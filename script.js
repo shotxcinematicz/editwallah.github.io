@@ -1,486 +1,490 @@
-/* =========================================
-   EDIT WALLAH — SCRIPT.JS
-   ========================================= */
+document.addEventListener("DOMContentLoaded", function () {
 
-document.addEventListener("DOMContentLoaded", () => {
+  /* =========================================
+     HEADER
+  ========================================= */
 
-    /* =========================================
-       LOADER
-       ========================================= */
+  const header = document.getElementById("siteHeader");
 
-    const loader = document.getElementById("loader");
+  function updateHeader() {
+    if (!header) return;
 
-    if (loader) {
-
-        window.addEventListener("load", () => {
-
-            setTimeout(() => {
-
-                loader.classList.add("hide");
-
-            }, 800);
-
-        });
-
+    if (window.scrollY > 40) {
+      header.classList.add("scrolled");
+    } else {
+      header.classList.remove("scrolled");
     }
+  }
+
+  window.addEventListener("scroll", updateHeader, {
+    passive: true
+  });
+
+  updateHeader();
 
 
-    /* =========================================
-       SCROLL REVEAL ANIMATION
-       ========================================= */
+  /* =========================================
+     MOBILE MENU
+  ========================================= */
 
-    const revealElements =
-        document.querySelectorAll(".reveal");
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
 
-    const revealObserver =
-        new IntersectionObserver(
+  if (menuBtn && mobileMenu) {
 
-            (entries, observer) => {
+    menuBtn.addEventListener("click", function () {
 
-                entries.forEach((entry) => {
+      mobileMenu.classList.toggle("open");
 
-                    if (entry.isIntersecting) {
-
-                        entry.target.classList.add("active");
-
-                        observer.unobserve(entry.target);
-
-                    }
-
-                });
-
-            },
-
-            {
-                threshold: 0.12,
-                rootMargin: "0px 0px -50px 0px"
-            }
-
-        );
-
-
-    revealElements.forEach((element) => {
-
-        revealObserver.observe(element);
+      document.body.classList.toggle(
+        "menu-open"
+      );
 
     });
 
 
-    /* =========================================
-       NAVBAR SCROLL EFFECT
-       ========================================= */
+    const mobileLinks =
+      mobileMenu.querySelectorAll("a");
 
-    const navbar =
-        document.querySelector(".navbar");
+    mobileLinks.forEach(function (link) {
 
-    function updateNavbar() {
+      link.addEventListener("click", function () {
 
-        if (!navbar) return;
+        mobileMenu.classList.remove("open");
 
-        if (window.scrollY > 80) {
-
-            navbar.classList.add("scrolled");
-
-        } else {
-
-            navbar.classList.remove("scrolled");
-
-        }
-
-    }
-
-    window.addEventListener(
-        "scroll",
-        updateNavbar,
-        { passive: true }
-    );
-
-    updateNavbar();
-
-
-    /* =========================================
-       HERO PHONE MOUSE PARALLAX
-       ========================================= */
-
-    const phone =
-        document.querySelector(".phone");
-
-
-    if (
-        phone &&
-        window.innerWidth > 900 &&
-        !window.matchMedia(
-            "(prefers-reduced-motion: reduce)"
-        ).matches
-    ) {
-
-        let mouseX = 0;
-        let mouseY = 0;
-
-        let currentX = 0;
-        let currentY = 0;
-
-
-        document.addEventListener(
-            "mousemove",
-            (event) => {
-
-                mouseX =
-                    (window.innerWidth / 2 -
-                        event.clientX) / 70;
-
-                mouseY =
-                    (window.innerHeight / 2 -
-                        event.clientY) / 70;
-
-            }
+        document.body.classList.remove(
+          "menu-open"
         );
 
+      });
 
-        function animatePhone() {
+    });
 
-            currentX +=
-                (mouseX - currentX) * 0.08;
-
-            currentY +=
-                (mouseY - currentY) * 0.08;
+  }
 
 
-            phone.style.transform =
-                `rotate(7deg)
-                 translate(${currentX}px, ${currentY}px)`;
+  /* =========================================
+     SCROLL REVEAL ANIMATION
+  ========================================= */
+
+  const revealElements =
+    document.querySelectorAll(".reveal");
 
 
-            requestAnimationFrame(
-                animatePhone
-            );
+  if ("IntersectionObserver" in window) {
 
+    const observer =
+      new IntersectionObserver(
+
+        function (entries, obs) {
+
+          entries.forEach(function (entry) {
+
+            if (entry.isIntersecting) {
+
+              entry.target.classList.add(
+                "visible"
+              );
+
+              obs.unobserve(
+                entry.target
+              );
+
+            }
+
+          });
+
+        },
+
+        {
+          threshold: 0.12
         }
 
-
-        animatePhone();
-
-    }
+      );
 
 
-    /* =========================================
-       HORIZONTAL SHOWCASE DRAG
-       ========================================= */
+    revealElements.forEach(function (element) {
+
+      observer.observe(element);
+
+    });
+
+  } else {
+
+    revealElements.forEach(function (element) {
+
+      element.classList.add("visible");
+
+    });
+
+  }
+
+
+  /* =========================================
+     PORTFOLIO SLIDER
+  ========================================= */
+
+  function setupSlider(
+    sliderId,
+    previousId,
+    nextId
+  ) {
 
     const slider =
-        document.querySelector(".showcase-row");
+      document.getElementById(sliderId);
+
+    const previous =
+      document.getElementById(previousId);
+
+    const next =
+      document.getElementById(nextId);
 
 
-    if (slider) {
-
-        let isDown = false;
-
-        let startX = 0;
-
-        let scrollStart = 0;
+    if (!slider) return;
 
 
-        slider.addEventListener(
-            "mousedown",
-            (event) => {
+    function getScrollAmount() {
 
-                isDown = true;
-
-                slider.classList.add(
-                    "dragging"
-                );
-
-                startX =
-                    event.pageX -
-                    slider.offsetLeft;
-
-                scrollStart =
-                    slider.scrollLeft;
-
-            }
+      const card =
+        slider.querySelector(
+          ".portfolio-card"
         );
 
+      if (!card) {
 
-        slider.addEventListener(
-            "mouseleave",
-            () => {
+        return 350;
 
-                isDown = false;
+      }
 
-                slider.classList.remove(
-                    "dragging"
-                );
-
-            }
-        );
-
-
-        slider.addEventListener(
-            "mouseup",
-            () => {
-
-                isDown = false;
-
-                slider.classList.remove(
-                    "dragging"
-                );
-
-            }
-        );
-
-
-        slider.addEventListener(
-            "mousemove",
-            (event) => {
-
-                if (!isDown) return;
-
-                event.preventDefault();
-
-                const currentX =
-                    event.pageX -
-                    slider.offsetLeft;
-
-                const distance =
-                    (currentX - startX) * 1.5;
-
-                slider.scrollLeft =
-                    scrollStart - distance;
-
-            }
-        );
+      return (
+        card.getBoundingClientRect().width
+        + 14
+      );
 
     }
 
 
-    /* =========================================
-       SMOOTH ANCHOR SCROLL
-       ========================================= */
+    if (previous) {
 
-    document
-        .querySelectorAll('a[href^="#"]')
-        .forEach((link) => {
+      previous.addEventListener(
+        "click",
+        function () {
 
-            link.addEventListener(
-                "click",
-                function (event) {
+          slider.scrollBy({
 
-                    const targetID =
-                        this.getAttribute("href");
+            left:
+              -getScrollAmount(),
 
+            behavior:
+              "smooth"
 
-                    if (
-                        !targetID ||
-                        targetID === "#"
-                    ) {
-
-                        return;
-
-                    }
-
-
-                    const target =
-                        document.querySelector(
-                            targetID
-                        );
-
-
-                    if (!target) return;
-
-
-                    event.preventDefault();
-
-
-                    target.scrollIntoView({
-                        behavior: "smooth",
-                        block: "start"
-                    });
-
-                }
-            );
-
-        });
-
-
-    /* =========================================
-       SERVICE CARD 3D TILT
-       ========================================= */
-
-    const serviceCards =
-        document.querySelectorAll(
-            ".service-card"
-        );
-
-
-    if (window.innerWidth > 900) {
-
-        serviceCards.forEach((card) => {
-
-            card.addEventListener(
-                "mousemove",
-                (event) => {
-
-                    const rect =
-                        card.getBoundingClientRect();
-
-
-                    const x =
-                        event.clientX -
-                        rect.left;
-
-
-                    const y =
-                        event.clientY -
-                        rect.top;
-
-
-                    const centerX =
-                        rect.width / 2;
-
-
-                    const centerY =
-                        rect.height / 2;
-
-
-                    const rotateX =
-                        ((y - centerY) /
-                            centerY) * -2;
-
-
-                    const rotateY =
-                        ((x - centerX) /
-                            centerX) * 2;
-
-
-                    card.style.transform =
-                        `perspective(1000px)
-                         rotateX(${rotateX}deg)
-                         rotateY(${rotateY}deg)
-                         translateY(-8px)`;
-
-                }
-            );
-
-
-            card.addEventListener(
-                "mouseleave",
-                () => {
-
-                    card.style.transform =
-                        "";
-
-                }
-            );
-
-        });
-
-    }
-
-
-    /* =========================================
-       MARQUEE HOVER PAUSE
-       ========================================= */
-
-    const marquee =
-        document.querySelector(".marquee");
-
-
-    if (marquee) {
-
-        const track =
-            marquee.querySelector(
-                ".marquee-track"
-            );
-
-
-        if (track) {
-
-            marquee.addEventListener(
-                "mouseenter",
-                () => {
-
-                    track.style.animationPlayState =
-                        "paused";
-
-                }
-            );
-
-
-            marquee.addEventListener(
-                "mouseleave",
-                () => {
-
-                    track.style.animationPlayState =
-                        "running";
-
-                }
-            );
+          });
 
         }
+      );
 
     }
 
 
-    /* =========================================
-       IMAGE FALLBACK
-       ========================================= */
+    if (next) {
 
-    document
-        .querySelectorAll("img")
-        .forEach((image) => {
+      next.addEventListener(
+        "click",
+        function () {
 
-            image.addEventListener(
-                "error",
-                () => {
+          slider.scrollBy({
 
-                    console.warn(
-                        "Image not found:",
-                        image.src
-                    );
+            left:
+              getScrollAmount(),
 
-                }
-            );
+            behavior:
+              "smooth"
 
+          });
 
-            image.setAttribute(
-                "draggable",
-                "false"
-            );
+        }
+      );
 
-        });
+    }
 
 
-    /* =========================================
-       WHATSAPP CTA TRACKING
-       ========================================= */
+    /* =====================================
+       MOUSE DRAG
+    ===================================== */
 
-    document
-        .querySelectorAll(
-            'a[href*="wa.me"]'
-        )
-        .forEach((button) => {
+    let isDragging = false;
 
-            button.addEventListener(
-                "click",
-                () => {
+    let startX = 0;
 
-                    console.log(
-                        "Edit Wallah WhatsApp CTA clicked"
-                    );
-
-                }
-            );
-
-        });
+    let startScroll = 0;
 
 
-    /* =========================================
-       PAGE LOADED
-       ========================================= */
+    slider.addEventListener(
+      "pointerdown",
+      function (event) {
 
-    document.body.classList.add(
-        "page-loaded"
+        isDragging = true;
+
+        startX = event.clientX;
+
+        startScroll =
+          slider.scrollLeft;
+
+        slider.setPointerCapture(
+          event.pointerId
+        );
+
+      }
     );
+
+
+    slider.addEventListener(
+      "pointermove",
+      function (event) {
+
+        if (!isDragging) return;
+
+        const distance =
+          event.clientX - startX;
+
+        slider.scrollLeft =
+          startScroll - distance;
+
+      }
+    );
+
+
+    function stopDragging() {
+
+      isDragging = false;
+
+    }
+
+
+    slider.addEventListener(
+      "pointerup",
+      stopDragging
+    );
+
+    slider.addEventListener(
+      "pointercancel",
+      stopDragging
+    );
+
+    slider.addEventListener(
+      "pointerleave",
+      stopDragging
+    );
+
+  }
+
+
+  setupSlider(
+    "workSlider",
+    "workPrev",
+    "workNext"
+  );
+
+
+  setupSlider(
+    "portfolioSlider",
+    "portfolioPrev",
+    "portfolioNext"
+  );
+
+
+  /* =========================================
+     HERO MOBILE PARALLAX
+  ========================================= */
+
+  const device =
+    document.querySelector(
+      ".hero-device"
+    );
+
+
+  if (
+    device &&
+    window.innerWidth > 950
+  ) {
+
+    let targetX = 0;
+
+    let targetY = 0;
+
+    let currentX = 0;
+
+    let currentY = 0;
+
+
+    document.addEventListener(
+      "mousemove",
+      function (event) {
+
+        targetX =
+          (
+            window.innerWidth / 2
+            - event.clientX
+          ) / 80;
+
+
+        targetY =
+          (
+            window.innerHeight / 2
+            - event.clientY
+          ) / 80;
+
+      }
+    );
+
+
+    function animateDevice() {
+
+      currentX +=
+        (targetX - currentX) * 0.06;
+
+      currentY +=
+        (targetY - currentY) * 0.06;
+
+
+      device.style.marginLeft =
+        currentX + "px";
+
+
+      device.style.marginTop =
+        currentY + "px";
+
+
+      requestAnimationFrame(
+        animateDevice
+      );
+
+    }
+
+
+    animateDevice();
+
+  }
+
+
+  /* =========================================
+     IMAGE DRAG DISABLE
+  ========================================= */
+
+  document
+    .querySelectorAll("img")
+    .forEach(function (image) {
+
+      image.setAttribute(
+        "draggable",
+        "false"
+      );
+
+    });
+
+
+  /* =========================================
+     SMOOTH INTERNAL LINKS
+  ========================================= */
+
+  document
+    .querySelectorAll(
+      'a[href^="#"]'
+    )
+    .forEach(function (link) {
+
+      link.addEventListener(
+        "click",
+        function (event) {
+
+          const targetId =
+            link.getAttribute("href");
+
+
+          if (
+            !targetId ||
+            targetId === "#"
+          ) {
+
+            return;
+
+          }
+
+
+          const target =
+            document.querySelector(
+              targetId
+            );
+
+
+          if (!target) return;
+
+
+          event.preventDefault();
+
+
+          const headerHeight =
+            header
+              ? header.offsetHeight
+              : 0;
+
+
+          const position =
+            target.getBoundingClientRect()
+              .top
+            + window.scrollY
+            - headerHeight;
+
+
+          window.scrollTo({
+
+            top: position,
+
+            behavior: "smooth"
+
+          });
+
+        }
+      );
+
+    });
 
 
 });
+
+
+/* =========================================
+   PAGE LOAD
+========================================= */
+
+window.addEventListener(
+  "load",
+  function () {
+
+    const loader =
+      document.getElementById(
+        "pageLoader"
+      );
+
+
+    if (!loader) return;
+
+
+    setTimeout(
+      function () {
+
+        loader.style.opacity =
+          "0";
+
+        loader.style.visibility =
+          "hidden";
+
+        loader.style.pointerEvents =
+          "none";
+
+      },
+      900
+    );
+
+  }
+);
