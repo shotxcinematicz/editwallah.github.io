@@ -1,1318 +1,1085 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Edit Wallah — Premium Creative Agency</title>
+    <title>Edit Wallah — Premium Creative Studio</title>
 
-<meta name="description" content="Edit Wallah helps startups, local businesses and established brands turn attention into leads, customers and measurable growth.">
+    <meta name="description"
+    content="Edit Wallah creates premium video editing, cinematic content and creative solutions for brands.">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-html{
-scroll-behavior:smooth;
-}
-
-body{
-background:#050505;
-color:#fff;
-font-family:"DM Sans",sans-serif;
-overflow-x:hidden;
-}
-
-a{
-color:inherit;
-text-decoration:none;
-}
-
-.container{
-width:min(1180px,92%);
-margin:auto;
-}
-
-/* NAVBAR */
-
-nav{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-z-index:1000;
-padding:15px 0;
-background:rgba(5,5,5,.88);
-backdrop-filter:blur(18px);
-border-bottom:1px solid rgba(255,255,255,.08);
-}
-
-.nav-inner{
-display:flex;
-align-items:center;
-justify-content:space-between;
-}
-
-.logo-area{
-display:flex;
-align-items:center;
-}
-
-.logo-img{
-height:52px;
-width:52px;
-object-fit:contain;
-border-radius:50%;
-}
-
-.logo-text{
-font-family:"Space Grotesk";
-font-size:22px;
-font-weight:700;
-margin-left:12px;
-}
-
-.logo-text span{
-color:#d4af37;
-}
-
-.nav-links{
-display:flex;
-gap:30px;
-align-items:center;
-}
-
-.nav-links a{
-color:#bdbdbd;
-font-size:14px;
-transition:.3s;
-}
-
-.nav-links a:hover{
-color:#d4af37;
-}
-
-.nav-btn{
-background:#d4af37;
-color:#050505;
-padding:12px 22px;
-border-radius:30px;
-font-weight:700;
-font-size:14px;
-transition:.3s;
-}
-
-.nav-btn:hover{
-background:#fff;
-transform:translateY(-2px);
-}
-
-.menu{
-display:none;
-font-size:28px;
-cursor:pointer;
-}
-
-/* HERO */
-
-.hero{
-min-height:100vh;
-padding-top:150px;
-display:flex;
-align-items:center;
-position:relative;
-overflow:hidden;
-}
-
-.glow{
-position:absolute;
-width:500px;
-height:500px;
-background:#d4af37;
-filter:blur(190px);
-opacity:.07;
-border-radius:50%;
-right:-180px;
-top:100px;
-}
-
-.hero-content{
-max-width:950px;
-position:relative;
-z-index:2;
-}
-
-.tag{
-display:inline-flex;
-border:1px solid rgba(212,175,55,.45);
-color:#d4af37;
-padding:9px 15px;
-border-radius:30px;
-font-size:13px;
-margin-bottom:25px;
-}
-
-.hero h1{
-font-family:"Space Grotesk";
-font-size:clamp(50px,8vw,100px);
-line-height:.95;
-letter-spacing:-5px;
-max-width:1000px;
-}
-
-.hero h1 span{
-color:#d4af37;
-}
-
-.hero p{
-color:#aaa;
-max-width:680px;
-font-size:18px;
-line-height:1.7;
-margin:30px 0;
-}
-
-.hero-buttons{
-display:flex;
-gap:15px;
-flex-wrap:wrap;
-}
-
-.primary{
-background:#d4af37;
-color:#050505;
-padding:16px 25px;
-border-radius:35px;
-font-weight:700;
-display:inline-block;
-transition:.3s;
-}
-
-.primary:hover{
-background:#fff;
-transform:translateY(-2px);
-}
-
-.secondary{
-border:1px solid #333;
-padding:16px 25px;
-border-radius:35px;
-color:#ddd;
-display:inline-block;
-transition:.3s;
-}
-
-.secondary:hover{
-border-color:#d4af37;
-color:#d4af37;
-}
-
-/* BRANDS */
-
-.brands{
-padding:65px 0;
-border-top:1px solid #181818;
-border-bottom:1px solid #181818;
-}
-
-.small-title{
-text-align:center;
-color:#777;
-font-size:13px;
-text-transform:uppercase;
-letter-spacing:2px;
-margin-bottom:35px;
-}
-
-.brand-row{
-display:flex;
-justify-content:space-between;
-align-items:center;
-gap:30px;
-flex-wrap:wrap;
-}
-
-.brand{
-color:#666;
-font-family:"Space Grotesk";
-font-size:21px;
-font-weight:600;
-}
-
-/* SECTIONS */
-
-section{
-padding:110px 0;
-}
-
-.section-head{
-display:flex;
-justify-content:space-between;
-gap:30px;
-align-items:end;
-margin-bottom:60px;
-}
-
-.section-head h2{
-font-family:"Space Grotesk";
-font-size:clamp(40px,6vw,70px);
-letter-spacing:-3px;
-}
-
-.section-head p{
-max-width:400px;
-color:#888;
-line-height:1.7;
-}
-
-/* SERVICES */
-
-.service{
-border-top:1px solid #252525;
-padding:40px 0;
-display:grid;
-grid-template-columns:100px 1fr 80px;
-gap:30px;
-align-items:start;
-transition:.3s;
-}
-
-.service:hover{
-padding-left:15px;
-}
-
-.service-number{
-color:#d4af37;
-font-size:14px;
-}
-
-.service h3{
-font-family:"Space Grotesk";
-font-size:36px;
-margin-bottom:12px;
-}
-
-.service p{
-color:#888;
-max-width:600px;
-line-height:1.7;
-}
-
-.arrow{
-font-size:30px;
-text-align:right;
-color:#555;
-}
-
-/* STATS */
-
-.stats{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:1px;
-background:#222;
-border:1px solid #222;
-}
-
-.stat{
-background:#0b0b0b;
-padding:45px 30px;
-}
-
-.stat h3{
-color:#d4af37;
-font-family:"Space Grotesk";
-font-size:55px;
-}
-
-.stat p{
-color:#777;
-margin-top:8px;
-}
-
-/* FEATURE */
-
-.feature{
-background:#0d0d0d;
-border:1px solid #202020;
-border-radius:25px;
-padding:60px;
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:60px;
-align-items:center;
-}
-
-.feature h2{
-font-family:"Space Grotesk";
-font-size:50px;
-line-height:1;
-margin-bottom:20px;
-}
-
-.feature p{
-color:#888;
-line-height:1.7;
-margin-bottom:25px;
-}
-
-.feature-box{
-height:350px;
-border-radius:20px;
-background:
-radial-gradient(circle at 30% 30%,#d4af3730,transparent 30%),
-linear-gradient(135deg,#171717,#080808);
-border:1px solid #282828;
-display:flex;
-align-items:center;
-justify-content:center;
-overflow:hidden;
-}
-
-.feature-box img{
-width:230px;
-height:230px;
-object-fit:contain;
-}
-
-/* PROCESS */
-
-.process{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:20px;
-}
-
-.process-card{
-border:1px solid #222;
-border-radius:20px;
-padding:35px;
-background:#0b0b0b;
-}
-
-.process-card .num{
-color:#d4af37;
-font-size:13px;
-}
-
-.process-card h3{
-font-family:"Space Grotesk";
-font-size:26px;
-margin:40px 0 15px;
-}
-
-.process-card p{
-color:#777;
-line-height:1.7;
-}
-
-/* ABOUT */
-
-.about{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:80px;
-align-items:center;
-}
-
-.about h2{
-font-family:"Space Grotesk";
-font-size:60px;
-line-height:1;
-letter-spacing:-3px;
-}
-
-.about h2 span{
-color:#d4af37;
-}
-
-.about p{
-color:#888;
-line-height:1.8;
-margin-top:25px;
-}
-
-.about-card{
-min-height:400px;
-border-radius:25px;
-border:1px solid #222;
-background:#101010;
-display:flex;
-align-items:center;
-justify-content:center;
-position:relative;
-overflow:hidden;
-}
-
-.about-card::before{
-content:"";
-position:absolute;
-width:300px;
-height:300px;
-border-radius:50%;
-background:#d4af37;
-filter:blur(130px);
-opacity:.08;
-}
-
-.about-card img{
-position:relative;
-width:250px;
-height:250px;
-object-fit:contain;
-}
-
-/* FAQ */
-
-.faq{
-max-width:850px;
-margin:auto;
-}
-
-details{
-border-top:1px solid #242424;
-padding:25px 0;
-}
-
-summary{
-cursor:pointer;
-list-style:none;
-font-family:"Space Grotesk";
-font-size:20px;
-display:flex;
-justify-content:space-between;
-}
-
-summary::after{
-content:"+";
-color:#d4af37;
-}
-
-details[open] summary::after{
-content:"−";
-}
-
-details p{
-color:#888;
-line-height:1.7;
-padding-top:20px;
-max-width:700px;
-}
-
-/* CTA */
-
-.cta{
-text-align:center;
-padding:120px 20px;
-background:#fff;
-color:#050505;
-border-radius:30px;
-}
-
-.cta h2{
-font-family:"Space Grotesk";
-font-size:clamp(45px,7vw,85px);
-line-height:.95;
-letter-spacing:-4px;
-max-width:900px;
-margin:auto;
-}
-
-.cta p{
-max-width:650px;
-margin:25px auto;
-color:#555;
-}
-
-.cta-btn{
-display:inline-block;
-background:#050505;
-color:#fff;
-padding:16px 28px;
-border-radius:35px;
-font-weight:700;
-transition:.3s;
-}
-
-.cta-btn:hover{
-background:#d4af37;
-color:#050505;
-}
-
-/* FOOTER */
-
-footer{
-padding:70px 0 30px;
-}
-
-.footer-top{
-display:flex;
-justify-content:space-between;
-gap:40px;
-padding-bottom:50px;
-border-bottom:1px solid #222;
-}
-
-.footer-logo{
-font-family:"Space Grotesk";
-font-size:32px;
-font-weight:700;
-}
-
-.footer-logo span{
-color:#d4af37;
-}
-
-.footer-top p{
-color:#777;
-max-width:400px;
-margin-top:15px;
-line-height:1.6;
-}
-
-.footer-links{
-display:flex;
-gap:30px;
-flex-wrap:wrap;
-}
-
-.footer-links a{
-color:#888;
-font-size:14px;
-transition:.3s;
-}
-
-.footer-links a:hover{
-color:#d4af37;
-}
-
-.instagram-link{
-color:#d4af37 !important;
-font-weight:700;
-}
-
-.copyright{
-padding-top:25px;
-color:#555;
-font-size:13px;
-display:flex;
-justify-content:space-between;
-}
-
-/* MOBILE */
-
-@media(max-width:800px){
-
-.nav-links,
-.nav-btn{
-display:none;
-}
-
-.menu{
-display:block;
-}
-
-.hero{
-padding-top:130px;
-}
-
-.hero h1{
-letter-spacing:-3px;
-}
-
-.section-head{
-display:block;
-}
-
-.section-head p{
-margin-top:20px;
-}
-
-.service{
-grid-template-columns:50px 1fr 30px;
-gap:10px;
-}
-
-.service h3{
-font-size:25px;
-}
-
-.stats,
-.process{
-grid-template-columns:1fr;
-}
-
-.feature,
-.about{
-grid-template-columns:1fr;
-padding:30px;
-}
-
-.feature h2,
-.about h2{
-font-size:45px;
-}
-
-.feature-box{
-height:280px;
-}
-
-.footer-top{
-display:block;
-}
-
-.footer-links{
-margin-top:30px;
-}
-
-.copyright{
-display:block;
-}
-
-.copyright span{
-display:block;
-margin-bottom:8px;
-}
-
-}
-
-</style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- NAVBAR -->
+<!-- ================= LOADER ================= -->
 
-<nav>
+<div class="loader" id="loader">
 
-<div class="container nav-inner">
+    <div class="loader-inner">
 
-<a href="#" class="logo-area">
+        <img src="logo.png"
+             class="loader-logo"
+             alt="Edit Wallah Logo">
 
-<img src="logo.png" class="logo-img" alt="Edit Wallah Logo">
+        <div class="loader-text">
+            EDIT WALLAH
+        </div>
 
-<div class="logo-text">
-Edit<span>Wallah</span>
-</div>
-
-</a>
-
-<div class="nav-links">
-
-<a href="#services">Services</a>
-<a href="#about">About</a>
-<a href="#process">Process</a>
-<a href="#faq">FAQ</a>
+    </div>
 
 </div>
 
-<a href="https://wa.me/919373376926?text=Hello%20Edit%20Wallah,%20I%20want%20to%20book%20a%20call." class="nav-btn">
-Book a Call →
-</a>
 
-<div class="menu">☰</div>
+<!-- ================= NAVBAR ================= -->
 
-</div>
+<nav class="navbar">
+
+    <a href="#" class="brand-logo">
+        <img src="logo.png"
+             alt="Edit Wallah"
+             class="logo">
+    </a>
+
+    <div class="nav-right">
+
+        <a href="#services" class="nav-link">
+            Services
+        </a>
+
+        <a href="#portfolio" class="nav-link">
+            Portfolio
+        </a>
+
+        <a href="https://wa.me/919373376926"
+           class="nav-btn">
+            Book A Call →
+        </a>
+
+    </div>
 
 </nav>
 
 
-<!-- HERO -->
+<!-- ================= HERO ================= -->
 
-<section class="hero">
+<header class="hero">
 
-<div class="glow"></div>
+    <div class="hero-glow"></div>
 
-<div class="container">
+    <div class="hero-small reveal">
+        WHY CHOOSE US?
+    </div>
 
-<div class="hero-content">
+    <h1 class="hero-title reveal">
 
-<div class="tag">
-● Premium Creative Agency
+        <span>Premium</span>
+
+        <span class="outline">
+            Creative
+        </span>
+
+        <span>
+            That Drives
+        </span>
+
+        <span class="outline">
+            Real Results
+        </span>
+
+    </h1>
+
+    <p class="hero-description reveal">
+
+        We create premium edits, cinematic content
+        and scroll-stopping creatives that help
+        brands stand out.
+
+    </p>
+
+
+    <div class="hero-buttons reveal">
+
+        <a href="https://wa.me/919373376926"
+           class="primary-btn">
+
+            Get Your Project Started →
+
+        </a>
+
+        <a href="#portfolio"
+           class="secondary-btn">
+
+            Explore Our Work
+
+        </a>
+
+    </div>
+
+
+    <!-- BLANK MOBILE -->
+
+    <div class="phone">
+
+        <div class="phone-camera"></div>
+
+        <div class="phone-screen">
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- ================= MARQUEE ================= -->
+
+<div class="marquee">
+
+    <div class="marquee-track">
+
+        <span>AD CONTENT</span>
+        <span>VIDEO EDITING</span>
+        <span>SOCIAL MEDIA</span>
+        <span>PERSONAL BRANDING</span>
+        <span>VIDEO PRODUCTION</span>
+        <span>GRAPHIC DESIGNING</span>
+
+        <span>AD CONTENT</span>
+        <span>VIDEO EDITING</span>
+        <span>SOCIAL MEDIA</span>
+        <span>PERSONAL BRANDING</span>
+        <span>VIDEO PRODUCTION</span>
+        <span>GRAPHIC DESIGNING</span>
+
+    </div>
+
 </div>
 
-<h1>
-Premium Creative
-<span>That Drives Real Results.</span>
-</h1>
 
-<p>
-Edit Wallah helps startups, local businesses and established brands
-turn attention into leads, customers and measurable growth with
-premium creative, ad content, performance marketing and brand strategy.
-</p>
+<!-- ================= SHOWCASE ================= -->
 
-<div class="hero-buttons">
+<section class="showcase">
 
-<a href="https://wa.me/919373376926?text=Hello%20Edit%20Wallah,%20I%20want%20to%20book%20a%20call." class="primary">
-Book a Call →
-</a>
+    <div class="showcase-head reveal">
 
-<a href="#services" class="secondary">
-Explore Services
-</a>
+        <div>
 
-</div>
+            <div class="section-label">
+                CREATIVE SHOWCASE
+            </div>
 
-</div>
+            <h2 class="section-title">
 
-</div>
+                Premium Creative
+
+                <span>
+                    That Drives Real Results
+                </span>
+
+            </h2>
+
+        </div>
+
+        <div class="swipe-text">
+            Swipe to explore ← →
+        </div>
+
+    </div>
+
+
+    <div class="showcase-row">
+
+
+        <div class="show-card">
+
+            <img src="image.jpg"
+                 alt="Edit Wallah Creative">
+
+            <div class="card-overlay"></div>
+
+            <div class="mute">
+                🔇
+            </div>
+
+            <div class="show-info">
+
+                <div class="show-number">
+                    01
+                </div>
+
+                <div class="show-name">
+                    Commercial
+                </div>
+
+                <div class="show-type">
+                    Ad Content
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="show-card">
+
+            <img src="image.jpg"
+                 alt="Edit Wallah Creative">
+
+            <div class="card-overlay"></div>
+
+            <div class="mute">
+                🔇
+            </div>
+
+            <div class="show-info">
+
+                <div class="show-number">
+                    02
+                </div>
+
+                <div class="show-name">
+                    Brand Story
+                </div>
+
+                <div class="show-type">
+                    Creative Content
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="show-card">
+
+            <img src="image.jpg"
+                 alt="Edit Wallah Creative">
+
+            <div class="card-overlay"></div>
+
+            <div class="mute">
+                🔇
+            </div>
+
+            <div class="show-info">
+
+                <div class="show-number">
+                    03
+                </div>
+
+                <div class="show-name">
+                    Product
+                </div>
+
+                <div class="show-type">
+                    Commercial
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="show-card">
+
+            <img src="image.jpg"
+                 alt="Edit Wallah Creative">
+
+            <div class="card-overlay"></div>
+
+            <div class="mute">
+                🔇
+            </div>
+
+            <div class="show-info">
+
+                <div class="show-number">
+                    04
+                </div>
+
+                <div class="show-name">
+                    Social
+                </div>
+
+                <div class="show-type">
+                    Content Creation
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="center-button">
+
+        <a href="https://wa.me/919373376926"
+           class="primary-btn">
+
+            Get Your Ad Made →
+
+        </a>
+
+    </div>
 
 </section>
 
 
-<!-- BRANDS -->
+<!-- ================= PROCESS ================= -->
 
-<section class="brands">
+<section class="process">
 
-<div class="container">
+    <div class="process-head reveal">
 
-<div class="small-title">
-Trusted by growing brands
-</div>
+        <div class="section-label">
+            OUR PROVEN SYSTEM
+        </div>
 
-<div class="brand-row">
+        <h2 class="section-title">
 
-<div class="brand">NEXORA</div>
-<div class="brand">URBANCO</div>
-<div class="brand">VELORA</div>
-<div class="brand">NOVA</div>
-<div class="brand">KRAFT</div>
-<div class="brand">ZENTRA</div>
+            Content Growth
 
-</div>
+            <span>
+                Plan
+            </span>
 
-</div>
+        </h2>
 
-</section>
+        <p class="process-intro">
 
+            We don't guess. Our creative team follows
+            a structured process to create content
+            that gets attention and delivers results.
 
-<!-- SERVICES -->
+        </p>
 
-<section id="services">
-
-<div class="container">
-
-<div class="section-head">
-
-<h2>
-Our<br>
-Services
-</h2>
-
-<p>
-From strategy to execution, we create premium digital solutions
-designed to make your brand look better, connect faster and grow smarter.
-</p>
-
-</div>
+    </div>
 
 
-<div class="service">
-
-<div class="service-number">#01</div>
-
-<div>
-<h3>Digital Marketing</h3>
-
-<p>
-Performance-focused campaigns across social platforms designed
-to increase reach, leads and conversions.
-</p>
-</div>
-
-<div class="arrow">↗</div>
-
-</div>
+    <div class="process-grid">
 
 
-<div class="service">
+        <div class="process-item reveal">
 
-<div class="service-number">#02</div>
+            <div class="process-number">
+                01
+            </div>
 
-<div>
-<h3>Website Development</h3>
+            <div class="process-image">
 
-<p>
-Modern, responsive and conversion-focused websites that make
-your business look professional online.
-</p>
-</div>
+                <img src="image.jpg"
+                     alt="Research">
 
-<div class="arrow">↗</div>
+            </div>
 
-</div>
+            <h3>
+                Deep Research &
+                Proper Content Planning
+            </h3>
 
+            <p>
+                We analyze your market, audience and
+                competitors to create strong concepts
+                for your brand.
+            </p>
 
-<div class="service">
-
-<div class="service-number">#03</div>
-
-<div>
-<h3>Creative Content</h3>
-
-<p>
-Reels, advertisements, product videos, graphics and social content
-designed to stop the scroll and build brand identity.
-</p>
-</div>
-
-<div class="arrow">↗</div>
-
-</div>
+        </div>
 
 
-<div class="service">
+        <div class="process-item reveal">
 
-<div class="service-number">#04</div>
+            <div class="process-number">
+                02
+            </div>
 
-<div>
-<h3>Brand Strategy</h3>
+            <div class="process-image">
 
-<p>
-Clear positioning, visual direction and digital strategy that helps
-your brand stand apart from competitors.
-</p>
-</div>
+                <img src="image.jpg"
+                     alt="Scripting">
 
-<div class="arrow">↗</div>
+            </div>
 
-</div>
+            <h3>
+                Scripting
+            </h3>
 
-</div>
+            <p>
+                We create scroll-stopping scripts
+                designed to capture attention and
+                communicate your message clearly.
+            </p>
 
-</section>
+        </div>
 
 
-<!-- STATS -->
+        <div class="process-item reveal">
 
-<section>
+            <div class="process-number">
+                03
+            </div>
 
-<div class="container">
+            <div class="process-image">
 
-<div class="stats">
+                <img src="image.jpg"
+                     alt="Shooting">
 
-<div class="stat">
-<h3>120+</h3>
-<p>Projects Delivered</p>
-</div>
+            </div>
 
-<div class="stat">
-<h3>50+</h3>
-<p>Brands Worked With</p>
-</div>
+            <h3>
+                Professional Shooting
+            </h3>
 
-<div class="stat">
-<h3>4.9★</h3>
-<p>Average Client Rating</p>
-</div>
+            <p>
+                We provide creative direction and
+                professional production for your
+                brand content.
+            </p>
 
-</div>
+        </div>
 
-</div>
+
+        <div class="process-item reveal">
+
+            <div class="process-number">
+                04
+            </div>
+
+            <div class="process-image">
+
+                <img src="image.jpg"
+                     alt="Editing">
+
+            </div>
+
+            <h3>
+                Premium Quality Editing
+            </h3>
+
+            <p>
+                We turn raw footage into engaging,
+                premium content designed to keep
+                audiences watching.
+            </p>
+
+        </div>
+
+
+    </div>
 
 </section>
 
 
-<!-- FEATURE -->
+<!-- ================= SERVICES ================= -->
 
-<section>
+<section id="services" class="services">
 
-<div class="container">
+    <div class="section-label reveal">
+        SERVICES
+    </div>
 
-<div class="feature">
+    <h2 class="section-title reveal">
 
-<div>
+        What We Do
 
-<div class="tag">
-Built for Growth
-</div>
+        <span>
+            Pick Your Weapon
+        </span>
 
-<h2>
-Your brand deserves
-more than average.
-</h2>
+    </h2>
 
-<p>
-We combine creativity, technology and strategy to create
-digital experiences that people remember.
-</p>
 
-<a href="https://wa.me/919373376926?text=Hello%20Edit%20Wallah,%20I%20want%20to%20build%20a%20project." class="primary">
-Build With Us →
-</a>
+    <div class="services-grid">
 
-</div>
 
-<div class="feature-box">
+        <!-- AD SHOOT -->
 
-<img src="logo.png" alt="Edit Wallah Logo">
+        <div class="service-card reveal">
 
-</div>
+            <div class="service-image">
 
-</div>
+                <img src="image.jpg"
+                     alt="Ad Shoot">
 
-</div>
+            </div>
+
+            <div class="service-content">
+
+                <h3>
+                    Ads Shoot 🎬
+                </h3>
+
+                <p>
+                    High-converting ad shoots crafted
+                    to stop the scroll, grab attention
+                    and turn viewers into customers.
+                </p>
+
+                <div class="service-tags">
+
+                    <span>Product Ads</span>
+                    <span>Brand Films</span>
+                    <span>UGC Videos</span>
+                    <span>Studio Shoot</span>
+                    <span>Outdoor Shoot</span>
+                    <span>Reels</span>
+
+                </div>
+
+                <a href="https://wa.me/919373376926"
+                   class="service-btn">
+
+                    Request Callback Now →
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- VIDEO EDITING -->
+
+        <div class="service-card reveal">
+
+            <div class="service-image">
+
+                <img src="image.jpg"
+                     alt="Video Editing">
+
+            </div>
+
+            <div class="service-content">
+
+                <h3>
+                    Video Editing 🚀
+                </h3>
+
+                <p>
+                    Premium edits designed to increase
+                    retention, engagement and make
+                    your content stand out.
+                </p>
+
+                <div class="service-tags">
+
+                    <span>Reels</span>
+                    <span>YouTube</span>
+                    <span>Cinematic</span>
+                    <span>Shorts</span>
+                    <span>Color Grading</span>
+                    <span>Motion Graphics</span>
+
+                </div>
+
+                <a href="https://wa.me/919373376926"
+                   class="service-btn">
+
+                    Request Callback Now →
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- SOCIAL MEDIA -->
+
+        <div class="service-card reveal">
+
+            <div class="service-image">
+
+                <img src="image.jpg"
+                     alt="Social Media">
+
+            </div>
+
+            <div class="service-content">
+
+                <h3>
+                    Social Media Marketing 📣
+                </h3>
+
+                <p>
+                    Build a powerful online presence with
+                    scroll-stopping content and consistent
+                    creative branding.
+                </p>
+
+                <div class="service-tags">
+
+                    <span>Instagram</span>
+                    <span>Content Strategy</span>
+                    <span>Reels Marketing</span>
+                    <span>Community Growth</span>
+
+                </div>
+
+                <a href="https://wa.me/919373376926"
+                   class="service-btn">
+
+                    Request Callback Now →
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- GRAPHIC DESIGN -->
+
+        <div class="service-card reveal">
+
+            <div class="service-image">
+
+                <img src="image.jpg"
+                     alt="Graphic Designing">
+
+            </div>
+
+            <div class="service-content">
+
+                <h3>
+                    Graphic Designing 🎨
+                </h3>
+
+                <p>
+                    Strong visual designs that make
+                    your brand look professional and
+                    memorable.
+                </p>
+
+                <div class="service-tags">
+
+                    <span>Posters</span>
+                    <span>Thumbnails</span>
+                    <span>Branding</span>
+                    <span>Social Posts</span>
+
+                </div>
+
+                <a href="https://wa.me/919373376926"
+                   class="service-btn">
+
+                    Request Callback Now →
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+    </div>
 
 </section>
 
 
-<!-- PROCESS -->
+<!-- ================= CLIENTS ================= -->
 
-<section id="process">
+<section class="clients">
 
-<div class="container">
+    <div class="section-label reveal">
+        TRUSTED BY
+    </div>
 
-<div class="section-head">
+    <h2 class="section-title reveal">
 
-<h2>
-Simple.<br>
-Strategic.
-</h2>
+        Our
 
-<p>
-No complicated process. Just a clear path from your idea
-to a finished project.
-</p>
+        <span>
+            Clients
+        </span>
 
-</div>
+    </h2>
 
 
-<div class="process">
+    <div class="client-row">
 
-<div class="process-card">
+        <div class="client-logo">
+            CLIENT 01
+        </div>
 
-<div class="num">
-01 — DISCOVER
-</div>
+        <div class="client-logo">
+            CLIENT 02
+        </div>
 
-<h3>
-Tell Us Your Goal
-</h3>
+        <div class="client-logo">
+            CLIENT 03
+        </div>
 
-<p>
-We understand your business, audience, competition and
-what you want to achieve.
-</p>
+        <div class="client-logo">
+            CLIENT 04
+        </div>
 
-</div>
+        <div class="client-logo">
+            CLIENT 05
+        </div>
 
-
-<div class="process-card">
-
-<div class="num">
-02 — CREATE
-</div>
-
-<h3>
-We Build The Solution
-</h3>
-
-<p>
-Our creative and development team turns the strategy
-into a polished digital experience.
-</p>
-
-</div>
-
-
-<div class="process-card">
-
-<div class="num">
-03 — GROW
-</div>
-
-<h3>
-Launch & Scale
-</h3>
-
-<p>
-After launch, we optimize and improve your digital
-presence for long-term growth.
-</p>
-
-</div>
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
 
-<!-- ABOUT -->
+<!-- ================= PORTFOLIO ================= -->
 
-<section id="about">
+<section id="portfolio" class="portfolio">
 
-<div class="container about">
+    <div class="section-label reveal">
+        PORTFOLIO
+    </div>
 
-<div>
+    <h2 class="section-title reveal">
 
-<div class="tag">
-About Edit Wallah
-</div>
+        Premium Creative
 
-<h2>
-Ideas into
-<span>impact.</span>
-</h2>
+        <span>
+            That Drives Real Results
+        </span>
 
-<p>
-Edit Wallah is a creative digital agency focused on helping
-modern businesses build stronger brands online. From websites
-and content to marketing campaigns, we bring creativity and
-strategy together.
-</p>
-
-</div>
+    </h2>
 
 
-<div class="about-card">
-
-<img src="logo.png" alt="Edit Wallah Logo">
-
-</div>
-
-</div>
-
-</section>
+    <div class="portfolio-grid">
 
 
-<!-- FAQ -->
+        <div class="portfolio-card reveal">
 
-<section id="faq">
+            <img src="image.jpg"
+                 alt="Portfolio">
 
-<div class="container">
+            <div class="portfolio-info">
 
-<div class="section-head">
+                <small>
+                    01 · AD
+                </small>
 
-<h2>FAQs</h2>
+                <h3>
+                    Commercial
+                </h3>
 
-<p>
-Everything you need to know before starting your project.
-</p>
+            </div>
 
-</div>
-
-
-<div class="faq">
-
-<details>
-
-<summary>
-What services does Edit Wallah provide?
-</summary>
-
-<p>
-We provide digital marketing, website development,
-creative content production and brand strategy.
-</p>
-
-</details>
+        </div>
 
 
-<details>
+        <div class="portfolio-card reveal">
 
-<summary>
-Can you build a website from scratch?
-</summary>
+            <img src="image.jpg"
+                 alt="Portfolio">
 
-<p>
-Yes. We can design and develop responsive websites
-according to your brand and business requirements.
-</p>
+            <div class="portfolio-info">
 
-</details>
+                <small>
+                    02 · FASHION
+                </small>
 
+                <h3>
+                    Creative Film
+                </h3>
 
-<details>
+            </div>
 
-<summary>
-How long does a website project take?
-</summary>
-
-<p>
-Most standard projects can be completed within 1–3 weeks
-depending on the number of pages and features.
-</p>
-
-</details>
+        </div>
 
 
-<details>
+        <div class="portfolio-card reveal">
 
-<summary>
-Do you provide custom designs?
-</summary>
+            <img src="image.jpg"
+                 alt="Portfolio">
 
-<p>
-Yes. Every project can be customized according to your
-brand identity, content and target audience.
-</p>
+            <div class="portfolio-info">
 
-</details>
+                <small>
+                    03 · PRODUCT
+                </small>
 
+                <h3>
+                    Product Film
+                </h3>
 
-<details>
+            </div>
 
-<summary>
-How can I start a project?
-</summary>
-
-<p>
-Simply contact our team on WhatsApp and share your requirements.
-We will discuss your project and recommend the best approach.
-</p>
-
-</details>
-
-</div>
-
-</div>
-
-</section>
+        </div>
 
 
-<!-- CTA -->
+        <div class="portfolio-card reveal">
 
-<section id="contact">
+            <img src="image.jpg"
+                 alt="Portfolio">
 
-<div class="container">
+            <div class="portfolio-info">
 
-<div class="cta">
+                <small>
+                    04 · BRAND
+                </small>
 
-<h2>
-Let's build something
-people remember.
-</h2>
+                <h3>
+                    Brand Story
+                </h3>
 
-<p>
-Have a project in mind? Let's turn your idea into
-a powerful digital experience.
-</p>
+            </div>
 
-<a href="https://wa.me/919373376926?text=Hello%20Edit%20Wallah,%20I%20want%20to%20start%20a%20project." class="cta-btn">
-Start a Conversation →
-</a>
+        </div>
 
-</div>
 
-</div>
+        <div class="portfolio-card reveal">
+
+            <img src="image.jpg"
+                 alt="Portfolio">
+
+            <div class="portfolio-info">
+
+                <small>
+                    05 · SOCIAL
+                </small>
+
+                <h3>
+                    Social Content
+                </h3>
+
+            </div>
+
+        </div>
+
+
+        <div class="portfolio-card reveal">
+
+            <img src="image.jpg"
+                 alt="Portfolio">
+
+            <div class="portfolio-info">
+
+                <small>
+                    06 · COMMERCIAL
+                </small>
+
+                <h3>
+                    Advertisement
+                </h3>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="center-button">
+
+        <a href="https://wa.me/919373376926"
+           class="primary-btn">
+
+            Get Your Ad Made →
+
+        </a>
+
+    </div>
 
 </section>
 
 
-<!-- FOOTER -->
+<!-- ================= ABOUT ================= -->
+
+<section class="about">
+
+    <div class="section-label reveal">
+        KNOW US
+    </div>
+
+
+    <div class="about-grid">
+
+
+        <div class="about-image reveal">
+
+            <img src="image.jpg"
+                 alt="Edit Wallah">
+
+        </div>
+
+
+        <div class="about-text reveal">
+
+            <h2>
+
+                We Don't Just Create Content.
+                We Build Brands That People Remember.
+
+            </h2>
+
+
+            <p>
+
+                At Edit Wallah, we believe every brand
+                has a story worth telling. Our goal is
+                to transform ideas into premium visual
+                content that captures attention and
+                builds a strong digital presence.
+
+            </p>
+
+
+            <p>
+
+                From professional video editing and
+                cinematic content to social media
+                creatives, we help brands stand out
+                in a crowded digital world.
+
+            </p>
+
+
+            <a href="https://wa.me/919373376926"
+               class="whatsapp-btn">
+
+                Chat on WhatsApp →
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
 
 <footer>
 
-<div class="container">
-
-<div class="footer-top">
-
-<div>
-
-<div class="footer-logo">
-Edit<span>Wallah</span>
-</div>
-
-<p>
-Creative digital solutions for brands that want
-to stand out and grow.
-</p>
-
-</div>
+    <div class="footer-top">
 
 
-<div class="footer-links">
+        <div class="footer-brand">
 
-<a href="#services">Services</a>
+            <h2>
 
-<a href="#about">About</a>
+                Let's Make Your Brand
+                Impossible To Ignore!
 
-<a href="#faq">FAQ</a>
-
-<a href="https://wa.me/919373376926?text=Hello%20Edit%20Wallah,%20I%20want%20to%20contact%20you.">
-Contact
-</a>
-
-<a href="https://www.instagram.com/editwallah.media/" target="_blank" class="instagram-link">
-Instagram ↗
-</a>
-
-</div>
-
-</div>
+            </h2>
 
 
-<div class="copyright">
+            <p>
 
-<span>
-© 2026 Edit Wallah. All rights reserved.
-</span>
+                Premium creative solutions for brands,
+                creators and businesses.
 
-<span>
-Made for ambitious brands.
-</span>
+            </p>
 
-</div>
 
-</div>
+            <a href="https://wa.me/919373376926"
+               class="primary-btn footer-cta">
+
+                Book Free Call
+
+            </a>
+
+        </div>
+
+
+        <div class="footer-columns">
+
+
+            <div class="footer-column">
+
+                <h4>
+                    SERVICES
+                </h4>
+
+                <a href="#services">
+                    Ad Content
+                </a>
+
+                <a href="#services">
+                    Video Editing
+                </a>
+
+                <a href="#services">
+                    Social Media Marketing
+                </a>
+
+                <a href="#services">
+                    Personal Branding
+                </a>
+
+                <a href="#services">
+                    Graphic Designing
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    CONTACT
+                </h4>
+
+                <a href="tel:+919373376926">
+                    +91 93733 76926
+                </a>
+
+                <a href="https://wa.me/919373376926">
+                    WhatsApp
+                </a>
+
+                <a href="https://www.instagram.com/editwallah.media?igsi=MXR2aWgxMDB5MWlxdQ=="
+                   target="_blank">
+
+                    Instagram
+
+                </a>
+
+                <a href="#">
+                    Maharashtra, Nagpur
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <div>
+            © 2026 Edit Wallah — All Rights Reserved.
+        </div>
+
+        <div>
+            Maharashtra, Nagpur
+        </div>
+
+    </div>
 
 </footer>
 
 
-<script>
+<!-- ================= FLOATING WHATSAPP ================= -->
 
-const menu = document.querySelector(".menu");
-const links = document.querySelector(".nav-links");
+<a href="https://wa.me/919373376926"
+   class="float-wa"
+   aria-label="WhatsApp">
 
-menu.addEventListener("click", () => {
+    <span>✆</span>
 
-if(links.style.display === "flex"){
-
-links.style.display = "none";
-
-}else{
-
-links.style.display = "flex";
-links.style.position = "absolute";
-links.style.top = "75px";
-links.style.left = "4%";
-links.style.width = "92%";
-links.style.flexDirection = "column";
-links.style.background = "#101010";
-links.style.padding = "25px";
-links.style.borderRadius = "15px";
-links.style.border = "1px solid #222";
-
-}
-
-});
+</a>
 
 
-document.querySelectorAll(".nav-links a").forEach(link => {
+<!-- IMPORTANT:
+     script.js is already connected here -->
 
-link.addEventListener("click", () => {
-
-if(window.innerWidth <= 800){
-links.style.display = "none";
-}
-
-});
-
-});
-
-</script>
+<script src="script.js"></script>
 
 </body>
   </html>
