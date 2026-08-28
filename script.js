@@ -1,180 +1,486 @@
-document.addEventListener("DOMContentLoaded", function () {
+/* =========================================
+   EDIT WALLAH — SCRIPT.JS
+   ========================================= */
 
-  // Mobile Menu
-  const menu = document.querySelector(".menu");
-  const navLinks = document.querySelector(".nav-links");
+document.addEventListener("DOMContentLoaded", () => {
 
-  if (menu && navLinks) {
-    menu.addEventListener("click", function () {
-      navLinks.classList.toggle("mobile-active");
+    /* =========================================
+       LOADER
+       ========================================= */
 
-      if (navLinks.classList.contains("mobile-active")) {
-        navLinks.style.display = "flex";
-        navLinks.style.position = "absolute";
-        navLinks.style.top = "75px";
-        navLinks.style.left = "4%";
-        navLinks.style.width = "92%";
-        navLinks.style.flexDirection = "column";
-        navLinks.style.background = "#101010";
-        navLinks.style.padding = "25px";
-        navLinks.style.borderRadius = "15px";
-        navLinks.style.border = "1px solid #222";
-      } else {
-        navLinks.style.display = "";
-      }
-    });
+    const loader = document.getElementById("loader");
 
-    document.querySelectorAll(".nav-links a").forEach(function (link) {
-      link.addEventListener("click", function () {
-        navLinks.classList.remove("mobile-active");
-        navLinks.style.display = "";
-      });
-    });
-  }
+    if (loader) {
 
+        window.addEventListener("load", () => {
 
-  // Navbar Scroll Effect
-  const navbar = document.querySelector("nav");
+            setTimeout(() => {
 
-  window.addEventListener("scroll", function () {
-    if (!navbar) return;
+                loader.classList.add("hide");
 
-    if (window.scrollY > 50) {
-      navbar.style.background = "rgba(7,7,7,0.95)";
-      navbar.style.boxShadow = "0 10px 40px rgba(0,0,0,0.3)";
-    } else {
-      navbar.style.background = "rgba(7,7,7,0.75)";
-      navbar.style.boxShadow = "none";
+            }, 800);
+
+        });
+
     }
-  });
 
 
-  // Smooth Scroll
-  document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+    /* =========================================
+       SCROLL REVEAL ANIMATION
+       ========================================= */
 
-    link.addEventListener("click", function (e) {
+    const revealElements =
+        document.querySelectorAll(".reveal");
 
-      const targetId = this.getAttribute("href");
+    const revealObserver =
+        new IntersectionObserver(
 
-      if (targetId === "#") return;
+            (entries, observer) => {
 
-      const target = document.querySelector(targetId);
+                entries.forEach((entry) => {
 
-      if (target) {
-        e.preventDefault();
+                    if (entry.isIntersecting) {
 
-        target.scrollIntoView({
-          behavior: "smooth",
-          block: "start"
+                        entry.target.classList.add("active");
+
+                        observer.unobserve(entry.target);
+
+                    }
+
+                });
+
+            },
+
+            {
+                threshold: 0.12,
+                rootMargin: "0px 0px -50px 0px"
+            }
+
+        );
+
+
+    revealElements.forEach((element) => {
+
+        revealObserver.observe(element);
+
+    });
+
+
+    /* =========================================
+       NAVBAR SCROLL EFFECT
+       ========================================= */
+
+    const navbar =
+        document.querySelector(".navbar");
+
+    function updateNavbar() {
+
+        if (!navbar) return;
+
+        if (window.scrollY > 80) {
+
+            navbar.classList.add("scrolled");
+
+        } else {
+
+            navbar.classList.remove("scrolled");
+
+        }
+
+    }
+
+    window.addEventListener(
+        "scroll",
+        updateNavbar,
+        { passive: true }
+    );
+
+    updateNavbar();
+
+
+    /* =========================================
+       HERO PHONE MOUSE PARALLAX
+       ========================================= */
+
+    const phone =
+        document.querySelector(".phone");
+
+
+    if (
+        phone &&
+        window.innerWidth > 900 &&
+        !window.matchMedia(
+            "(prefers-reduced-motion: reduce)"
+        ).matches
+    ) {
+
+        let mouseX = 0;
+        let mouseY = 0;
+
+        let currentX = 0;
+        let currentY = 0;
+
+
+        document.addEventListener(
+            "mousemove",
+            (event) => {
+
+                mouseX =
+                    (window.innerWidth / 2 -
+                        event.clientX) / 70;
+
+                mouseY =
+                    (window.innerHeight / 2 -
+                        event.clientY) / 70;
+
+            }
+        );
+
+
+        function animatePhone() {
+
+            currentX +=
+                (mouseX - currentX) * 0.08;
+
+            currentY +=
+                (mouseY - currentY) * 0.08;
+
+
+            phone.style.transform =
+                `rotate(7deg)
+                 translate(${currentX}px, ${currentY}px)`;
+
+
+            requestAnimationFrame(
+                animatePhone
+            );
+
+        }
+
+
+        animatePhone();
+
+    }
+
+
+    /* =========================================
+       HORIZONTAL SHOWCASE DRAG
+       ========================================= */
+
+    const slider =
+        document.querySelector(".showcase-row");
+
+
+    if (slider) {
+
+        let isDown = false;
+
+        let startX = 0;
+
+        let scrollStart = 0;
+
+
+        slider.addEventListener(
+            "mousedown",
+            (event) => {
+
+                isDown = true;
+
+                slider.classList.add(
+                    "dragging"
+                );
+
+                startX =
+                    event.pageX -
+                    slider.offsetLeft;
+
+                scrollStart =
+                    slider.scrollLeft;
+
+            }
+        );
+
+
+        slider.addEventListener(
+            "mouseleave",
+            () => {
+
+                isDown = false;
+
+                slider.classList.remove(
+                    "dragging"
+                );
+
+            }
+        );
+
+
+        slider.addEventListener(
+            "mouseup",
+            () => {
+
+                isDown = false;
+
+                slider.classList.remove(
+                    "dragging"
+                );
+
+            }
+        );
+
+
+        slider.addEventListener(
+            "mousemove",
+            (event) => {
+
+                if (!isDown) return;
+
+                event.preventDefault();
+
+                const currentX =
+                    event.pageX -
+                    slider.offsetLeft;
+
+                const distance =
+                    (currentX - startX) * 1.5;
+
+                slider.scrollLeft =
+                    scrollStart - distance;
+
+            }
+        );
+
+    }
+
+
+    /* =========================================
+       SMOOTH ANCHOR SCROLL
+       ========================================= */
+
+    document
+        .querySelectorAll('a[href^="#"]')
+        .forEach((link) => {
+
+            link.addEventListener(
+                "click",
+                function (event) {
+
+                    const targetID =
+                        this.getAttribute("href");
+
+
+                    if (
+                        !targetID ||
+                        targetID === "#"
+                    ) {
+
+                        return;
+
+                    }
+
+
+                    const target =
+                        document.querySelector(
+                            targetID
+                        );
+
+
+                    if (!target) return;
+
+
+                    event.preventDefault();
+
+
+                    target.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start"
+                    });
+
+                }
+            );
+
         });
-      }
-
-    });
-
-  });
 
 
-  // FAQ
-  const faqItems = document.querySelectorAll("details");
+    /* =========================================
+       SERVICE CARD 3D TILT
+       ========================================= */
 
-  faqItems.forEach(function (item) {
+    const serviceCards =
+        document.querySelectorAll(
+            ".service-card"
+        );
 
-    item.addEventListener("toggle", function () {
 
-      if (item.open) {
+    if (window.innerWidth > 900) {
 
-        faqItems.forEach(function (other) {
+        serviceCards.forEach((card) => {
 
-          if (other !== item) {
-            other.removeAttribute("open");
-          }
+            card.addEventListener(
+                "mousemove",
+                (event) => {
+
+                    const rect =
+                        card.getBoundingClientRect();
+
+
+                    const x =
+                        event.clientX -
+                        rect.left;
+
+
+                    const y =
+                        event.clientY -
+                        rect.top;
+
+
+                    const centerX =
+                        rect.width / 2;
+
+
+                    const centerY =
+                        rect.height / 2;
+
+
+                    const rotateX =
+                        ((y - centerY) /
+                            centerY) * -2;
+
+
+                    const rotateY =
+                        ((x - centerX) /
+                            centerX) * 2;
+
+
+                    card.style.transform =
+                        `perspective(1000px)
+                         rotateX(${rotateX}deg)
+                         rotateY(${rotateY}deg)
+                         translateY(-8px)`;
+
+                }
+            );
+
+
+            card.addEventListener(
+                "mouseleave",
+                () => {
+
+                    card.style.transform =
+                        "";
+
+                }
+            );
 
         });
 
-      }
-
-    });
-
-  });
+    }
 
 
-  // Scroll Reveal
-  const elements = document.querySelectorAll(
-    ".service, .stat, .feature, .process-card, .about, details, .cta"
-  );
+    /* =========================================
+       MARQUEE HOVER PAUSE
+       ========================================= */
 
-  const observer = new IntersectionObserver(function (entries) {
-
-    entries.forEach(function (entry) {
-
-      if (entry.isIntersecting) {
-
-        entry.target.style.opacity = "1";
-        entry.target.style.transform = "translateY(0)";
-
-        observer.unobserve(entry.target);
-      }
-
-    });
-
-  }, {
-    threshold: 0.15
-  });
+    const marquee =
+        document.querySelector(".marquee");
 
 
-  elements.forEach(function (element) {
+    if (marquee) {
 
-    element.style.opacity = "0";
-    element.style.transform = "translateY(35px)";
-    element.style.transition =
-      "opacity 0.8s ease, transform 0.8s ease";
-
-    observer.observe(element);
-
-  });
+        const track =
+            marquee.querySelector(
+                ".marquee-track"
+            );
 
 
-  // Mouse Glow Effect
-  const glow = document.querySelector(".glow");
+        if (track) {
 
-  if (glow) {
+            marquee.addEventListener(
+                "mouseenter",
+                () => {
 
-    document.addEventListener("mousemove", function (e) {
+                    track.style.animationPlayState =
+                        "paused";
 
-      const x =
-        (e.clientX / window.innerWidth - 0.5) * 40;
-
-      const y =
-        (e.clientY / window.innerHeight - 0.5) * 40;
-
-      glow.style.transform =
-        `translate(${x}px, ${y}px)`;
-
-    });
-
-  }
+                }
+            );
 
 
-  // Button Click Effect
-  const buttons = document.querySelectorAll(
-    ".primary, .secondary, .nav-btn, .cta-btn"
-  );
+            marquee.addEventListener(
+                "mouseleave",
+                () => {
 
-  buttons.forEach(function (button) {
+                    track.style.animationPlayState =
+                        "running";
 
-    button.addEventListener("click", function () {
+                }
+            );
 
-      button.style.transform = "scale(0.95)";
+        }
 
-      setTimeout(function () {
-        button.style.transform = "";
-      }, 150);
-
-    });
-
-  });
+    }
 
 
-  console.log("Edit Wallah website loaded successfully 🚀");
+    /* =========================================
+       IMAGE FALLBACK
+       ========================================= */
+
+    document
+        .querySelectorAll("img")
+        .forEach((image) => {
+
+            image.addEventListener(
+                "error",
+                () => {
+
+                    console.warn(
+                        "Image not found:",
+                        image.src
+                    );
+
+                }
+            );
+
+
+            image.setAttribute(
+                "draggable",
+                "false"
+            );
+
+        });
+
+
+    /* =========================================
+       WHATSAPP CTA TRACKING
+       ========================================= */
+
+    document
+        .querySelectorAll(
+            'a[href*="wa.me"]'
+        )
+        .forEach((button) => {
+
+            button.addEventListener(
+                "click",
+                () => {
+
+                    console.log(
+                        "Edit Wallah WhatsApp CTA clicked"
+                    );
+
+                }
+            );
+
+        });
+
+
+    /* =========================================
+       PAGE LOADED
+       ========================================= */
+
+    document.body.classList.add(
+        "page-loaded"
+    );
+
 
 });
