@@ -166,10 +166,6 @@ button {
   position: relative;
 }
 
-/*
-   Logo ke bagal me EDIT WALLAH text
-*/
-
 .brand::after {
   content: "EDIT WALLAH";
 
@@ -586,6 +582,8 @@ button {
 
   inset: 9px;
 
+  overflow: hidden;
+
   border-radius: 35px;
 
   background:
@@ -599,6 +597,23 @@ button {
       #171717,
       #050505
     );
+}
+
+.device-screen img,
+.device-screen video {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+
+  border: 0;
+  margin: 0;
+  padding: 0;
+
+  border-radius: inherit;
 }
 
 .device-button {
@@ -1712,16 +1727,34 @@ button {
   }
 
 
-  /* HERO */
+  /* =======================================================
+     MOBILE HERO
+  ======================================================= */
 
   .hero {
-    min-height: 850px;
+    min-height: 1250px;
 
     padding:
       135px 24px
       80px;
 
+    display: flex;
+
     align-items: flex-start;
+
+    position: relative;
+
+    overflow: hidden;
+  }
+
+  .hero-copy {
+    width: 100%;
+
+    max-width: 100%;
+
+    position: relative;
+
+    z-index: 4;
   }
 
   .hero h1 {
@@ -1729,10 +1762,16 @@ button {
       clamp(43px, 13vw, 65px);
 
     letter-spacing: -2px;
+
+    line-height: 0.98;
   }
 
   .hero-text {
     font-size: 15px;
+
+    line-height: 1.7;
+
+    max-width: 100%;
   }
 
   .hero-actions {
@@ -1743,27 +1782,64 @@ button {
     gap: 18px;
   }
 
+
+  /* =======================================================
+     MOBILE PHONE
+  ======================================================= */
+
   .hero-device {
     opacity: 0.38;
 
-    right: -65px;
-    top: 65%;
+    right: 18px;
+
+    top: auto;
+
+    bottom: 45px;
 
     width: 220px;
+
     height: 430px;
 
-    transform:
-      translateY(-50%)
-      rotate(9deg);
+    transform: rotate(9deg);
+
+    z-index: 2;
+  }
+
+  .device-screen {
+    inset: 8px;
+
+    border-radius: 34px;
+
+    overflow: hidden;
+  }
+
+  .device-screen img,
+  .device-screen video {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    display: block;
   }
 
   .hero-glow {
+    width: 420px;
+    height: 420px;
+
     right: -150px;
-    top: 45%;
+
+    top: 55%;
+
+    pointer-events: none;
   }
 
 
-  /* SECTIONS */
+  /* =======================================================
+     SECTIONS
+  ======================================================= */
 
   .section {
     padding:
@@ -1784,7 +1860,9 @@ button {
   }
 
 
-  /* SLIDER */
+  /* =======================================================
+     SLIDER
+  ======================================================= */
 
   .portfolio-card {
     flex-basis: 78vw;
@@ -1801,7 +1879,9 @@ button {
   }
 
 
-  /* PROCESS */
+  /* =======================================================
+     PROCESS
+  ======================================================= */
 
   .process-section {
     padding-left: 20px;
@@ -1819,7 +1899,9 @@ button {
   }
 
 
-  /* SERVICES */
+  /* =======================================================
+     SERVICES
+  ======================================================= */
 
   .service-card {
     grid-template-columns: 1fr;
@@ -1827,6 +1909,7 @@ button {
 
   .service-image {
     min-height: 260px;
+
     height: 260px;
   }
 
@@ -1835,7 +1918,9 @@ button {
   }
 
 
-  /* CLIENTS */
+  /* =======================================================
+     CLIENTS
+  ======================================================= */
 
   .clients-section {
     padding:
@@ -1843,10 +1928,13 @@ button {
   }
 
 
-  /* ABOUT */
+  /* =======================================================
+     ABOUT
+  ======================================================= */
 
   .about-section {
     padding-left: 20px;
+
     padding-right: 20px;
   }
 
@@ -1865,7 +1953,9 @@ button {
   }
 
 
-  /* FINAL CTA */
+  /* =======================================================
+     FINAL CTA
+  ======================================================= */
 
   .final-cta {
     padding:
@@ -1880,7 +1970,9 @@ button {
   }
 
 
-  /* FOOTER */
+  /* =======================================================
+     FOOTER
+  ======================================================= */
 
   .footer {
     padding:
@@ -1908,6 +2000,7 @@ button {
     height: 52px;
 
     right: 16px;
+
     bottom: 16px;
   }
 
@@ -1926,16 +2019,38 @@ button {
 
   .brand::after {
     font-size: 11px;
+
     letter-spacing: 1.4px;
   }
 
   .brand img {
     width: 35px;
+
     height: 35px;
   }
 
   .hero {
-    min-height: 820px;
+    min-height: 1200px;
+
+    padding-left: 20px;
+
+    padding-right: 20px;
+  }
+
+  .hero-device {
+    right: 10px;
+
+    bottom: 35px;
+
+    width: 205px;
+
+    height: 400px;
+  }
+
+  .device-screen {
+    inset: 8px;
+
+    border-radius: 32px;
   }
 
   .portfolio-card {
@@ -1951,10 +2066,32 @@ button {
   }
 
 }
-.device-screen img {
+
+
+/* =========================================================
+   DEVICE MEDIA — IMAGE / VIDEO
+========================================================= */
+
+.device-screen {
+  overflow: hidden;
+}
+
+.device-screen img,
+.device-screen video {
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  object-position: center;
+
   display: block;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  border: 0;
+
+  margin: 0;
+
+  padding: 0;
+
+  border-radius: inherit;
 }
