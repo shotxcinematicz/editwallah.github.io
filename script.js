@@ -121,6 +121,126 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   /* =========================================
+     VIDEO SOUND ON CLICK / TAP
+  ========================================= */
+
+  const soundVideos =
+    document.querySelectorAll(
+      "video[data-sound-video]"
+    );
+
+
+  soundVideos.forEach(function (video) {
+
+    video.addEventListener("click", function (event) {
+
+      /*
+       * Stop click from accidentally triggering
+       * slider drag behaviour.
+       */
+      event.stopPropagation();
+
+
+      /*
+       * If this video is muted,
+       * turn its sound ON.
+       *
+       * If already unmuted,
+       * turn its sound OFF.
+       */
+      const shouldUnmute =
+        video.muted === true;
+
+
+      /*
+       * Mute every other video first.
+       * This prevents multiple videos playing
+       * sound at the same time.
+       */
+      soundVideos.forEach(function (otherVideo) {
+
+        if (otherVideo !== video) {
+
+          otherVideo.muted = true;
+
+          updateSoundIcon(
+            otherVideo,
+            false
+          );
+
+        }
+
+      });
+
+
+      /*
+       * Toggle current video's sound.
+       */
+      video.muted = !shouldUnmute;
+
+
+      /*
+       * Make sure the video keeps playing
+       * after the user taps it.
+       */
+      if (video.paused) {
+
+        const playPromise =
+          video.play();
+
+        if (
+          playPromise &&
+          typeof playPromise.catch === "function"
+        ) {
+
+          playPromise.catch(function () {});
+
+        }
+
+      }
+
+
+      updateSoundIcon(
+        video,
+        !video.muted
+      );
+
+    });
+
+
+    /*
+     * Make sure autoplay videos start muted.
+     */
+    video.muted = true;
+
+  });
+
+
+  function updateSoundIcon(video, isSoundOn) {
+
+    const card =
+      video.closest(".portfolio-card");
+
+
+    if (!card) return;
+
+
+    const icon =
+      card.querySelector(".sound-icon");
+
+
+    if (!icon) return;
+
+
+    icon.textContent =
+      isSoundOn
+        ? "🔊"
+        : "🔇";
+
+  }
+
+
+  /* =========================================
      PORTFOLIO SLIDER
   ========================================= */
 
@@ -209,7 +329,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /* =====================================
-       MOUSE DRAG
+       MOUSE / TOUCH DRAG
     ===================================== */
 
     let isDragging = false;
@@ -223,6 +343,20 @@ document.addEventListener("DOMContentLoaded", function () {
       "pointerdown",
       function (event) {
 
+        /*
+         * Don't start slider dragging when
+         * user is clicking directly on a video.
+         */
+        if (
+          event.target &&
+          event.target.tagName === "VIDEO"
+        ) {
+
+          return;
+
+        }
+
+
         isDragging = true;
 
         startX = event.clientX;
@@ -230,9 +364,13 @@ document.addEventListener("DOMContentLoaded", function () {
         startScroll =
           slider.scrollLeft;
 
-        slider.setPointerCapture(
-          event.pointerId
-        );
+        try {
+
+          slider.setPointerCapture(
+            event.pointerId
+          );
+
+        } catch (error) {}
 
       }
     );
@@ -294,7 +432,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   /* =========================================
-     HERO MOBILE PARALLAX
+     HERO DESKTOP PARALLAX
   ========================================= */
 
   const device =
