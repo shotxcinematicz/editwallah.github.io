@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
   <title>Edit Wallah — Creative Studio</title>
 
@@ -12,6 +12,40 @@
   >
 
   <link rel="stylesheet" href="style.css">
+
+  <!-- MOBILE OVERFLOW FIX -->
+  <style>
+    html,
+    body {
+      width: 100%;
+      max-width: 100%;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+    }
+
+    video {
+      display: block;
+    }
+
+    .portfolio-slider,
+    .portfolio-card,
+    .process-image,
+    .device-screen {
+      max-width: 100%;
+    }
+  </style>
 </head>
 
 <body>
@@ -145,6 +179,7 @@
         loop
         playsinline
         preload="metadata"
+        data-sound-video
       >
         <source src="hero-phone.mp4" type="video/mp4">
       </video>
@@ -246,13 +281,14 @@
           loop
           playsinline
           preload="metadata"
+          data-sound-video
         >
           <source src="work-01.mp4" type="video/mp4">
         </video>
 
         <div class="card-meta">
           <strong>01</strong>
-          <span>🔇</span>
+          <span class="sound-icon">🔇</span>
         </div>
 
         <div class="card-title">
@@ -273,13 +309,14 @@
           loop
           playsinline
           preload="metadata"
+          data-sound-video
         >
           <source src="work-02.mp4" type="video/mp4">
         </video>
 
         <div class="card-meta">
           <strong>02</strong>
-          <span>🔇</span>
+          <span class="sound-icon">🔇</span>
         </div>
 
         <div class="card-title">
@@ -300,13 +337,14 @@
           loop
           playsinline
           preload="metadata"
+          data-sound-video
         >
           <source src="work-03.mp4" type="video/mp4">
         </video>
 
         <div class="card-meta">
           <strong>03</strong>
-          <span>🔇</span>
+          <span class="sound-icon">🔇</span>
         </div>
 
         <div class="card-title">
@@ -327,13 +365,14 @@
           loop
           playsinline
           preload="metadata"
+          data-sound-video
         >
           <source src="work-04.mp4" type="video/mp4">
         </video>
 
         <div class="card-meta">
           <strong>04</strong>
-          <span>🔇</span>
+          <span class="sound-icon">🔇</span>
         </div>
 
         <div class="card-title">
@@ -354,13 +393,14 @@
           loop
           playsinline
           preload="metadata"
+          data-sound-video
         >
           <source src="work-05.mp4" type="video/mp4">
         </video>
 
         <div class="card-meta">
           <strong>05</strong>
-          <span>🔇</span>
+          <span class="sound-icon">🔇</span>
         </div>
 
         <div class="card-title">
@@ -452,6 +492,7 @@
           loop
           playsinline
           preload="metadata"
+          data-sound-video
         >
           <source src="process-01.mp4" type="video/mp4">
         </video>
@@ -486,6 +527,7 @@
           loop
           playsinline
           preload="metadata"
+          data-sound-video
         >
           <source src="process-02.mp4" type="video/mp4">
         </video>
@@ -520,6 +562,7 @@
           loop
           playsinline
           preload="metadata"
+          data-sound-video
         >
           <source src="process-03.mp4" type="video/mp4">
         </video>
@@ -554,6 +597,7 @@
           loop
           playsinline
           preload="metadata"
+          data-sound-video
         >
           <source src="process-04.mp4" type="video/mp4">
         </video>
@@ -879,13 +923,14 @@
           loop
           playsinline
           preload="metadata"
+          data-sound-video
         >
           <source src="portfolio-01.mp4" type="video/mp4">
         </video>
 
         <div class="card-meta">
           <strong>01</strong>
-          <span>🔇</span>
+          <span class="sound-icon">🔇</span>
         </div>
 
         <div class="card-title">
@@ -906,13 +951,14 @@
           loop
           playsinline
           preload="metadata"
+          data-sound-video
         >
           <source src="portfolio-02.mp4" type="video/mp4">
         </video>
 
         <div class="card-meta">
           <strong>02</strong>
-          <span>🔇</span>
+          <span class="sound-icon">🔇</span>
         </div>
 
         <div class="card-title">
@@ -933,13 +979,14 @@
           loop
           playsinline
           preload="metadata"
+          data-sound-video
         >
           <source src="portfolio-03.mp4" type="video/mp4">
         </video>
 
         <div class="card-meta">
           <strong>03</strong>
-          <span>🔇</span>
+          <span class="sound-icon">🔇</span>
         </div>
 
         <div class="card-title">
@@ -960,13 +1007,14 @@
           loop
           playsinline
           preload="metadata"
+          data-sound-video
         >
           <source src="portfolio-04.mp4" type="video/mp4">
         </video>
 
         <div class="card-meta">
           <strong>04</strong>
-          <span>🔇</span>
+          <span class="sound-icon">🔇</span>
         </div>
 
         <div class="card-title">
