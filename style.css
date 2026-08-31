@@ -614,6 +614,12 @@ button {
   padding: 0;
 
   border-radius: inherit;
+
+  filter:
+    brightness(1.18)
+    contrast(1.05);
+
+  opacity: 1;
 }
 
 .device-button {
@@ -816,7 +822,8 @@ button {
     0 20px 50px rgba(0,0,0,0.1);
 }
 
-.portfolio-card img {
+.portfolio-card img,
+.portfolio-card video {
   width: 100%;
   height: 100%;
 
@@ -824,11 +831,16 @@ button {
 
   object-fit: cover;
 
+  object-position: center;
+
+  display: block;
+
   transition:
     transform 0.5s ease;
 }
 
-.portfolio-card:hover img {
+.portfolio-card:hover img,
+.portfolio-card:hover video {
   transform: scale(1.04);
 }
 
@@ -1039,17 +1051,23 @@ button {
   background: #202020;
 }
 
-.process-image img {
+.process-image img,
+.process-image video {
   width: 100%;
   height: 100%;
 
   object-fit: cover;
 
+  object-position: center;
+
+  display: block;
+
   transition:
     transform 0.5s ease;
 }
 
-.process-card:hover .process-image img {
+.process-card:hover .process-image img,
+.process-card:hover .process-image video {
   transform: scale(1.05);
 }
 
@@ -1784,23 +1802,25 @@ button {
 
 
   /* =======================================================
-     MOBILE PHONE
+     MOBILE PHONE — EXACT CENTER + BRIGHT
   ======================================================= */
 
   .hero-device {
-    opacity: 0.38;
+    opacity: 1;
 
-    right: 18px;
+    left: 50%;
+    right: auto;
 
     top: auto;
 
     bottom: 45px;
 
     width: 220px;
-
     height: 430px;
 
-    transform: rotate(9deg);
+    transform:
+      translateX(-50%)
+      rotate(9deg);
 
     z-index: 2;
   }
@@ -1811,6 +1831,8 @@ button {
     border-radius: 34px;
 
     overflow: hidden;
+
+    background: #111;
   }
 
   .device-screen img,
@@ -1823,13 +1845,22 @@ button {
     object-position: center;
 
     display: block;
+
+    opacity: 1;
+
+    filter:
+      brightness(1.18)
+      contrast(1.05);
   }
 
   .hero-glow {
     width: 420px;
     height: 420px;
 
-    right: -150px;
+    left: 50%;
+    right: auto;
+
+    transform: translateX(-50%);
 
     top: 55%;
 
@@ -1870,7 +1901,8 @@ button {
     min-height: 470px;
   }
 
-  .portfolio-card img {
+  .portfolio-card img,
+  .portfolio-card video {
     min-height: 470px;
   }
 
@@ -2037,20 +2069,47 @@ button {
     padding-right: 20px;
   }
 
+  /* EXACT CENTER ON SMALL PHONES */
+
   .hero-device {
-    right: 10px;
+    left: 50%;
+    right: auto;
 
     bottom: 35px;
 
     width: 205px;
 
     height: 400px;
+
+    transform:
+      translateX(-50%)
+      rotate(9deg);
+
+    opacity: 1;
   }
 
   .device-screen {
     inset: 8px;
 
     border-radius: 32px;
+
+    overflow: hidden;
+  }
+
+  .device-screen img,
+  .device-screen video {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    opacity: 1;
+
+    filter:
+      brightness(1.18)
+      contrast(1.05);
   }
 
   .portfolio-card {
@@ -2094,4 +2153,10 @@ button {
   padding: 0;
 
   border-radius: inherit;
+
+  opacity: 1;
+
+  filter:
+    brightness(1.18)
+    contrast(1.05);
 }
