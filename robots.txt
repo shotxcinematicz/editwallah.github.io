@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://shotxcinematicz.github.io/editwallah.github.io/sitemap.xml
