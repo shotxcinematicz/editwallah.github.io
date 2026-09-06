@@ -1,1773 +1,1829 @@
-<!DOCTYPE html>  <html lang="en">  <head>    <meta charset="UTF-8">  <meta
-name="viewport"
-content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+  >
+
+  <!-- ================= SEO ================= -->
+
+  <title>
+    Edit Wallah | Video Editing, Creative Studio & Digital Marketing
+  </title>
+
+  <meta
+    name="description"
+    content="Edit Wallah is a creative studio offering professional video editing, ad shoots, social media marketing, performance marketing, graphic design, personal branding and creative content services."
+  >
+
+  <meta
+    name="keywords"
+    content="Edit Wallah, Edit Wallah Creative Studio, video editing, video editor, professional video editing, ad shoot, video production, social media marketing, performance marketing, graphic designing, personal branding, influencer marketing, creative agency"
+  >
+
+  <meta
+    name="author"
+    content="Edit Wallah"
+  >
+
+  <meta
+    name="robots"
+    content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+  >
+
+  <meta
+    name="googlebot"
+    content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+  >
+
+  <meta
+    name="theme-color"
+    content="#080808"
+  >
+
+  <!-- ================= CANONICAL ================= -->
+
+  <link
+    rel="canonical"
+    href="https://shotxcinematicz.github.io/editwallah.github.io/"
+  >
+
+  <!-- ================= OPEN GRAPH ================= -->
+
+  <meta
+    property="og:type"
+    content="website"
+  >
+
+  <meta
+    property="og:title"
+    content="Edit Wallah | Creative Studio & Video Editing"
+  >
+
+  <meta
+    property="og:description"
+    content="Professional video editing, ad shoots, social media marketing, performance marketing and creative content by Edit Wallah."
+  >
+
+  <meta
+    property="og:url"
+    content="https://shotxcinematicz.github.io/editwallah.github.io/"
+  >
+
+  <meta
+    property="og:site_name"
+    content="Edit Wallah"
+  >
+
+  <meta
+    property="og:image"
+    content="https://shotxcinematicz.github.io/editwallah.github.io/logo.png"
+  >
+
+  <meta
+    property="og:image:alt"
+    content="Edit Wallah Creative Studio Logo"
+  >
+
+  <!-- ================= TWITTER ================= -->
+
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  >
+
+  <meta
+    name="twitter:title"
+    content="Edit Wallah | Creative Studio"
+  >
+
+  <meta
+    name="twitter:description"
+    content="Professional video editing, ad shoots, digital marketing and creative brand solutions."
+  >
+
+  <meta
+    name="twitter:image"
+    content="https://shotxcinematicz.github.io/editwallah.github.io/logo.png"
+  >
+
+  <!-- ================= FAVICON ================= -->
+
+  <link
+    rel="icon"
+    type="image/png"
+    href="logo.png"
+  >
+
+  <!-- ================= STRUCTURED DATA ================= -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CreativeAgency",
+    "name": "Edit Wallah",
+    "url": "https://shotxcinematicz.github.io/editwallah.github.io/",
+    "logo": "https://shotxcinematicz.github.io/editwallah.github.io/logo.png",
+    "image": "https://shotxcinematicz.github.io/editwallah.github.io/image.jpg",
+    "description": "Edit Wallah is a creative studio providing professional video editing, ad shoots, social media marketing, performance marketing, graphic designing, personal branding and creative content services.",
+    "telephone": "+91-9373376926",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Nagpur",
+      "addressRegion": "Maharashtra",
+      "addressCountry": "IN"
+    },
+    "sameAs": [
+      "https://www.instagram.com/editwallah.media/"
+    ],
+    "serviceType": [
+      "Video Editing",
+      "Video Production",
+      "Ad Shoot",
+      "Social Media Marketing",
+      "Performance Marketing",
+      "Graphic Designing",
+      "Personal Branding",
+      "Influencer Marketing"
+    ]
+  }
+  </script>
+
+  <!-- ================= CSS ================= -->
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
+  <!-- ================= MOBILE + ICON FIX ================= -->
+
+  <style>
+
+    html,
+    body {
+      width: 100%;
+      max-width: 100%;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+    }
+
+    video {
+      display: block;
+    }
+
+    .portfolio-slider,
+    .portfolio-card,
+    .process-image,
+    .device-screen {
+      max-width: 100%;
+    }
+
+    /* ================= CIRCULAR LOGO ================= */
+
+    .brand .logo-circle {
+      width: 43px !important;
+      height: 43px !important;
+      min-width: 43px !important;
+      min-height: 43px !important;
+      border-radius: 50% !important;
+      object-fit: cover !important;
+      object-position: center !important;
+      display: block !important;
+      overflow: hidden !important;
+    }
+
+    .page-loader .logo-circle,
+    .footer-brand .logo-circle {
+      border-radius: 50% !important;
+      object-fit: cover !important;
+    }
+
+    /* ================= 3 LINE MENU ================= */
+
+    .menu-btn {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 5px !important;
+    }
+
+    .menu-btn span {
+      display: block !important;
+      width: 24px !important;
+      height: 2px !important;
+      background: currentColor !important;
+      border-radius: 2px !important;
+    }
+
+    /* ================= CHAT ICON ================= */
+
+    .whatsapp-float {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+    }
+
+    .whatsapp-float svg {
+      width: 30px !important;
+      height: 30px !important;
+      display: block !important;
+    }
+
+    /* ================= PROCESS IMAGES ================= */
+
+    .process-image img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- ================= LOADER ================= -->
+
+  <div
+    class="page-loader"
+    id="pageLoader"
+  >
+
+    <img
+      src="logo.png"
+      alt="Edit Wallah Creative Studio Logo"
+      class="logo-circle"
+      width="43"
+      height="43"
+    >
+
+    <p>EDIT WALLAH</p>
+
+  </div>
+
+
+  <!-- ================= HEADER ================= -->
+
+  <header
+    class="site-header"
+    id="siteHeader"
+  >
+
+    <a
+      href="#top"
+      class="brand"
+      aria-label="Edit Wallah Home"
+    >
+
+      <img
+        src="logo.png"
+        alt="Edit Wallah Logo"
+        class="logo-circle"
+        width="43"
+        height="43"
+      >
+
+    </a>
+
+
+    <nav
+      class="desktop-nav"
+      aria-label="Main Navigation"
+    >
+
+      <a href="#work">
+        Work
+      </a>
+
+      <a href="#process">
+        Process
+      </a>
+
+      <a href="#services">
+        Services
+      </a>
+
+      <a href="#about">
+        About
+      </a>
+
+      <a
+        class="header-cta"
+        href="https://wa.me/919373376926"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Book A Call →
+      </a>
+
+    </nav>
+
+
+    <!-- ================= 3 LINE MENU ================= -->
+
+    <button
+      class="menu-btn"
+      id="menuBtn"
+      aria-label="Open Menu"
+      type="button"
+    >
+
+      <span></span>
+      <span></span>
+      <span></span>
+
+    </button>
+
+
+    <div
+      class="mobile-menu"
+      id="mobileMenu"
+    >
+
+      <a href="#work">
+        Work
+      </a>
+
+      <a href="#process">
+        Process
+      </a>
+
+      <a href="#services">
+        Services
+      </a>
+
+      <a href="#about">
+        About
+      </a>
+
+      <a
+        href="https://wa.me/919373376926"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Book A Call →
+      </a>
+
+    </div>
 
-> 
+  </header>
 
-  <!-- ================= SEO ================= -->    <title>  
-    Edit Wallah | Video Editing, Creative Studio & Digital Marketing  
-  </title>  <meta
-name="description"
-content="Edit Wallah is a creative studio offering professional video editing, ad shoots, social media marketing, performance marketing, graphic design, personal branding and creative content services."
 
-> 
+  <main id="top">
 
-<meta
-name="keywords"
-content="Edit Wallah, Edit Wallah Creative Studio, video editing, video editor, professional video editing, ad shoot, video production, social media marketing, performance marketing, graphic designing, personal branding, influencer marketing, creative agency"
+    <!-- ================= HERO ================= -->
 
-> 
+    <section
+      class="hero"
+      aria-labelledby="hero-title"
+    >
 
-<meta
-name="author"
-content="Edit Wallah"
+      <div class="hero-copy reveal">
 
-> 
+        <div class="eyebrow">
+          EDIT WALLAH — CREATIVE STUDIO
+        </div>
 
-<meta
-name="robots"
-content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
 
-> 
+        <h1 id="hero-title">
 
-<meta
-name="googlebot"
-content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+          We Make Your Brand<br>
 
-> 
+          <span>
+            Impossible To Ignore
+          </span>
 
-<meta
-name="theme-color"
-content="#080808"
+        </h1>
+
+
+        <p class="hero-text">
 
-> 
+          Edit Wallah creates scroll-stopping content,
+          cinematic video edits, professional ad creatives
+          and powerful brand visuals that make people
+          remember your brand.
 
-  <!-- ================= CANONICAL ================= -->    <link  
-    rel="canonical"  
-    href="https://shotxcinematicz.github.io/editwallah.github.io/"  
-  >    <!-- ================= OPEN GRAPH ================= -->  <meta
-property="og:type"
-content="website"
-
-> 
-
-<meta
-property="og:title"
-content="Edit Wallah | Creative Studio & Video Editing"
-
-> 
-
-<meta
-property="og:description"
-content="Professional video editing, ad shoots, social media marketing, performance marketing and creative content by Edit Wallah."
-
-> 
-
-<meta
-property="og:url"
-content="https://shotxcinematicz.github.io/editwallah.github.io/"
-
-> 
-
-<meta
-property="og:site_name"
-content="Edit Wallah"
-
-> 
-
-<meta
-property="og:image"
-content="https://shotxcinematicz.github.io/editwallah.github.io/logo.png"
-
-> 
-
-<meta
-property="og:image:alt"
-content="Edit Wallah Creative Studio Logo"
-
-> 
-
-  <!-- ================= TWITTER ================= -->  <meta
-name="twitter:card"
-content="summary_large_image"
-
-> 
-
-<meta
-name="twitter:title"
-content="Edit Wallah | Creative Studio"
-
-> 
-
-<meta
-name="twitter:description"
-content="Professional video editing, ad shoots, digital marketing and creative brand solutions."
-
-> 
-
-<meta
-name="twitter:image"
-content="https://shotxcinematicz.github.io/editwallah.github.io/logo.png"
-
-> 
-
-  <!-- ================= FAVICON ================= -->    <link  
-    rel="icon"  
-    type="image/png"  
-    href="logo.png"  
-  >    <!-- ================= STRUCTURED DATA ================= -->    <script type="application/ld+json">  
-  {  
-    "@context": "https://schema.org",  
-    "@type": "CreativeAgency",  
-    "name": "Edit Wallah",  
-    "url": "https://shotxcinematicz.github.io/editwallah.github.io/",  
-    "logo": "https://shotxcinematicz.github.io/editwallah.github.io/logo.png",  
-    "image": "https://shotxcinematicz.github.io/editwallah.github.io/image.jpg",  
-    "description": "Edit Wallah is a creative studio providing professional video editing, ad shoots, social media marketing, performance marketing, graphic designing, personal branding and creative content services.",  
-    "telephone": "+91-9373376926",  
-    "address": {  
-      "@type": "PostalAddress",  
-      "addressLocality": "Nagpur",  
-      "addressRegion": "Maharashtra",  
-      "addressCountry": "IN"  
-    },  
-    "sameAs": [  
-      "https://www.instagram.com/editwallah.media/"  
-    ],  
-    "serviceType": [  
-      "Video Editing",  
-      "Video Production",  
-      "Ad Shoot",  
-      "Social Media Marketing",  
-      "Performance Marketing",  
-      "Graphic Designing",  
-      "Personal Branding",  
-      "Influencer Marketing"  
-    ]  
-  }  
-  </script>    <!-- ================= CSS ================= -->    <link  
-    rel="stylesheet"  
-    href="style.css"  
-  >    <!-- ================= MOBILE + ICON FIX ================= -->    <style>  
-  
-    html,  
-    body {  
-      width: 100%;  
-      max-width: 100%;  
-      margin: 0;  
-      padding: 0;  
-      overflow-x: hidden;  
-    }  
-  
-    *,  
-    *::before,  
-    *::after {  
-      box-sizing: border-box;  
-    }  
-  
-    img,  
-    video {  
-      max-width: 100%;  
-    }  
-  
-    video {  
-      display: block;  
-    }  
-  
-    .portfolio-slider,  
-    .portfolio-card,  
-    .process-image,  
-    .device-screen {  
-      max-width: 100%;  
-    }  
-  
-    /* ================= CIRCULAR LOGO ================= */  
-  
-    .brand .logo-circle {  
-      width: 43px !important;  
-      height: 43px !important;  
-      min-width: 43px !important;  
-      min-height: 43px !important;  
-      border-radius: 50% !important;  
-      object-fit: cover !important;  
-      object-position: center !important;  
-      display: block !important;  
-      overflow: hidden !important;  
-    }  
-  
-    .page-loader .logo-circle,  
-    .footer-brand .logo-circle {  
-      border-radius: 50% !important;  
-      object-fit: cover !important;  
-    }  
-  
-    /* ================= 3 LINE MENU ================= */  
-  
-    .menu-btn {  
-      display: flex !important;  
-      flex-direction: column !important;  
-      align-items: center !important;  
-      justify-content: center !important;  
-      gap: 5px !important;  
-    }  
-  
-    .menu-btn span {  
-      display: block !important;  
-      width: 24px !important;  
-      height: 2px !important;  
-      background: currentColor !important;  
-      border-radius: 2px !important;  
-    }  
-  
-    /* ================= CHAT ICON ================= */  
-  
-    .whatsapp-float {  
-      display: flex !important;  
-      align-items: center !important;  
-      justify-content: center !important;  
-    }  
-  
-    .whatsapp-float svg {  
-      width: 30px !important;  
-      height: 30px !important;  
-      display: block !important;  
-    }  
-  
-  </style>  </head>  <body>    <!-- ================= LOADER ================= -->    <div  
-    class="page-loader"  
-    id="pageLoader"  
-  >  <img  
-  src="logo.png"  
-  alt="Edit Wallah Creative Studio Logo"  
-  class="logo-circle"  
-  width="43"  
-  height="43"  
->  
-
-<p>EDIT WALLAH</p>
-
-  </div>    <!-- ================= HEADER ================= -->    <header  
-    class="site-header"  
-    id="siteHeader"  
-  >  <a  
-  href="#top"  
-  class="brand"  
-  aria-label="Edit Wallah Home"  
->  
-
-  <img  
-    src="logo.png"  
-    alt="Edit Wallah Logo"  
-    class="logo-circle"  
-    width="43"  
-    height="43"  
-  >  
-
-</a>  
-
-
-<nav  
-  class="desktop-nav"  
-  aria-label="Main Navigation"  
->  
-
-  <a href="#work">  
-    Work  
-  </a>  
-
-  <a href="#process">  
-    Process  
-  </a>  
-
-  <a href="#services">  
-    Services  
-  </a>  
-
-  <a href="#about">  
-    About  
-  </a>  
-
-  <a  
-    class="header-cta"  
-    href="https://wa.me/919373376926"  
-    target="_blank"  
-    rel="noopener noreferrer"  
-  >  
-    Book A Call →  
-  </a>  
-
-</nav>  
-
-
-<!-- ================= 3 LINE MENU ================= -->  
-
-<button  
-  class="menu-btn"  
-  id="menuBtn"  
-  aria-label="Open Menu"  
-  type="button"  
->  
-
-  <span></span>  
-  <span></span>  
-  <span></span>  
-
-</button>  
-
-
-<div  
-  class="mobile-menu"  
-  id="mobileMenu"  
->  
-
-  <a href="#work">  
-    Work  
-  </a>  
-
-  <a href="#process">  
-    Process  
-  </a>  
-
-  <a href="#services">  
-    Services  
-  </a>  
-
-  <a href="#about">  
-    About  
-  </a>  
-
-  <a  
-    href="https://wa.me/919373376926"  
-    target="_blank"  
-    rel="noopener noreferrer"  
-  >  
-    Book A Call →  
-  </a>  
-
-</div>
-
-  </header>    <main id="top">  <!-- ================= HERO ================= -->  
-
-<section  
-  class="hero"  
-  aria-labelledby="hero-title"  
->  
-
-  <div class="hero-copy reveal">  
-
-    <div class="eyebrow">  
-      EDIT WALLAH — CREATIVE STUDIO  
-    </div>  
-
-
-    <h1 id="hero-title">  
-
-      We Make Your Brand<br>  
-
-      <span>  
-        Impossible To Ignore  
-      </span>  
-
-    </h1>  
-
-
-    <p class="hero-text">  
-
-      Edit Wallah creates scroll-stopping content,  
-      cinematic video edits, professional ad creatives  
-      and powerful brand visuals that make people  
-      remember your brand.  
-
-    </p>  
-
-
-    <div class="hero-actions">  
-
-      <a  
-        class="btn btn-dark"  
-        href="https://wa.me/919373376926"  
-        target="_blank"  
-        rel="noopener noreferrer"  
-      >  
-        Get Your Ad Made →  
-      </a>  
-
-
-      <a  
-        class="text-link"  
-        href="#work"  
-      >  
-        Swipe to explore ↓  
-      </a>  
-
-    </div>  
-
-  </div>  
-
-
-  <!-- ================= PHONE ================= -->  
-
-  <div  
-    class="hero-device"  
-    aria-label="Edit Wallah video showcase"  
-  >  
-
-    <div class="device-camera"></div>  
-
-    <div class="device-screen">  
-
-      <video  
-        autoplay  
-        muted  
-        loop  
-        playsinline  
-        preload="metadata"  
-        data-sound-video  
-        aria-label="Edit Wallah creative video showcase"  
-      >  
-
-        <source  
-          src="https://stream.vidhosting.in/videos/c6292109.mp4"  
-          type="video/mp4"  
-        >  
-
-      </video>  
-
-    </div>  
-
-    <div class="device-button"></div>  
-
-  </div>  
-
-
-  <div class="hero-glow"></div>  
-
-</section>  
-
-
-<!-- ================= SERVICES MARQUEE ================= -->  
-
-<div  
-  class="marquee"  
-  aria-label="Edit Wallah Services"  
->  
-
-  <div class="marquee-track">  
-
-    <span>Ad Content ✦</span>  
-    <span>Performance Marketing ✦</span>  
-    <span>Social Media Marketing ✦</span>  
-    <span>Personal Branding ✦</span>  
-    <span>Video Production ✦</span>  
-    <span>Video Editing ✦</span>  
-    <span>Graphic Designing ✦</span>  
-    <span>Influencer Marketing ✦</span>  
-
-    <span>Ad Content ✦</span>  
-    <span>Performance Marketing ✦</span>  
-    <span>Social Media Marketing ✦</span>  
-    <span>Personal Branding ✦</span>  
-    <span>Video Production ✦</span>  
-    <span>Video Editing ✦</span>  
-    <span>Graphic Designing ✦</span>  
-    <span>Influencer Marketing ✦</span>  
-
-  </div>  
-
-</div>  
-
-
-<!-- ================= FEATURED WORK ================= -->  
-
-<section  
-  class="section work-section"  
-  id="work"  
-  aria-labelledby="work-title"  
->  
-
-  <div class="section-top reveal">  
-
-    <div>  
-
-      <div class="eyebrow">  
-        FEATURED WORK  
-      </div>  
-
-      <h2 id="work-title">  
-
-        Premium Creative<br>  
-
-        <span>  
-          That Drives Real Results  
-        </span>  
-
-      </h2>  
-
-    </div>  
-
-
-    <div class="swipe-note">  
-      Swipe to explore ← →  
-    </div>  
-
-  </div>  
-
-
-  <div class="portfolio-wrap">  
-
-    <button  
-      class="slider-arrow prev"  
-      id="workPrev"  
-      aria-label="Previous Work"  
-      type="button"  
-    >  
-      ←  
-    </button>  
-
-
-    <div  
-      class="portfolio-slider"  
-      id="workSlider"  
-    >  
-
-
-      <article class="portfolio-card">  
-
-        <video  
-          autoplay  
-          muted  
-          loop  
-          playsinline  
-          preload="metadata"  
-          data-sound-video  
-          aria-label="Edit Wallah commercial advertisement"  
-        >  
-
-          <source  
-            src="work-01.mp4"  
-            type="video/mp4"  
-          >  
-
-        </video>  
-
-        <div class="card-meta">  
-
-          <strong>01</strong>  
-
-          <span class="sound-icon">  
-            🔇  
-          </span>  
-
-        </div>  
-
-        <div class="card-title">  
-
-          <small>  
-            AD  
-          </small>  
-
-          <b>  
-            Commercial  
-          </b>  
-
-        </div>  
-
-      </article>  
-
-
-      <article class="portfolio-card">  
-
-        <video  
-          autoplay  
-          muted  
-          loop  
-          playsinline  
-          preload="metadata"  
-          data-sound-video  
-          aria-label="Edit Wallah brand story video"  
-        >  
-
-          <source  
-            src="work-02.mp4"  
-            type="video/mp4"  
-          >  
-
-        </video>  
-
-        <div class="card-meta">  
-
-          <strong>02</strong>  
-
-          <span class="sound-icon">  
-            🔇  
-          </span>  
-
-        </div>  
-
-        <div class="card-title">  
-
-          <small>  
-            EDUCATION  
-          </small>  
-
-          <b>  
-            Brand Story  
-          </b>  
-
-        </div>  
-
-      </article>  
-
-
-      <article class="portfolio-card">  
-
-        <video  
-          autoplay  
-          muted  
-          loop  
-          playsinline  
-          preload="metadata"  
-          data-sound-video  
-          aria-label="Edit Wallah fashion commercial"  
-        >  
-
-          <source  
-            src="work-03.mp4"  
-            type="video/mp4"  
-          >  
-
-        </video>  
-
-        <div class="card-meta">  
-
-          <strong>03</strong>  
-
-          <span class="sound-icon">  
-            🔇  
-          </span>  
-
-        </div>  
-
-        <div class="card-title">  
-
-          <small>  
-            FASHION  
-          </small>  
+        </p>
 
-          <b>  
-            Commercial  
-          </b>  
 
-        </div>  
-
-      </article>  
-
-
-      <article class="portfolio-card">  
-
-        <video  
-          autoplay  
-          muted  
-          loop  
-          playsinline  
-          preload="metadata"  
-          data-sound-video  
-          aria-label="Edit Wallah product commercial"  
-        >  
+        <div class="hero-actions">
 
-          <source  
-            src="work-04.mp4"  
-            type="video/mp4"  
-          >  
+          <a
+            class="btn btn-dark"
+            href="https://wa.me/919373376926"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Get Your Ad Made →
+          </a>
 
-        </video>  
 
-        <div class="card-meta">  
+          <a
+            class="text-link"
+            href="#work"
+          >
+            Swipe to explore ↓
+          </a>
 
-          <strong>04</strong>  
+        </div>
 
-          <span class="sound-icon">  
-            🔇  
-          </span>  
+      </div>
 
-        </div>  
 
-        <div class="card-title">  
+      <!-- ================= PHONE ================= -->
 
-          <small>  
-            PRODUCT  
-          </small>  
+      <div
+        class="hero-device"
+        aria-label="Edit Wallah video showcase"
+      >
 
-          <b>  
-            Commercial  
-          </b>  
+        <div class="device-camera"></div>
 
-        </div>  
+        <div class="device-screen">
 
-      </article>  
+          <video
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+            data-sound-video
+            aria-label="Edit Wallah creative video showcase"
+          >
 
+            <source
+              src="https://stream.vidhosting.in/videos/c6292109.mp4"
+              type="video/mp4"
+            >
 
-      <article class="portfolio-card">  
+          </video>
 
-        <video  
-          autoplay  
-          muted  
-          loop  
-          playsinline  
-          preload="metadata"  
-          data-sound-video  
-          aria-label="Edit Wallah advertising brand story"  
-        >  
+        </div>
 
-          <source  
-            src="work-05.mp4"  
-            type="video/mp4"  
-          >  
+        <div class="device-button"></div>
 
-        </video>  
+      </div>
 
-        <div class="card-meta">  
 
-          <strong>05</strong>  
+      <div class="hero-glow"></div>
 
-          <span class="sound-icon">  
-            🔇  
-          </span>  
+    </section>
 
-        </div>  
 
-        <div class="card-title">  
+    <!-- ================= SERVICES MARQUEE ================= -->
 
-          <small>  
-            AD  
-          </small>  
+    <div
+      class="marquee"
+      aria-label="Edit Wallah Services"
+    >
 
-          <b>  
-            Brand Story  
-          </b>  
+      <div class="marquee-track">
 
-        </div>  
+        <span>Ad Content ✦</span>
+        <span>Performance Marketing ✦</span>
+        <span>Social Media Marketing ✦</span>
+        <span>Personal Branding ✦</span>
+        <span>Video Production ✦</span>
+        <span>Video Editing ✦</span>
+        <span>Graphic Designing ✦</span>
+        <span>Influencer Marketing ✦</span>
 
-      </article>  
+        <span>Ad Content ✦</span>
+        <span>Performance Marketing ✦</span>
+        <span>Social Media Marketing ✦</span>
+        <span>Personal Branding ✦</span>
+        <span>Video Production ✦</span>
+        <span>Video Editing ✦</span>
+        <span>Graphic Designing ✦</span>
+        <span>Influencer Marketing ✦</span>
 
+      </div>
 
-    </div>  
+    </div>
 
 
-    <button  
-      class="slider-arrow next"  
-      id="workNext"  
-      aria-label="Next Work"  
-      type="button"  
-    >  
-      →  
-    </button>  
+    <!-- ================= FEATURED WORK ================= -->
 
-  </div>  
+    <section
+      class="section work-section"
+      id="work"
+      aria-labelledby="work-title"
+    >
 
+      <div class="section-top reveal">
 
-  <div class="center-cta">  
+        <div>
 
-    <a  
-      class="btn btn-dark"  
-      href="https://wa.me/919373376926"  
-      target="_blank"  
-      rel="noopener noreferrer"  
-    >  
-      Get Your Ad Made →  
-    </a>  
+          <div class="eyebrow">
+            FEATURED WORK
+          </div>
 
-  </div>  
+          <h2 id="work-title">
 
-</section>  
+            Premium Creative<br>
 
+            <span>
+              That Drives Real Results
+            </span>
 
-<!-- ================= PROCESS ================= -->  
+          </h2>
 
-<section  
-  class="section process-section"  
-  id="process"  
-  aria-labelledby="process-title"  
->  
+        </div>
 
-  <div class="section-top reveal">  
 
-    <div>  
+        <div class="swipe-note">
+          Swipe to explore ← →
+        </div>
 
-      <div class="eyebrow">  
-        OUR PROVEN SYSTEMATIZED  
-      </div>  
+      </div>
 
-      <h2 id="process-title">  
 
-        Content Growth<br>  
+      <div class="portfolio-wrap">
 
-        <span>  
-          Plan  
-        </span>  
+        <button
+          class="slider-arrow prev"
+          id="workPrev"
+          aria-label="Previous Work"
+          type="button"
+        >
+          ←
+        </button>
 
-      </h2>  
 
-    </div>  
+        <div
+          class="portfolio-slider"
+          id="workSlider"
+        >
 
 
-    <p class="section-description">  
+          <!-- WORK 01 -->
 
-      We Don't Guess. Our creative team follows  
-      a proven process to scale your brand.  
+          <article class="portfolio-card">
 
-    </p>  
+            <video
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              data-sound-video
+              aria-label="Edit Wallah commercial advertisement"
+            >
 
-  </div>  
+              <source
+                src="https://stream.vidhosting.in/videos/589e4a37.mp4"
+                type="video/mp4"
+              >
 
+            </video>
 
-  <div class="process-grid">  
+            <div class="card-meta">
 
+              <strong>01</strong>
 
-    <article class="process-card reveal">  
+              <span class="sound-icon">
+                🔇
+              </span>
 
-      <div class="process-number">  
-        01  
-      </div>  
+            </div>
 
-      <div class="process-image">  
+            <div class="card-title">
 
-        <video  
-          autoplay  
-          muted  
-          loop  
-          playsinline  
-          preload="metadata"  
-          data-sound-video  
-          aria-label="Edit Wallah research and content planning"  
-        >  
+              <small>
+                AD
+              </small>
 
-          <source  
-            src="process-01.mp4"  
-            type="video/mp4"  
-          >  
+              <b>
+                Commercial
+              </b>
 
-        </video>  
+            </div>
 
-      </div>  
+          </article>
 
-      <h3>  
-        Deep Research & Proper Content Planning  
-      </h3>  
 
-      <p>  
-        We analyze your competitors and create  
-        proven result-oriented concepts for your brand.  
-      </p>  
+          <!-- WORK 02 -->
 
-    </article>  
+          <article class="portfolio-card">
 
+            <video
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              data-sound-video
+              aria-label="Edit Wallah brand story video"
+            >
 
-    <article class="process-card reveal">  
+              <source
+                src="https://stream.vidhosting.in/videos/905dac61.mp4"
+                type="video/mp4"
+              >
 
-      <div class="process-number">  
-        02  
-      </div>  
+            </video>
 
-      <div class="process-image">  
+            <div class="card-meta">
 
-        <video  
-          autoplay  
-          muted  
-          loop  
-          playsinline  
-          preload="metadata"  
-          data-sound-video  
-          aria-label="Edit Wallah scripting process"  
-        >  
+              <strong>02</strong>
 
-          <source  
-            src="process-02.mp4"  
-            type="video/mp4"  
-          >  
+              <span class="sound-icon">
+                🔇
+              </span>
 
-        </video>  
+            </div>
 
-      </div>  
+            <div class="card-title">
 
-      <h3>  
-        Scripting  
-      </h3>  
+              <small>
+                EDUCATION
+              </small>
 
-      <p>  
-        We write scroll-stopping scripts to stop  
-        the scroll and make people choose your brand.  
-      </p>  
+              <b>
+                Brand Story
+              </b>
 
-    </article>  
+            </div>
 
+          </article>
 
-    <article class="process-card reveal">  
 
-      <div class="process-number">  
-        03  
-      </div>  
+          <!-- WORK 03 -->
 
-      <div class="process-image">  
+          <article class="portfolio-card">
 
-        <video  
-          autoplay  
-          muted  
-          loop  
-          playsinline  
-          preload="metadata"  
-          data-sound-video  
-          aria-label="Edit Wallah professional shooting"  
-        >  
+            <video
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              data-sound-video
+              aria-label="Edit Wallah fashion commercial"
+            >
 
-          <source  
-            src="process-03.mp4"  
-            type="video/mp4"  
-          >  
+              <source
+                src="https://stream.vidhosting.in/videos/48cefe50.mp4"
+                type="video/mp4"
+              >
 
-        </video>  
+            </video>
 
-      </div>  
+            <div class="card-meta">
 
-      <h3>  
-        Professional Shooting  
-      </h3>  
+              <strong>03</strong>
 
-      <p>  
-        We provide the right direction with the  
-        right creators for your brand.  
-      </p>  
+              <span class="sound-icon">
+                🔇
+              </span>
 
-    </article>  
+            </div>
 
+            <div class="card-title">
 
-    <article class="process-card reveal">  
+              <small>
+                FASHION
+              </small>
 
-      <div class="process-number">  
-        04  
-      </div>  
+              <b>
+                Commercial
+              </b>
 
-      <div class="process-image">  
+            </div>
 
-        <video  
-          autoplay  
-          muted  
-          loop  
-          playsinline  
-          preload="metadata"  
-          data-sound-video  
-          aria-label="Edit Wallah premium video editing"  
-        >  
+          </article>
 
-          <source  
-            src="process-04.mp4"  
-            type="video/mp4"  
-          >  
 
-        </video>  
+          <!-- WORK 04 -->
 
-      </div>  
+          <article class="portfolio-card">
 
-      <h3>  
-        Premium Quality Editing  
-      </h3>  
+            <video
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              data-sound-video
+              aria-label="Edit Wallah product commercial"
+            >
 
-      <p>  
-        Our editing team creates videos designed  
-        to stop the scroll and maximize engagement.  
-      </p>  
+              <source
+                src="https://stream.vidhosting.in/videos/67b109fb.mp4"
+                type="video/mp4"
+              >
 
-    </article>  
+            </video>
 
+            <div class="card-meta">
 
-  </div>  
+              <strong>04</strong>
 
-</section>  
+              <span class="sound-icon">
+                🔇
+              </span>
 
+            </div>
 
-<!-- ================= SERVICES ================= -->  
+            <div class="card-title">
 
-<section  
-  class="section services-section"  
-  id="services"  
-  aria-labelledby="services-title"  
->  
+              <small>
+                PRODUCT
+              </small>
 
-  <div class="section-heading reveal">  
+              <b>
+                Commercial
+              </b>
 
-    <div class="eyebrow">  
-      EDIT WALLAH SERVICES  
-    </div>  
+            </div>
 
-    <h2 id="services-title">  
-      What We Do  
-    </h2>  
+          </article>
 
-    <p>  
-      Professional creative, video editing and  
-      digital marketing services for brands and businesses.  
-    </p>  
 
-  </div>  
+          <!-- WORK 05 -->
 
+          <article class="portfolio-card">
 
-  <div class="service-grid">  
+            <video
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              data-sound-video
+              aria-label="Edit Wallah advertising brand story"
+            >
 
+              <source
+                src="https://stream.vidhosting.in/videos/ff18c244.mp4"
+                type="video/mp4"
+              >
 
-    <article class="service-card reveal">  
+            </video>
 
-      <div class="service-image">  
+            <div class="card-meta">
 
-        <img  
-          src="service-ads.jpg"  
-          alt="Edit Wallah professional advertising and ad shoot service"  
-          loading="lazy"  
-        >  
+              <strong>05</strong>
 
-      </div>  
+              <span class="sound-icon">
+                🔇
+              </span>
 
-      <div class="service-body">  
+            </div>
 
-        <h3>  
-          Ads Shoot 🎬  
-        </h3>  
+            <div class="card-title">
 
-        <p>  
-          High-converting ad shoots crafted to stop  
-          the scroll, grab attention, and turn viewers  
-          into loyal customers.  
-        </p>  
+              <small>
+                AD
+              </small>
 
-        <div class="tags">  
-          Product Ads · Brand Films · UGC Videos ·  
-          Studio Shoot · Outdoor Shoot · Reels ·  
-          Commercial Ads  
-        </div>  
+              <b>
+                Brand Story
+              </b>
 
-        <a  
-          href="https://wa.me/919373376926"  
-          target="_blank"  
-          rel="noopener noreferrer"  
-        >  
-          Request Callback Now →  
-        </a>  
+            </div>
 
-      </div>  
+          </article>
 
-    </article>  
 
+        </div>
 
-    <article class="service-card reveal">  
 
-      <div class="service-image">  
+        <button
+          class="slider-arrow next"
+          id="workNext"
+          aria-label="Next Work"
+          type="button"
+        >
+          →
+        </button>
 
-        <img  
-          src="service-marketing.jpg"  
-          alt="Edit Wallah performance marketing and digital advertising service"  
-          loading="lazy"  
-        >  
+      </div>
 
-      </div>  
 
-      <div class="service-body">  
+      <div class="center-cta">
 
-        <h3>  
-          Performance Marketing 🚀  
-        </h3>  
+        <a
+          class="btn btn-dark"
+          href="https://wa.me/919373376926"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Get Your Ad Made →
+        </a>
 
-        <p>  
-          ROI-focused campaigns that drive qualified  
-          leads, boost conversions, and maximize every  
-          rupee of your marketing budget.  
-        </p>  
+      </div>
 
-        <div class="tags">  
-          Meta Ads · Google Ads · Lead Generation ·  
-          Remarketing · Conversion Tracking · Sales Funnel  
-        </div>  
+    </section>
 
-        <a  
-          href="https://wa.me/919373376926"  
-          target="_blank"  
-          rel="noopener noreferrer"  
-        >  
-          Request Callback Now →  
-        </a>  
 
-      </div>  
+    <!-- ================= PROCESS ================= -->
 
-    </article>  
+    <section
+      class="section process-section"
+      id="process"
+      aria-labelledby="process-title"
+    >
 
+      <div class="section-top reveal">
 
-    <article class="service-card reveal">  
+        <div>
 
-      <div class="service-image">  
+          <div class="eyebrow">
+            OUR PROVEN SYSTEMATIZED
+          </div>
 
-        <img  
-          src="service-social.jpg"  
-          alt="Edit Wallah social media marketing service"  
-          loading="lazy"  
-        >  
+          <h2 id="process-title">
 
-      </div>  
+            Content Growth<br>
 
-      <div class="service-body">  
+            <span>
+              Plan
+            </span>
 
-        <h3>  
-          Social Media Marketing 📣  
-        </h3>  
+          </h2>
 
-        <p>  
-          Build a powerful online presence with  
-          scroll-stopping content, consistent branding,  
-          and strategies that turn followers into customers.  
-        </p>  
+        </div>
 
-        <div class="tags">  
-          Instagram · Facebook · Content Strategy ·  
-          Reels Marketing · Community Growth ·  
-          Monthly Management  
-        </div>  
 
-        <a  
-          href="https://wa.me/919373376926"  
-          target="_blank"  
-          rel="noopener noreferrer"  
-        >  
-          Request Callback Now →  
-        </a>  
+        <p class="section-description">
 
-      </div>  
+          We Don't Guess. Our creative team follows
+          a proven process to scale your brand.
 
-    </article>  
+        </p>
 
+      </div>
 
-    <article class="service-card reveal">  
 
-      <div class="service-image">  
+      <div class="process-grid">
 
-        <img  
-          src="service-editing.jpg"  
-          alt="Edit Wallah professional video editing service"  
-          loading="lazy"  
-        >  
 
-      </div>  
+        <!-- PROCESS 01 -->
 
-      <div class="service-body">  
+        <article class="process-card reveal">
 
-        <h3>  
-          Video Editing 🎞️  
-        </h3>  
+          <div class="process-number">
+            01
+          </div>
 
-        <p>  
-          Premium edits built around storytelling,  
-          pacing, sound design, effects and  
-          professional color grading.  
-        </p>  
+          <div class="process-image">
 
-        <div class="tags">  
-          Reels · Shorts · YouTube · Cinematic ·  
-          Color Grading · Motion Graphics · Sound Design  
-        </div>  
+            <img
+              src="process-01.jpg"
+              alt="Edit Wallah research and content planning"
+              loading="lazy"
+            >
 
-        <a  
-          href="https://wa.me/919373376926"  
-          target="_blank"  
-          rel="noopener noreferrer"  
-        >  
-          Request Callback Now →  
-        </a>  
+          </div>
 
-      </div>  
+          <h3>
+            Deep Research & Proper Content Planning
+          </h3>
 
-    </article>  
+          <p>
+            We analyze your competitors and create
+            proven result-oriented concepts for your brand.
+          </p>
 
+        </article>
 
-  </div>  
 
-</section>  
+        <!-- PROCESS 02 -->
 
+        <article class="process-card reveal">
 
-<!-- ================= CLIENTS ================= -->  
+          <div class="process-number">
+            02
+          </div>
 
-<section  
-  class="clients-section"  
-  aria-labelledby="clients-title"  
->  
+          <div class="process-image">
 
-  <div class="eyebrow">  
-    TRUSTED BY  
-  </div>  
+            <img
+              src="process-02.jpg"
+              alt="Edit Wallah scripting process"
+              loading="lazy"
+            >
 
-  <h2 id="clients-title">  
-    Our Clients  
-  </h2>  
+          </div>
 
-  <div class="client-marquee">  
+          <h3>
+            Scripting
+          </h3>
 
-    <div class="client-track">  
+          <p>
+            We write scroll-stopping scripts to stop
+            the scroll and make people choose your brand.
+          </p>
 
-      <span>  
-        EDIT WALLAH  
-      </span>  
+        </article>
 
-      <span>  
-        CREATIVE  
-      </span>  
 
-      <span>  
-        BRAND  
-      </span>  
+        <!-- PROCESS 03 -->
 
-      <span>  
-        MEDIA  
-      </span>  
+        <article class="process-card reveal">
 
-      <span>  
-        EDIT WALLAH  
-      </span>  
+          <div class="process-number">
+            03
+          </div>
 
-      <span>  
-        CREATIVE  
-      </span>  
+          <div class="process-image">
 
-      <span>  
-        BRAND  
-      </span>  
+            <img
+              src="process-03.jpg"
+              alt="Edit Wallah professional shooting"
+              loading="lazy"
+            >
 
-      <span>  
-        MEDIA  
-      </span>  
+          </div>
 
-    </div>  
+          <h3>
+            Professional Shooting
+          </h3>
 
-  </div>  
+          <p>
+            We provide the right direction with the
+            right creators for your brand.
+          </p>
 
-  <p>  
-    …and many more growing brands 🚀  
-  </p>  
+        </article>
 
-</section>  
 
+        <!-- PROCESS 04 -->
 
-<!-- ================= PORTFOLIO ================= -->  
+        <article class="process-card reveal">
 
-<section  
-  class="section portfolio-section"  
-  aria-labelledby="portfolio-title"  
->  
+          <div class="process-number">
+            04
+          </div>
 
-  <div class="section-top reveal">  
+          <div class="process-image">
 
-    <div>  
+            <img
+              src="process-04.jpg"
+              alt="Edit Wallah premium video editing"
+              loading="lazy"
+            >
 
-      <div class="eyebrow">  
-        EDIT WALLAH PORTFOLIO  
-      </div>  
+          </div>
 
-      <h2 id="portfolio-title">  
+          <h3>
+            Premium Quality Editing
+          </h3>
 
-        Premium Creative<br>  
+          <p>
+            Our editing team creates videos designed
+            to stop the scroll and maximize engagement.
+          </p>
 
-        <span>  
-          That Drives Real Results  
-        </span>  
+        </article>
 
-      </h2>  
 
-    </div>  
+      </div>
 
-    <div class="swipe-note">  
-      Swipe to explore ← →  
-    </div>  
+    </section>
 
-  </div>  
 
+    <!-- ================= SERVICES ================= -->
 
-  <div class="portfolio-wrap">  
+    <section
+      class="section services-section"
+      id="services"
+      aria-labelledby="services-title"
+    >
 
-    <button  
-      class="slider-arrow prev"  
-      id="portfolioPrev"  
-      aria-label="Previous Portfolio"  
-      type="button"  
-    >  
-      ←  
-    </button>  
+      <div class="section-heading reveal">
 
+        <div class="eyebrow">
+          EDIT WALLAH SERVICES
+        </div>
 
-    <div  
-      class="portfolio-slider"  
-      id="portfolioSlider"  
-    >  
+        <h2 id="services-title">
+          What We Do
+        </h2>
 
+        <p>
+          Professional creative, video editing and
+          digital marketing services for brands and businesses.
+        </p>
 
-      <article class="portfolio-card">  
+      </div>
 
-        <video  
-          autoplay  
-          muted  
-          loop  
-          playsinline  
-          preload="metadata"  
-          data-sound-video  
-          aria-label="Edit Wallah education commercial"  
-        >  
 
-          <source  
-            src="portfolio-01.mp4"  
-            type="video/mp4"  
-          >  
+      <div class="service-grid">
 
-        </video>  
 
-        <div class="card-meta">  
+        <!-- SERVICE 01 -->
 
-          <strong>01</strong>  
+        <article class="service-card reveal">
 
-          <span class="sound-icon">  
-            🔇  
-          </span>  
+          <div class="service-image">
 
-        </div>  
+            <img
+              src="service-ads.jpg"
+              alt="Edit Wallah professional advertising and ad shoot service"
+              loading="lazy"
+            >
 
-        <div class="card-title">  
+          </div>
 
-          <small>  
-            EDUCATION  
-          </small>  
+          <div class="service-body">
 
-          <b>  
-            Commercial  
-          </b>  
+            <h3>
+              Ads Shoot 🎬
+            </h3>
 
-        </div>  
+            <p>
+              High-converting ad shoots crafted to stop
+              the scroll, grab attention, and turn viewers
+              into loyal customers.
+            </p>
 
-      </article>  
+            <div class="tags">
+              Product Ads · Brand Films · UGC Videos ·
+              Studio Shoot · Outdoor Shoot · Reels ·
+              Commercial Ads
+            </div>
 
+            <a
+              href="https://wa.me/919373376926"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Request Callback Now →
+            </a>
 
-      <article class="portfolio-card">  
+          </div>
 
-        <video  
-          autoplay  
-          muted  
-          loop  
-          playsinline  
-          preload="metadata"  
-          data-sound-video  
-          aria-label="Edit Wallah fashion commercial"  
-        >  
+        </article>
 
-          <source  
-            src="portfolio-02.mp4"  
-            type="video/mp4"  
-          >  
 
-        </video>  
+        <!-- SERVICE 02 -->
 
-        <div class="card-meta">  
+        <article class="service-card reveal">
 
-          <strong>02</strong>  
+          <div class="service-image">
 
-          <span class="sound-icon">  
-            🔇  
-          </span>  
+            <img
+              src="service-marketing.jpg"
+              alt="Edit Wallah performance marketing and digital advertising service"
+              loading="lazy"
+            >
 
-        </div>  
+          </div>
 
-        <div class="card-title">  
+          <div class="service-body">
 
-          <small>  
-            FASHION  
-          </small>  
+            <h3>
+              Performance Marketing 🚀
+            </h3>
 
-          <b>  
-            Commercial  
-          </b>  
+            <p>
+              ROI-focused campaigns that drive qualified
+              leads, boost conversions, and maximize every
+              rupee of your marketing budget.
+            </p>
 
-        </div>  
+            <div class="tags">
+              Meta Ads · Google Ads · Lead Generation ·
+              Remarketing · Conversion Tracking · Sales Funnel
+            </div>
 
-      </article>  
+            <a
+              href="https://wa.me/919373376926"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Request Callback Now →
+            </a>
 
+          </div>
 
-      <article class="portfolio-card">  
+        </article>
 
-        <video  
-          autoplay  
-          muted  
-          loop  
-          playsinline  
-          preload="metadata"  
-          data-sound-video  
-          aria-label="Edit Wallah cafe commercial"  
-        >  
 
-          <source  
-            src="portfolio-03.mp4"  
-            type="video/mp4"  
-          >  
+        <!-- SERVICE 03 -->
 
-        </video>  
+        <article class="service-card reveal">
 
-        <div class="card-meta">  
+          <div class="service-image">
 
-          <strong>03</strong>  
+            <img
+              src="service-social.jpg"
+              alt="Edit Wallah social media marketing service"
+              loading="lazy"
+            >
 
-          <span class="sound-icon">  
-            🔇  
-          </span>  
+          </div>
 
-        </div>  
+          <div class="service-body">
 
-        <div class="card-title">  
+            <h3>
+              Social Media Marketing 📣
+            </h3>
 
-          <small>  
-            CAFE  
-          </small>  
+            <p>
+              Build a powerful online presence with
+              scroll-stopping content, consistent branding,
+              and strategies that turn followers into customers.
+            </p>
 
-          <b>  
-            Commercial  
-          </b>  
+            <div class="tags">
+              Instagram · Facebook · Content Strategy ·
+              Reels Marketing · Community Growth ·
+              Monthly Management
+            </div>
 
-        </div>  
+            <a
+              href="https://wa.me/919373376926"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Request Callback Now →
+            </a>
 
-      </article>  
+          </div>
 
+        </article>
 
-      <article class="portfolio-card">  
 
-        <video  
-          autoplay  
-          muted  
-          loop  
-          playsinline  
-          preload="metadata"  
-          data-sound-video  
-          aria-label="Edit Wallah product commercial"  
-        >  
+        <!-- SERVICE 04 -->
 
-          <source  
-            src="portfolio-04.mp4"  
-            type="video/mp4"  
-          >  
+        <article class="service-card reveal">
 
-        </video>  
+          <div class="service-image">
 
-        <div class="card-meta">  
+            <img
+              src="service-editing.jpg"
+              alt="Edit Wallah professional video editing service"
+              loading="lazy"
+            >
 
-          <strong>04</strong>  
+          </div>
 
-          <span class="sound-icon">  
-            🔇  
-          </span>  
+          <div class="service-body">
 
-        </div>  
+            <h3>
+              Video Editing 🎞️
+            </h3>
 
-        <div class="card-title">  
+            <p>
+              Premium edits built around storytelling,
+              pacing, sound design, effects and
+              professional color grading.
+            </p>
 
-          <small>  
-            PRODUCT  
-          </small>  
+            <div class="tags">
+              Reels · Shorts · YouTube · Cinematic ·
+              Color Grading · Motion Graphics · Sound Design
+            </div>
 
-          <b>  
-            Commercial  
-          </b>  
+            <a
+              href="https://wa.me/919373376926"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Request Callback Now →
+            </a>
 
-        </div>  
+          </div>
 
-      </article>  
+        </article>
 
 
-    </div>  
+      </div>
 
+    </section>
 
-    <button  
-      class="slider-arrow next"  
-      id="portfolioNext"  
-      aria-label="Next Portfolio"  
-      type="button"  
-    >  
-      →  
-    </button>  
 
-  </div>  
+    <!-- ================= CLIENTS ================= -->
 
+    <section
+      class="clients-section"
+      aria-labelledby="clients-title"
+    >
 
-  <div class="center-cta">  
+      <div class="eyebrow">
+        TRUSTED BY
+      </div>
 
-    <a  
-      class="btn btn-dark"  
-      href="https://wa.me/919373376926"  
-      target="_blank"  
-      rel="noopener noreferrer"  
-    >  
-      Get Your Ad Made →  
-    </a>  
+      <h2 id="clients-title">
+        Our Clients
+      </h2>
 
-  </div>  
+      <div class="client-marquee">
 
-</section>  
+        <div class="client-track">
 
+          <span>
+            EDIT WALLAH
+          </span>
 
-<!-- ================= ABOUT ================= -->  
+          <span>
+            CREATIVE
+          </span>
 
-<section  
-  class="section about-section"  
-  id="about"  
-  aria-labelledby="about-title"  
->  
+          <span>
+            BRAND
+          </span>
 
-  <div class="about-grid">  
+          <span>
+            MEDIA
+          </span>
 
+          <span>
+            EDIT WALLAH
+          </span>
 
-    <div class="about-image reveal">  
+          <span>
+            CREATIVE
+          </span>
 
-      <img  
-        src="image.jpg"  
-        alt="Edit Wallah Creative Studio"  
-        loading="lazy"  
-      >  
+          <span>
+            BRAND
+          </span>
 
-    </div>  
+          <span>
+            MEDIA
+          </span>
 
+        </div>
 
-    <div class="about-copy reveal">  
+      </div>
 
-      <div class="eyebrow">  
-        KNOW US  
-      </div>  
+      <p>
+        …and many more growing brands 🚀
+      </p>
 
-      <h2 id="about-title">  
-        About Edit Wallah  
-      </h2>  
+    </section>
 
-      <h3>  
-        We Don't Just Create Content.  
-        We Build Brands That People Remember.  
-      </h3>  
 
-      <p>  
-        At Edit Wallah, we believe every business  
-        has a story worth telling—but only the right  
-        strategy can turn that story into attention  
-        and growth.  
-      </p>  
+    <!-- ================= PORTFOLIO ================= -->
 
-      <p>  
-        We're a creative studio helping businesses,  
-        creators and brands grow through high-quality  
-        content, powerful ad creatives, social media  
-        branding and result-driven visual storytelling.  
-      </p>  
+    <section
+      class="section portfolio-section"
+      aria-labelledby="portfolio-title"
+    >
 
-      <a  
-        class="btn btn-dark"  
-        href="https://wa.me/919373376926"  
-        target="_blank"  
-        rel="noopener noreferrer"  
-      >  
-        Chat on WhatsApp  
-      </a>  
+      <div class="section-top reveal">
 
-      <div class="contact-number">  
-        WhatsApp: +91 93733 76926  
-      </div>  
+        <div>
 
-    </div>  
+          <div class="eyebrow">
+            EDIT WALLAH PORTFOLIO
+          </div>
 
-  </div>  
+          <h2 id="portfolio-title">
 
-</section>  
+            Premium Creative<br>
 
+            <span>
+              That Drives Real Results
+            </span>
 
-<!-- ================= FINAL CTA ================= -->  
+          </h2>
 
-<section  
-  class="final-cta"  
-  aria-labelledby="cta-title"  
->  
+        </div>
 
-  <div class="eyebrow">  
-    READY TO BLOW UP?  
-  </div>  
+        <div class="swipe-note">
+          Swipe to explore ← →
+        </div>
 
-  <h2 id="cta-title">  
+      </div>
 
-    Let's Make Your Brand<br>  
 
-    <span>  
-      Impossible to Ignore!  
-    </span>  
+      <div class="portfolio-wrap">
 
-  </h2>  
+        <button
+          class="slider-arrow prev"
+          id="portfolioPrev"
+          aria-label="Previous Portfolio"
+          type="button"
+        >
+          ←
+        </button>
 
 
-  <a  
-    class="btn btn-dark"  
-    href="https://wa.me/919373376926"  
-    target="_blank"  
-    rel="noopener noreferrer"  
-  >  
-    Book Free Call  
-  </a>  
+        <div
+          class="portfolio-slider"
+          id="portfolioSlider"
+        >
 
-</section>
 
-  </main>    <!-- ================= FOOTER ================= -->    <footer class="footer">  <div class="footer-top">  
+          <!-- PORTFOLIO 01 -->
 
+          <article class="portfolio-card">
 
-  <div class="footer-brand">  
+            <video
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              data-sound-video
+              aria-label="Edit Wallah education commercial"
+            >
 
-    <img  
-      src="logo.png"  
-      alt="Edit Wallah Creative Studio Logo"  
-      class="logo-circle"  
-      loading="lazy"  
-    >  
+              <source
+                src="https://stream.vidhosting.in/videos/003e8c93.mp4"
+                type="video/mp4"
+              >
 
-    <p>  
-      Premium creative solutions for brands,  
-      creators and businesses.  
-    </p>  
+            </video>
 
-  </div>  
+            <div class="card-meta">
 
+              <strong>01</strong>
 
-  <div class="footer-column">  
+              <span class="sound-icon">
+                🔇
+              </span>
 
-    <h4>  
-      Services  
-    </h4>  
+            </div>
 
-    <a href="#services">  
-      Ad Content  
-    </a>  
+            <div class="card-title">
 
-    <a href="#services">  
-      Performance Marketing  
-    </a>  
+              <small>
+                EDUCATION
+              </small>
 
-    <a href="#services">  
-      Social Media Marketing  
-    </a>  
+              <b>
+                Commercial
+              </b>
 
-    <a href="#services">  
-      Personal Branding  
-    </a>  
+            </div>
 
-    <a href="#services">  
-      Video Production  
-    </a>  
+          </article>
 
-  </div>  
 
+          <!-- PORTFOLIO 02 -->
 
-  <div class="footer-column">  
+          <article class="portfolio-card">
 
-    <h4>  
-      Services  
-    </h4>  
+            <video
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              data-sound-video
+              aria-label="Edit Wallah fashion commercial"
+            >
 
-    <a href="#services">  
-      Video Editing  
-    </a>  
+              <source
+                src="https://stream.vidhosting.in/videos/430e51a0.mp4"
+                type="video/mp4"
+              >
 
-    <a href="#services">  
-      Graphic Designing  
-    </a>  
+            </video>
 
-    <a href="#services">  
-      Influencer Marketing  
-    </a>  
+            <div class="card-meta">
 
-  </div>  
+              <strong>02</strong>
 
+              <span class="sound-icon">
+                🔇
+              </span>
 
-  <div class="footer-column">  
+            </div>
 
-    <h4>  
-      Contact  
-    </h4>  
+            <div class="card-title">
 
-    <a href="tel:+919373376926">  
+              <small>
+                FASHION
+              </small>
 
-      Call Us<br>  
+              <b>
+                Commercial
+              </b>
 
-      +91 93733 76926  
+            </div>
 
-    </a>  
+          </article>
 
 
-    <a  
-      href="https://www.instagram.com/editwallah.media/"  
-      target="_blank"  
-      rel="noopener noreferrer"  
-    >  
-      Instagram  
-    </a>  
+          <!-- PORTFOLIO 03 -->
 
+          <article class="portfolio-card">
 
-    <p>  
+            <video
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              data-sound-video
+              aria-label="Edit Wallah cafe commercial"
+            >
 
-      Location<br>  
+              <source
+                src="https://stream.vidhosting.in/videos/589e4a37.mp4"
+                type="video/mp4"
+              >
 
-      Nagpur, Maharashtra, India  
+            </video>
 
-    </p>  
+            <div class="card-meta">
 
-  </div>  
+              <strong>03</strong>
 
+              <span class="sound-icon">
+                🔇
+              </span>
 
-</div>  
+            </div>
 
+            <div class="card-title">
 
-<div class="footer-bottom">  
+              <small>
+                CAFE
+              </small>
 
-  <span>  
-    © 2026 Edit Wallah — All Rights Reserved.  
-  </span>  
+              <b>
+                Commercial
+              </b>
 
-  <span>  
-    Nagpur, Maharashtra, India  
-  </span>  
+            </div>
 
-</div>
+          </article>
 
-  </footer>    <!-- ================= CHAT / WHATSAPP ================= -->  <a
-class="whatsapp-float"
-href="https://wa.me/919373376926"
-target="_blank"
-rel="noopener noreferrer"
-aria-label="Chat with Edit Wallah on WhatsApp"
 
-> 
+          <!-- PORTFOLIO 04 -->
 
-<!-- Chat bubble icon -->  
+          <article class="portfolio-card">
 
-<svg  
-  viewBox="0 0 24 24"  
-  aria-hidden="true"  
-  focusable="false"  
->  
+            <video
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              data-sound-video
+              aria-label="Edit Wallah product commercial"
+            >
 
-  <path  
-    d="M20 11.5a8.5 8.5 0 0 1-12.7 7.4L4 20l1.2-3.1A8.5 8.5 0 1 1 20 11.5Z"  
-    fill="none"  
-    stroke="currentColor"  
-    stroke-width="2"  
-    stroke-linecap="round"  
-    stroke-linejoin="round"  
-  />  
+              <source
+                src="https://stream.vidhosting.in/videos/e4ce8cf2.mp4"
+                type="video/mp4"
+              >
 
-  <path  
-    d="M8.5 10.5h7M8.5 14h4.5"  
-    fill="none"  
-    stroke="currentColor"  
-    stroke-width="2"  
-    stroke-linecap="round"  
-  />  
+            </video>
 
-</svg>
+            <div class="card-meta">
 
-  </a>    <!-- ================= JAVASCRIPT ================= -->    <script src="script.js"></script>  </body>  </html>
+              <strong>04</strong>
+
+              <span class="sound-icon">
+                🔇
+              </span>
+
+            </div>
+
+            <div class="card-title">
+
+              <small>
+                PRODUCT
+              </small>
+
+              <b>
+                Commercial
+              </b>
+
+            </div>
+
+          </article>
+
+
+        </div>
+
+
+        <button
+          class="slider-arrow next"
+          id="portfolioNext"
+          aria-label="Next Portfolio"
+          type="button"
+        >
+          →
+        </button>
+
+      </div>
+
+
+      <div class="center-cta">
+
+        <a
+          class="btn btn-dark"
+          href="https://wa.me/919373376926"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Get Your Ad Made →
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section
+      class="section about-section"
+      id="about"
+      aria-labelledby="about-title"
+    >
+
+      <div class="about-grid">
+
+
+        <div class="about-image reveal">
+
+          <img
+            src="image.jpg"
+            alt="Edit Wallah Creative Studio"
+            loading="lazy"
+          >
+
+        </div>
+
+
+        <div class="about-copy reveal">
+
+          <div class="eyebrow">
+            KNOW US
+          </div>
+
+          <h2 id="about-title">
+            About Edit Wallah
+          </h2>
+
+          <h3>
+            We Don't Just Create Content.
+            We Build Brands That People Remember.
+          </h3>
+
+          <p>
+            At Edit Wallah, we believe every business
+            has a story worth telling—but only the right
+            strategy can turn that story into attention
+            and growth.
+          </p>
+
+          <p>
+            We're a creative studio helping businesses,
+            creators and brands grow through high-quality
+            content, powerful ad creatives, social media
+            branding and result-driven visual storytelling.
+          </p>
+
+          <a
+            class="btn btn-dark"
+            href="https://wa.me/919373376926"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Chat on WhatsApp
+          </a>
+
+          <div class="contact-number">
+            WhatsApp: +91 93733 76926
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= FINAL CTA ================= -->
+
+    <section
+      class="final-cta"
+      aria-labelledby="cta-title"
+    >
+
+      <div class="eyebrow">
+        READY TO BLOW UP?
+      </div>
+
+      <h2 id="cta-title">
+
+        Let's Make Your Brand<br>
+
+        <span>
+          Impossible to Ignore!
+        </span>
+
+      </h2>
+
+
+      <a
+        class="btn btn-dark"
+        href="https://wa.me/919373376926"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Book Free Call
+      </a>
+
+    </section>
+
+  </main>
+
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer class="footer">
+
+    <div class="footer-top">
+
+
+      <div class="footer-brand">
+
+        <img
+          src="logo.png"
+          alt="Edit Wallah Creative Studio Logo"
+          class="logo-circle"
+          loading="lazy"
+        >
+
+        <p>
+          Premium creative solutions for brands,
+          creators and businesses.
+        </p>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <h4>
+          Services
+        </h4>
+
+        <a href="#services">
+          Ad Content
+        </a>
+
+        <a href="#services">
+          Performance Marketing
+        </a>
+
+        <a href="#services">
+          Social Media Marketing
+        </a>
+
+        <a href="#services">
+          Personal Branding
+        </a>
+
+        <a href="#services">
+          Video Production
+        </a>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <h4>
+          Services
+        </h4>
+
+        <a href="#services">
+          Video Editing
+        </a>
+
+        <a href="#services">
+          Graphic Designing
+        </a>
+
+        <a href="#services">
+          Influencer Marketing
+        </a>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <h4>
+          Contact
+        </h4>
+
+        <a href="tel:+919373376926">
+
+          Call Us<br>
+
+          +91 93733 76926
+
+        </a>
+
+
+        <a
+          href="https://www.instagram.com/editwallah.media/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Instagram
+        </a>
+
+
+        <p>
+
+          Location<br>
+
+          Nagpur, Maharashtra, India
+
+        </p>
+
+      </div>
+
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      <span>
+        © 2026 Edit Wallah — All Rights Reserved.
+      </span>
+
+      <span>
+        Nagpur, Maharashtra, India
+      </span>
+
+    </div>
+
+  </footer>
+
+
+  <!-- ================= CHAT / WHATSAPP ================= -->
+
+  <a
+    class="whatsapp-float"
+    href="https://wa.me/919373376926"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Chat with Edit Wallah on WhatsApp"
+  >
+
+    <!-- Chat bubble icon -->
+
+    <svg
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+      focusable="false"
+    >
+
+      <path
+        d="M20 11.5a8.5 8.5 0 0 1-12.7 7.4L4 20l1.2-3.1A8.5 8.5 0 1 1 20 11.5Z"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+
+      <path
+        d="M8.5 10.5h7M8.5 14h4.5"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+      />
+
+    </svg>
+
+  </a>
+
+
+  <!-- ================= JAVASCRIPT ================= -->
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
