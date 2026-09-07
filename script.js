@@ -36,9 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       mobileMenu.classList.toggle("open");
 
-      document.body.classList.toggle(
-        "menu-open"
-      );
+      document.body.classList.toggle("menu-open");
 
     });
 
@@ -52,9 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         mobileMenu.classList.remove("open");
 
-        document.body.classList.remove(
-          "menu-open"
-        );
+        document.body.classList.remove("menu-open");
 
       });
 
@@ -82,13 +78,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
             if (entry.isIntersecting) {
 
-              entry.target.classList.add(
-                "visible"
-              );
+              entry.target.classList.add("visible");
 
-              obs.unobserve(
-                entry.target
-              );
+              obs.unobserve(entry.target);
 
             }
 
@@ -132,31 +124,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
   soundVideos.forEach(function (video) {
 
+    /*
+     * Start all videos muted
+     */
+    video.muted = true;
+
+
     video.addEventListener("click", function (event) {
 
-      /*
-       * Stop click from accidentally triggering
-       * slider drag behaviour.
-       */
       event.stopPropagation();
 
 
-      /*
-       * If this video is muted,
-       * turn its sound ON.
-       *
-       * If already unmuted,
-       * turn its sound OFF.
-       */
       const shouldUnmute =
         video.muted === true;
 
 
       /*
-       * Mute every other video first.
-       * This prevents multiple videos playing
-       * sound at the same time.
+       * Mute all other videos
        */
+
       soundVideos.forEach(function (otherVideo) {
 
         if (otherVideo !== video) {
@@ -174,15 +160,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
       /*
-       * Toggle current video's sound.
+       * Toggle current video sound
        */
+
       video.muted = !shouldUnmute;
 
 
       /*
-       * Make sure the video keeps playing
-       * after the user taps it.
+       * Keep video playing
        */
+
       if (video.paused) {
 
         const playPromise =
@@ -206,12 +193,6 @@ document.addEventListener("DOMContentLoaded", function () {
       );
 
     });
-
-
-    /*
-     * Make sure autoplay videos start muted.
-     */
-    video.muted = true;
 
   });
 
@@ -270,11 +251,13 @@ document.addEventListener("DOMContentLoaded", function () {
           ".portfolio-card"
         );
 
+
       if (!card) {
 
         return 350;
 
       }
+
 
       return (
         card.getBoundingClientRect().width
@@ -283,6 +266,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     }
 
+
+    /* =====================================
+       PREVIOUS
+    ===================================== */
 
     if (previous) {
 
@@ -305,6 +292,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     }
 
+
+    /* =====================================
+       NEXT
+    ===================================== */
 
     if (next) {
 
@@ -344,9 +335,9 @@ document.addEventListener("DOMContentLoaded", function () {
       function (event) {
 
         /*
-         * Don't start slider dragging when
-         * user is clicking directly on a video.
+         * Don't drag slider when clicking video
          */
+
         if (
           event.target &&
           event.target.tagName === "VIDEO"
@@ -363,6 +354,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         startScroll =
           slider.scrollLeft;
+
 
         try {
 
@@ -382,8 +374,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (!isDragging) return;
 
+
         const distance =
           event.clientX - startX;
+
 
         slider.scrollLeft =
           startScroll - distance;
@@ -404,10 +398,12 @@ document.addEventListener("DOMContentLoaded", function () {
       stopDragging
     );
 
+
     slider.addEventListener(
       "pointercancel",
       stopDragging
     );
+
 
     slider.addEventListener(
       "pointerleave",
@@ -480,6 +476,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       currentX +=
         (targetX - currentX) * 0.06;
+
 
       currentY +=
         (targetY - currentY) * 0.06;
@@ -587,42 +584,67 @@ document.addEventListener("DOMContentLoaded", function () {
 
     });
 
-
 });
 
 
 /* =========================================
-   PAGE LOAD
+   PAGE LOADER — FIXED
 ========================================= */
+
+function hidePageLoader() {
+
+  const loader =
+    document.getElementById("pageLoader");
+
+
+  if (!loader) return;
+
+
+  loader.style.opacity = "0";
+
+  loader.style.visibility = "hidden";
+
+  loader.style.pointerEvents = "none";
+
+  /*
+   * Completely remove loader after animation.
+   */
+
+  setTimeout(function () {
+
+    loader.style.display = "none";
+
+  }, 600);
+
+}
+
+
+/*
+ * Normal page load
+ */
 
 window.addEventListener(
   "load",
   function () {
 
-    const loader =
-      document.getElementById(
-        "pageLoader"
-      );
-
-
-    if (!loader) return;
-
-
     setTimeout(
-      function () {
-
-        loader.style.opacity =
-          "0";
-
-        loader.style.visibility =
-          "hidden";
-
-        loader.style.pointerEvents =
-          "none";
-
-      },
-      900
+      hidePageLoader,
+      500
     );
 
   }
+);
+
+
+/*
+ * Safety fallback.
+ *
+ * Even if any external video takes time
+ * or something goes wrong, loader will
+ * disappear after 3 seconds.
+ */
+
+setTimeout(
+  hidePageLoader,
+  3000
 );
