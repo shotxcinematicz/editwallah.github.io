@@ -53,7 +53,7 @@
     href="https://shotxcinematicz.github.io/editwallah.github.io/"
   >
 
-  <!-- ================= EDIT WALLAH FAVICON ================= -->
+  <!-- ================= FAVICON ================= -->
 
   <link
     rel="icon"
@@ -145,14 +145,10 @@
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
-
     "@id": "https://shotxcinematicz.github.io/editwallah.github.io/#website",
-
     "name": "Edit Wallah",
     "alternateName": "Edit Wallah Nagpur",
-
     "url": "https://shotxcinematicz.github.io/editwallah.github.io/",
-
     "publisher": {
       "@id": "https://shotxcinematicz.github.io/editwallah.github.io/#business"
     }
@@ -164,47 +160,34 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-
     "@type": "LocalBusiness",
-
     "@id": "https://shotxcinematicz.github.io/editwallah.github.io/#business",
-
     "name": "Edit Wallah",
-
     "alternateName": "Edit Wallah Nagpur",
-
     "url": "https://shotxcinematicz.github.io/editwallah.github.io/",
-
     "logo": {
       "@type": "ImageObject",
       "url": "https://shotxcinematicz.github.io/editwallah.github.io/logo.png"
     },
-
     "image": [
       "https://shotxcinematicz.github.io/editwallah.github.io/logo.png",
       "https://shotxcinematicz.github.io/editwallah.github.io/image.jpg"
     ],
-
     "description": "Edit Wallah is a social media marketing agency and creative studio in Nagpur offering professional video editing, social media marketing, performance marketing, ad shoots, graphic designing, personal branding, influencer marketing and creative content services.",
-
     "telephone": "+91-9373376926",
-
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Nagpur",
       "addressRegion": "Maharashtra",
       "addressCountry": "IN"
     },
-
     "areaServed": {
       "@type": "City",
       "name": "Nagpur"
     },
-
     "sameAs": [
       "https://www.instagram.com/editwallah.media/"
     ],
-
     "serviceType": [
       "Social Media Marketing",
       "Performance Marketing",
@@ -225,7 +208,7 @@
     href="style.css"
   >
 
-  <!-- ================= MOBILE + ICON FIX ================= -->
+  <!-- ================= CUSTOM FIXES ================= -->
 
   <style>
 
@@ -260,7 +243,7 @@
       max-width: 100%;
     }
 
-    /* ================= EDIT WALLAH LOGO ================= */
+    /* ================= EDIT WALLAH HEADER LOGO ================= */
 
     .brand {
       display: flex !important;
@@ -285,6 +268,7 @@
       height: 43px !important;
       min-width: 43px !important;
       min-height: 43px !important;
+      max-width: 43px !important;
       border-radius: 50% !important;
       object-fit: cover !important;
       object-position: center !important;
@@ -292,16 +276,49 @@
       overflow: hidden !important;
     }
 
+    /* ================= LOADER + FOOTER LOGO ================= */
+
     .page-loader .logo-circle,
     .footer-brand .logo-circle {
       width: 43px !important;
       height: 43px !important;
       min-width: 43px !important;
       min-height: 43px !important;
+      max-width: 43px !important;
       border-radius: 50% !important;
       object-fit: cover !important;
       object-position: center !important;
       display: block !important;
+      overflow: hidden !important;
+    }
+
+    /* ================= ABOUT US CIRCULAR LOGO ================= */
+
+    .about-image.about-logo-box {
+      width: 100% !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      overflow: hidden !important;
+    }
+
+    .about-image.about-logo-box img.about-logo {
+      width: min(420px, 75vw) !important;
+      height: min(420px, 75vw) !important;
+      min-width: 260px !important;
+      min-height: 260px !important;
+      max-width: 420px !important;
+      max-height: 420px !important;
+
+      display: block !important;
+
+      border-radius: 50% !important;
+
+      object-fit: cover !important;
+      object-position: center !important;
+
+      aspect-ratio: 1 / 1 !important;
+
       overflow: hidden !important;
     }
 
@@ -344,6 +361,19 @@
       height: 100%;
       display: block;
       object-fit: cover;
+    }
+
+    /* ================= MOBILE ABOUT LOGO ================= */
+
+    @media (max-width: 600px) {
+
+      .about-image.about-logo-box img.about-logo {
+        width: 260px !important;
+        height: 260px !important;
+        min-width: 260px !important;
+        min-height: 260px !important;
+      }
+
     }
 
   </style>
@@ -548,7 +578,7 @@
       </div>
 
 
-      <!-- ================= PHONE ================= -->
+      <!-- ================= HERO PHONE ================= -->
 
       <div
         class="hero-device"
@@ -672,7 +702,6 @@
           class="portfolio-slider"
           id="workSlider"
         >
-
 
           <!-- WORK 01 -->
 
@@ -856,7 +885,6 @@
             </div>
 
           </article>
-
 
         </div>
 
@@ -1609,11 +1637,16 @@
       <div class="about-grid">
 
 
-        <div class="about-image reveal">
+        <!-- ================= ABOUT CIRCULAR LOGO ================= -->
+
+        <div class="about-image about-logo-box reveal">
 
           <img
-            src="image.jpg"
-            alt="Edit Wallah Social Media Marketing Agency and Creative Studio in Nagpur"
+            src="./logo.png"
+            alt="Edit Wallah Social Media Marketing Agency Logo"
+            class="about-logo"
+            width="420"
+            height="420"
             loading="lazy"
           >
 
