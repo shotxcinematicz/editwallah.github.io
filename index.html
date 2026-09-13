@@ -243,38 +243,77 @@
       max-width: 100%;
     }
 
-    /* ================= EDIT WALLAH HEADER LOGO ================= */
+
+    /* =====================================================
+       EDIT WALLAH HEADER
+       LOGO + TEXT PERFECTLY TOGETHER
+       ===================================================== */
 
     .brand {
-      display: flex !important;
+      display: inline-flex !important;
       align-items: center !important;
-      gap: 10px !important;
+      justify-content: flex-start !important;
+
+      gap: 6px !important;
+
+      width: auto !important;
+      max-width: max-content !important;
+
+      margin: 0 !important;
+      padding: 0 !important;
+
       text-decoration: none !important;
     }
 
-    .brand .brand-name {
-      display: inline-block !important;
-      margin: 0 !important;
-      padding: 0 !important;
-      letter-spacing: 0 !important;
-      word-spacing: 0 !important;
-      white-space: nowrap !important;
-      font-weight: 700 !important;
-      line-height: 1 !important;
-    }
 
     .brand .logo-circle {
       width: 43px !important;
       height: 43px !important;
+
       min-width: 43px !important;
       min-height: 43px !important;
+
       max-width: 43px !important;
+      max-height: 43px !important;
+
+      margin: 0 !important;
+      padding: 0 !important;
+
+      flex: 0 0 43px !important;
+
       border-radius: 50% !important;
+
       object-fit: cover !important;
       object-position: center !important;
+
       display: block !important;
+
       overflow: hidden !important;
     }
+
+
+    .brand .brand-name {
+      display: block !important;
+
+      width: auto !important;
+      max-width: max-content !important;
+
+      margin: 0 !important;
+      padding: 0 !important;
+
+      flex: 0 0 auto !important;
+
+      white-space: nowrap !important;
+
+      letter-spacing: 0 !important;
+      word-spacing: 0 !important;
+
+      font-weight: 700 !important;
+      line-height: 1 !important;
+
+      transform: none !important;
+    }
+
 
     /* ================= LOADER + FOOTER LOGO ================= */
 
@@ -282,31 +321,45 @@
     .footer-brand .logo-circle {
       width: 43px !important;
       height: 43px !important;
+
       min-width: 43px !important;
       min-height: 43px !important;
+
       max-width: 43px !important;
+      max-height: 43px !important;
+
       border-radius: 50% !important;
+
       object-fit: cover !important;
       object-position: center !important;
+
       display: block !important;
+
       overflow: hidden !important;
     }
+
 
     /* ================= ABOUT US CIRCULAR LOGO ================= */
 
     .about-image.about-logo-box {
       width: 100% !important;
+
       display: flex !important;
+
       align-items: center !important;
       justify-content: center !important;
+
       overflow: hidden !important;
     }
+
 
     .about-image.about-logo-box img.about-logo {
       width: min(420px, 75vw) !important;
       height: min(420px, 75vw) !important;
+
       min-width: 260px !important;
       min-height: 260px !important;
+
       max-width: 420px !important;
       max-height: 420px !important;
 
@@ -322,46 +375,62 @@
       overflow: hidden !important;
     }
 
+
     /* ================= 3 LINE MENU ================= */
 
     .menu-btn {
       display: flex !important;
+
       flex-direction: column !important;
+
       align-items: center !important;
       justify-content: center !important;
+
       gap: 5px !important;
     }
 
+
     .menu-btn span {
       display: block !important;
+
       width: 24px !important;
       height: 2px !important;
+
       background: currentColor !important;
+
       border-radius: 2px !important;
     }
+
 
     /* ================= CHAT ICON ================= */
 
     .whatsapp-float {
       display: flex !important;
+
       align-items: center !important;
       justify-content: center !important;
     }
 
+
     .whatsapp-float svg {
       width: 30px !important;
       height: 30px !important;
+
       display: block !important;
     }
+
 
     /* ================= PROCESS IMAGES ================= */
 
     .process-image img {
       width: 100%;
       height: 100%;
+
       display: block;
+
       object-fit: cover;
     }
+
 
     /* ================= MOBILE ABOUT LOGO ================= */
 
@@ -370,6 +439,7 @@
       .about-image.about-logo-box img.about-logo {
         width: 260px !important;
         height: 260px !important;
+
         min-width: 260px !important;
         min-height: 260px !important;
       }
@@ -531,7 +601,6 @@
           SOCIAL MEDIA MARKETING AGENCY — NAGPUR
         </div>
 
-
         <h1 id="hero-title">
 
           We Make Your Brand<br>
@@ -541,7 +610,6 @@
           </span>
 
         </h1>
-
 
         <p class="hero-text">
 
@@ -553,7 +621,6 @@
 
         </p>
 
-
         <div class="hero-actions">
 
           <a
@@ -564,7 +631,6 @@
           >
             Get Your Ad Made →
           </a>
-
 
           <a
             class="text-link"
@@ -678,7 +744,6 @@
 
         </div>
 
-
         <div class="swipe-note">
           Swipe to explore ← →
         </div>
@@ -703,19 +768,10 @@
           id="workSlider"
         >
 
-          <!-- WORK 01 -->
-
           <article class="portfolio-card">
 
-            <video
-              autoplay
-              muted
-              loop
-              playsinline
-              preload="metadata"
-              data-sound-video
-              aria-label="Edit Wallah commercial advertisement"
-            >
+            <video autoplay muted loop playsinline preload="metadata" data-sound-video
+              aria-label="Edit Wallah commercial advertisement">
 
               <source
                 src="https://stream.vidhosting.in/videos/589e4a37.mp4"
@@ -725,43 +781,22 @@
             </video>
 
             <div class="card-meta">
-
               <strong>01</strong>
-
-              <span class="sound-icon">
-                🔇
-              </span>
-
+              <span class="sound-icon">🔇</span>
             </div>
 
             <div class="card-title">
-
-              <small>
-                AD
-              </small>
-
-              <b>
-                Commercial
-              </b>
-
+              <small>AD</small>
+              <b>Commercial</b>
             </div>
 
           </article>
 
 
-          <!-- WORK 02 -->
-
           <article class="portfolio-card">
 
-            <video
-              autoplay
-              muted
-              loop
-              playsinline
-              preload="metadata"
-              data-sound-video
-              aria-label="Edit Wallah education brand story video"
-            >
+            <video autoplay muted loop playsinline preload="metadata" data-sound-video
+              aria-label="Edit Wallah education brand story video">
 
               <source
                 src="https://stream.vidhosting.in/videos/905dac61.mp4"
@@ -771,43 +806,22 @@
             </video>
 
             <div class="card-meta">
-
               <strong>02</strong>
-
-              <span class="sound-icon">
-                🔇
-              </span>
-
+              <span class="sound-icon">🔇</span>
             </div>
 
             <div class="card-title">
-
-              <small>
-                EDUCATION
-              </small>
-
-              <b>
-                Brand Story
-              </b>
-
+              <small>EDUCATION</small>
+              <b>Brand Story</b>
             </div>
 
           </article>
 
 
-          <!-- WORK 03 -->
-
           <article class="portfolio-card">
 
-            <video
-              autoplay
-              muted
-              loop
-              playsinline
-              preload="metadata"
-              data-sound-video
-              aria-label="Edit Wallah fashion commercial"
-            >
+            <video autoplay muted loop playsinline preload="metadata" data-sound-video
+              aria-label="Edit Wallah fashion commercial">
 
               <source
                 src="https://stream.vidhosting.in/videos/48cefe50.mp4"
@@ -817,43 +831,22 @@
             </video>
 
             <div class="card-meta">
-
               <strong>03</strong>
-
-              <span class="sound-icon">
-                🔇
-              </span>
-
+              <span class="sound-icon">🔇</span>
             </div>
 
             <div class="card-title">
-
-              <small>
-                FASHION
-              </small>
-
-              <b>
-                Commercial
-              </b>
-
+              <small>FASHION</small>
+              <b>Commercial</b>
             </div>
 
           </article>
 
 
-          <!-- WORK 04 -->
-
           <article class="portfolio-card">
 
-            <video
-              autoplay
-              muted
-              loop
-              playsinline
-              preload="metadata"
-              data-sound-video
-              aria-label="Edit Wallah product commercial"
-            >
+            <video autoplay muted loop playsinline preload="metadata" data-sound-video
+              aria-label="Edit Wallah product commercial">
 
               <source
                 src="https://stream.vidhosting.in/videos/67b109fb.mp4"
@@ -863,25 +856,13 @@
             </video>
 
             <div class="card-meta">
-
               <strong>04</strong>
-
-              <span class="sound-icon">
-                🔇
-              </span>
-
+              <span class="sound-icon">🔇</span>
             </div>
 
             <div class="card-title">
-
-              <small>
-                PRODUCT
-              </small>
-
-              <b>
-                Commercial
-              </b>
-
+              <small>PRODUCT</small>
+              <b>Commercial</b>
             </div>
 
           </article>
@@ -934,23 +915,15 @@
           </div>
 
           <h2 id="process-title">
-
             Content Growth<br>
-
-            <span>
-              Plan
-            </span>
-
+            <span>Plan</span>
           </h2>
 
         </div>
 
-
         <p class="section-description">
-
           We Don't Guess. Our creative team follows
           a proven process to scale your brand.
-
         </p>
 
       </div>
@@ -958,14 +931,9 @@
 
       <div class="process-grid">
 
-
-        <!-- PROCESS 01 -->
-
         <article class="process-card reveal">
 
-          <div class="process-number">
-            01
-          </div>
+          <div class="process-number">01</div>
 
           <div class="process-image">
 
@@ -989,13 +957,9 @@
         </article>
 
 
-        <!-- PROCESS 02 -->
-
         <article class="process-card reveal">
 
-          <div class="process-number">
-            02
-          </div>
+          <div class="process-number">02</div>
 
           <div class="process-image">
 
@@ -1019,13 +983,9 @@
         </article>
 
 
-        <!-- PROCESS 03 -->
-
         <article class="process-card reveal">
 
-          <div class="process-number">
-            03
-          </div>
+          <div class="process-number">03</div>
 
           <div class="process-image">
 
@@ -1049,13 +1009,9 @@
         </article>
 
 
-        <!-- PROCESS 04 -->
-
         <article class="process-card reveal">
 
-          <div class="process-number">
-            04
-          </div>
+          <div class="process-number">04</div>
 
           <div class="process-image">
 
@@ -1077,7 +1033,6 @@
           </p>
 
         </article>
-
 
       </div>
 
@@ -1112,9 +1067,6 @@
 
 
       <div class="service-grid">
-
-
-        <!-- SERVICE 01 -->
 
         <article class="service-card reveal">
 
@@ -1159,8 +1111,6 @@
         </article>
 
 
-        <!-- SERVICE 02 -->
-
         <article class="service-card reveal">
 
           <div class="service-image">
@@ -1202,8 +1152,6 @@
 
         </article>
 
-
-        <!-- SERVICE 03 -->
 
         <article class="service-card reveal">
 
@@ -1248,8 +1196,6 @@
         </article>
 
 
-        <!-- SERVICE 04 -->
-
         <article class="service-card reveal">
 
           <div class="service-image">
@@ -1291,7 +1237,6 @@
 
         </article>
 
-
       </div>
 
     </section>
@@ -1316,37 +1261,15 @@
 
         <div class="client-track">
 
-          <span>
-            EDIT WALLAH
-          </span>
+          <span>EDIT WALLAH</span>
+          <span>CREATIVE</span>
+          <span>BRAND</span>
+          <span>MEDIA</span>
 
-          <span>
-            CREATIVE
-          </span>
-
-          <span>
-            BRAND
-          </span>
-
-          <span>
-            MEDIA
-          </span>
-
-          <span>
-            EDIT WALLAH
-          </span>
-
-          <span>
-            CREATIVE
-          </span>
-
-          <span>
-            BRAND
-          </span>
-
-          <span>
-            MEDIA
-          </span>
+          <span>EDIT WALLAH</span>
+          <span>CREATIVE</span>
+          <span>BRAND</span>
+          <span>MEDIA</span>
 
         </div>
 
@@ -1375,13 +1298,8 @@
           </div>
 
           <h2 id="portfolio-title">
-
             Premium Creative<br>
-
-            <span>
-              That Drives Real Results
-            </span>
-
+            <span>That Drives Real Results</span>
           </h2>
 
         </div>
@@ -1410,20 +1328,10 @@
           id="portfolioSlider"
         >
 
-
-          <!-- PORTFOLIO 01 -->
-
           <article class="portfolio-card">
 
-            <video
-              autoplay
-              muted
-              loop
-              playsinline
-              preload="metadata"
-              data-sound-video
-              aria-label="Edit Wallah education commercial"
-            >
+            <video autoplay muted loop playsinline preload="metadata" data-sound-video
+              aria-label="Edit Wallah education commercial">
 
               <source
                 src="https://stream.vidhosting.in/videos/003e8c93.mp4"
@@ -1433,43 +1341,22 @@
             </video>
 
             <div class="card-meta">
-
               <strong>01</strong>
-
-              <span class="sound-icon">
-                🔇
-              </span>
-
+              <span class="sound-icon">🔇</span>
             </div>
 
             <div class="card-title">
-
-              <small>
-                EDUCATION
-              </small>
-
-              <b>
-                Commercial
-              </b>
-
+              <small>EDUCATION</small>
+              <b>Commercial</b>
             </div>
 
           </article>
 
 
-          <!-- PORTFOLIO 02 -->
-
           <article class="portfolio-card">
 
-            <video
-              autoplay
-              muted
-              loop
-              playsinline
-              preload="metadata"
-              data-sound-video
-              aria-label="Edit Wallah fashion commercial"
-            >
+            <video autoplay muted loop playsinline preload="metadata" data-sound-video
+              aria-label="Edit Wallah fashion commercial">
 
               <source
                 src="https://stream.vidhosting.in/videos/430e51a0.mp4"
@@ -1479,43 +1366,22 @@
             </video>
 
             <div class="card-meta">
-
               <strong>02</strong>
-
-              <span class="sound-icon">
-                🔇
-              </span>
-
+              <span class="sound-icon">🔇</span>
             </div>
 
             <div class="card-title">
-
-              <small>
-                FASHION
-              </small>
-
-              <b>
-                Commercial
-              </b>
-
+              <small>FASHION</small>
+              <b>Commercial</b>
             </div>
 
           </article>
 
 
-          <!-- PORTFOLIO 03 -->
-
           <article class="portfolio-card">
 
-            <video
-              autoplay
-              muted
-              loop
-              playsinline
-              preload="metadata"
-              data-sound-video
-              aria-label="Edit Wallah cafe commercial"
-            >
+            <video autoplay muted loop playsinline preload="metadata" data-sound-video
+              aria-label="Edit Wallah cafe commercial">
 
               <source
                 src="https://stream.vidhosting.in/videos/589e4a37.mp4"
@@ -1525,43 +1391,22 @@
             </video>
 
             <div class="card-meta">
-
               <strong>03</strong>
-
-              <span class="sound-icon">
-                🔇
-              </span>
-
+              <span class="sound-icon">🔇</span>
             </div>
 
             <div class="card-title">
-
-              <small>
-                CAFE
-              </small>
-
-              <b>
-                Commercial
-              </b>
-
+              <small>CAFE</small>
+              <b>Commercial</b>
             </div>
 
           </article>
 
 
-          <!-- PORTFOLIO 04 -->
-
           <article class="portfolio-card">
 
-            <video
-              autoplay
-              muted
-              loop
-              playsinline
-              preload="metadata"
-              data-sound-video
-              aria-label="Edit Wallah product commercial"
-            >
+            <video autoplay muted loop playsinline preload="metadata" data-sound-video
+              aria-label="Edit Wallah product commercial">
 
               <source
                 src="https://stream.vidhosting.in/videos/e4ce8cf2.mp4"
@@ -1571,29 +1416,16 @@
             </video>
 
             <div class="card-meta">
-
               <strong>04</strong>
-
-              <span class="sound-icon">
-                🔇
-              </span>
-
+              <span class="sound-icon">🔇</span>
             </div>
 
             <div class="card-title">
-
-              <small>
-                PRODUCT
-              </small>
-
-              <b>
-                Commercial
-              </b>
-
+              <small>PRODUCT</small>
+              <b>Commercial</b>
             </div>
 
           </article>
-
 
         </div>
 
@@ -1635,9 +1467,6 @@
     >
 
       <div class="about-grid">
-
-
-        <!-- ================= ABOUT CIRCULAR LOGO ================= -->
 
         <div class="about-image about-logo-box reveal">
 
@@ -1745,7 +1574,6 @@
 
     <div class="footer-top">
 
-
       <div class="footer-brand">
 
         <img
@@ -1822,13 +1650,9 @@
         </h4>
 
         <a href="tel:+919373376926">
-
           Call Us<br>
-
           +91 93733 76926
-
         </a>
-
 
         <a
           href="https://www.instagram.com/editwallah.media/"
@@ -1838,17 +1662,12 @@
           Instagram
         </a>
 
-
         <p>
-
           Location<br>
-
           Nagpur, Maharashtra, India
-
         </p>
 
       </div>
-
 
     </div>
 
