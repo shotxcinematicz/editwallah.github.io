@@ -1,5 +1,6 @@
 /* =========================================================
 EDIT WALLAH — PREMIUM BLACK / WHITE / GOLD
+FIXED HEADER BRAND SPACING
 ========================================================= */
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap');
@@ -165,42 +166,92 @@ HEADER
 }
 
 /* =========================================================
-BRAND
+BRAND — FIXED
+IMPORTANT:
+No ::after text.
+HTML .brand-name is the ONLY brand text.
 ========================================================= */
 
 .brand {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+  display: flex !important;
+  align-items: center !important;
+
+  gap: 6px !important;
 
   position: relative;
+
+  width: fit-content !important;
+  max-width: max-content !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  flex: 0 0 auto !important;
+
+  white-space: nowrap !important;
 }
+
+/* REMOVE OLD DUPLICATE BRAND TEXT */
 
 .brand::after {
-  content: "EDIT WALLAH";
-
-  color: var(--white);
-
-  font-family: "Manrope", sans-serif;
-  font-size: 15px;
-  font-weight: 800;
-
-  letter-spacing: 2.2px;
-
-  white-space: nowrap;
-
-  text-shadow:
-    0 0 18px rgba(201, 162, 39, 0.12);
+  content: none !important;
+  display: none !important;
 }
 
-.brand img {
-  width: 43px;
-  height: 43px;
+/* LOGO */
 
-  object-fit: cover;
-  object-position: center;
+.brand img,
+.brand .logo-circle {
+  width: 43px !important;
+  height: 43px !important;
 
-  border-radius: 50%;
+  min-width: 43px !important;
+  min-height: 43px !important;
+
+  max-width: 43px !important;
+  max-height: 43px !important;
+
+  flex: 0 0 43px !important;
+
+  display: block !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  border-radius: 50% !important;
+
+  object-fit: cover !important;
+  object-position: center !important;
+}
+
+/* BRAND NAME */
+
+.brand .brand-name {
+  display: block !important;
+
+  width: auto !important;
+  max-width: max-content !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  color: var(--white) !important;
+
+  font-family: "Manrope", sans-serif !important;
+
+  font-size: 15px !important;
+  font-weight: 800 !important;
+
+  line-height: 1 !important;
+
+  letter-spacing: 1.8px !important;
+  word-spacing: 0 !important;
+
+  white-space: nowrap !important;
+
+  flex: 0 0 auto !important;
+
+  transform: none !important;
 }
 
 /* =========================================================
@@ -209,7 +260,9 @@ DESKTOP NAV
 
 .desktop-nav {
   display: flex;
+
   align-items: center;
+
   gap: 30px;
 }
 
@@ -527,7 +580,7 @@ HERO ACTIONS
 }
 
 /* =========================================================
-HERO DEVICE — STRAIGHT
+HERO DEVICE
 ========================================================= */
 
 .hero-device {
@@ -1724,8 +1777,6 @@ TABLET
     gap: 45px;
   }
 
-  /* TABLET ABOUT CIRCLE */
-
   .about-image {
     width: min(100%, 420px);
 
@@ -1779,18 +1830,55 @@ MOBILE
     display: flex;
   }
 
-  .brand img {
-    width: 38px;
-    height: 38px;
+  /* =======================================================
+  MOBILE BRAND — FIXED
+  ======================================================= */
 
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: center;
+  .brand {
+    gap: 5px !important;
+
+    width: fit-content !important;
+    max-width: max-content !important;
+
+    flex: 0 0 auto !important;
   }
 
   .brand::after {
-    font-size: 13px;
-    letter-spacing: 1.7px;
+    content: none !important;
+    display: none !important;
+  }
+
+  .brand img,
+  .brand .logo-circle {
+    width: 38px !important;
+    height: 38px !important;
+
+    min-width: 38px !important;
+    min-height: 38px !important;
+
+    max-width: 38px !important;
+    max-height: 38px !important;
+
+    flex: 0 0 38px !important;
+
+    margin: 0 !important;
+  }
+
+  .brand .brand-name {
+    display: block !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    font-size: 13px !important;
+
+    line-height: 1 !important;
+
+    letter-spacing: 1.5px !important;
+
+    white-space: nowrap !important;
+
+    transform: none !important;
   }
 
   /* =======================================================
@@ -2014,8 +2102,6 @@ MOBILE
     gap: 35px;
   }
 
-  /* PERFECT MOBILE ABOUT CIRCLE */
-
   .about-image {
     width: min(100%, 360px);
 
@@ -2103,24 +2189,54 @@ SMALL MOBILE
 
 @media (max-width: 420px) {
 
+  /* =======================================================
+  SMALL MOBILE BRAND — FIXED
+  ======================================================= */
+
   .brand {
-    gap: 9px;
+    gap: 4px !important;
+
+    width: fit-content !important;
+    max-width: max-content !important;
   }
 
   .brand::after {
-    font-size: 11px;
-
-    letter-spacing: 1.4px;
+    content: none !important;
+    display: none !important;
   }
 
-  .brand img {
-    width: 35px;
+  .brand img,
+  .brand .logo-circle {
+    width: 35px !important;
+    height: 35px !important;
 
-    height: 35px;
+    min-width: 35px !important;
+    min-height: 35px !important;
 
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: center;
+    max-width: 35px !important;
+    max-height: 35px !important;
+
+    flex: 0 0 35px !important;
+
+    border-radius: 50% !important;
+
+    object-fit: cover !important;
+    object-position: center !important;
+
+    margin: 0 !important;
+  }
+
+  .brand .brand-name {
+    font-size: 11px !important;
+
+    letter-spacing: 1.1px !important;
+
+    line-height: 1 !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    white-space: nowrap !important;
   }
 
   .hero {
@@ -2130,8 +2246,6 @@ SMALL MOBILE
 
     padding-right: 20px;
   }
-
-  /* EXACT CENTER + COMPLETELY STRAIGHT */
 
   .hero-device {
     left: 50%;
@@ -2173,8 +2287,6 @@ SMALL MOBILE
       brightness(1.18)
       contrast(1.05);
   }
-
-  /* SMALL MOBILE ABOUT CIRCLE */
 
   .about-image {
     width: min(100%, 320px);
@@ -2250,7 +2362,6 @@ DEVICE MEDIA — IMAGE / VIDEO
 
 /* =========================================================
 FINAL ABOUT CIRCLE OVERRIDE
-Keeps About image circular on every screen size
 ========================================================= */
 
 .about-image {
@@ -2268,4 +2379,56 @@ Keeps About image circular on every screen size
   object-fit: cover !important;
   object-position: center !important;
   display: block !important;
+}
+
+/* =========================================================
+FINAL HEADER BRAND OVERRIDE
+This is intentionally at the very end so no older rule
+can create extra spacing or duplicate text.
+========================================================= */
+
+.site-header .brand {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+
+  gap: 6px !important;
+
+  width: fit-content !important;
+  max-width: max-content !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  flex: 0 0 auto !important;
+}
+
+.site-header .brand::before,
+.site-header .brand::after {
+  content: none !important;
+  display: none !important;
+}
+
+.site-header .brand .logo-circle,
+.site-header .brand img {
+  flex: 0 0 auto !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  transform: none !important;
+}
+
+.site-header .brand .brand-name {
+  flex: 0 0 auto !important;
+
+  width: auto !important;
+  max-width: max-content !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  transform: none !important;
+
+  white-space: nowrap !important;
 }
