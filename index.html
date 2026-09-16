@@ -12,9 +12,7 @@
 
   <!-- ================= PRIMARY SEO ================= -->
 
-  <title>
-    Edit Wallah | Social Media Marketing Agency in Nagpur
-  </title>
+  <title>Edit Wallah | Social Media Marketing Agency in Nagpur</title>
 
   <meta
     name="description"
@@ -26,10 +24,7 @@
     content="Edit Wallah, Edit Wallah Nagpur, social media marketing agency in Nagpur, social media marketing Nagpur, digital marketing agency Nagpur, digital marketing Nagpur, video editing Nagpur, video editing agency Nagpur, performance marketing Nagpur, ad agency Nagpur, creative agency Nagpur, graphic designing Nagpur, personal branding Nagpur, influencer marketing Nagpur"
   >
 
-  <meta
-    name="author"
-    content="Edit Wallah"
-  >
+  <meta name="author" content="Edit Wallah">
 
   <meta
     name="robots"
@@ -41,10 +36,7 @@
     content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
   >
 
-  <meta
-    name="theme-color"
-    content="#080808"
-  >
+  <meta name="theme-color" content="#080808">
 
   <!-- ================= CANONICAL ================= -->
 
@@ -82,10 +74,7 @@
 
   <!-- ================= OPEN GRAPH ================= -->
 
-  <meta
-    property="og:type"
-    content="website"
-  >
+  <meta property="og:type" content="website">
 
   <meta
     property="og:title"
@@ -102,10 +91,7 @@
     content="https://shotxcinematicz.github.io/editwallah.github.io/"
   >
 
-  <meta
-    property="og:site_name"
-    content="Edit Wallah"
-  >
+  <meta property="og:site_name" content="Edit Wallah">
 
   <meta
     property="og:image"
@@ -119,10 +105,7 @@
 
   <!-- ================= TWITTER ================= -->
 
-  <meta
-    name="twitter:card"
-    content="summary_large_image"
-  >
+  <meta name="twitter:card" content="summary_large_image">
 
   <meta
     name="twitter:title"
@@ -203,16 +186,14 @@
 
   <!-- ================= CSS ================= -->
 
-  <link
-    rel="stylesheet"
-    href="style.css"
-  >
-
-  <!-- =====================================================
-       CUSTOM FIXES + PREMIUM GOLD THEME
-       ===================================================== -->
+  <link rel="stylesheet" href="style.css">
 
   <style>
+
+    /* =====================================================
+       EDIT WALLAH — PREMIUM BLACK / GOLD
+       CLEAN SECTION SYSTEM
+       ===================================================== */
 
     html,
     body {
@@ -221,6 +202,7 @@
       margin: 0;
       padding: 0;
       overflow-x: hidden;
+      background: #080808 !important;
     }
 
     *,
@@ -238,87 +220,54 @@
       display: block;
     }
 
-    .portfolio-slider,
-    .portfolio-card,
-    .process-image,
-    .device-screen {
-      max-width: 100%;
-    }
-
-
-    /* =====================================================
-       PREMIUM COLOR SYSTEM
-       ===================================================== */
-
     :root {
       --ew-black: #080808;
       --ew-black-soft: #111111;
+      --ew-black-card: #151515;
       --ew-gold: #c9a227;
-      --ew-gold-light: #e0bd55;
-      --ew-gold-bg: #c9a227;
-      --ew-gold-soft: #d6ad36;
-      --ew-cream: #f3e7bd;
-      --ew-dark-text: #111111;
+      --ew-gold-light: #dfbd58;
       --ew-white: #ffffff;
+      --ew-muted: rgba(255,255,255,.68);
+      --ew-border: rgba(201,162,39,.22);
     }
 
-
-    /* =====================================================
-       GLOBAL GOLD BACKGROUND OVERRIDE
-       Removes WHITE section backgrounds without making
-       the whole website black.
-       ===================================================== */
-
     body {
-      background: var(--ew-black) !important;
+      background: #080808 !important;
       color: #ffffff;
     }
 
     main {
-      background: var(--ew-black) !important;
+      background: #080808 !important;
     }
 
-
     /* =====================================================
-       GOLD SECTIONS
+       ALL MAJOR SECTIONS — BLACK
        ===================================================== */
 
+    .work-section,
+    .process-section,
+    .services-section,
+    .portfolio-section,
+    .team-section,
+    .about-section,
+    .clients-section,
+    .client-reviews-section {
+      background: #080808 !important;
+      color: #ffffff !important;
+    }
+
+    /* Prevent old CSS from making sections yellow */
+    .work-section,
     .process-section,
     .services-section,
     .portfolio-section,
     .team-section,
     .about-section {
-      background:
-        linear-gradient(
-          135deg,
-          #c9a227 0%,
-          #d7b43f 48%,
-          #bd921d 100%
-        ) !important;
-
-      color: #111111 !important;
+      background-image: none !important;
     }
 
-
     /* =====================================================
-       FEATURED WORK SECTION
-       ===================================================== */
-
-    .work-section {
-      background:
-        linear-gradient(
-          135deg,
-          #c9a227 0%,
-          #d8b645 50%,
-          #bd941e 100%
-        ) !important;
-
-      color: #111111 !important;
-    }
-
-
-    /* =====================================================
-       GOLD SECTION TEXT
+       SECTION TEXT
        ===================================================== */
 
     .work-section h2,
@@ -327,11 +276,18 @@
     .portfolio-section h2,
     .team-section h2,
     .about-section h2,
+    .clients-section h2 {
+      color: #ffffff !important;
+    }
+
     .work-section h3,
     .process-section h3,
     .services-section h3,
     .portfolio-section h3,
-    .about-section h3,
+    .about-section h3 {
+      color: #ffffff !important;
+    }
+
     .work-section p,
     .process-section p,
     .services-section p,
@@ -339,27 +295,23 @@
     .about-section p,
     .section-description,
     .swipe-note {
-      color: #111111 !important;
+      color: rgba(255,255,255,.68) !important;
     }
 
-
-    /* =====================================================
-       EYEBROW ON GOLD
-       ===================================================== */
-
+    /* Gold ONLY as accent */
     .work-section .eyebrow,
     .process-section .eyebrow,
     .services-section .eyebrow,
     .portfolio-section .eyebrow,
     .team-section .eyebrow,
-    .about-section .eyebrow {
-      color: #111111 !important;
-      opacity: 0.7;
+    .about-section .eyebrow,
+    .clients-section .eyebrow {
+      color: var(--ew-gold-light) !important;
+      opacity: 1 !important;
     }
 
-
     /* =====================================================
-       GOLD SECTION BUTTONS
+       BUTTONS
        ===================================================== */
 
     .work-section .btn-dark,
@@ -367,9 +319,9 @@
     .services-section .btn-dark,
     .portfolio-section .btn-dark,
     .about-section .btn-dark {
-      background: #111111 !important;
-      color: #f5e7b2 !important;
-      border-color: #111111 !important;
+      background: var(--ew-gold) !important;
+      color: #080808 !important;
+      border-color: var(--ew-gold) !important;
     }
 
     .work-section .btn-dark:hover,
@@ -377,89 +329,68 @@
     .services-section .btn-dark:hover,
     .portfolio-section .btn-dark:hover,
     .about-section .btn-dark:hover {
-      background: #000000 !important;
-      color: #ffffff !important;
+      background: #ffffff !important;
+      color: #080808 !important;
+      border-color: #ffffff !important;
     }
 
-
     /* =====================================================
-       GOLD SECTION LINKS
-       ===================================================== */
-
-    .services-section .service-body > a {
-      color: #111111 !important;
-      border-color: rgba(17,17,17,0.3) !important;
-    }
-
-
-    /* =====================================================
-       GOLD SECTION CARDS
+       CARDS — DARK, NOT GOLD
        ===================================================== */
 
     .process-section .process-card,
     .services-section .service-card {
-      background:
-        rgba(255,255,255,0.12) !important;
-
-      border-color:
-        rgba(17,17,17,0.22) !important;
-
+      background: #111111 !important;
+      border-color: rgba(201,162,39,.18) !important;
       box-shadow:
-        0 20px 55px rgba(0,0,0,0.16),
-        inset 0 1px 0 rgba(255,255,255,0.25) !important;
+        0 22px 60px rgba(0,0,0,.35),
+        inset 0 1px 0 rgba(255,255,255,.05) !important;
     }
-
-
-    /* =====================================================
-       PORTFOLIO / WORK CARD
-       ===================================================== */
 
     .work-section .portfolio-card,
     .portfolio-section .portfolio-card {
-      border-color: rgba(17,17,17,0.2) !important;
-      box-shadow:
-        0 25px 60px rgba(0,0,0,0.22) !important;
+      border-color: rgba(201,162,39,.18) !important;
+      box-shadow: 0 25px 60px rgba(0,0,0,.4) !important;
     }
 
+    .services-section .service-body > a {
+      color: var(--ew-gold-light) !important;
+      border-color: rgba(201,162,39,.3) !important;
+    }
 
     /* =====================================================
-       GOLD SECTION SLIDER ARROWS
+       SLIDER ARROWS
        ===================================================== */
 
     .work-section .slider-arrow,
     .portfolio-section .slider-arrow {
       background: #111111 !important;
       color: #ffffff !important;
-      border-color: rgba(255,255,255,0.2) !important;
+      border-color: rgba(201,162,39,.35) !important;
     }
 
     .work-section .slider-arrow:hover,
     .portfolio-section .slider-arrow:hover {
-      background: #000000 !important;
+      background: var(--ew-gold) !important;
+      color: #080808 !important;
     }
-
 
     /* =====================================================
        CLIENT FEEDBACK
-       NOW POSITIONED ABOVE FEATURED WORK
+       BLACK + SUBTLE GOLD
        ===================================================== */
 
     .client-reviews-section {
       width: 100%;
       padding: 95px 6vw;
-
       overflow: hidden;
       text-align: center;
 
-      background:
-        linear-gradient(
-          135deg,
-          #080808 0%,
-          #15120a 48%,
-          #080808 100%
-        ) !important;
-
+      background: #080808 !important;
       color: #ffffff !important;
+
+      border-top: 1px solid rgba(201,162,39,.12);
+      border-bottom: 1px solid rgba(201,162,39,.12);
     }
 
     .client-reviews-heading {
@@ -469,21 +400,20 @@
 
     .client-reviews-heading .eyebrow {
       margin-bottom: 12px;
+      color: var(--ew-gold-light) !important;
     }
 
     .client-reviews-heading h2 {
       margin: 0;
       font-size: clamp(38px, 6vw, 72px);
-      line-height: 0.98;
+      line-height: .98;
       letter-spacing: -2px;
       color: #ffffff !important;
     }
 
     .client-reviews-heading h2 span {
       color: var(--ew-gold-light) !important;
-      opacity: 1;
     }
-
 
     /* =====================================================
        REVIEW SLIDER
@@ -502,9 +432,7 @@
       display: flex;
       width: 100%;
       transform: translateX(0);
-      transition:
-        transform 0.85s cubic-bezier(.2,.8,.2,1);
-
+      transition: transform .85s cubic-bezier(.2,.8,.2,1);
       will-change: transform;
     }
 
@@ -526,30 +454,20 @@
 
       text-align: left;
 
-      border:
-        1px solid rgba(201,162,39,0.4);
-
+      border: 1px solid rgba(201,162,39,.28);
       border-radius: 28px;
 
-      background:
-        linear-gradient(
-          135deg,
-          rgba(201,162,39,0.18),
-          rgba(255,255,255,0.035)
-        );
+      background: #111111 !important;
 
       box-shadow:
-        0 30px 80px rgba(0,0,0,0.35),
-        inset 0 1px 0 rgba(255,255,255,0.12);
-
-      backdrop-filter: blur(15px);
+        0 30px 80px rgba(0,0,0,.4),
+        inset 0 1px 0 rgba(255,255,255,.05);
 
       overflow: hidden;
     }
 
     .client-review-card::before {
       content: "";
-
       position: absolute;
 
       width: 240px;
@@ -560,16 +478,10 @@
 
       border-radius: 50%;
 
-      background:
-        rgba(201,162,39,0.13);
+      background: rgba(201,162,39,.07);
 
       pointer-events: none;
     }
-
-
-    /* =====================================================
-       REVIEW INFO
-       ===================================================== */
 
     .review-top-row {
       display: flex;
@@ -614,12 +526,13 @@
 
     .review-client-type {
       font-size: 13px;
-      opacity: 0.58;
+      opacity: .55;
       margin: 0;
+      color: #ffffff !important;
     }
 
     .review-stars {
-      color: #ffd21c;
+      color: var(--ew-gold-light) !important;
       font-size: 26px;
       letter-spacing: 2px;
       white-space: nowrap;
@@ -629,51 +542,42 @@
     .review-label {
       display: inline-flex;
       align-items: center;
-
       width: fit-content;
 
       padding: 7px 12px;
       margin-bottom: 18px;
 
-      border:
-        1px solid rgba(201,162,39,0.4);
-
+      border: 1px solid rgba(201,162,39,.3);
       border-radius: 999px;
 
-      color: var(--ew-gold-light);
+      color: var(--ew-gold-light) !important;
 
       font-size: 11px;
       font-weight: 800;
       letter-spacing: 1.5px;
       text-transform: uppercase;
-
-      opacity: 0.9;
     }
 
     .client-review-card blockquote {
       margin: 0;
       max-width: 900px;
 
-      font-size: clamp(19px, 2.3vw, 28px);
+      font-size: clamp(19px,2.3vw,28px);
       line-height: 1.55;
       font-weight: 500;
-      letter-spacing: -0.2px;
+      letter-spacing: -.2px;
 
       color: #ffffff !important;
     }
 
     .review-counter {
       margin-top: 28px;
-
       font-size: 12px;
       font-weight: 700;
       letter-spacing: 1.5px;
-
-      opacity: 0.45;
-
+      opacity: .4;
       text-transform: uppercase;
     }
-
 
     /* =====================================================
        REVIEW ARROWS
@@ -693,33 +597,22 @@
       align-items: center;
       justify-content: center;
 
-      border:
-        1px solid rgba(201,162,39,0.45);
-
+      border: 1px solid rgba(201,162,39,.35);
       border-radius: 50%;
 
-      background:
-        rgba(0,0,0,0.65);
-
+      background: rgba(0,0,0,.75);
       color: #ffffff;
 
       font-size: 21px;
       cursor: pointer;
 
-      backdrop-filter: blur(10px);
-
-      transition:
-        transform 0.25s ease,
-        background 0.25s ease;
+      transition: .25s ease;
     }
 
     .review-arrow:hover {
-      transform:
-        translateY(-50%)
-        scale(1.08);
-
-      background:
-        rgba(201,162,39,0.2);
+      transform: translateY(-50%) scale(1.08);
+      background: var(--ew-gold);
+      color: #080808;
     }
 
     .review-arrow.prev {
@@ -729,7 +622,6 @@
     .review-arrow.next {
       right: 22px;
     }
-
 
     /* =====================================================
        REVIEW DOTS
@@ -753,60 +645,41 @@
       border: 0;
       border-radius: 50%;
 
-      background:
-        rgba(255,255,255,0.25);
-
+      background: rgba(255,255,255,.22);
       cursor: pointer;
 
-      transition:
-        width 0.3s ease,
-        background 0.3s ease;
+      transition: .3s ease;
     }
 
     .review-dot.active {
       width: 24px;
       border-radius: 999px;
-
-      background:
-        var(--ew-gold);
+      background: var(--ew-gold);
     }
 
     .review-slider-note {
       margin-top: 18px;
-
       font-size: 12px;
-      opacity: 0.42;
-
-      letter-spacing: 0.5px;
+      opacity: .4;
+      letter-spacing: .5px;
     }
 
-
     /* =====================================================
-       CLIENT MARQUEE — EXTRA SLOW
-       ===================================================== */
-
-    .client-track {
-      animation-duration: 55s !important;
-      animation-timing-function: linear !important;
-    }
-
-
-    /* =====================================================
-       CLIENTS SECTION
+       CLIENTS
        ===================================================== */
 
     .clients-section {
-      background:
-        linear-gradient(
-          135deg,
-          #080808 0%,
-          #12100a 50%,
-          #080808 100%
-        ) !important;
-
+      background: #080808 !important;
       color: #ffffff !important;
     }
 
+    .clients-section h2 {
+      color: #ffffff !important;
+    }
+
+    .clients-section p {
+      color: rgba(255,255,255,.6) !important;
+    }
 
     /* =====================================================
        TEAM
@@ -823,12 +696,9 @@
       margin-bottom: 35px;
     }
 
-    .team-section .eyebrow {
-      margin-bottom: 10px;
-    }
-
     .team-section h2 {
       margin: 0;
+      color: #ffffff !important;
     }
 
     .team-image-box {
@@ -848,7 +718,6 @@
       border-radius: 22px;
     }
 
-
     /* =====================================================
        HEADER
        ===================================================== */
@@ -857,65 +726,44 @@
       display: inline-flex !important;
       align-items: center !important;
       justify-content: flex-start !important;
-
       gap: 6px !important;
-
       width: auto !important;
       max-width: max-content !important;
-
       margin: 0 !important;
       padding: 0 !important;
-
       text-decoration: none !important;
     }
 
     .brand .logo-circle {
       width: 43px !important;
       height: 43px !important;
-
       min-width: 43px !important;
       min-height: 43px !important;
-
       max-width: 43px !important;
       max-height: 43px !important;
-
       margin: 0 !important;
       padding: 0 !important;
-
       flex: 0 0 43px !important;
-
       border-radius: 50% !important;
-
       object-fit: cover !important;
       object-position: center !important;
-
       display: block !important;
-
       overflow: hidden !important;
     }
 
     .brand .brand-name {
       display: block !important;
-
       width: auto !important;
       max-width: max-content !important;
-
       margin: 0 !important;
       padding: 0 !important;
-
       flex: 0 0 auto !important;
-
       white-space: nowrap !important;
-
       letter-spacing: 0 !important;
       word-spacing: 0 !important;
-
       font-weight: 700 !important;
       line-height: 1 !important;
-
-      transform: none !important;
     }
-
 
     /* =====================================================
        LOADER + FOOTER LOGO
@@ -925,23 +773,16 @@
     .footer-brand .logo-circle {
       width: 43px !important;
       height: 43px !important;
-
       min-width: 43px !important;
       min-height: 43px !important;
-
       max-width: 43px !important;
       max-height: 43px !important;
-
       border-radius: 50% !important;
-
       object-fit: cover !important;
       object-position: center !important;
-
       display: block !important;
-
       overflow: hidden !important;
     }
-
 
     /* =====================================================
        ABOUT LOGO
@@ -949,71 +790,52 @@
 
     .about-image.about-logo-box {
       width: 100% !important;
-
       display: flex !important;
-
       align-items: center !important;
       justify-content: center !important;
-
       overflow: hidden !important;
     }
 
     .about-image.about-logo-box img.about-logo {
-      width: min(420px, 75vw) !important;
-      height: min(420px, 75vw) !important;
-
+      width: min(420px,75vw) !important;
+      height: min(420px,75vw) !important;
       min-width: 260px !important;
       min-height: 260px !important;
-
       max-width: 420px !important;
       max-height: 420px !important;
-
       display: block !important;
-
       border-radius: 50% !important;
-
       object-fit: cover !important;
       object-position: center !important;
-
       aspect-ratio: 1 / 1 !important;
-
-      overflow: hidden !important;
     }
 
-
     /* =====================================================
-       3 LINE MENU
+       MENU
        ===================================================== */
 
     .menu-btn {
       display: flex !important;
-
       flex-direction: column !important;
       align-items: center !important;
       justify-content: center !important;
-
       gap: 5px !important;
     }
 
     .menu-btn span {
       display: block !important;
-
       width: 24px !important;
       height: 2px !important;
-
       background: currentColor !important;
-
       border-radius: 2px !important;
     }
 
-
     /* =====================================================
-       CHAT ICON
+       WHATSAPP
        ===================================================== */
 
     .whatsapp-float {
       display: flex !important;
-
       align-items: center !important;
       justify-content: center !important;
     }
@@ -1021,10 +843,8 @@
     .whatsapp-float svg {
       width: 30px !important;
       height: 30px !important;
-
       display: block !important;
     }
-
 
     /* =====================================================
        PROCESS IMAGES
@@ -1033,25 +853,31 @@
     .process-image img {
       width: 100%;
       height: 100%;
-
       display: block;
-
       object-fit: cover;
     }
 
-
     /* =====================================================
-       MOBILE REVIEWS
+       SLOW CLIENT MARQUEE
        ===================================================== */
 
-    @media (max-width: 700px) {
+    .client-track {
+      animation-duration: 55s !important;
+      animation-timing-function: linear !important;
+    }
+
+    /* =====================================================
+       MOBILE
+       ===================================================== */
+
+    @media (max-width:700px) {
 
       .client-reviews-section {
         padding: 70px 5vw;
       }
 
       .client-reviews-heading h2 {
-        font-size: clamp(38px, 12vw, 58px);
+        font-size: clamp(38px,12vw,58px);
         letter-spacing: -1.5px;
       }
 
@@ -1121,20 +947,13 @@
       .review-dot.active {
         width: 20px;
       }
-
     }
 
-
-    /* =====================================================
-       MOBILE TEAM
-       ===================================================== */
-
-    @media (max-width: 600px) {
+    @media (max-width:600px) {
 
       .about-image.about-logo-box img.about-logo {
         width: 260px !important;
         height: 260px !important;
-
         min-width: 260px !important;
         min-height: 260px !important;
       }
@@ -1147,17 +966,11 @@
       .team-image-box img {
         border-radius: 16px;
       }
-
     }
-
 
     /* =====================================================
-       PREVENT ANY ACCIDENTAL PURE WHITE SECTION
+       FINAL PROTECTION AGAINST OLD GOLD OVERRIDES
        ===================================================== */
-
-    .section:not(.hero) {
-      background-color: transparent;
-    }
 
     .work-section,
     .process-section,
@@ -1165,6 +978,8 @@
     .portfolio-section,
     .team-section,
     .about-section {
+      background-color: #080808 !important;
+      background-image: none !important;
       position: relative;
       isolation: isolate;
     }
@@ -1173,16 +988,11 @@
 
 </head>
 
-
 <body>
-
 
   <!-- ================= LOADER ================= -->
 
-  <div
-    class="page-loader"
-    id="pageLoader"
-  >
+  <div class="page-loader" id="pageLoader">
 
     <img
       src="./logo.png"
@@ -1192,19 +1002,13 @@
       height="43"
     >
 
-    <p>
-      EDIT WALLAH
-    </p>
+    <p>EDIT WALLAH</p>
 
   </div>
 
-
   <!-- ================= HEADER ================= -->
 
-  <header
-    class="site-header"
-    id="siteHeader"
-  >
+  <header class="site-header" id="siteHeader">
 
     <a
       href="#top"
@@ -1220,33 +1024,16 @@
         height="43"
       >
 
-      <span class="brand-name">
-        EDITWALLAH
-      </span>
+      <span class="brand-name">EDITWALLAH</span>
 
     </a>
 
+    <nav class="desktop-nav" aria-label="Main Navigation">
 
-    <nav
-      class="desktop-nav"
-      aria-label="Main Navigation"
-    >
-
-      <a href="#work">
-        Work
-      </a>
-
-      <a href="#process">
-        Process
-      </a>
-
-      <a href="#services">
-        Services
-      </a>
-
-      <a href="#about">
-        About
-      </a>
+      <a href="#work">Work</a>
+      <a href="#process">Process</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
 
       <a
         class="header-cta"
@@ -1259,41 +1046,23 @@
 
     </nav>
 
-
     <button
       class="menu-btn"
       id="menuBtn"
       aria-label="Open Menu"
       type="button"
     >
-
       <span></span>
       <span></span>
       <span></span>
-
     </button>
 
+    <div class="mobile-menu" id="mobileMenu">
 
-    <div
-      class="mobile-menu"
-      id="mobileMenu"
-    >
-
-      <a href="#work">
-        Work
-      </a>
-
-      <a href="#process">
-        Process
-      </a>
-
-      <a href="#services">
-        Services
-      </a>
-
-      <a href="#about">
-        About
-      </a>
+      <a href="#work">Work</a>
+      <a href="#process">Process</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
 
       <a
         href="https://wa.me/919373376926"
@@ -1307,16 +1076,11 @@
 
   </header>
 
-
   <main id="top">
-
 
     <!-- ================= HERO ================= -->
 
-    <section
-      class="hero"
-      aria-labelledby="hero-title"
-    >
+    <section class="hero" aria-labelledby="hero-title">
 
       <div class="hero-copy reveal">
 
@@ -1325,23 +1089,16 @@
         </div>
 
         <h1 id="hero-title">
-
           We Make Your Brand<br>
-
-          <span>
-            Impossible To Ignore
-          </span>
-
+          <span>Impossible To Ignore</span>
         </h1>
 
         <p class="hero-text">
-
           Edit Wallah is a social media marketing agency
           in Nagpur creating scroll-stopping content,
           cinematic video edits, professional ad creatives
           and powerful brand visuals that make people
           remember your brand.
-
         </p>
 
         <div class="hero-actions">
@@ -1355,17 +1112,13 @@
             Get Your Ad Made →
           </a>
 
-          <a
-            class="text-link"
-            href="#work"
-          >
+          <a class="text-link" href="#work">
             Swipe to explore ↓
           </a>
 
         </div>
 
       </div>
-
 
       <div
         class="hero-device"
@@ -1403,13 +1156,9 @@
 
     </section>
 
-
     <!-- ================= SERVICES MARQUEE ================= -->
 
-    <div
-      class="marquee"
-      aria-label="Edit Wallah Services"
-    >
+    <div class="marquee" aria-label="Edit Wallah Services">
 
       <div class="marquee-track">
 
@@ -1435,10 +1184,8 @@
 
     </div>
 
-
     <!-- =====================================================
-         CLIENT FEEDBACK
-         MOVED ABOVE FEATURED WORK
+         CLIENT FEEDBACK — ABOVE FEATURED WORK
          ===================================================== -->
 
     <section
@@ -1460,11 +1207,7 @@
 
       </div>
 
-
-      <div
-        class="reviews-slider"
-        id="reviewsSlider"
-      >
+      <div class="reviews-slider" id="reviewsSlider">
 
         <button
           class="review-arrow prev"
@@ -1475,847 +1218,7 @@
           ←
         </button>
 
-
-        <div
-          class="reviews-track"
-          id="reviewsTrack"
-        >
-
-
-          <article class="client-review-slide">
-
-            <div class="client-review-card">
-
-              <div class="review-top-row">
-
-                <div class="review-client-info">
-
-                  <div class="review-avatar">
-                    S
-                  </div>
-
-                  <div>
-
-                    <h3 class="review-client-name">
-                      SHOBHA AYURVEDA
-                    </h3>
-
-                    <p class="review-client-type">
-                      Client Feedback
-                    </p>
-
-                  </div>
-
-                </div>
-
-                <div class="review-stars">
-                  ★★★★★
-                </div>
-
-              </div>
-
-              <div class="review-label">
-                Client Review
-              </div>
-
-              <blockquote>
-                "Editwallah team ke sath kaam karke hamari Ayurvedic brand ko ek naya aur premium look mila hai. Unki Reels aur social media strategy se hamari client inquiries kafi badh gayi hain. Highly recommended for authentic brand building!"
-              </blockquote>
-
-              <div class="review-counter">
-                01 / 17
-              </div>
-
-            </div>
-
-          </article>
-
-
-          <article class="client-review-slide">
-
-            <div class="client-review-card">
-
-              <div class="review-top-row">
-
-                <div class="review-client-info">
-
-                  <div class="review-avatar">
-                    M
-                  </div>
-
-                  <div>
-
-                    <h3 class="review-client-name">
-                      MADHAV BAUG
-                    </h3>
-
-                    <p class="review-client-type">
-                      Client Feedback
-                    </p>
-
-                  </div>
-
-                </div>
-
-                <div class="review-stars">
-                  ★★★★★
-                </div>
-
-              </div>
-
-              <div class="review-label">
-                Client Review
-              </div>
-
-              <blockquote>
-                "Health & Wellness niche me engagement lana mushkil hota hai, lekin Editwallah ne hamare educational aur promotional content ko itna attractive banaya ki patient trust build ho saka. Brilliant execution!"
-              </blockquote>
-
-              <div class="review-counter">
-                02 / 17
-              </div>
-
-            </div>
-
-          </article>
-
-
-          <article class="client-review-slide">
-
-            <div class="client-review-card">
-
-              <div class="review-top-row">
-
-                <div class="review-client-info">
-
-                  <div class="review-avatar">
-                    S
-                  </div>
-
-                  <div>
-
-                    <h3 class="review-client-name">
-                      SHRI SANSAR
-                    </h3>
-
-                    <p class="review-client-type">
-                      Client Feedback
-                    </p>
-
-                  </div>
-
-                </div>
-
-                <div class="review-stars">
-                  ★★★★★
-                </div>
-
-              </div>
-
-              <div class="review-label">
-                Client Review
-              </div>
-
-              <blockquote>
-                "Ethnic wear business ke liye high-quality visuals aur video editing bohot zaruri hoti hai. Editwallah ki team ne hamare clothing collection ko perfectly showcase kiya. Hamari sales aur footfall dono me growth dekhi hai."
-              </blockquote>
-
-              <div class="review-counter">
-                03 / 17
-              </div>
-
-            </div>
-
-          </article>
-
-
-          <article class="client-review-slide">
-
-            <div class="client-review-card">
-
-              <div class="review-top-row">
-
-                <div class="review-client-info">
-
-                  <div class="review-avatar">
-                    S
-                  </div>
-
-                  <div>
-
-                    <h3 class="review-client-name">
-                      SHRI SAT GURU COLLECTION
-                    </h3>
-
-                    <p class="review-client-type">
-                      Client Feedback
-                    </p>
-
-                  </div>
-
-                </div>
-
-                <div class="review-stars">
-                  ★★★★★
-                </div>
-
-              </div>
-
-              <div class="review-label">
-                Client Review
-              </div>
-
-              <blockquote>
-                "Social media marketing aur content strategy me Editwallah expert hai. Unke ad campaigns aur trend-based Reels ki wajeh se hamari brand reach localized audience me bohot strong ho gayi hai."
-              </blockquote>
-
-              <div class="review-counter">
-                04 / 17
-              </div>
-
-            </div>
-
-          </article>
-
-
-          <article class="client-review-slide">
-
-            <div class="client-review-card">
-
-              <div class="review-top-row">
-
-                <div class="review-client-info">
-
-                  <div class="review-avatar">
-                    S
-                  </div>
-
-                  <div>
-
-                    <h3 class="review-client-name">
-                      SHRI SAT GURU CREATION
-                    </h3>
-
-                    <p class="review-client-type">
-                      Client Feedback
-                    </p>
-
-                  </div>
-
-                </div>
-
-                <div class="review-stars">
-                  ★★★★★
-                </div>
-
-              </div>
-
-              <div class="review-label">
-                Client Review
-              </div>
-
-              <blockquote>
-                "Creative agency bolna inko bilkul sahi hoga! Frame design se lekar final video edit tak, har cheez top-notch hoti hai. Team hamesha punctual aur supportive rahi hai."
-              </blockquote>
-
-              <div class="review-counter">
-                05 / 17
-              </div>
-
-            </div>
-
-          </article>
-
-
-          <article class="client-review-slide">
-
-            <div class="client-review-card">
-
-              <div class="review-top-row">
-
-                <div class="review-client-info">
-
-                  <div class="review-avatar">
-                    K
-                  </div>
-
-                  <div>
-
-                    <h3 class="review-client-name">
-                      KARAN NX
-                    </h3>
-
-                    <p class="review-client-type">
-                      Client Feedback
-                    </p>
-
-                  </div>
-
-                </div>
-
-                <div class="review-stars">
-                  ★★★★★
-                </div>
-
-              </div>
-
-              <div class="review-label">
-                Client Review
-              </div>
-
-              <blockquote>
-                "Retail fashion business me regular fresh content chahiye hota hai. Editwallah ne hamare studio shoots aur Reels dynamic tarike se handle kiye. Highly satisfied with their consistency and speed."
-              </blockquote>
-
-              <div class="review-counter">
-                06 / 17
-              </div>
-
-            </div>
-
-          </article>
-
-
-          <article class="client-review-slide">
-
-            <div class="client-review-card">
-
-              <div class="review-top-row">
-
-                <div class="review-client-info">
-
-                  <div class="review-avatar">
-                    B
-                  </div>
-
-                  <div>
-
-                    <h3 class="review-client-name">
-                      BELLA VEDA SALON
-                    </h3>
-
-                    <p class="review-client-type">
-                      Client Feedback
-                    </p>
-
-                  </div>
-
-                </div>
-
-                <div class="review-stars">
-                  ★★★★★
-                </div>
-
-              </div>
-
-              <div class="review-label">
-                Client Review
-              </div>
-
-              <blockquote>
-                "Salon transformation videos aur aesthetics edit karna Editwallah se accha koi nahi kar sakta. Unki social media management se hamare salon ki online bookings me kafi rise aaya hai!"
-              </blockquote>
-
-              <div class="review-counter">
-                07 / 17
-              </div>
-
-            </div>
-
-          </article>
-
-
-          <article class="client-review-slide">
-
-            <div class="client-review-card">
-
-              <div class="review-top-row">
-
-                <div class="review-client-info">
-
-                  <div class="review-avatar">
-                    H
-                  </div>
-
-                  <div>
-
-                    <h3 class="review-client-name">
-                      THE HOUSE OF STYLE SALON
-                    </h3>
-
-                    <p class="review-client-type">
-                      Client Feedback
-                    </p>
-
-                  </div>
-
-                </div>
-
-                <div class="review-stars">
-                  ★★★★★
-                </div>
-
-              </div>
-
-              <div class="review-label">
-                Client Review
-              </div>
-
-              <blockquote>
-                "Aesthetic feed, trendy reels, aur targeted Ads—Editwallah ne hamare salon ko ek luxury brand jaisa positioning diya hai. Nagpur & PAN India level par inki strategy super effective hai!"
-              </blockquote>
-
-              <div class="review-counter">
-                08 / 17
-              </div>
-
-            </div>
-
-          </article>
-
-
-          <article class="client-review-slide">
-
-            <div class="client-review-card">
-
-              <div class="review-top-row">
-
-                <div class="review-client-info">
-
-                  <div class="review-avatar">
-                    A
-                  </div>
-
-                  <div>
-
-                    <h3 class="review-client-name">
-                      ART ZONE SALON
-                    </h3>
-
-                    <p class="review-client-type">
-                      Client Feedback
-                    </p>
-
-                  </div>
-
-                </div>
-
-                <div class="review-stars">
-                  ★★★★★
-                </div>
-
-              </div>
-
-              <div class="review-label">
-                Client Review
-              </div>
-
-              <blockquote>
-                "Client retention aur naye walk-ins ke liye social media presence bohot zaruri tha. Editwallah team ne hamare work ki branding bohot hi professional way me ki. Amazing team to work with!"
-              </blockquote>
-
-              <div class="review-counter">
-                09 / 17
-              </div>
-
-            </div>
-
-          </article>
-
-
-          <article class="client-review-slide">
-
-            <div class="client-review-card">
-
-              <div class="review-top-row">
-
-                <div class="review-client-info">
-
-                  <div class="review-avatar">
-                    R
-                  </div>
-
-                  <div>
-
-                    <h3 class="review-client-name">
-                      REEVA THE LUXURY SALON
-                    </h3>
-
-                    <p class="review-client-type">
-                      Client Feedback
-                    </p>
-
-                  </div>
-
-                </div>
-
-                <div class="review-stars">
-                  ★★★★★
-                </div>
-
-              </div>
-
-              <div class="review-label">
-                Client Review
-              </div>
-
-              <blockquote>
-                "Luxury clients ko attract karne ke liye premium edits aur high-end strategy chahiye thi. Editwallah delivered exactly what we needed. Content quality and professionalism are top tier!"
-              </blockquote>
-
-              <div class="review-counter">
-                10 / 17
-              </div>
-
-            </div>
-
-          </article>
-
-
-          <article class="client-review-slide">
-
-            <div class="client-review-card">
-
-              <div class="review-top-row">
-
-                <div class="review-client-info">
-
-                  <div class="review-avatar">
-                    D
-                  </div>
-
-                  <div>
-
-                    <h3 class="review-client-name">
-                      DHRUV INTERIOR MALL
-                    </h3>
-
-                    <p class="review-client-type">
-                      Client Feedback
-                    </p>
-
-                  </div>
-
-                </div>
-
-                <div class="review-stars">
-                  ★★★★★
-                </div>
-
-              </div>
-
-              <div class="review-label">
-                Client Review
-              </div>
-
-              <blockquote>
-                "Interior mall ke large scale products aur showrooms ko short-form videos me capture karna tough job hai. Editwallah ki team ne cinematic shoots aur clean editing se hamari branding next level kar di."
-              </blockquote>
-
-              <div class="review-counter">
-                11 / 17
-              </div>
-
-            </div>
-
-          </article>
-
-
-          <article class="client-review-slide">
-
-            <div class="client-review-card">
-
-              <div class="review-top-row">
-
-                <div class="review-client-info">
-
-                  <div class="review-avatar">
-                    L
-                  </div>
-
-                  <div>
-
-                    <h3 class="review-client-name">
-                      LOYAL DECORE
-                    </h3>
-
-                    <p class="review-client-type">
-                      Client Feedback
-                    </p>
-
-                  </div>
-
-                </div>
-
-                <div class="review-stars">
-                  ★★★★★
-                </div>
-
-              </div>
-
-              <div class="review-label">
-                Client Review
-              </div>
-
-              <blockquote>
-                "Home decor and interior projects me visuals hi sab kuch hote hain. Editwallah team ne hamare projects ke tour videos aur branding campaign itne shandar tarike se design kiye ki inquiries continuously aa rahi hain."
-              </blockquote>
-
-              <div class="review-counter">
-                12 / 17
-              </div>
-
-            </div>
-
-          </article>
-
-
-          <article class="client-review-slide">
-
-            <div class="client-review-card">
-
-              <div class="review-top-row">
-
-                <div class="review-client-info">
-
-                  <div class="review-avatar">
-                    R
-                  </div>
-
-                  <div>
-
-                    <h3 class="review-client-name">
-                      RUDRA LIFESTYLE
-                    </h3>
-
-                    <p class="review-client-type">
-                      Client Feedback
-                    </p>
-
-                  </div>
-
-                </div>
-
-                <div class="review-stars">
-                  ★★★★★
-                </div>
-
-              </div>
-
-              <div class="review-label">
-                Client Review
-              </div>
-
-              <blockquote>
-                "Working with Editwallah has been a smooth ride. Content strategy se lekar Ads management tak, har step par transparent ROI aur growth dekhne ko mili. Great job, team!"
-              </blockquote>
-
-              <div class="review-counter">
-                13 / 17
-              </div>
-
-            </div>
-
-          </article>
-
-
-          <article class="client-review-slide">
-
-            <div class="client-review-card">
-
-              <div class="review-top-row">
-
-                <div class="review-client-info">
-
-                  <div class="review-avatar">
-                    F
-                  </div>
-
-                  <div>
-
-                    <h3 class="review-client-name">
-                      FLOWRA
-                    </h3>
-
-                    <p class="review-client-type">
-                      Client Feedback
-                    </p>
-
-                  </div>
-
-                </div>
-
-                <div class="review-stars">
-                  ★★★★★
-                </div>
-
-              </div>
-
-              <div class="review-label">
-                Client Review
-              </div>
-
-              <blockquote>
-                "Hamare brand aesthetics aur tone of voice ko Editwallah ne turant samajh liya. Creative posts aur reel strategy ne hamari organic reach kafi improve ki hai. Best agency experience!"
-              </blockquote>
-
-              <div class="review-counter">
-                14 / 17
-              </div>
-
-            </div>
-
-          </article>
-
-
-          <article class="client-review-slide">
-
-            <div class="client-review-card">
-
-              <div class="review-top-row">
-
-                <div class="review-client-info">
-
-                  <div class="review-avatar">
-                    P
-                  </div>
-
-                  <div>
-
-                    <h3 class="review-client-name">
-                      PRAYAS ACADEMY
-                    </h3>
-
-                    <p class="review-client-type">
-                      Client Feedback
-                    </p>
-
-                  </div>
-
-                </div>
-
-                <div class="review-stars">
-                  ★★★★★
-                </div>
-
-              </div>
-
-              <div class="review-label">
-                Client Review
-              </div>
-
-              <blockquote>
-                "Education sector me students aur parents tak sahi message pahunchana zaruri hota hai. Editwallah ne hamare results, ad campaigns aur informative reels ko bohot achhe se manage kiya."
-              </blockquote>
-
-              <div class="review-counter">
-                15 / 17
-              </div>
-
-            </div>
-
-          </article>
-
-
-          <article class="client-review-slide">
-
-            <div class="client-review-card">
-
-              <div class="review-top-row">
-
-                <div class="review-client-info">
-
-                  <div class="review-avatar">
-                    F
-                  </div>
-
-                  <div>
-
-                    <h3 class="review-client-name">
-                      FIRSTCRY
-                    </h3>
-
-                    <p class="review-client-type">
-                      Client Feedback
-                    </p>
-
-                  </div>
-
-                </div>
-
-                <div class="review-stars">
-                  ★★★★★
-                </div>
-
-              </div>
-
-              <div class="review-label">
-                Client Review
-              </div>
-
-              <blockquote>
-                "Local level promotion aur brand visibility badhane ke liye Editwallah ke campaigns bohot effective rahe. Unki execution speed aur creative ideas really stand out."
-              </blockquote>
-
-              <div class="review-counter">
-                16 / 17
-              </div>
-
-            </div>
-
-          </article>
-
-
-          <article class="client-review-slide">
-
-            <div class="client-review-card">
-
-              <div class="review-top-row">
-
-                <div class="review-client-info">
-
-                  <div class="review-avatar">
-                    A
-                  </div>
-
-                  <div>
-
-                    <h3 class="review-client-name">
-                      AMRITSAR HAVELI
-                    </h3>
-
-                    <p class="review-client-type">
-                      Client Feedback
-                    </p>
-
-                  </div>
-
-                </div>
-
-                <div class="review-stars">
-                  ★★★★★
-                </div>
-
-              </div>
-
-              <div class="review-label">
-                Client Review
-              </div>
-
-              <blockquote>
-                "Food & Hospitality business me mouth-watering visuals sabse zyada matter karte hain. Editwallah ne hamare food Reels aur restaurant ambiance ko itna tempting tarike se edit kiya ki footfall kafi badh gaya!"
-              </blockquote>
-
-              <div class="review-counter">
-                17 / 17
-              </div>
-
-            </div>
-
-          </article>
-
-        </div>
-
+        <div class="reviews-track" id="reviewsTrack"></div>
 
         <button
           class="review-arrow next"
@@ -2328,13 +1231,11 @@
 
       </div>
 
-
       <div
         class="review-dots"
         id="reviewDots"
         aria-label="Client review navigation"
       ></div>
-
 
       <div class="review-slider-note">
         Auto sliding • Swipe to explore
@@ -2342,10 +1243,8 @@
 
     </section>
 
-
     <!-- =====================================================
-         FEATURED WORK
-         NOW BELOW CLIENT FEEDBACK
+         FEATURED WORK — BELOW CLIENT FEEDBACK
          ===================================================== -->
 
     <section
@@ -2363,13 +1262,8 @@
           </div>
 
           <h2 id="work-title">
-
             Premium Creative<br>
-
-            <span>
-              That Drives Real Results
-            </span>
-
+            <span>That Drives Real Results</span>
           </h2>
 
         </div>
@@ -2379,7 +1273,6 @@
         </div>
 
       </div>
-
 
       <div class="portfolio-wrap">
 
@@ -2392,11 +1285,7 @@
           ←
         </button>
 
-
-        <div
-          class="portfolio-slider"
-          id="workSlider"
-        >
+        <div class="portfolio-slider" id="workSlider">
 
           <article class="portfolio-card">
 
@@ -2429,7 +1318,6 @@
 
           </article>
 
-
           <article class="portfolio-card">
 
             <video
@@ -2461,7 +1349,6 @@
 
           </article>
 
-
           <article class="portfolio-card">
 
             <video
@@ -2492,7 +1379,6 @@
             </div>
 
           </article>
-
 
           <article class="portfolio-card">
 
@@ -2527,7 +1413,6 @@
 
         </div>
 
-
         <button
           class="slider-arrow next"
           id="workNext"
@@ -2538,7 +1423,6 @@
         </button>
 
       </div>
-
 
       <div class="center-cta">
 
@@ -2554,7 +1438,6 @@
       </div>
 
     </section>
-
 
     <!-- ================= PROCESS ================= -->
 
@@ -2586,7 +1469,6 @@
 
       </div>
 
-
       <div class="process-grid">
 
         <article class="process-card reveal">
@@ -2594,18 +1476,14 @@
           <div class="process-number">01</div>
 
           <div class="process-image">
-
             <img
               src="process-01.jpg"
               alt="Edit Wallah research and content planning"
               loading="lazy"
             >
-
           </div>
 
-          <h3>
-            Deep Research & Proper Content Planning
-          </h3>
+          <h3>Deep Research & Proper Content Planning</h3>
 
           <p>
             We analyze your competitors and create
@@ -2614,24 +1492,19 @@
 
         </article>
 
-
         <article class="process-card reveal">
 
           <div class="process-number">02</div>
 
           <div class="process-image">
-
             <img
               src="process-02.jpg"
               alt="Edit Wallah scripting process"
               loading="lazy"
             >
-
           </div>
 
-          <h3>
-            Scripting
-          </h3>
+          <h3>Scripting</h3>
 
           <p>
             We write scroll-stopping scripts to stop
@@ -2640,24 +1513,19 @@
 
         </article>
 
-
         <article class="process-card reveal">
 
           <div class="process-number">03</div>
 
           <div class="process-image">
-
             <img
               src="process-03.jpg"
               alt="Edit Wallah professional shooting"
               loading="lazy"
             >
-
           </div>
 
-          <h3>
-            Professional Shooting
-          </h3>
+          <h3>Professional Shooting</h3>
 
           <p>
             We provide the right direction with the
@@ -2666,24 +1534,19 @@
 
         </article>
 
-
         <article class="process-card reveal">
 
           <div class="process-number">04</div>
 
           <div class="process-image">
-
             <img
               src="process-04.jpg"
               alt="Edit Wallah premium video editing"
               loading="lazy"
             >
-
           </div>
 
-          <h3>
-            Premium Quality Editing
-          </h3>
+          <h3>Premium Quality Editing</h3>
 
           <p>
             Our editing team creates videos designed
@@ -2695,7 +1558,6 @@
       </div>
 
     </section>
-
 
     <!-- ================= SERVICES ================= -->
 
@@ -2723,9 +1585,7 @@
 
       </div>
 
-
       <div class="service-grid">
-
 
         <article class="service-card reveal">
 
@@ -2741,9 +1601,7 @@
 
           <div class="service-body">
 
-            <h3>
-              Ads Shoot 🎬
-            </h3>
+            <h3>Ads Shoot 🎬</h3>
 
             <p>
               High-converting ad shoots crafted to stop
@@ -2769,7 +1627,6 @@
 
         </article>
 
-
         <article class="service-card reveal">
 
           <div class="service-image">
@@ -2784,9 +1641,7 @@
 
           <div class="service-body">
 
-            <h3>
-              Performance Marketing 🚀
-            </h3>
+            <h3>Performance Marketing 🚀</h3>
 
             <p>
               ROI-focused campaigns that drive qualified
@@ -2811,7 +1666,6 @@
 
         </article>
 
-
         <article class="service-card reveal">
 
           <div class="service-image">
@@ -2826,9 +1680,7 @@
 
           <div class="service-body">
 
-            <h3>
-              Social Media Marketing 📣
-            </h3>
+            <h3>Social Media Marketing 📣</h3>
 
             <p>
               Build a powerful online presence with
@@ -2854,7 +1706,6 @@
 
         </article>
 
-
         <article class="service-card reveal">
 
           <div class="service-image">
@@ -2869,9 +1720,7 @@
 
           <div class="service-body">
 
-            <h3>
-              Video Editing 🎞️
-            </h3>
+            <h3>Video Editing 🎞️</h3>
 
             <p>
               Premium edits built around storytelling,
@@ -2899,7 +1748,6 @@
       </div>
 
     </section>
-
 
     <!-- ================= CLIENTS ================= -->
 
@@ -2966,7 +1814,6 @@
 
     </section>
 
-
     <!-- ================= PORTFOLIO ================= -->
 
     <section
@@ -2995,7 +1842,6 @@
 
       </div>
 
-
       <div class="portfolio-wrap">
 
         <button
@@ -3006,7 +1852,6 @@
         >
           ←
         </button>
-
 
         <div
           class="portfolio-slider"
@@ -3044,7 +1889,6 @@
 
           </article>
 
-
           <article class="portfolio-card">
 
             <video
@@ -3076,7 +1920,6 @@
 
           </article>
 
-
           <article class="portfolio-card">
 
             <video
@@ -3107,7 +1950,6 @@
             </div>
 
           </article>
-
 
           <article class="portfolio-card">
 
@@ -3142,7 +1984,6 @@
 
         </div>
 
-
         <button
           class="slider-arrow next"
           id="portfolioNext"
@@ -3153,7 +1994,6 @@
         </button>
 
       </div>
-
 
       <div class="center-cta">
 
@@ -3169,7 +2009,6 @@
       </div>
 
     </section>
-
 
     <!-- ================= TEAM ================= -->
 
@@ -3191,7 +2030,6 @@
 
       </div>
 
-
       <div class="team-image-box reveal">
 
         <img
@@ -3203,7 +2041,6 @@
       </div>
 
     </section>
-
 
     <!-- ================= ABOUT ================= -->
 
@@ -3227,7 +2064,6 @@
           >
 
         </div>
-
 
         <div class="about-copy reveal">
 
@@ -3278,7 +2114,6 @@
 
     </section>
 
-
     <!-- ================= FINAL CTA ================= -->
 
     <section
@@ -3291,15 +2126,9 @@
       </div>
 
       <h2 id="cta-title">
-
         Let's Make Your Brand<br>
-
-        <span>
-          Impossible to Ignore!
-        </span>
-
+        <span>Impossible to Ignore!</span>
       </h2>
-
 
       <a
         class="btn btn-dark"
@@ -3313,7 +2142,6 @@
     </section>
 
   </main>
-
 
   <!-- ================= FOOTER ================= -->
 
@@ -3339,62 +2167,31 @@
 
       </div>
 
-
       <div class="footer-column">
 
-        <h4>
-          Services
-        </h4>
+        <h4>Services</h4>
 
-        <a href="#services">
-          Ad Content
-        </a>
-
-        <a href="#services">
-          Performance Marketing
-        </a>
-
-        <a href="#services">
-          Social Media Marketing
-        </a>
-
-        <a href="#services">
-          Personal Branding
-        </a>
-
-        <a href="#services">
-          Video Production
-        </a>
+        <a href="#services">Ad Content</a>
+        <a href="#services">Performance Marketing</a>
+        <a href="#services">Social Media Marketing</a>
+        <a href="#services">Personal Branding</a>
+        <a href="#services">Video Production</a>
 
       </div>
 
-
       <div class="footer-column">
 
-        <h4>
-          Services
-        </h4>
+        <h4>Services</h4>
 
-        <a href="#services">
-          Video Editing
-        </a>
-
-        <a href="#services">
-          Graphic Designing
-        </a>
-
-        <a href="#services">
-          Influencer Marketing
-        </a>
+        <a href="#services">Video Editing</a>
+        <a href="#services">Graphic Designing</a>
+        <a href="#services">Influencer Marketing</a>
 
       </div>
 
-
       <div class="footer-column">
 
-        <h4>
-          Contact
-        </h4>
+        <h4>Contact</h4>
 
         <a href="tel:+919373376926">
           Call Us<br>
@@ -3418,7 +2215,6 @@
 
     </div>
 
-
     <div class="footer-bottom">
 
       <span>
@@ -3433,8 +2229,7 @@
 
   </footer>
 
-
-  <!-- ================= CHAT / WHATSAPP ================= -->
+  <!-- ================= WHATSAPP ================= -->
 
   <a
     class="whatsapp-float"
@@ -3471,19 +2266,123 @@
 
   </a>
 
-
-  <!-- ================= MAIN JAVASCRIPT ================= -->
+  <!-- ================= MAIN JS ================= -->
 
   <script src="script.js"></script>
 
-
   <!-- =====================================================
-       CLIENT REVIEWS AUTO SLIDER
+       CLIENT REVIEWS
        ===================================================== -->
 
   <script>
 
     (function () {
+
+      const reviews = [
+
+        [
+          "S",
+          "SHOBHA AYURVEDA",
+          "Editwallah team ke sath kaam karke hamari Ayurvedic brand ko ek naya aur premium look mila hai. Unki Reels aur social media strategy se hamari client inquiries kafi badh gayi hain. Highly recommended for authentic brand building!"
+        ],
+
+        [
+          "M",
+          "MADHAV BAUG",
+          "Health & Wellness niche me engagement lana mushkil hota hai, lekin Editwallah ne hamare educational aur promotional content ko itna attractive banaya ki patient trust build ho saka. Brilliant execution!"
+        ],
+
+        [
+          "S",
+          "SHRI SANSAR",
+          "Ethnic wear business ke liye high-quality visuals aur video editing bohot zaruri hoti hai. Editwallah ki team ne hamare clothing collection ko perfectly showcase kiya. Hamari sales aur footfall dono me growth dekhi hai."
+        ],
+
+        [
+          "S",
+          "SHRI SAT GURU COLLECTION",
+          "Social media marketing aur content strategy me Editwallah expert hai. Unke ad campaigns aur trend-based Reels ki wajeh se hamari brand reach localized audience me bohot strong ho gayi hai."
+        ],
+
+        [
+          "S",
+          "SHRI SAT GURU CREATION",
+          "Creative agency bolna inko bilkul sahi hoga! Frame design se lekar final video edit tak, har cheez top-notch hoti hai. Team hamesha punctual aur supportive rahi hai."
+        ],
+
+        [
+          "K",
+          "KARAN NX",
+          "Retail fashion business me regular fresh content chahiye hota hai. Editwallah ne hamare studio shoots aur Reels dynamic tarike se handle kiye. Highly satisfied with their consistency and speed."
+        ],
+
+        [
+          "B",
+          "BELLA VEDA SALON",
+          "Salon transformation videos aur aesthetics edit karna Editwallah se accha koi nahi kar sakta. Unki social media management se hamare salon ki online bookings me kafi rise aaya hai!"
+        ],
+
+        [
+          "H",
+          "THE HOUSE OF STYLE SALON",
+          "Aesthetic feed, trendy reels, aur targeted Ads—Editwallah ne hamare salon ko ek luxury brand jaisa positioning diya hai. Nagpur & PAN India level par inki strategy super effective hai!"
+        ],
+
+        [
+          "A",
+          "ART ZONE SALON",
+          "Client retention aur naye walk-ins ke liye social media presence bohot zaruri tha. Editwallah team ne hamare work ki branding bohot hi professional way me ki. Amazing team to work with!"
+        ],
+
+        [
+          "R",
+          "REEVA THE LUXURY SALON",
+          "Luxury clients ko attract karne ke liye premium edits aur high-end strategy chahiye thi. Editwallah delivered exactly what we needed. Content quality and professionalism are top tier!"
+        ],
+
+        [
+          "D",
+          "DHRUV INTERIOR MALL",
+          "Interior mall ke large scale products aur showrooms ko short-form videos me capture karna tough job hai. Editwallah ki team ne cinematic shoots aur clean editing se hamari branding next level kar di."
+        ],
+
+        [
+          "L",
+          "LOYAL DECORE",
+          "Home decor and interior projects me visuals hi sab kuch hote hain. Editwallah team ne hamare projects ke tour videos aur branding campaign itne shandar tarike se design kiye ki inquiries continuously aa rahi hain."
+        ],
+
+        [
+          "R",
+          "RUDRA LIFESTYLE",
+          "Working with Editwallah has been a smooth ride. Content strategy se lekar Ads management tak, har step par transparent ROI aur growth dekhne ko mili. Great job, team!"
+        ],
+
+        [
+          "F",
+          "FLOWRA",
+          "Hamare brand aesthetics aur tone of voice ko Editwallah ne turant samajh liya. Creative posts aur reel strategy ne hamari organic reach kafi improve ki hai. Best agency experience!"
+        ],
+
+        [
+          "P",
+          "PRAYAS ACADEMY",
+          "Education sector me students aur parents tak sahi message pahunchana zaruri hota hai. Editwallah ne hamare results, ad campaigns aur informative reels ko bohot achhe se manage kiya."
+        ],
+
+        [
+          "F",
+          "FIRSTCRY",
+          "Local level promotion aur brand visibility badhane ke liye Editwallah ke campaigns bohot effective rahe. Unki execution speed aur creative ideas really stand out."
+        ],
+
+        [
+          "A",
+          "AMRITSAR HAVELI",
+          "Food & Hospitality business me mouth-watering visuals sabse zyada matter karte hain. Editwallah ne hamare food Reels aur restaurant ambiance ko itna tempting tarike se edit kiya ki footfall kafi badh gaya!"
+        ]
+
+      ];
 
       const track =
         document.getElementById("reviewsTrack");
@@ -3500,7 +2399,6 @@
       const dotsContainer =
         document.getElementById("reviewDots");
 
-
       if (
         !track ||
         !slider ||
@@ -3511,24 +2409,81 @@
         return;
       }
 
+      /* ================= BUILD REVIEWS ================= */
+
+      reviews.forEach(function (review, index) {
+
+        const slide =
+          document.createElement("article");
+
+        slide.className =
+          "client-review-slide";
+
+        slide.innerHTML = `
+
+          <div class="client-review-card">
+
+            <div class="review-top-row">
+
+              <div class="review-client-info">
+
+                <div class="review-avatar">
+                  ${review[0]}
+                </div>
+
+                <div>
+
+                  <h3 class="review-client-name">
+                    ${review[1]}
+                  </h3>
+
+                  <p class="review-client-type">
+                    Client Feedback
+                  </p>
+
+                </div>
+
+              </div>
+
+              <div class="review-stars">
+                ★★★★★
+              </div>
+
+            </div>
+
+            <div class="review-label">
+              Client Review
+            </div>
+
+            <blockquote>
+              "${review[2]}"
+            </blockquote>
+
+            <div class="review-counter">
+              ${String(index + 1).padStart(2,"0")} / ${reviews.length}
+            </div>
+
+          </div>
+
+        `;
+
+        track.appendChild(slide);
+
+      });
 
       const slides =
         Array.from(
-          track.querySelectorAll(".client-review-slide")
+          track.querySelectorAll(
+            ".client-review-slide"
+          )
         );
 
-
       let currentIndex = 0;
-
       let autoSlide = null;
-
-
-      /* REVIEW AUTO-SLIDE */
 
       const slideDelay = 6500;
 
-
-      /* ================= CREATE DOTS ================= */
+      /* ================= DOTS ================= */
 
       slides.forEach(function (_, index) {
 
@@ -3551,7 +2506,6 @@
           function () {
 
             goToReview(index);
-
             restartAutoSlide();
 
           }
@@ -3561,14 +2515,14 @@
 
       });
 
-
       const dots =
         Array.from(
-          dotsContainer.querySelectorAll(".review-dot")
+          dotsContainer.querySelectorAll(
+            ".review-dot"
+          )
         );
 
-
-      /* ================= GO TO REVIEW ================= */
+      /* ================= SLIDE ================= */
 
       function goToReview(index) {
 
@@ -3582,12 +2536,10 @@
 
         currentIndex = index;
 
-
         track.style.transform =
           "translateX(-" +
-          (currentIndex * 100) +
+          currentIndex * 100 +
           "%)";
-
 
         dots.forEach(function (dot, dotIndex) {
 
@@ -3600,24 +2552,13 @@
 
       }
 
-
-      /* ================= NEXT ================= */
-
       function nextReview() {
-
         goToReview(currentIndex + 1);
-
       }
-
-
-      /* ================= PREVIOUS ================= */
 
       function previousReview() {
-
         goToReview(currentIndex - 1);
-
       }
-
 
       /* ================= BUTTONS ================= */
 
@@ -3626,26 +2567,22 @@
         function () {
 
           nextReview();
-
           restartAutoSlide();
 
         }
       );
-
 
       prevButton.addEventListener(
         "click",
         function () {
 
           previousReview();
-
           restartAutoSlide();
 
         }
       );
 
-
-      /* ================= AUTO SLIDE ================= */
+      /* ================= AUTO ================= */
 
       function startAutoSlide() {
 
@@ -3659,47 +2596,36 @@
 
       }
 
-
       function stopAutoSlide() {
 
         if (autoSlide) {
 
           clearInterval(autoSlide);
-
           autoSlide = null;
 
         }
 
       }
 
-
       function restartAutoSlide() {
-
         startAutoSlide();
-
       }
 
-
-      /* ================= HOVER PAUSE ================= */
+      /* ================= HOVER ================= */
 
       slider.addEventListener(
         "mouseenter",
         stopAutoSlide
       );
 
-
       slider.addEventListener(
         "mouseleave",
         startAutoSlide
       );
 
-
-      /* ================= TOUCH SWIPE ================= */
+      /* ================= SWIPE ================= */
 
       let touchStartX = 0;
-
-      let touchEndX = 0;
-
 
       slider.addEventListener(
         "touchstart",
@@ -3716,28 +2642,22 @@
         }
       );
 
-
       slider.addEventListener(
         "touchend",
         function (event) {
 
-          touchEndX =
+          const touchEndX =
             event.changedTouches[0].screenX;
 
           const difference =
             touchStartX - touchEndX;
 
-
           if (Math.abs(difference) > 45) {
 
             if (difference > 0) {
-
               nextReview();
-
             } else {
-
               previousReview();
-
             }
 
           }
@@ -3750,7 +2670,6 @@
         }
       );
 
-
       /* ================= KEYBOARD ================= */
 
       document.addEventListener(
@@ -3760,7 +2679,6 @@
           if (event.key === "ArrowRight") {
 
             nextReview();
-
             restartAutoSlide();
 
           }
@@ -3768,7 +2686,6 @@
           if (event.key === "ArrowLeft") {
 
             previousReview();
-
             restartAutoSlide();
 
           }
@@ -3776,17 +2693,14 @@
         }
       );
 
-
       /* ================= START ================= */
 
       goToReview(0);
-
       startAutoSlide();
 
     })();
 
   </script>
-
 
 </body>
 
