@@ -191,8 +191,9 @@
   <style>
 
     /* =====================================================
-       EDIT WALLAH — PREMIUM BLACK / GOLD
-       CLEAN SECTION SYSTEM
+       EDIT WALLAH
+       PREMIUM BLACK + GOLD
+       BALANCED SECTION SYSTEM
        ===================================================== */
 
     html,
@@ -222,18 +223,29 @@
 
     :root {
       --ew-black: #080808;
-      --ew-black-soft: #111111;
+      --ew-black-soft: #101010;
       --ew-black-card: #151515;
+
       --ew-gold: #c9a227;
-      --ew-gold-light: #dfbd58;
+      --ew-gold-light: #e0bd55;
+      --ew-gold-dark: #8f6d12;
+
       --ew-white: #ffffff;
       --ew-muted: rgba(255,255,255,.68);
-      --ew-border: rgba(201,162,39,.22);
+
+      --ew-border: rgba(201,162,39,.25);
     }
 
     body {
-      background: #080808 !important;
       color: #ffffff;
+
+      background:
+        radial-gradient(
+          circle at 50% 10%,
+          rgba(201,162,39,.10),
+          transparent 34%
+        ),
+        #080808 !important;
     }
 
     main {
@@ -241,7 +253,94 @@
     }
 
     /* =====================================================
-       ALL MAJOR SECTIONS — BLACK
+       HERO
+       ===================================================== */
+
+    .hero {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+
+      position: absolute;
+
+      width: 620px;
+      height: 620px;
+
+      right: -250px;
+      top: -180px;
+
+      border-radius: 50%;
+
+      background:
+        radial-gradient(
+          circle,
+          rgba(201,162,39,.18),
+          rgba(201,162,39,.04) 45%,
+          transparent 72%
+        );
+
+      pointer-events: none;
+
+      z-index: -1;
+    }
+
+    .hero::after {
+      content: "";
+
+      position: absolute;
+
+      width: 500px;
+      height: 500px;
+
+      left: -280px;
+      bottom: -250px;
+
+      border-radius: 50%;
+
+      background:
+        radial-gradient(
+          circle,
+          rgba(201,162,39,.10),
+          transparent 68%
+        );
+
+      pointer-events: none;
+
+      z-index: -1;
+    }
+
+    /* =====================================================
+       MARQUEE
+       ===================================================== */
+
+    .marquee {
+      position: relative;
+
+      background:
+        linear-gradient(
+          90deg,
+          #090909,
+          #171208,
+          #090909
+        ) !important;
+
+      border-top:
+        1px solid rgba(201,162,39,.22);
+
+      border-bottom:
+        1px solid rgba(201,162,39,.22);
+    }
+
+    .marquee-track span {
+      color: var(--ew-gold-light) !important;
+    }
+
+    /* =====================================================
+       COMMON SECTION SYSTEM
        ===================================================== */
 
     .work-section,
@@ -250,24 +349,138 @@
     .portfolio-section,
     .team-section,
     .about-section,
-    .clients-section,
-    .client-reviews-section {
-      background: #080808 !important;
-      color: #ffffff !important;
-    }
+    .clients-section {
 
-    /* Prevent old CSS from making sections yellow */
-    .work-section,
-    .process-section,
-    .services-section,
-    .portfolio-section,
-    .team-section,
-    .about-section {
-      background-image: none !important;
+      position: relative;
+
+      isolation: isolate;
+
+      color: #ffffff !important;
+
+      background:
+        linear-gradient(
+          180deg,
+          #080808 0%,
+          #0b0b0b 52%,
+          #141006 100%
+        ) !important;
+
+      background-image:
+        linear-gradient(
+          180deg,
+          #080808 0%,
+          #0b0b0b 52%,
+          #141006 100%
+        ) !important;
     }
 
     /* =====================================================
-       SECTION TEXT
+       ALTERNATING GOLD-TINTED SECTIONS
+       ===================================================== */
+
+    .process-section,
+    .clients-section,
+    .team-section {
+
+      background:
+        radial-gradient(
+          circle at 50% 0%,
+          rgba(201,162,39,.15),
+          transparent 42%
+        ),
+        linear-gradient(
+          180deg,
+          #151108 0%,
+          #090909 52%,
+          #080808 100%
+        ) !important;
+    }
+
+    .services-section,
+    .about-section {
+
+      background:
+        radial-gradient(
+          circle at 15% 50%,
+          rgba(201,162,39,.08),
+          transparent 32%
+        ),
+        radial-gradient(
+          circle at 85% 50%,
+          rgba(201,162,39,.07),
+          transparent 32%
+        ),
+        #080808 !important;
+    }
+
+    /* =====================================================
+       SECTION GOLD DIVIDERS
+       ===================================================== */
+
+    .work-section::before,
+    .process-section::before,
+    .services-section::before,
+    .portfolio-section::before,
+    .team-section::before,
+    .about-section::before,
+    .clients-section::before {
+
+      content: "";
+
+      position: absolute;
+
+      left: 8%;
+      right: 8%;
+
+      top: 0;
+
+      height: 1px;
+
+      background:
+        linear-gradient(
+          90deg,
+          transparent,
+          rgba(201,162,39,.65),
+          transparent
+        );
+
+      pointer-events: none;
+    }
+
+    .work-section::after,
+    .process-section::after,
+    .services-section::after,
+    .portfolio-section::after,
+    .team-section::after,
+    .about-section::after,
+    .clients-section::after {
+
+      content: "";
+
+      position: absolute;
+
+      left: 50%;
+      bottom: 0;
+
+      width: 55%;
+
+      height: 1px;
+
+      transform: translateX(-50%);
+
+      background:
+        linear-gradient(
+          90deg,
+          transparent,
+          rgba(201,162,39,.30),
+          transparent
+        );
+
+      pointer-events: none;
+    }
+
+    /* =====================================================
+       SECTION HEADINGS
        ===================================================== */
 
     .work-section h2,
@@ -277,7 +490,20 @@
     .team-section h2,
     .about-section h2,
     .clients-section h2 {
+
       color: #ffffff !important;
+    }
+
+    .work-section h2 span,
+    .process-section h2 span,
+    .services-section h2 span,
+    .portfolio-section h2 span,
+    .team-section h2 span,
+    .about-section h2 span,
+    .clients-section h2 span {
+
+      color:
+        var(--ew-gold-light) !important;
     }
 
     .work-section h3,
@@ -285,6 +511,7 @@
     .services-section h3,
     .portfolio-section h3,
     .about-section h3 {
+
       color: #ffffff !important;
     }
 
@@ -295,10 +522,15 @@
     .about-section p,
     .section-description,
     .swipe-note {
-      color: rgba(255,255,255,.68) !important;
+
+      color:
+        rgba(255,255,255,.68) !important;
     }
 
-    /* Gold ONLY as accent */
+    /* =====================================================
+       EYEBROWS
+       ===================================================== */
+
     .work-section .eyebrow,
     .process-section .eyebrow,
     .services-section .eyebrow,
@@ -306,7 +538,10 @@
     .team-section .eyebrow,
     .about-section .eyebrow,
     .clients-section .eyebrow {
-      color: var(--ew-gold-light) !important;
+
+      color:
+        var(--ew-gold-light) !important;
+
       opacity: 1 !important;
     }
 
@@ -318,44 +553,101 @@
     .process-section .btn-dark,
     .services-section .btn-dark,
     .portfolio-section .btn-dark,
-    .about-section .btn-dark {
-      background: var(--ew-gold) !important;
+    .about-section .btn-dark,
+    .final-cta .btn-dark {
+
+      background:
+        linear-gradient(
+          135deg,
+          #e0bd55 0%,
+          #c9a227 100%
+        ) !important;
+
       color: #080808 !important;
-      border-color: var(--ew-gold) !important;
+
+      border-color:
+        #c9a227 !important;
+
+      box-shadow:
+        0 12px 35px rgba(201,162,39,.18);
     }
 
     .work-section .btn-dark:hover,
     .process-section .btn-dark:hover,
     .services-section .btn-dark:hover,
     .portfolio-section .btn-dark:hover,
-    .about-section .btn-dark:hover {
-      background: #ffffff !important;
-      color: #080808 !important;
-      border-color: #ffffff !important;
+    .about-section .btn-dark:hover,
+    .final-cta .btn-dark:hover {
+
+      background:
+        #ffffff !important;
+
+      color:
+        #080808 !important;
+
+      border-color:
+        #ffffff !important;
+
+      box-shadow:
+        0 15px 40px rgba(255,255,255,.12);
     }
 
     /* =====================================================
-       CARDS — DARK, NOT GOLD
+       DARK CARDS
        ===================================================== */
 
     .process-section .process-card,
     .services-section .service-card {
-      background: #111111 !important;
-      border-color: rgba(201,162,39,.18) !important;
+
+      background:
+        linear-gradient(
+          145deg,
+          #181818,
+          #0d0d0d
+        ) !important;
+
+      border:
+        1px solid rgba(201,162,39,.20) !important;
+
       box-shadow:
-        0 22px 60px rgba(0,0,0,.35),
-        inset 0 1px 0 rgba(255,255,255,.05) !important;
+        0 25px 70px rgba(0,0,0,.42),
+        inset 0 1px 0 rgba(255,255,255,.05);
     }
 
     .work-section .portfolio-card,
     .portfolio-section .portfolio-card {
-      border-color: rgba(201,162,39,.18) !important;
-      box-shadow: 0 25px 60px rgba(0,0,0,.4) !important;
+
+      border-color:
+        rgba(201,162,39,.25) !important;
+
+      box-shadow:
+        0 28px 75px rgba(0,0,0,.48);
     }
 
+    .process-section .process-card:hover,
+    .services-section .service-card:hover,
+    .work-section .portfolio-card:hover,
+    .portfolio-section .portfolio-card:hover {
+
+      border-color:
+        rgba(201,162,39,.55) !important;
+
+      box-shadow:
+        0 30px 80px rgba(0,0,0,.55),
+        0 0 35px rgba(201,162,39,.08);
+    }
+
+    /* =====================================================
+       SERVICE LINKS
+       ===================================================== */
+
     .services-section .service-body > a {
-      color: var(--ew-gold-light) !important;
-      border-color: rgba(201,162,39,.3) !important;
+
+      color:
+        var(--ew-gold-light) !important;
+
+      border-color:
+        rgba(201,162,39,.30) !important;
     }
 
     /* =====================================================
@@ -364,55 +656,125 @@
 
     .work-section .slider-arrow,
     .portfolio-section .slider-arrow {
-      background: #111111 !important;
-      color: #ffffff !important;
-      border-color: rgba(201,162,39,.35) !important;
+
+      background:
+        #111111 !important;
+
+      color:
+        #ffffff !important;
+
+      border:
+        1px solid rgba(201,162,39,.35) !important;
     }
 
     .work-section .slider-arrow:hover,
     .portfolio-section .slider-arrow:hover {
-      background: var(--ew-gold) !important;
-      color: #080808 !important;
+
+      background:
+        var(--ew-gold) !important;
+
+      color:
+        #080808 !important;
+
+      border-color:
+        var(--ew-gold) !important;
     }
 
     /* =====================================================
        CLIENT FEEDBACK
-       BLACK + SUBTLE GOLD
        ===================================================== */
 
     .client-reviews-section {
+
+      position: relative;
+
       width: 100%;
+
       padding: 95px 6vw;
+
       overflow: hidden;
+
       text-align: center;
 
-      background: #080808 !important;
+      background:
+        radial-gradient(
+          circle at 50% 0%,
+          rgba(201,162,39,.15),
+          transparent 40%
+        ),
+        linear-gradient(
+          180deg,
+          #0d0d0d 0%,
+          #080808 55%,
+          #151006 100%
+        ) !important;
+
       color: #ffffff !important;
 
-      border-top: 1px solid rgba(201,162,39,.12);
-      border-bottom: 1px solid rgba(201,162,39,.12);
+      border-top:
+        1px solid rgba(201,162,39,.18);
+
+      border-bottom:
+        1px solid rgba(201,162,39,.18);
+    }
+
+    .client-reviews-section::before {
+
+      content: "";
+
+      position: absolute;
+
+      left: 10%;
+      right: 10%;
+
+      top: 0;
+
+      height: 1px;
+
+      background:
+        linear-gradient(
+          90deg,
+          transparent,
+          #c9a227,
+          transparent
+        );
     }
 
     .client-reviews-heading {
+
       max-width: 850px;
-      margin: 0 auto 42px;
+
+      margin:
+        0 auto 42px;
     }
 
     .client-reviews-heading .eyebrow {
+
       margin-bottom: 12px;
-      color: var(--ew-gold-light) !important;
+
+      color:
+        var(--ew-gold-light) !important;
     }
 
     .client-reviews-heading h2 {
+
       margin: 0;
-      font-size: clamp(38px, 6vw, 72px);
+
+      font-size:
+        clamp(38px, 6vw, 72px);
+
       line-height: .98;
+
       letter-spacing: -2px;
-      color: #ffffff !important;
+
+      color:
+        #ffffff !important;
     }
 
     .client-reviews-heading h2 span {
-      color: var(--ew-gold-light) !important;
+
+      color:
+        var(--ew-gold-light) !important;
     }
 
     /* =====================================================
@@ -420,162 +782,267 @@
        ===================================================== */
 
     .reviews-slider {
+
       position: relative;
+
       width: 100%;
+
       max-width: 1050px;
+
       margin: 0 auto;
+
       overflow: hidden;
+
       border-radius: 28px;
     }
 
     .reviews-track {
+
       display: flex;
+
       width: 100%;
-      transform: translateX(0);
-      transition: transform .85s cubic-bezier(.2,.8,.2,1);
-      will-change: transform;
+
+      transform:
+        translateX(0);
+
+      transition:
+        transform .85s cubic-bezier(.2,.8,.2,1);
+
+      will-change:
+        transform;
     }
 
     .client-review-slide {
+
       min-width: 100%;
+
       width: 100%;
+
       padding: 10px;
     }
 
     .client-review-card {
+
       position: relative;
+
       width: 100%;
+
       min-height: 380px;
+
       padding: 48px;
 
       display: flex;
+
       flex-direction: column;
+
       justify-content: center;
 
       text-align: left;
 
-      border: 1px solid rgba(201,162,39,.28);
+      border:
+        1px solid rgba(201,162,39,.30);
+
       border-radius: 28px;
 
-      background: #111111 !important;
+      background:
+        linear-gradient(
+          145deg,
+          #181818,
+          #0c0c0c
+        ) !important;
 
       box-shadow:
-        0 30px 80px rgba(0,0,0,.4),
+        0 30px 80px rgba(0,0,0,.5),
         inset 0 1px 0 rgba(255,255,255,.05);
 
       overflow: hidden;
     }
 
     .client-review-card::before {
+
       content: "";
+
       position: absolute;
 
-      width: 240px;
-      height: 240px;
+      width: 300px;
+      height: 300px;
 
-      top: -120px;
-      right: -100px;
+      top: -150px;
+      right: -120px;
 
       border-radius: 50%;
 
-      background: rgba(201,162,39,.07);
+      background:
+        radial-gradient(
+          circle,
+          rgba(201,162,39,.17),
+          transparent 68%
+        );
 
       pointer-events: none;
     }
 
     .review-top-row {
+
       display: flex;
+
       align-items: center;
+
       justify-content: space-between;
+
       gap: 20px;
+
       margin-bottom: 24px;
     }
 
     .review-client-info {
+
       display: flex;
+
       align-items: center;
+
       gap: 14px;
+
       min-width: 0;
     }
 
     .review-avatar {
+
       width: 54px;
       height: 54px;
+
       min-width: 54px;
 
       border-radius: 50%;
 
       display: flex;
+
       align-items: center;
+
       justify-content: center;
 
-      background: var(--ew-gold);
-      color: #111111;
+      background:
+        linear-gradient(
+          135deg,
+          #e0bd55,
+          #c9a227
+        );
+
+      color:
+        #111111;
 
       font-size: 21px;
+
       font-weight: 800;
+
+      box-shadow:
+        0 8px 25px rgba(201,162,39,.18);
     }
 
     .review-client-name {
+
       font-size: 18px;
+
       font-weight: 800;
+
       line-height: 1.2;
-      margin: 0 0 5px;
-      color: #ffffff !important;
+
+      margin:
+        0 0 5px;
+
+      color:
+        #ffffff !important;
     }
 
     .review-client-type {
+
       font-size: 13px;
+
       opacity: .55;
+
       margin: 0;
-      color: #ffffff !important;
+
+      color:
+        #ffffff !important;
     }
 
     .review-stars {
-      color: var(--ew-gold-light) !important;
+
+      color:
+        var(--ew-gold-light) !important;
+
       font-size: 26px;
+
       letter-spacing: 2px;
+
       white-space: nowrap;
+
       line-height: 1;
     }
 
     .review-label {
+
       display: inline-flex;
+
       align-items: center;
+
       width: fit-content;
 
       padding: 7px 12px;
+
       margin-bottom: 18px;
 
-      border: 1px solid rgba(201,162,39,.3);
+      border:
+        1px solid rgba(201,162,39,.32);
+
       border-radius: 999px;
 
-      color: var(--ew-gold-light) !important;
+      color:
+        var(--ew-gold-light) !important;
 
       font-size: 11px;
+
       font-weight: 800;
+
       letter-spacing: 1.5px;
+
       text-transform: uppercase;
+
+      background:
+        rgba(201,162,39,.04);
     }
 
     .client-review-card blockquote {
+
       margin: 0;
+
       max-width: 900px;
 
-      font-size: clamp(19px,2.3vw,28px);
+      font-size:
+        clamp(19px,2.3vw,28px);
+
       line-height: 1.55;
+
       font-weight: 500;
+
       letter-spacing: -.2px;
 
-      color: #ffffff !important;
+      color:
+        #ffffff !important;
     }
 
     .review-counter {
+
       margin-top: 28px;
+
       font-size: 12px;
+
       font-weight: 700;
+
       letter-spacing: 1.5px;
+
       opacity: .4;
+
       text-transform: uppercase;
     }
 
@@ -584,35 +1051,53 @@
        ===================================================== */
 
     .review-arrow {
+
       position: absolute;
+
       top: 50%;
+
       z-index: 10;
 
       width: 48px;
       height: 48px;
 
-      transform: translateY(-50%);
+      transform:
+        translateY(-50%);
 
       display: flex;
+
       align-items: center;
+
       justify-content: center;
 
-      border: 1px solid rgba(201,162,39,.35);
+      border:
+        1px solid rgba(201,162,39,.38);
+
       border-radius: 50%;
 
-      background: rgba(0,0,0,.75);
-      color: #ffffff;
+      background:
+        rgba(0,0,0,.82);
+
+      color:
+        #ffffff;
 
       font-size: 21px;
+
       cursor: pointer;
 
       transition: .25s ease;
     }
 
     .review-arrow:hover {
-      transform: translateY(-50%) scale(1.08);
-      background: var(--ew-gold);
-      color: #080808;
+
+      transform:
+        translateY(-50%) scale(1.08);
+
+      background:
+        var(--ew-gold);
+
+      color:
+        #080808;
     }
 
     .review-arrow.prev {
@@ -628,39 +1113,57 @@
        ===================================================== */
 
     .review-dots {
+
       display: flex;
+
       align-items: center;
+
       justify-content: center;
+
       flex-wrap: wrap;
 
       gap: 7px;
+
       margin-top: 28px;
     }
 
     .review-dot {
+
       width: 7px;
       height: 7px;
 
       padding: 0;
+
       border: 0;
+
       border-radius: 50%;
 
-      background: rgba(255,255,255,.22);
+      background:
+        rgba(255,255,255,.22);
+
       cursor: pointer;
 
       transition: .3s ease;
     }
 
     .review-dot.active {
+
       width: 24px;
+
       border-radius: 999px;
-      background: var(--ew-gold);
+
+      background:
+        var(--ew-gold);
     }
 
     .review-slider-note {
+
       margin-top: 18px;
+
       font-size: 12px;
+
       opacity: .4;
+
       letter-spacing: .5px;
     }
 
@@ -669,16 +1172,43 @@
        ===================================================== */
 
     .clients-section {
-      background: #080808 !important;
-      color: #ffffff !important;
+
+      color:
+        #ffffff !important;
+
+      background:
+        radial-gradient(
+          circle at 50% 50%,
+          rgba(201,162,39,.12),
+          transparent 42%
+        ),
+        linear-gradient(
+          180deg,
+          #151108,
+          #080808
+        ) !important;
     }
 
     .clients-section h2 {
-      color: #ffffff !important;
+
+      color:
+        #ffffff !important;
     }
 
     .clients-section p {
-      color: rgba(255,255,255,.6) !important;
+
+      color:
+        rgba(255,255,255,.60) !important;
+    }
+
+    /* =====================================================
+       CLIENT MARQUEE GOLD
+       ===================================================== */
+
+    .client-track span {
+
+      color:
+        #e0bd55 !important;
     }
 
     /* =====================================================
@@ -686,35 +1216,68 @@
        ===================================================== */
 
     .team-section {
+
       width: 100%;
+
       padding: 90px 6vw;
+
       text-align: center;
+
       overflow: hidden;
+
+      background:
+        linear-gradient(
+          180deg,
+          #151108 0%,
+          #090909 55%,
+          #080808 100%
+        ) !important;
     }
 
     .team-section .team-heading {
+
       margin-bottom: 35px;
     }
 
     .team-section h2 {
+
       margin: 0;
-      color: #ffffff !important;
+
+      color:
+        #ffffff !important;
     }
 
     .team-image-box {
+
       width: 100%;
+
       max-width: 1100px;
+
       margin: 0 auto;
+
       overflow: hidden;
+
       border-radius: 22px;
+
+      border:
+        1px solid rgba(201,162,39,.25);
+
+      box-shadow:
+        0 30px 80px rgba(0,0,0,.5);
     }
 
     .team-image-box img {
+
       width: 100%;
+
       height: auto;
+
       display: block;
+
       object-fit: cover;
+
       object-position: center;
+
       border-radius: 22px;
     }
 
@@ -723,46 +1286,79 @@
        ===================================================== */
 
     .brand {
+
       display: inline-flex !important;
+
       align-items: center !important;
+
       justify-content: flex-start !important;
+
       gap: 6px !important;
+
       width: auto !important;
+
       max-width: max-content !important;
+
       margin: 0 !important;
+
       padding: 0 !important;
+
       text-decoration: none !important;
     }
 
     .brand .logo-circle {
+
       width: 43px !important;
       height: 43px !important;
+
       min-width: 43px !important;
       min-height: 43px !important;
+
       max-width: 43px !important;
       max-height: 43px !important;
+
       margin: 0 !important;
       padding: 0 !important;
+
       flex: 0 0 43px !important;
+
       border-radius: 50% !important;
+
       object-fit: cover !important;
+
       object-position: center !important;
+
       display: block !important;
+
       overflow: hidden !important;
     }
 
     .brand .brand-name {
+
       display: block !important;
+
       width: auto !important;
+
       max-width: max-content !important;
+
       margin: 0 !important;
+
       padding: 0 !important;
+
       flex: 0 0 auto !important;
+
       white-space: nowrap !important;
+
       letter-spacing: 0 !important;
+
       word-spacing: 0 !important;
+
       font-weight: 700 !important;
+
       line-height: 1 !important;
+
+      color:
+        #ffffff !important;
     }
 
     /* =====================================================
@@ -771,16 +1367,24 @@
 
     .page-loader .logo-circle,
     .footer-brand .logo-circle {
+
       width: 43px !important;
       height: 43px !important;
+
       min-width: 43px !important;
       min-height: 43px !important;
+
       max-width: 43px !important;
       max-height: 43px !important;
+
       border-radius: 50% !important;
+
       object-fit: cover !important;
+
       object-position: center !important;
+
       display: block !important;
+
       overflow: hidden !important;
     }
 
@@ -789,25 +1393,46 @@
        ===================================================== */
 
     .about-image.about-logo-box {
+
       width: 100% !important;
+
       display: flex !important;
+
       align-items: center !important;
+
       justify-content: center !important;
+
       overflow: hidden !important;
     }
 
     .about-image.about-logo-box img.about-logo {
-      width: min(420px,75vw) !important;
-      height: min(420px,75vw) !important;
+
+      width:
+        min(420px,75vw) !important;
+
+      height:
+        min(420px,75vw) !important;
+
       min-width: 260px !important;
+
       min-height: 260px !important;
+
       max-width: 420px !important;
+
       max-height: 420px !important;
+
       display: block !important;
+
       border-radius: 50% !important;
+
       object-fit: cover !important;
+
       object-position: center !important;
+
       aspect-ratio: 1 / 1 !important;
+
+      box-shadow:
+        0 25px 70px rgba(201,162,39,.12);
     }
 
     /* =====================================================
@@ -815,18 +1440,29 @@
        ===================================================== */
 
     .menu-btn {
+
       display: flex !important;
+
       flex-direction: column !important;
+
       align-items: center !important;
+
       justify-content: center !important;
+
       gap: 5px !important;
     }
 
     .menu-btn span {
+
       display: block !important;
+
       width: 24px !important;
+
       height: 2px !important;
-      background: currentColor !important;
+
+      background:
+        currentColor !important;
+
       border-radius: 2px !important;
     }
 
@@ -835,14 +1471,33 @@
        ===================================================== */
 
     .whatsapp-float {
+
       display: flex !important;
+
       align-items: center !important;
+
       justify-content: center !important;
+
+      background:
+        linear-gradient(
+          135deg,
+          #e0bd55,
+          #c9a227
+        ) !important;
+
+      color:
+        #080808 !important;
+
+      box-shadow:
+        0 12px 35px rgba(201,162,39,.22);
     }
 
     .whatsapp-float svg {
+
       width: 30px !important;
+
       height: 30px !important;
+
       display: block !important;
     }
 
@@ -851,19 +1506,110 @@
        ===================================================== */
 
     .process-image img {
+
       width: 100%;
+
       height: 100%;
+
       display: block;
+
       object-fit: cover;
     }
 
     /* =====================================================
-       SLOW CLIENT MARQUEE
+       CLIENT MARQUEE SPEED
        ===================================================== */
 
     .client-track {
-      animation-duration: 55s !important;
-      animation-timing-function: linear !important;
+
+      animation-duration:
+        55s !important;
+
+      animation-timing-function:
+        linear !important;
+    }
+
+    /* =====================================================
+       FINAL CTA
+       ===================================================== */
+
+    .final-cta {
+
+      position: relative;
+
+      overflow: hidden;
+
+      background:
+        radial-gradient(
+          circle at 50% 50%,
+          rgba(201,162,39,.18),
+          transparent 48%
+        ),
+        linear-gradient(
+          135deg,
+          #080808 0%,
+          #161106 50%,
+          #080808 100%
+        ) !important;
+
+      border-top:
+        1px solid rgba(201,162,39,.25);
+
+      border-bottom:
+        1px solid rgba(201,162,39,.25);
+    }
+
+    .final-cta h2 {
+
+      color:
+        #ffffff !important;
+    }
+
+    .final-cta h2 span {
+
+      color:
+        var(--ew-gold-light) !important;
+    }
+
+    .final-cta .eyebrow {
+
+      color:
+        var(--ew-gold-light) !important;
+    }
+
+    /* =====================================================
+       FOOTER
+       ===================================================== */
+
+    .footer {
+
+      background:
+        linear-gradient(
+          180deg,
+          #0d0d0d,
+          #050505
+        ) !important;
+
+      border-top:
+        1px solid rgba(201,162,39,.25);
+    }
+
+    .footer h4 {
+
+      color:
+        var(--ew-gold-light) !important;
+    }
+
+    .footer a:hover {
+
+      color:
+        var(--ew-gold-light) !important;
+    }
+
+    .footer-bottom {
+
+      border-top:
+        1px solid rgba(201,162,39,.15) !important;
     }
 
     /* =====================================================
@@ -873,57 +1619,86 @@
     @media (max-width:700px) {
 
       .client-reviews-section {
-        padding: 70px 5vw;
+
+        padding:
+          70px 5vw;
       }
 
       .client-reviews-heading h2 {
-        font-size: clamp(38px,12vw,58px);
-        letter-spacing: -1.5px;
+
+        font-size:
+          clamp(38px,12vw,58px);
+
+        letter-spacing:
+          -1.5px;
       }
 
       .reviews-slider {
-        border-radius: 20px;
+
+        border-radius:
+          20px;
       }
 
       .client-review-slide {
+
         padding: 4px;
       }
 
       .client-review-card {
-        min-height: 430px;
-        padding: 30px 24px;
-        border-radius: 22px;
+
+        min-height:
+          430px;
+
+        padding:
+          30px 24px;
+
+        border-radius:
+          22px;
       }
 
       .review-top-row {
-        align-items: flex-start;
-        flex-direction: column;
+
+        align-items:
+          flex-start;
+
+        flex-direction:
+          column;
+
         gap: 18px;
       }
 
       .review-avatar {
+
         width: 48px;
         height: 48px;
+
         min-width: 48px;
+
         font-size: 18px;
       }
 
       .review-client-name {
+
         font-size: 16px;
       }
 
       .review-stars {
+
         font-size: 22px;
       }
 
       .client-review-card blockquote {
+
         font-size: 18px;
+
         line-height: 1.6;
       }
 
       .review-arrow {
+
         width: 40px;
         height: 40px;
+
         font-size: 18px;
       }
 
@@ -936,52 +1711,59 @@
       }
 
       .review-dots {
+
         gap: 5px;
       }
 
       .review-dot {
+
         width: 6px;
         height: 6px;
       }
 
       .review-dot.active {
+
         width: 20px;
       }
+
     }
 
     @media (max-width:600px) {
 
       .about-image.about-logo-box img.about-logo {
+
         width: 260px !important;
         height: 260px !important;
+
         min-width: 260px !important;
         min-height: 260px !important;
       }
 
       .team-section {
-        padding: 65px 5vw;
+
+        padding:
+          65px 5vw;
       }
 
       .team-image-box,
       .team-image-box img {
+
         border-radius: 16px;
       }
+
     }
 
     /* =====================================================
-       FINAL PROTECTION AGAINST OLD GOLD OVERRIDES
+       FINAL SAFETY
        ===================================================== */
 
-    .work-section,
-    .process-section,
-    .services-section,
-    .portfolio-section,
-    .team-section,
-    .about-section {
-      background-color: #080808 !important;
-      background-image: none !important;
-      position: relative;
-      isolation: isolate;
+    html,
+    body,
+    main {
+
+      max-width: 100%;
+
+      overflow-x: hidden;
     }
 
   </style>
@@ -1080,7 +1862,10 @@
 
     <!-- ================= HERO ================= -->
 
-    <section class="hero" aria-labelledby="hero-title">
+    <section
+      class="hero"
+      aria-labelledby="hero-title"
+    >
 
       <div class="hero-copy reveal">
 
@@ -1089,16 +1874,23 @@
         </div>
 
         <h1 id="hero-title">
+
           We Make Your Brand<br>
-          <span>Impossible To Ignore</span>
+
+          <span>
+            Impossible To Ignore
+          </span>
+
         </h1>
 
         <p class="hero-text">
+
           Edit Wallah is a social media marketing agency
           in Nagpur creating scroll-stopping content,
           cinematic video edits, professional ad creatives
           and powerful brand visuals that make people
           remember your brand.
+
         </p>
 
         <div class="hero-actions">
@@ -1112,7 +1904,10 @@
             Get Your Ad Made →
           </a>
 
-          <a class="text-link" href="#work">
+          <a
+            class="text-link"
+            href="#work"
+          >
             Swipe to explore ↓
           </a>
 
@@ -1158,7 +1953,10 @@
 
     <!-- ================= SERVICES MARQUEE ================= -->
 
-    <div class="marquee" aria-label="Edit Wallah Services">
+    <div
+      class="marquee"
+      aria-label="Edit Wallah Services"
+    >
 
       <div class="marquee-track">
 
@@ -1185,7 +1983,7 @@
     </div>
 
     <!-- =====================================================
-         CLIENT FEEDBACK — ABOVE FEATURED WORK
+         CLIENT FEEDBACK
          ===================================================== -->
 
     <section
@@ -1201,13 +1999,21 @@
         </div>
 
         <h2 id="client-reviews-title">
+
           What Our Clients<br>
-          <span>Say About Us</span>
+
+          <span>
+            Say About Us
+          </span>
+
         </h2>
 
       </div>
 
-      <div class="reviews-slider" id="reviewsSlider">
+      <div
+        class="reviews-slider"
+        id="reviewsSlider"
+      >
 
         <button
           class="review-arrow prev"
@@ -1218,7 +2024,10 @@
           ←
         </button>
 
-        <div class="reviews-track" id="reviewsTrack"></div>
+        <div
+          class="reviews-track"
+          id="reviewsTrack"
+        ></div>
 
         <button
           class="review-arrow next"
@@ -1244,7 +2053,7 @@
     </section>
 
     <!-- =====================================================
-         FEATURED WORK — BELOW CLIENT FEEDBACK
+         FEATURED WORK
          ===================================================== -->
 
     <section
@@ -1262,8 +2071,13 @@
           </div>
 
           <h2 id="work-title">
+
             Premium Creative<br>
-            <span>That Drives Real Results</span>
+
+            <span>
+              That Drives Real Results
+            </span>
+
           </h2>
 
         </div>
@@ -1285,7 +2099,10 @@
           ←
         </button>
 
-        <div class="portfolio-slider" id="workSlider">
+        <div
+          class="portfolio-slider"
+          id="workSlider"
+        >
 
           <article class="portfolio-card">
 
@@ -1456,15 +2273,22 @@
           </div>
 
           <h2 id="process-title">
+
             Content Growth<br>
-            <span>Plan</span>
+
+            <span>
+              Plan
+            </span>
+
           </h2>
 
         </div>
 
         <p class="section-description">
+
           We Don't Guess. Our creative team follows
           a proven process to scale your brand.
+
         </p>
 
       </div>
@@ -1473,17 +2297,23 @@
 
         <article class="process-card reveal">
 
-          <div class="process-number">01</div>
+          <div class="process-number">
+            01
+          </div>
 
           <div class="process-image">
+
             <img
               src="process-01.jpg"
               alt="Edit Wallah research and content planning"
               loading="lazy"
             >
+
           </div>
 
-          <h3>Deep Research & Proper Content Planning</h3>
+          <h3>
+            Deep Research & Proper Content Planning
+          </h3>
 
           <p>
             We analyze your competitors and create
@@ -1494,17 +2324,23 @@
 
         <article class="process-card reveal">
 
-          <div class="process-number">02</div>
+          <div class="process-number">
+            02
+          </div>
 
           <div class="process-image">
+
             <img
               src="process-02.jpg"
               alt="Edit Wallah scripting process"
               loading="lazy"
             >
+
           </div>
 
-          <h3>Scripting</h3>
+          <h3>
+            Scripting
+          </h3>
 
           <p>
             We write scroll-stopping scripts to stop
@@ -1515,17 +2351,23 @@
 
         <article class="process-card reveal">
 
-          <div class="process-number">03</div>
+          <div class="process-number">
+            03
+          </div>
 
           <div class="process-image">
+
             <img
               src="process-03.jpg"
               alt="Edit Wallah professional shooting"
               loading="lazy"
             >
+
           </div>
 
-          <h3>Professional Shooting</h3>
+          <h3>
+            Professional Shooting
+          </h3>
 
           <p>
             We provide the right direction with the
@@ -1536,17 +2378,23 @@
 
         <article class="process-card reveal">
 
-          <div class="process-number">04</div>
+          <div class="process-number">
+            04
+          </div>
 
           <div class="process-image">
+
             <img
               src="process-04.jpg"
               alt="Edit Wallah premium video editing"
               loading="lazy"
             >
+
           </div>
 
-          <h3>Premium Quality Editing</h3>
+          <h3>
+            Premium Quality Editing
+          </h3>
 
           <p>
             Our editing team creates videos designed
@@ -1601,7 +2449,9 @@
 
           <div class="service-body">
 
-            <h3>Ads Shoot 🎬</h3>
+            <h3>
+              Ads Shoot 🎬
+            </h3>
 
             <p>
               High-converting ad shoots crafted to stop
@@ -1641,7 +2491,9 @@
 
           <div class="service-body">
 
-            <h3>Performance Marketing 🚀</h3>
+            <h3>
+              Performance Marketing 🚀
+            </h3>
 
             <p>
               ROI-focused campaigns that drive qualified
@@ -1680,7 +2532,9 @@
 
           <div class="service-body">
 
-            <h3>Social Media Marketing 📣</h3>
+            <h3>
+              Social Media Marketing 📣
+            </h3>
 
             <p>
               Build a powerful online presence with
@@ -1720,7 +2574,9 @@
 
           <div class="service-body">
 
-            <h3>Video Editing 🎞️</h3>
+            <h3>
+              Video Editing 🎞️
+            </h3>
 
             <p>
               Premium edits built around storytelling,
@@ -1830,8 +2686,13 @@
           </div>
 
           <h2 id="portfolio-title">
+
             Premium Creative<br>
-            <span>That Drives Real Results</span>
+
+            <span>
+              That Drives Real Results
+            </span>
+
           </h2>
 
         </div>
@@ -1883,8 +2744,15 @@
             </div>
 
             <div class="card-title">
-              <small>EDUCATION</small>
-              <b>Commercial</b>
+
+              <small>
+                EDUCATION
+              </small>
+
+              <b>
+                Commercial
+              </b>
+
             </div>
 
           </article>
@@ -1914,8 +2782,15 @@
             </div>
 
             <div class="card-title">
-              <small>FASHION</small>
-              <b>Commercial</b>
+
+              <small>
+                FASHION
+              </small>
+
+              <b>
+                Commercial
+              </b>
+
             </div>
 
           </article>
@@ -1945,8 +2820,15 @@
             </div>
 
             <div class="card-title">
-              <small>CAFE</small>
-              <b>Commercial</b>
+
+              <small>
+                CAFE
+              </small>
+
+              <b>
+                Commercial
+              </b>
+
             </div>
 
           </article>
@@ -1976,8 +2858,15 @@
             </div>
 
             <div class="card-title">
-              <small>PRODUCT</small>
-              <b>Commercial</b>
+
+              <small>
+                PRODUCT
+              </small>
+
+              <b>
+                Commercial
+              </b>
+
             </div>
 
           </article>
@@ -2052,7 +2941,9 @@
 
       <div class="about-grid">
 
-        <div class="about-image about-logo-box reveal">
+        <div
+          class="about-image about-logo-box reveal"
+        >
 
           <img
             src="./logo.png"
@@ -2076,23 +2967,29 @@
           </h2>
 
           <h3>
+
             We Don't Just Create Content.
             We Build Brands That People Remember.
+
           </h3>
 
           <p>
+
             At Edit Wallah, we believe every business
             has a story worth telling—but only the right
             strategy can turn that story into attention
             and growth.
+
           </p>
 
           <p>
+
             We're a creative studio and social media
             marketing agency in Nagpur helping businesses,
             creators and brands grow through high-quality
             content, powerful ad creatives, social media
             branding and result-driven visual storytelling.
+
           </p>
 
           <a
@@ -2126,8 +3023,13 @@
       </div>
 
       <h2 id="cta-title">
+
         Let's Make Your Brand<br>
-        <span>Impossible to Ignore!</span>
+
+        <span>
+          Impossible to Ignore!
+        </span>
+
       </h2>
 
       <a
@@ -2161,41 +3063,73 @@
         >
 
         <p>
+
           Premium creative and social media marketing
           solutions for brands, creators and businesses.
+
         </p>
 
       </div>
 
       <div class="footer-column">
 
-        <h4>Services</h4>
+        <h4>
+          Services
+        </h4>
 
-        <a href="#services">Ad Content</a>
-        <a href="#services">Performance Marketing</a>
-        <a href="#services">Social Media Marketing</a>
-        <a href="#services">Personal Branding</a>
-        <a href="#services">Video Production</a>
+        <a href="#services">
+          Ad Content
+        </a>
+
+        <a href="#services">
+          Performance Marketing
+        </a>
+
+        <a href="#services">
+          Social Media Marketing
+        </a>
+
+        <a href="#services">
+          Personal Branding
+        </a>
+
+        <a href="#services">
+          Video Production
+        </a>
 
       </div>
 
       <div class="footer-column">
 
-        <h4>Services</h4>
+        <h4>
+          Services
+        </h4>
 
-        <a href="#services">Video Editing</a>
-        <a href="#services">Graphic Designing</a>
-        <a href="#services">Influencer Marketing</a>
+        <a href="#services">
+          Video Editing
+        </a>
+
+        <a href="#services">
+          Graphic Designing
+        </a>
+
+        <a href="#services">
+          Influencer Marketing
+        </a>
 
       </div>
 
       <div class="footer-column">
 
-        <h4>Contact</h4>
+        <h4>
+          Contact
+        </h4>
 
         <a href="tel:+919373376926">
+
           Call Us<br>
           +91 93733 76926
+
         </a>
 
         <a
@@ -2207,8 +3141,10 @@
         </a>
 
         <p>
+
           Location<br>
           Nagpur, Maharashtra, India
+
         </p>
 
       </div>
@@ -2479,6 +3415,7 @@
         );
 
       let currentIndex = 0;
+
       let autoSlide = null;
 
       const slideDelay = 6500;
@@ -2506,6 +3443,7 @@
           function () {
 
             goToReview(index);
+
             restartAutoSlide();
 
           }
@@ -2527,37 +3465,51 @@
       function goToReview(index) {
 
         if (index < 0) {
-          index = slides.length - 1;
+
+          index =
+            slides.length - 1;
         }
 
         if (index >= slides.length) {
+
           index = 0;
         }
 
-        currentIndex = index;
+        currentIndex =
+          index;
 
         track.style.transform =
           "translateX(-" +
           currentIndex * 100 +
           "%)";
 
-        dots.forEach(function (dot, dotIndex) {
+        dots.forEach(
+          function (dot, dotIndex) {
 
-          dot.classList.toggle(
-            "active",
-            dotIndex === currentIndex
-          );
+            dot.classList.toggle(
+              "active",
+              dotIndex === currentIndex
+            );
 
-        });
+          }
+        );
 
       }
 
       function nextReview() {
-        goToReview(currentIndex + 1);
+
+        goToReview(
+          currentIndex + 1
+        );
+
       }
 
       function previousReview() {
-        goToReview(currentIndex - 1);
+
+        goToReview(
+          currentIndex - 1
+        );
+
       }
 
       /* ================= BUTTONS ================= */
@@ -2567,6 +3519,7 @@
         function () {
 
           nextReview();
+
           restartAutoSlide();
 
         }
@@ -2577,6 +3530,7 @@
         function () {
 
           previousReview();
+
           restartAutoSlide();
 
         }
@@ -2601,6 +3555,7 @@
         if (autoSlide) {
 
           clearInterval(autoSlide);
+
           autoSlide = null;
 
         }
@@ -2608,7 +3563,9 @@
       }
 
       function restartAutoSlide() {
+
         startAutoSlide();
+
       }
 
       /* ================= HOVER ================= */
@@ -2650,14 +3607,21 @@
             event.changedTouches[0].screenX;
 
           const difference =
-            touchStartX - touchEndX;
+            touchStartX -
+            touchEndX;
 
-          if (Math.abs(difference) > 45) {
+          if (
+            Math.abs(difference) > 45
+          ) {
 
             if (difference > 0) {
+
               nextReview();
+
             } else {
+
               previousReview();
+
             }
 
           }
@@ -2676,16 +3640,22 @@
         "keydown",
         function (event) {
 
-          if (event.key === "ArrowRight") {
+          if (
+            event.key === "ArrowRight"
+          ) {
 
             nextReview();
+
             restartAutoSlide();
 
           }
 
-          if (event.key === "ArrowLeft") {
+          if (
+            event.key === "ArrowLeft"
+          ) {
 
             previousReview();
+
             restartAutoSlide();
 
           }
@@ -2696,6 +3666,7 @@
       /* ================= START ================= */
 
       goToReview(0);
+
       startAutoSlide();
 
     })();
