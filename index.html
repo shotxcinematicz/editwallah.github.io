@@ -45,9 +45,7 @@
     href="https://shotxcinematicz.github.io/editwallah.github.io/"
   >
 
-  <!-- =====================================================
-       EDIT WALLAH FAVICON / GOOGLE SITE ICON
-       ===================================================== -->
+  <!-- ================= FAVICON ================= -->
 
   <link
     rel="icon"
@@ -1166,7 +1164,254 @@
     }
 
     /* =====================================================
-       CLIENTS
+       PREMIUM OUR CLIENTS IMAGE SHOWCASE
+       ===================================================== */
+
+    .clients-showcase {
+
+      position: relative;
+
+      padding: 85px 0 90px;
+
+      background:
+        radial-gradient(
+          circle at 50% 0%,
+          rgba(201,162,39,0.10),
+          transparent 38%
+        ),
+        #050505;
+
+      overflow: hidden;
+    }
+
+    .clients-showcase-head {
+
+      text-align: center;
+
+      max-width: 700px;
+
+      margin: 0 auto 45px;
+
+      padding: 0 20px;
+    }
+
+    .clients-showcase-head span {
+
+      display: inline-block;
+
+      font-size: 11px;
+
+      font-weight: 700;
+
+      letter-spacing: 4px;
+
+      color: #c9a227;
+
+      margin-bottom: 12px;
+    }
+
+    .clients-showcase-head h2 {
+
+      margin: 0;
+
+      font-size:
+        clamp(34px, 5vw, 58px);
+
+      line-height: 1;
+
+      font-weight: 800;
+
+      letter-spacing: -2px;
+
+      color: #fff;
+    }
+
+    .clients-showcase-head p {
+
+      margin: 17px 0 0;
+
+      color:
+        rgba(255,255,255,0.55);
+
+      font-size: 14px;
+    }
+
+    .client-logo-slider {
+
+      width: 100%;
+
+      overflow: hidden;
+
+      position: relative;
+
+      padding: 10px 0 25px;
+    }
+
+    .client-logo-slider::before,
+    .client-logo-slider::after {
+
+      content: "";
+
+      position: absolute;
+
+      top: 0;
+
+      width: 130px;
+
+      height: 100%;
+
+      z-index: 3;
+
+      pointer-events: none;
+    }
+
+    .client-logo-slider::before {
+
+      left: 0;
+
+      background:
+        linear-gradient(
+          90deg,
+          #050505,
+          transparent
+        );
+    }
+
+    .client-logo-slider::after {
+
+      right: 0;
+
+      background:
+        linear-gradient(
+          270deg,
+          #050505,
+          transparent
+        );
+    }
+
+    .client-logo-track {
+
+      display: flex;
+
+      width: max-content;
+
+      align-items: center;
+
+      gap: 24px;
+
+      animation:
+        clientLogoSlide
+        28s
+        linear
+        infinite;
+    }
+
+    .client-logo-slider:hover
+    .client-logo-track {
+
+      animation-play-state:
+        paused;
+    }
+
+    .client-logo-card {
+
+      width: 210px;
+
+      height: 125px;
+
+      flex: 0 0 210px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      padding: 25px;
+
+      border:
+        1px solid rgba(201,162,39,0.18);
+
+      border-radius: 18px;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255,255,255,0.055),
+          rgba(255,255,255,0.015)
+        );
+
+      box-shadow:
+        0 15px 45px rgba(0,0,0,0.35),
+        inset 0 1px 0 rgba(255,255,255,0.05);
+
+      transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+    }
+
+    .client-logo-card:hover {
+
+      transform:
+        translateY(-6px);
+
+      border-color:
+        rgba(201,162,39,0.55);
+
+      box-shadow:
+        0 20px 55px rgba(0,0,0,0.5),
+        0 0 25px rgba(201,162,39,0.08);
+    }
+
+    .client-logo-card img {
+
+      width: 100%;
+
+      height: 100%;
+
+      object-fit: contain;
+
+      display: block;
+
+      filter:
+        grayscale(100%);
+
+      opacity: .72;
+
+      transition:
+        filter .35s ease,
+        opacity .35s ease,
+        transform .35s ease;
+    }
+
+    .client-logo-card:hover img {
+
+      filter:
+        grayscale(0%);
+
+      opacity: 1;
+
+      transform:
+        scale(1.05);
+    }
+
+    @keyframes clientLogoSlide {
+
+      from {
+        transform:
+          translateX(0);
+      }
+
+      to {
+        transform:
+          translateX(calc(-50% - 12px));
+      }
+
+    }
+
+    /* =====================================================
+       CLIENTS / GLOBAL BRANDS MARQUEE
        ===================================================== */
 
     .clients-section {
@@ -1185,6 +1430,8 @@
           #151108,
           #080808
         ) !important;
+
+      text-align: center;
     }
 
     .clients-section h2 {
@@ -1200,6 +1447,27 @@
 
       color:
         rgba(255,255,255,.60) !important;
+    }
+
+    .clients-section .eyebrow {
+
+      color:
+        #e8c65c !important;
+
+      font-size:
+        clamp(10px,1.4vw,13px);
+
+      letter-spacing:
+        3px;
+
+      font-weight:
+        800;
+
+      text-transform:
+        uppercase;
+
+      line-height:
+        1.5;
     }
 
     .client-track span {
@@ -1707,6 +1975,96 @@
 
       .review-dot.active {
         width: 20px;
+      }
+
+    }
+
+    /* =====================================================
+       PREMIUM CLIENT SLIDER MOBILE
+       ===================================================== */
+
+    @media (max-width:600px) {
+
+      .clients-showcase {
+
+        padding:
+          65px 0 70px;
+      }
+
+      .clients-showcase-head {
+
+        margin-bottom:
+          30px;
+      }
+
+      .clients-showcase-head h2 {
+
+        font-size:
+          38px;
+      }
+
+      .clients-showcase-head p {
+
+        font-size:
+          13px;
+      }
+
+      .client-logo-track {
+
+        gap:
+          15px;
+
+        animation-duration:
+          24s;
+      }
+
+      .client-logo-card {
+
+        width:
+          165px;
+
+        height:
+          105px;
+
+        flex-basis:
+          165px;
+
+        padding:
+          20px;
+
+        border-radius:
+          15px;
+      }
+
+      .client-logo-slider::before,
+      .client-logo-slider::after {
+
+        width:
+          65px;
+      }
+
+      .clients-section {
+
+        padding-left:
+          5vw !important;
+
+        padding-right:
+          5vw !important;
+
+        overflow:
+          hidden !important;
+      }
+
+      .clients-section .eyebrow {
+
+        max-width:
+          330px;
+
+        margin:
+          0 auto 12px;
+
+        line-height:
+          1.7;
       }
 
     }
@@ -2582,7 +2940,141 @@
 
     </section>
 
-    <!-- ================= CLIENTS ================= -->
+    <!-- =====================================================
+         PREMIUM OUR CLIENTS IMAGE SLIDER
+         ===================================================== -->
+
+    <section class="clients-showcase">
+
+      <div class="clients-showcase-head">
+
+        <span>
+          TRUSTED BY
+        </span>
+
+        <h2>
+          Our Clients
+        </h2>
+
+        <p>
+          Brands we've worked with and helped grow.
+        </p>
+
+      </div>
+
+      <div class="client-logo-slider">
+
+        <div class="client-logo-track">
+
+          <!-- ORIGINAL 6 -->
+
+          <div class="client-logo-card">
+            <img
+              src="./client-1.png"
+              alt="Edit Wallah Client 1"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="client-logo-card">
+            <img
+              src="./client-2.png"
+              alt="Edit Wallah Client 2"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="client-logo-card">
+            <img
+              src="./client-3.png"
+              alt="Edit Wallah Client 3"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="client-logo-card">
+            <img
+              src="./client-4.png"
+              alt="Edit Wallah Client 4"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="client-logo-card">
+            <img
+              src="./client-5.png"
+              alt="Edit Wallah Client 5"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="client-logo-card">
+            <img
+              src="./client-6.png"
+              alt="Edit Wallah Client 6"
+              loading="lazy"
+            >
+          </div>
+
+          <!-- DUPLICATE FOR SEAMLESS LOOP -->
+
+          <div class="client-logo-card">
+            <img
+              src="./client-1.png"
+              alt="Edit Wallah Client 1"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="client-logo-card">
+            <img
+              src="./client-2.png"
+              alt="Edit Wallah Client 2"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="client-logo-card">
+            <img
+              src="./client-3.png"
+              alt="Edit Wallah Client 3"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="client-logo-card">
+            <img
+              src="./client-4.png"
+              alt="Edit Wallah Client 4"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="client-logo-card">
+            <img
+              src="./client-5.png"
+              alt="Edit Wallah Client 5"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="client-logo-card">
+            <img
+              src="./client-6.png"
+              alt="Edit Wallah Client 6"
+              loading="lazy"
+            >
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- =====================================================
+         GLOBAL BRANDS / TRAINERS
+         ===================================================== -->
 
     <section
       class="clients-section"
@@ -2590,7 +3082,7 @@
     >
 
       <div class="eyebrow">
-        TRUSTED BY
+        OUR TRAINERS WORKED WITH GLOBAL BRANDS
       </div>
 
       <h2 id="clients-title">
