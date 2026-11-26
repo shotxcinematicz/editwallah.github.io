@@ -1,1257 +1,4088 @@
+<!DOCTYPE html>  <html lang="en">  <head>    <meta charset="UTF-8">  <meta
+name="viewport"
+content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Edit Wallah | Social Media Marketing Agency in Nagpur</title>
-
-<meta name="description" content="Edit Wallah is a social media marketing agency in Nagpur offering video editing, social media marketing, performance marketing, creative production and branding services.">
-
-<meta name="keywords" content="Edit Wallah, Social Media Marketing Agency Nagpur, Video Editing Nagpur, Digital Marketing, Video Production">
-
-<meta name="author" content="Edit Wallah">
-
-<meta name="robots" content="index, follow">
-
-<link rel="canonical" href="https://shotxcinematicz.github.io/editwallah.github.io/">
-
-<link rel="icon" href="logo.png">
-
-<meta property="og:title" content="Edit Wallah | Creative Marketing Agency">
-<meta property="og:description" content="We Make Your Brand Impossible To Ignore.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://shotxcinematicz.github.io/editwallah.github.io/">
-
-<meta name="theme-color" content="#080808">
-
-<link rel="stylesheet" href="style.css">
-
-<style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  background: #080808;
-  color: #fff;
-  font-family: Arial, Helvetica, sans-serif;
-  overflow-x: hidden;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-img, video {
-  max-width: 100%;
-}
-
-.gold {
-  color: #c9a227;
-}
-
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-}
-
-section {
-  padding: 90px 0;
-}
-
-.section-title {
-  font-size: clamp(30px, 5vw, 55px);
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.section-desc {
-  color: #aaa;
-  text-align: center;
-  max-width: 700px;
-  margin: 0 auto 45px;
-  line-height: 1.7;
-}
-
-.btn {
-  display: inline-block;
-  background: #c9a227;
-  color: #080808;
-  padding: 14px 26px;
-  font-weight: 700;
-  border-radius: 5px;
-  transition: .3s;
-}
-
-.btn:hover {
-  background: #fff;
-  transform: translateY(-3px);
-}
-
-/* HEADER */
-
-header {
-  width: 100%;
-  background: #090909;
-  border-bottom: 1px solid #222;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.navbar {
-  min-height: 75px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.logo-area {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.logo-area img {
-  width: 43px;
-  height: 43px;
-  object-fit: contain;
-}
-
-.logo-area h2 {
-  font-size: 20px;
-  letter-spacing: 1px;
-}
-
-.nav-links {
-  display: flex;
-  gap: 25px;
-  align-items: center;
-}
-
-.nav-links a {
-  color: #ddd;
-  font-size: 14px;
-  transition: .3s;
-}
-
-.nav-links a:hover {
-  color: #c9a227;
-}
-
-.menu-btn {
-  display: none;
-  background: none;
-  color: #fff;
-  border: none;
-  font-size: 27px;
-  cursor: pointer;
-}
-
-/* HERO */
-
-.hero {
-  min-height: 85vh;
-  display: flex;
-  align-items: center;
-  position: relative;
-  overflow: hidden;
-  padding: 0;
-}
-
-.hero-video {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  inset: 0;
-  z-index: 0;
-}
-
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(0,0,0,.95),
-    rgba(0,0,0,.65),
-    rgba(0,0,0,.35)
-  );
-  z-index: 1;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 800px;
-  padding: 80px 0;
-}
-
-.hero-content h1 {
-  font-size: clamp(40px, 7vw, 85px);
-  line-height: 1.08;
-  margin-bottom: 25px;
-}
-
-.hero-content p {
-  font-size: 17px;
-  color: #ccc;
-  line-height: 1.8;
-  max-width: 600px;
-  margin-bottom: 30px;
-}
-
-.hero-tag {
-  color: #c9a227;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-  font-size: 13px;
-}
-
-/* MARQUEE */
-
-.marquee {
-  background: #c9a227;
-  color: #000;
-  overflow: hidden;
-  padding: 17px 0;
-  white-space: nowrap;
-}
-
-.marquee-track {
-  display: inline-flex;
-  gap: 50px;
-  animation: marquee 30s linear infinite;
-}
-
-.marquee-track span {
-  font-size: 15px;
-  font-weight: bold;
-  letter-spacing: 2px;
-}
-
-@keyframes marquee {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
-}
-
-/* FEATURED WORK */
-
-.work-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 25px;
-}
-
-.work-card {
-  background: #111;
-  border: 1px solid #222;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.work-card video {
-  width: 100%;
-  display: block;
-  aspect-ratio: 16/9;
-  object-fit: cover;
-  background: #000;
-}
-
-.work-card h3 {
-  padding: 18px;
-  font-size: 18px;
-}
-
-/* PROCESS */
-
-.process-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-}
-
-.process-card {
-  background: #111;
-  border: 1px solid #222;
-  border-radius: 10px;
-  overflow: hidden;
-  transition: .3s;
-}
-
-.process-card:hover {
-  border-color: #c9a227;
-  transform: translateY(-5px);
-}
-
-.process-card img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-}
-
-.process-card h3 {
-  padding: 20px 20px 10px;
-  color: #c9a227;
-}
-
-.process-card p {
-  padding: 0 20px 20px;
-  color: #aaa;
-  line-height: 1.7;
-}
-
-/* SERVICES */
-
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 25px;
-}
-
-.service-card {
-  background: #111;
-  border: 1px solid #222;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.service-card img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-}
-
-.service-card h3 {
-  padding: 20px 20px 10px;
-  color: #c9a227;
-}
-
-.service-card p {
-  padding: 0 20px 25px;
-  color: #aaa;
-  line-height: 1.7;
-}
-
-/* CLIENT NAMES */
-
-.client-marquee {
-  overflow: hidden;
-  border-top: 1px solid #222;
-  border-bottom: 1px solid #222;
-  padding: 35px 0;
-}
-
-.client-track {
-  display: flex;
-  width: max-content;
-  gap: 70px;
-  animation: clientMove 38s linear infinite;
-}
-
-.client-track span {
-  color: #c9a227;
-  font-size: 22px;
-  font-weight: bold;
-  letter-spacing: 2px;
-}
-
-@keyframes clientMove {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
-}
-
-/* PORTFOLIO */
-
-.portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 25px;
-}
-
-.portfolio-card {
-  background: #111;
-  border: 1px solid #222;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.portfolio-card video {
-  width: 100%;
-  display: block;
-  aspect-ratio: 16/9;
-  background: #000;
-}
-
-.portfolio-card h3 {
-  padding: 18px;
-}
-
-/* REVIEWS */
-
-.reviews-section {
-  overflow: hidden;
-}
-
-.review-slider {
-  max-width: 750px;
-  margin: auto;
-  overflow: hidden;
-}
-
-.review-track {
-  display: flex;
-  transition: transform .5s ease;
-}
-
-.review-slide {
-  min-width: 100%;
-  background: #111;
-  border: 1px solid #333;
-  border-radius: 10px;
-  padding: 35px;
-  text-align: center;
-}
-
-.review-slide p {
-  color: #ccc;
-  line-height: 1.8;
-  margin: 15px 0;
-}
-
-.review-slide h3 {
-  color: #c9a227;
-}
-
-.review-buttons {
-  text-align: center;
-  margin-top: 25px;
-}
-
-.review-buttons button {
-  padding: 12px 20px;
-  background: #c9a227;
-  color: #000;
-  border: none;
-  cursor: pointer;
-  margin: 5px;
-  border-radius: 5px;
-}
-
-/* ABOUT */
-
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 40px;
-}
-
-.about-grid img {
-  width: 100%;
-  border-radius: 10px;
-  object-fit: cover;
-}
-
-.about-content h2 {
-  font-size: clamp(30px, 4vw, 48px);
-  margin-bottom: 20px;
-}
-
-.about-content p {
-  color: #aaa;
-  line-height: 1.9;
-  margin-bottom: 20px;
-}
-
-/* CTA */
-
-.cta {
-  background: linear-gradient(135deg, #161616, #090909);
-  text-align: center;
-  border-top: 1px solid #222;
-  border-bottom: 1px solid #222;
-}
-
-.cta h2 {
-  font-size: clamp(30px, 5vw, 55px);
-  margin-bottom: 20px;
-}
-
-.cta p {
-  color: #aaa;
-  margin-bottom: 30px;
-  line-height: 1.7;
-}
-
-/* FOOTER */
-
-footer {
-  background: #050505;
-  padding: 60px 0 25px;
-}
-
-.footer-grid {
-  display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr;
-  gap: 30px;
-}
-
-.footer-grid h3 {
-  color: #c9a227;
-  margin-bottom: 20px;
-}
-
-.footer-grid p {
-  color: #aaa;
-  line-height: 1.8;
-}
-
-.footer-links {
-  display: flex;
-  flex-direction: column;
-  gap: 13px;
-}
-
-.footer-links a {
-  color: #aaa;
-}
-
-.footer-links a:hover {
-  color: #c9a227;
-}
-
-.copyright {
-  border-top: 1px solid #222;
-  margin-top: 40px;
-  padding-top: 20px;
-  text-align: center;
-  color: #777;
-  font-size: 13px;
-}
-
-/* WHATSAPP */
-
-.whatsapp {
-  position: fixed;
-  bottom: 22px;
-  right: 22px;
-  z-index: 999;
-  background: #25D366;
-  color: #fff;
-  padding: 15px 20px;
-  border-radius: 50px;
-  font-weight: bold;
-  box-shadow: 0 5px 20px rgba(0,0,0,.5);
-}
-
-/* MOBILE */
-
-@media(max-width: 850px) {
-
-  .menu-btn {
-    display: block;
-  }
-
-  .nav-links {
-    position: absolute;
-    top: 75px;
-    left: 0;
-    width: 100%;
-    background: #090909;
-    flex-direction: column;
-    padding: 25px;
-    display: none;
-    border-bottom: 1px solid #222;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .process-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .about-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .footer-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .hero {
-    min-height: 75vh;
-  }
-}
-
-@media(max-width: 600px) {
-
-  section {
-    padding: 65px 0;
-  }
-
-  .work-grid,
-  .services-grid,
-  .portfolio-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .process-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .process-card img {
-    height: 240px;
-  }
-
-  .hero-content p {
-    font-size: 15px;
-  }
-
-  .logo-area h2 {
-    font-size: 17px;
-  }
-
-  .review-slide {
-    padding: 25px;
-  }
-}
-</style>
-</head>
-<script src="script.js"></script>
-<body>
-
-<!-- HEADER -->
-
-<header>
-  <div class="container navbar">
-
-    <a href="#" class="logo-area">
-      <img src="logo.png" alt="Edit Wallah Logo">
-      <h2>EDIT<span class="gold">WALLAH</span></h2>
-    </a>
-
-    <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
-
-    <nav class="nav-links" id="navLinks">
-      <a href="#home">Home</a>
-      <a href="#services">Services</a>
-      <a href="#process">Our Process</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
-
-  </div>
-</header>
-
-<!-- HERO -->
-
-<section class="hero" id="home">
-
-  <video class="hero-video" autoplay muted loop playsinline preload="auto">
-    <source src="c6292109.mp4" type="video/mp4">
-  </video>
-
-  <div class="container">
-    <div class="hero-content">
-
-      <div class="hero-tag">Creative Marketing Agency</div>
-
-      <h1>
-        WE MAKE YOUR BRAND
-        <span class="gold">IMPOSSIBLE TO IGNORE.</span>
-      </h1>
-
-      <p>
-        We help businesses grow through creative content,
-        powerful marketing strategies, professional video production
-        and impactful digital experiences.
-      </p>
-
-      <a href="https://wa.me/919373376926" class="btn">
-        Start Your Project
-      </a>
-
-    </div>
-  </div>
-
-</section>
-
-<!-- MARQUEE -->
-
-<div class="marquee">
-  <div class="marquee-track">
-    <span>VIDEO PRODUCTION</span>
-    <span>•</span>
-    <span>SOCIAL MEDIA MARKETING</span>
-    <span>•</span>
-    <span>PERFORMANCE MARKETING</span>
-    <span>•</span>
-    <span>CREATIVE STRATEGY</span>
-    <span>•</span>
-    <span>BRANDING</span>
-    <span>•</span>
-    <span>VIDEO PRODUCTION</span>
-    <span>•</span>
-    <span>SOCIAL MEDIA MARKETING</span>
-    <span>•</span>
-    <span>PERFORMANCE MARKETING</span>
-    <span>•</span>
-  </div>
+> 
+
+  <!-- ================= PRIMARY SEO ================= -->    <title>Edit Wallah | Social Media Marketing Agency in Nagpur</title>  <meta
+name="description"
+content="Edit Wallah is a social media marketing agency in Nagpur offering professional video editing, social media marketing, performance marketing, ad shoots, graphic designing, personal branding and creative content."
+
+> 
+
+<meta
+name="keywords"
+content="Edit Wallah, Edit Wallah Nagpur, social media marketing agency in Nagpur, social media marketing Nagpur, digital marketing agency Nagpur, digital marketing Nagpur, video editing Nagpur, video editing agency Nagpur, performance marketing Nagpur, ad agency Nagpur, creative agency Nagpur, graphic designing Nagpur, personal branding Nagpur, influencer marketing Nagpur"
+
+> 
+
+  <meta name="author" content="Edit Wallah">  <meta
+name="robots"
+content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+
+> 
+
+<meta
+name="googlebot"
+content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+
+> 
+
+  <meta name="theme-color" content="#080808">    <!-- ================= CANONICAL ================= -->    <link  
+    rel="canonical"  
+    href="https://shotxcinematicz.github.io/editwallah.github.io/"  
+  >    <!-- ================= FAVICON ================= -->    <link  
+    rel="icon"  
+    type="image/png"  
+    sizes="48x48"  
+    href="https://shotxcinematicz.github.io/editwallah.github.io/logo.png"  
+  >    <link  
+    rel="icon"  
+    type="image/png"  
+    sizes="96x96"  
+    href="https://shotxcinematicz.github.io/editwallah.github.io/logo.png"  
+  >    <link  
+    rel="shortcut icon"  
+    type="image/png"  
+    href="https://shotxcinematicz.github.io/editwallah.github.io/logo.png"  
+  >    <link  
+    rel="apple-touch-icon"  
+    sizes="180x180"  
+    href="https://shotxcinematicz.github.io/editwallah.github.io/logo.png"  
+  >  <meta
+name="msapplication-TileImage"
+content="https://shotxcinematicz.github.io/editwallah.github.io/logo.png"
+
+> 
+
+  <!-- ================= OPEN GRAPH ================= -->    <meta property="og:type" content="website">  <meta
+property="og:title"
+content="Edit Wallah | Social Media Marketing Agency in Nagpur"
+
+> 
+
+<meta
+property="og:description"
+content="Edit Wallah is a creative studio and social media marketing agency in Nagpur offering video editing, ad shoots, performance marketing, social media marketing, graphic designing and personal branding."
+
+> 
+
+<meta
+property="og:url"
+content="https://shotxcinematicz.github.io/editwallah.github.io/"
+
+> 
+
+  <meta property="og:site_name" content="Edit Wallah">  <meta
+property="og:image"
+content="https://shotxcinematicz.github.io/editwallah.github.io/logo.png"
+
+> 
+
+<meta
+property="og:image:alt"
+content="Edit Wallah Social Media Marketing Agency Logo"
+
+> 
+
+  <!-- ================= TWITTER ================= -->    <meta name="twitter:card" content="summary_large_image">  <meta
+name="twitter:title"
+content="Edit Wallah | Social Media Marketing Agency in Nagpur"
+
+> 
+
+<meta
+name="twitter:description"
+content="Professional social media marketing, video editing, performance marketing, ad shoots and creative brand solutions by Edit Wallah in Nagpur."
+
+> 
+
+<meta
+name="twitter:image"
+content="https://shotxcinematicz.github.io/editwallah.github.io/logo.png"
+
+> 
+
+  <!-- ================= WEBSITE STRUCTURED DATA ================= -->    <script type="application/ld+json">  
+  {  
+    "@context": "https://schema.org",  
+    "@type": "WebSite",  
+    "@id": "https://shotxcinematicz.github.io/editwallah.github.io/#website",  
+    "name": "Edit Wallah",  
+    "alternateName": "Edit Wallah Nagpur",  
+    "url": "https://shotxcinematicz.github.io/editwallah.github.io/",  
+    "image": "https://shotxcinematicz.github.io/editwallah.github.io/logo.png",  
+    "publisher": {  
+      "@id": "https://shotxcinematicz.github.io/editwallah.github.io/#business"  
+    }  
+  }  
+  </script>    <!-- ================= BUSINESS STRUCTURED DATA ================= -->    <script type="application/ld+json">  
+  {  
+    "@context": "https://schema.org",  
+    "@type": "LocalBusiness",  
+    "@id": "https://shotxcinematicz.github.io/editwallah.github.io/#business",  
+    "name": "Edit Wallah",  
+    "alternateName": "Edit Wallah Nagpur",  
+    "url": "https://shotxcinematicz.github.io/editwallah.github.io/",  
+    "logo": {  
+      "@type": "ImageObject",  
+      "url": "https://shotxcinematicz.github.io/editwallah.github.io/logo.png",  
+      "contentUrl": "https://shotxcinematicz.github.io/editwallah.github.io/logo.png",  
+      "width": 512,  
+      "height": 512  
+    },  
+    "image": [  
+      "https://shotxcinematicz.github.io/editwallah.github.io/logo.png",  
+      "https://shotxcinematicz.github.io/editwallah.github.io/image.jpg"  
+    ],  
+    "description": "Edit Wallah is a social media marketing agency and creative studio in Nagpur offering professional video editing, social media marketing, performance marketing, ad shoots, graphic designing, personal branding, influencer marketing and creative content services.",  
+    "telephone": "+91-9373376926",  
+    "address": {  
+      "@type": "PostalAddress",  
+      "addressLocality": "Nagpur",  
+      "addressRegion": "Maharashtra",  
+      "addressCountry": "IN"  
+    },  
+    "areaServed": {  
+      "@type": "City",  
+      "name": "Nagpur"  
+    },  
+    "sameAs": [  
+      "https://www.instagram.com/editwallah.media/"  
+    ],  
+    "serviceType": [  
+      "Social Media Marketing",  
+      "Performance Marketing",  
+      "Video Editing",  
+      "Video Production",  
+      "Ad Shoot",  
+      "Graphic Designing",  
+      "Personal Branding",  
+      "Influencer Marketing"  
+    ]  
+  }  
+  </script>    <!-- ================= CSS ================= -->    <link rel="stylesheet" href="style.css">    <style>  
+  
+    html,  
+    body {  
+      width: 100%;  
+      max-width: 100%;  
+      margin: 0;  
+      padding: 0;  
+      overflow-x: hidden;  
+      background: #080808 !important;  
+    }  
+  
+    *,  
+    *::before,  
+    *::after {  
+      box-sizing: border-box;  
+    }  
+  
+    img,  
+    video {  
+      max-width: 100%;  
+    }  
+  
+    video {  
+      display: block;  
+    }  
+  
+    :root {  
+      --ew-black: #080808;  
+      --ew-black-soft: #101010;  
+      --ew-black-card: #151515;  
+  
+      --ew-gold: #c9a227;  
+      --ew-gold-light: #e8c65c;  
+      --ew-gold-bright: #f0cf68;  
+      --ew-gold-dark: #8f6d12;  
+  
+      --ew-white: #ffffff;  
+      --ew-muted: rgba(255,255,255,.68);  
+  
+      --ew-border: rgba(201,162,39,.25);  
+    }  
+  
+    body {  
+      color: #ffffff;  
+  
+      background:  
+        radial-gradient(  
+          circle at 50% 10%,  
+          rgba(201,162,39,.10),  
+          transparent 34%  
+        ),  
+        #080808 !important;  
+    }  
+  
+    main {  
+      background: #080808 !important;  
+    }  
+  
+    /* =====================================================  
+       HERO  
+       ===================================================== */  
+  
+    .hero {  
+      position: relative;  
+      isolation: isolate;  
+      overflow: hidden;  
+    }  
+  
+    .hero::before {  
+      content: "";  
+  
+      position: absolute;  
+  
+      width: 620px;  
+      height: 620px;  
+  
+      right: -250px;  
+      top: -180px;  
+  
+      border-radius: 50%;  
+  
+      background:  
+        radial-gradient(  
+          circle,  
+          rgba(201,162,39,.18),  
+          rgba(201,162,39,.04) 45%,  
+          transparent 72%  
+        );  
+  
+      pointer-events: none;  
+  
+      z-index: -1;  
+    }  
+  
+    .hero::after {  
+      content: "";  
+  
+      position: absolute;  
+  
+      width: 500px;  
+      height: 500px;  
+  
+      left: -280px;  
+      bottom: -250px;  
+  
+      border-radius: 50%;  
+  
+      background:  
+        radial-gradient(  
+          circle,  
+          rgba(201,162,39,.10),  
+          transparent 68%  
+        );  
+  
+      pointer-events: none;  
+  
+      z-index: -1;  
+    }  
+  
+    /* =====================================================  
+       MARQUEE  
+       ===================================================== */  
+  
+    .marquee {  
+      position: relative;  
+  
+      background:  
+        linear-gradient(  
+          90deg,  
+          #090909,  
+          #171208,  
+          #090909  
+        ) !important;  
+  
+      border-top:  
+        1px solid rgba(201,162,39,.22);  
+  
+      border-bottom:  
+        1px solid rgba(201,162,39,.22);  
+    }  
+  
+    .marquee-track span {  
+      color: var(--ew-gold-light) !important;  
+    }  
+  
+    /* =====================================================  
+       COMMON SECTION SYSTEM  
+       ===================================================== */  
+  
+    .work-section,  
+    .process-section,  
+    .services-section,  
+    .portfolio-section,  
+    .team-section,  
+    .about-section,  
+    .clients-section {  
+  
+      position: relative;  
+  
+      isolation: isolate;  
+  
+      color: #ffffff !important;  
+  
+      background:  
+        linear-gradient(  
+          180deg,  
+          #080808 0%,  
+          #0b0b0b 52%,  
+          #141006 100%  
+        ) !important;  
+  
+      background-image:  
+        linear-gradient(  
+          180deg,  
+          #080808 0%,  
+          #0b0b0b 52%,  
+          #141006 100%  
+        ) !important;  
+    }  
+  
+    .process-section,  
+    .clients-section,  
+    .team-section {  
+  
+      background:  
+        radial-gradient(  
+          circle at 50% 0%,  
+          rgba(201,162,39,.15),  
+          transparent 42%  
+        ),  
+        linear-gradient(  
+          180deg,  
+          #151108 0%,  
+          #090909 52%,  
+          #080808 100%  
+        ) !important;  
+    }  
+  
+    .services-section,  
+    .about-section {  
+  
+      background:  
+        radial-gradient(  
+          circle at 15% 50%,  
+          rgba(201,162,39,.08),  
+          transparent 32%  
+        ),  
+        radial-gradient(  
+          circle at 85% 50%,  
+          rgba(201,162,39,.07),  
+          transparent 32%  
+        ),  
+        #080808 !important;  
+    }  
+  
+    .work-section::before,  
+    .process-section::before,  
+    .services-section::before,  
+    .portfolio-section::before,  
+    .team-section::before,  
+    .about-section::before,  
+    .clients-section::before {  
+  
+      content: "";  
+  
+      position: absolute;  
+  
+      left: 8%;  
+      right: 8%;  
+  
+      top: 0;  
+  
+      height: 1px;  
+  
+      background:  
+        linear-gradient(  
+          90deg,  
+          transparent,  
+          rgba(201,162,39,.65),  
+          transparent  
+        );  
+  
+      pointer-events: none;  
+    }  
+  
+    .work-section::after,  
+    .process-section::after,  
+    .services-section::after,  
+    .portfolio-section::after,  
+    .team-section::after,  
+    .about-section::after,  
+    .clients-section::after {  
+  
+      content: "";  
+  
+      position: absolute;  
+  
+      left: 50%;  
+      bottom: 0;  
+  
+      width: 55%;  
+  
+      height: 1px;  
+  
+      transform: translateX(-50%);  
+  
+      background:  
+        linear-gradient(  
+          90deg,  
+          transparent,  
+          rgba(201,162,39,.30),  
+          transparent  
+        );  
+  
+      pointer-events: none;  
+    }  
+  
+    .work-section h2,  
+    .process-section h2,  
+    .services-section h2,  
+    .portfolio-section h2,  
+    .team-section h2,  
+    .about-section h2,  
+    .clients-section h2 {  
+      color: #ffffff !important;  
+    }  
+  
+    .work-section h2 span,  
+    .process-section h2 span,  
+    .services-section h2 span,  
+    .portfolio-section h2 span,  
+    .team-section h2 span,  
+    .about-section h2 span,  
+    .clients-section h2 span {  
+  
+      color:  
+        var(--ew-gold-bright) !important;  
+  
+      text-shadow:  
+        0 0 18px rgba(201,162,39,.20);  
+    }  
+  
+    .work-section h3,  
+    .process-section h3,  
+    .services-section h3,  
+    .portfolio-section h3,  
+    .about-section h3 {  
+      color: #ffffff !important;  
+    }  
+  
+    .work-section p,  
+    .process-section p,  
+    .services-section p,  
+    .portfolio-section p,  
+    .about-section p,  
+    .section-description,  
+    .swipe-note {  
+      color:  
+        rgba(255,255,255,.68) !important;  
+    }  
+  
+    .work-section .eyebrow,  
+    .process-section .eyebrow,  
+    .services-section .eyebrow,  
+    .portfolio-section .eyebrow,  
+    .team-section .eyebrow,  
+    .about-section .eyebrow,  
+    .clients-section .eyebrow {  
+  
+      color:  
+        var(--ew-gold-bright) !important;  
+  
+      opacity: 1 !important;  
+    }  
+  
+    .client-reviews-heading h2 span,  
+    .work-section h2 span,  
+    .portfolio-section h2 span {  
+  
+      color:  
+        var(--ew-gold-bright) !important;  
+  
+      text-shadow:  
+        0 0 20px rgba(201,162,39,.28),  
+        0 0 45px rgba(201,162,39,.10);  
+    }  
+  
+    .process-section h2 span {  
+  
+      color:  
+        #ffffff !important;  
+  
+      text-shadow:  
+        none !important;  
+    }  
+  
+    /* =====================================================  
+       BUTTONS  
+       ===================================================== */  
+  
+    .work-section .btn-dark,  
+    .process-section .btn-dark,  
+    .services-section .btn-dark,  
+    .portfolio-section .btn-dark,  
+    .about-section .btn-dark,  
+    .final-cta .btn-dark {  
+  
+      background:  
+        linear-gradient(  
+          135deg,  
+          #e0bd55 0%,  
+          #c9a227 100%  
+        ) !important;  
+  
+      color: #080808 !important;  
+  
+      border-color:  
+        #c9a227 !important;  
+  
+      box-shadow:  
+        0 12px 35px rgba(201,162,39,.18);  
+    }  
+  
+    .work-section .btn-dark:hover,  
+    .process-section .btn-dark:hover,  
+    .services-section .btn-dark:hover,  
+    .portfolio-section .btn-dark:hover,  
+    .about-section .btn-dark:hover,  
+    .final-cta .btn-dark:hover {  
+  
+      background:  
+        #ffffff !important;  
+  
+      color:  
+        #080808 !important;  
+  
+      border-color:  
+        #ffffff !important;  
+  
+      box-shadow:  
+        0 15px 40px rgba(255,255,255,.12);  
+    }  
+  
+    /* =====================================================  
+       DARK CARDS  
+       ===================================================== */  
+  
+    .process-section .process-card,  
+    .services-section .service-card {  
+  
+      background:  
+        linear-gradient(  
+          145deg,  
+          #181818,  
+          #0d0d0d  
+        ) !important;  
+  
+      border:  
+        1px solid rgba(201,162,39,.20) !important;  
+  
+      box-shadow:  
+        0 25px 70px rgba(0,0,0,.42),  
+        inset 0 1px 0 rgba(255,255,255,.05);  
+    }  
+  
+    .work-section .portfolio-card,  
+    .portfolio-section .portfolio-card {  
+  
+      border-color:  
+        rgba(201,162,39,.25) !important;  
+  
+      box-shadow:  
+        0 28px 75px rgba(0,0,0,.48);  
+    }  
+  
+    .process-section .process-card:hover,  
+    .services-section .service-card:hover,  
+    .work-section .portfolio-card:hover,  
+    .portfolio-section .portfolio-card:hover {  
+  
+      border-color:  
+        rgba(201,162,39,.55) !important;  
+  
+      box-shadow:  
+        0 30px 80px rgba(0,0,0,.55),  
+        0 0 35px rgba(201,162,39,.08);  
+    }  
+  
+    .services-section .service-body > a {  
+  
+      color:  
+        var(--ew-gold-light) !important;  
+  
+      border-color:  
+        rgba(201,162,39,.30) !important;  
+    }  
+  
+    .work-section .slider-arrow,  
+    .portfolio-section .slider-arrow {  
+  
+      background:  
+        #111111 !important;  
+  
+      color:  
+        #ffffff !important;  
+  
+      border:  
+        1px solid rgba(201,162,39,.35) !important;  
+    }  
+  
+    .work-section .slider-arrow:hover,  
+    .portfolio-section .slider-arrow:hover {  
+  
+      background:  
+        var(--ew-gold) !important;  
+  
+      color:  
+        #080808 !important;  
+  
+      border-color:  
+        var(--ew-gold) !important;  
+    }  
+  
+    /* =====================================================  
+       CLIENT FEEDBACK  
+       ===================================================== */  
+  
+    .client-reviews-section {  
+  
+      position: relative;  
+  
+      width: 100%;  
+  
+      padding: 95px 6vw;  
+  
+      overflow: hidden;  
+  
+      text-align: center;  
+  
+      background:  
+        radial-gradient(  
+          circle at 50% 0%,  
+          rgba(201,162,39,.15),  
+          transparent 40%  
+        ),  
+        linear-gradient(  
+          180deg,  
+          #0d0d0d 0%,  
+          #080808 55%,  
+          #151006 100%  
+        ) !important;  
+  
+      color: #ffffff !important;  
+  
+      border-top:  
+        1px solid rgba(201,162,39,.18);  
+  
+      border-bottom:  
+        1px solid rgba(201,162,39,.18);  
+    }  
+  
+    .client-reviews-section::before {  
+  
+      content: "";  
+  
+      position: absolute;  
+  
+      left: 10%;  
+      right: 10%;  
+  
+      top: 0;  
+  
+      height: 1px;  
+  
+      background:  
+        linear-gradient(  
+          90deg,  
+          transparent,  
+          #c9a227,  
+          transparent  
+        );  
+    }  
+  
+    .client-reviews-heading {  
+  
+      max-width: 850px;  
+  
+      margin:  
+        0 auto 42px;  
+    }  
+  
+    .client-reviews-heading .eyebrow {  
+  
+      margin-bottom: 12px;  
+  
+      color:  
+        var(--ew-gold-bright) !important;  
+    }  
+  
+    .client-reviews-heading h2 {  
+  
+      margin: 0;  
+  
+      font-size:  
+        clamp(38px, 6vw, 72px);  
+  
+      line-height: .98;  
+  
+      letter-spacing: -2px;  
+  
+      color:  
+        #ffffff !important;  
+  
+      text-transform: uppercase;  
+    }  
+  
+    .client-reviews-heading h2 span {  
+  
+      color:  
+        var(--ew-gold-bright) !important;  
+  
+      text-shadow:  
+        0 0 20px rgba(201,162,39,.28),  
+        0 0 45px rgba(201,162,39,.10);  
+    }  
+  
+    .reviews-slider {  
+  
+      position: relative;  
+  
+      width: 100%;  
+  
+      max-width: 1050px;  
+  
+      margin: 0 auto;  
+  
+      overflow: hidden;  
+  
+      border-radius: 28px;  
+    }  
+  
+    .reviews-track {  
+  
+      display: flex;  
+  
+      width: 100%;  
+  
+      transform:  
+        translateX(0);  
+  
+      transition:  
+        transform .85s cubic-bezier(.2,.8,.2,1);  
+  
+      will-change:  
+        transform;  
+    }  
+  
+    .client-review-slide {  
+  
+      min-width: 100%;  
+  
+      width: 100%;  
+  
+      padding: 10px;  
+    }  
+  
+    .client-review-card {  
+  
+      position: relative;  
+  
+      width: 100%;  
+  
+      min-height: 380px;  
+  
+      padding: 48px;  
+  
+      display: flex;  
+  
+      flex-direction: column;  
+  
+      justify-content: center;  
+  
+      text-align: left;  
+  
+      border:  
+        1px solid rgba(201,162,39,.30);  
+  
+      border-radius: 28px;  
+  
+      background:  
+        linear-gradient(  
+          145deg,  
+          #181818,  
+          #0c0c0c  
+        ) !important;  
+  
+      box-shadow:  
+        0 30px 80px rgba(0,0,0,.5),  
+        inset 0 1px 0 rgba(255,255,255,.05);  
+  
+      overflow: hidden;  
+    }  
+  
+    .client-review-card::before {  
+  
+      content: "";  
+  
+      position: absolute;  
+  
+      width: 300px;  
+      height: 300px;  
+  
+      top: -150px;  
+      right: -120px;  
+  
+      border-radius: 50%;  
+  
+      background:  
+        radial-gradient(  
+          circle,  
+          rgba(201,162,39,.17),  
+          transparent 68%  
+        );  
+  
+      pointer-events: none;  
+    }  
+  
+    .review-top-row {  
+  
+      display: flex;  
+  
+      align-items: center;  
+  
+      justify-content: space-between;  
+  
+      gap: 20px;  
+  
+      margin-bottom: 24px;  
+    }  
+  
+    .review-client-info {  
+  
+      display: flex;  
+  
+      align-items: center;  
+  
+      gap: 14px;  
+  
+      min-width: 0;  
+    }  
+  
+    .review-avatar {  
+  
+      width: 54px;  
+      height: 54px;  
+  
+      min-width: 54px;  
+  
+      border-radius: 50%;  
+  
+      display: flex;  
+  
+      align-items: center;  
+  
+      justify-content: center;  
+  
+      background:  
+        linear-gradient(  
+          135deg,  
+          #e0bd55,  
+          #c9a227  
+        );  
+  
+      color:  
+        #111111;  
+  
+      font-size: 21px;  
+  
+      font-weight: 800;  
+  
+      box-shadow:  
+        0 8px 25px rgba(201,162,39,.18);  
+    }  
+  
+    .review-client-name {  
+  
+      font-size: 18px;  
+  
+      font-weight: 800;  
+  
+      line-height: 1.2;  
+  
+      margin:  
+        0 0 5px;  
+  
+      color:  
+        #ffffff !important;  
+    }  
+  
+    .review-client-type {  
+  
+      font-size: 13px;  
+  
+      opacity: .55;  
+  
+      margin: 0;  
+  
+      color:  
+        #ffffff !important;  
+    }  
+  
+    .review-stars {  
+  
+      color:  
+        var(--ew-gold-light) !important;  
+  
+      font-size: 26px;  
+  
+      letter-spacing: 2px;  
+  
+      white-space: nowrap;  
+  
+      line-height: 1;  
+    }  
+  
+    .review-label {  
+  
+      display: inline-flex;  
+  
+      align-items: center;  
+  
+      width: fit-content;  
+  
+      padding: 7px 12px;  
+  
+      margin-bottom: 18px;  
+  
+      border:  
+        1px solid rgba(201,162,39,.32);  
+  
+      border-radius: 999px;  
+  
+      color:  
+        var(--ew-gold-light) !important;  
+  
+      font-size: 11px;  
+  
+      font-weight: 800;  
+  
+      letter-spacing: 1.5px;  
+  
+      text-transform: uppercase;  
+  
+      background:  
+        rgba(201,162,39,.04);  
+    }  
+  
+    .client-review-card blockquote {  
+  
+      margin: 0;  
+  
+      max-width: 900px;  
+  
+      font-size:  
+        clamp(19px,2.3vw,28px);  
+  
+      line-height: 1.55;  
+  
+      font-weight: 500;  
+  
+      letter-spacing: -.2px;  
+  
+      color:  
+        #ffffff !important;  
+    }  
+  
+    .review-counter {  
+  
+      margin-top: 28px;  
+  
+      font-size: 12px;  
+  
+      font-weight: 700;  
+  
+      letter-spacing: 1.5px;  
+  
+      opacity: .4;  
+  
+      text-transform: uppercase;  
+    }  
+  
+    .review-arrow {  
+  
+      position: absolute;  
+  
+      top: 50%;  
+  
+      z-index: 10;  
+  
+      width: 48px;  
+      height: 48px;  
+  
+      transform:  
+        translateY(-50%);  
+  
+      display: flex;  
+  
+      align-items: center;  
+  
+      justify-content: center;  
+  
+      border:  
+        1px solid rgba(201,162,39,.38);  
+  
+      border-radius: 50%;  
+  
+      background:  
+        rgba(0,0,0,.82);  
+  
+      color:  
+        #ffffff;  
+  
+      font-size: 21px;  
+  
+      cursor: pointer;  
+  
+      transition: .25s ease;  
+    }  
+  
+    .review-arrow:hover {  
+  
+      transform:  
+        translateY(-50%) scale(1.08);  
+  
+      background:  
+        var(--ew-gold);  
+  
+      color:  
+        #080808;  
+    }  
+  
+    .review-arrow.prev {  
+      left: 22px;  
+    }  
+  
+    .review-arrow.next {  
+      right: 22px;  
+    }  
+  
+    .review-dots {  
+  
+      display: flex;  
+  
+      align-items: center;  
+  
+      justify-content: center;  
+  
+      flex-wrap: wrap;  
+  
+      gap: 7px;  
+  
+      margin-top: 28px;  
+    }  
+  
+    .review-dot {  
+  
+      width: 7px;  
+      height: 7px;  
+  
+      padding: 0;  
+  
+      border: 0;  
+  
+      border-radius: 50%;  
+  
+      background:  
+        rgba(255,255,255,.22);  
+  
+      cursor: pointer;  
+  
+      transition: .3s ease;  
+    }  
+  
+    .review-dot.active {  
+  
+      width: 24px;  
+  
+      border-radius: 999px;  
+  
+      background:  
+        var(--ew-gold);  
+    }  
+  
+    .review-slider-note {  
+  
+      margin-top: 18px;  
+  
+      font-size: 12px;  
+  
+      opacity: .4;  
+  
+      letter-spacing: .5px;  
+    }  
+  
+    /* =====================================================  
+       PREMIUM GLOBAL BRANDS IMAGE SHOWCASE  
+       ===================================================== */  
+  
+    .clients-showcase {  
+  
+      position: relative;  
+  
+      padding: 85px 0 90px;  
+  
+      background:  
+        radial-gradient(  
+          circle at 50% 0%,  
+          rgba(201,162,39,0.10),  
+          transparent 38%  
+        ),  
+        #050505;  
+  
+      overflow: hidden;  
+    }  
+  
+    .clients-showcase-head {  
+  
+      text-align: center;  
+  
+      max-width: 900px;  
+  
+      margin: 0 auto 45px;  
+  
+      padding: 0 20px;  
+    }  
+  
+    .clients-showcase-head span {  
+  
+      display: inline-block;  
+  
+      font-size: clamp(11px, 2vw, 15px);  
+  
+      font-weight: 800;  
+  
+      letter-spacing: 3px;  
+  
+      line-height: 1.5;  
+  
+      color: #c9a227;  
+  
+      margin-bottom: 12px;  
+  
+      text-transform: uppercase;  
+    }  
+  
+    .clients-showcase-head h2 {  
+  
+      margin: 0;  
+  
+      font-size:  
+        clamp(34px, 5vw, 58px);  
+  
+      line-height: 1;  
+  
+      font-weight: 800;  
+  
+      letter-spacing: -2px;  
+  
+      color: #fff;  
+  
+      text-transform: uppercase;  
+    }  
+  
+    .clients-showcase-head p {  
+  
+      margin: 17px 0 0;  
+  
+      color:  
+        rgba(255,255,255,0.55);  
+  
+      font-size: 14px;  
+    }  
+  
+    /* Slider */  
+  
+    .client-logo-slider {  
+  
+      width: 100%;  
+  
+      overflow: hidden;  
+  
+      position: relative;  
+  
+      padding: 10px 0 25px;  
+    }  
+  
+    .client-logo-slider::before,  
+    .client-logo-slider::after {  
+  
+      content: "";  
+  
+      position: absolute;  
+  
+      top: 0;  
+  
+      width: 130px;  
+  
+      height: 100%;  
+  
+      z-index: 3;  
+  
+      pointer-events: none;  
+    }  
+  
+    .client-logo-slider::before {  
+  
+      left: 0;  
+  
+      background:  
+        linear-gradient(  
+          90deg,  
+          #050505,  
+          transparent  
+        );  
+    }  
+  
+    .client-logo-slider::after {  
+  
+      right: 0;  
+  
+      background:  
+        linear-gradient(  
+          270deg,  
+          #050505,  
+          transparent  
+        );  
+    }  
+  
+    .client-logo-track {  
+  
+      display: flex;  
+  
+      width: max-content;  
+  
+      align-items: center;  
+  
+      gap: 24px;  
+  
+      animation:  
+        clientLogoSlide  
+        28s  
+        linear  
+        infinite;  
+    }  
+  
+    .client-logo-slider:hover  
+    .client-logo-track {  
+  
+      animation-play-state:  
+        paused;  
+    }  
+  
+    .client-logo-card {  
+  
+      width: 210px;  
+  
+      height: 125px;  
+  
+      flex: 0 0 210px;  
+  
+      display: flex;  
+  
+      align-items: center;  
+  
+      justify-content: center;  
+  
+      padding: 25px;  
+  
+      border:  
+        1px solid rgba(201,162,39,0.18);  
+  
+      border-radius: 18px;  
+  
+      background:  
+        linear-gradient(  
+          145deg,  
+          rgba(255,255,255,0.055),  
+          rgba(255,255,255,0.015)  
+        );  
+  
+      box-shadow:  
+        0 15px 45px rgba(0,0,0,0.35),  
+        inset 0 1px 0 rgba(255,255,255,0.05);  
+  
+      transition:  
+        transform 0.35s ease,  
+        border-color 0.35s ease,  
+        box-shadow 0.35s ease;  
+    }  
+  
+    .client-logo-card:hover {  
+  
+      transform:  
+        translateY(-6px);  
+  
+      border-color:  
+        rgba(201,162,39,0.55);  
+  
+      box-shadow:  
+        0 20px 55px rgba(0,0,0,0.5),  
+        0 0 25px rgba(201,162,39,0.08);  
+    }  
+  
+    .client-logo-card img {  
+  
+      width: 100%;  
+  
+      height: 100%;  
+  
+      object-fit: contain;  
+  
+      display: block;  
+  
+      filter:  
+        grayscale(100%);  
+  
+      opacity: .72;  
+  
+      transition:  
+        filter .35s ease,  
+        opacity .35s ease,  
+        transform .35s ease;  
+    }  
+  
+    .client-logo-card:hover img {  
+  
+      filter:  
+        grayscale(0%);  
+  
+      opacity: 1;  
+  
+      transform:  
+        scale(1.05);  
+    }  
+  
+    @keyframes clientLogoSlide {  
+  
+      from {  
+        transform:  
+          translateX(0);  
+      }  
+  
+      to {  
+        transform:  
+          translateX(calc(-50% - 12px));  
+      }  
+  
+    }  
+  
+    /* =====================================================  
+       CLIENTS NAME MARQUEE  
+       ===================================================== */  
+  
+    .clients-section {  
+  
+      color:  
+        #ffffff !important;  
+  
+      background:  
+        radial-gradient(  
+          circle at 50% 50%,  
+          rgba(201,162,39,.12),  
+          transparent 42%  
+        ),  
+        linear-gradient(  
+          180deg,  
+          #151108,  
+          #080808  
+        ) !important;  
+  
+      text-align: center;  
+    }  
+  
+    .clients-section h2 {  
+  
+      color:  
+        #ffffff !important;  
+  
+      text-transform:  
+        uppercase;  
+    }  
+  
+    .clients-section p {  
+  
+      color:  
+        rgba(255,255,255,.60) !important;  
+    }  
+  
+    .clients-section .eyebrow {  
+  
+      color:  
+        #e8c65c !important;  
+  
+      font-size:  
+        clamp(10px,1.4vw,13px);  
+  
+      letter-spacing:  
+        3px;  
+  
+      font-weight:  
+        800;  
+  
+      text-transform:  
+        uppercase;  
+  
+      line-height:  
+        1.5;  
+    }  
+  
+    .client-track span {  
+  
+      color:  
+        #e0bd55 !important;  
+    }  
+  
+    /* =====================================================  
+       TEAM  
+       ===================================================== */  
+  
+    .team-section {  
+  
+      width: 100%;  
+  
+      padding: 90px 6vw;  
+  
+      text-align: center;  
+  
+      overflow: hidden;  
+  
+      background:  
+        linear-gradient(  
+          180deg,  
+          #151108 0%,  
+          #090909 55%,  
+          #080808 100%  
+        ) !important;  
+    }  
+  
+    .team-section .team-heading {  
+      margin-bottom: 35px;  
+    }  
+  
+    .team-section h2 {  
+  
+      margin: 0;  
+  
+      color:  
+        #ffffff !important;  
+    }  
+  
+    .team-image-box {  
+  
+      width: 100%;  
+  
+      max-width: 1100px;  
+  
+      margin: 0 auto;  
+  
+      overflow: hidden;  
+  
+      border-radius: 22px;  
+  
+      border:  
+        1px solid rgba(201,162,39,.25);  
+  
+      box-shadow:  
+        0 30px 80px rgba(0,0,0,.5);  
+    }  
+  
+    .team-image-box img {  
+  
+      width: 100%;  
+  
+      height: auto;  
+  
+      display: block;  
+  
+      object-fit: cover;  
+  
+      object-position: center;  
+  
+      border-radius: 22px;  
+    }  
+  
+    /* =====================================================  
+       HEADER  
+       ===================================================== */  
+  
+    .brand {  
+  
+      display: inline-flex !important;  
+  
+      align-items: center !important;  
+  
+      justify-content: flex-start !important;  
+  
+      gap: 6px !important;  
+  
+      width: auto !important;  
+  
+      max-width: max-content !important;  
+  
+      margin: 0 !important;  
+  
+      padding: 0 !important;  
+  
+      text-decoration: none !important;  
+    }  
+  
+    .brand .logo-circle {  
+  
+      width: 43px !important;  
+      height: 43px !important;  
+  
+      min-width: 43px !important;  
+      min-height: 43px !important;  
+  
+      max-width: 43px !important;  
+      max-height: 43px !important;  
+  
+      margin: 0 !important;  
+      padding: 0 !important;  
+  
+      flex: 0 0 43px !important;  
+  
+      border-radius: 50% !important;  
+  
+      object-fit: cover !important;  
+  
+      object-position: center !important;  
+  
+      display: block !important;  
+  
+      overflow: hidden !important;  
+    }  
+  
+    .brand .brand-name {  
+  
+      display: block !important;  
+  
+      width: auto !important;  
+  
+      max-width: max-content !important;  
+  
+      margin: 0 !important;  
+  
+      padding: 0 !important;  
+  
+      flex: 0 0 auto !important;  
+  
+      white-space: nowrap !important;  
+  
+      letter-spacing: 0 !important;  
+  
+      word-spacing: 0 !important;  
+  
+      font-weight: 700 !important;  
+  
+      line-height: 1 !important;  
+  
+      color:  
+        #ffffff !important;  
+    }  
+  
+    /* =====================================================  
+       LOADER + FOOTER LOGO  
+       ===================================================== */  
+  
+    .page-loader .logo-circle,  
+    .footer-brand .logo-circle {  
+  
+      width: 43px !important;  
+      height: 43px !important;  
+  
+      min-width: 43px !important;  
+      min-height: 43px !important;  
+  
+      max-width: 43px !important;  
+      max-height: 43px !important;  
+  
+      border-radius: 50% !important;  
+  
+      object-fit: cover !important;  
+  
+      object-position: center !important;  
+  
+      display: block !important;  
+  
+      overflow: hidden !important;  
+    }  
+  
+    /* =====================================================  
+       ABOUT LOGO  
+       ===================================================== */  
+  
+    .about-image.about-logo-box {  
+  
+      width: 100% !important;  
+  
+      display: flex !important;  
+  
+      align-items: center !important;  
+  
+      justify-content: center !important;  
+  
+      overflow: hidden !important;  
+    }  
+  
+    .about-image.about-logo-box img.about-logo {  
+  
+      width:  
+        min(420px,75vw) !important;  
+  
+      height:  
+        min(420px,75vw) !important;  
+  
+      min-width: 260px !important;  
+  
+      min-height: 260px !important;  
+  
+      max-width: 420px !important;  
+  
+      max-height: 420px !important;  
+  
+      display: block !important;  
+  
+      border-radius: 50% !important;  
+  
+      object-fit: cover !important;  
+  
+      object-position: center !important;  
+  
+      aspect-ratio: 1 / 1 !important;  
+  
+      box-shadow:  
+        0 25px 70px rgba(201,162,39,.12);  
+    }  
+  
+    /* =====================================================  
+       MENU  
+       ===================================================== */  
+  
+    .menu-btn {  
+  
+      display: flex !important;  
+  
+      flex-direction: column !important;  
+  
+      align-items: center !important;  
+  
+      justify-content: center !important;  
+  
+      gap: 5px !important;  
+    }  
+  
+    .menu-btn span {  
+  
+      display: block !important;  
+  
+      width: 24px !important;  
+  
+      height: 2px !important;  
+  
+      background:  
+        currentColor !important;  
+  
+      border-radius: 2px !important;  
+    }  
+  
+    /* =====================================================  
+       WHATSAPP  
+       ===================================================== */  
+  
+    .whatsapp-float {  
+  
+      display: flex !important;  
+  
+      align-items: center !important;  
+  
+      justify-content: center !important;  
+  
+      background:  
+        linear-gradient(  
+          135deg,  
+          #e0bd55,  
+          #c9a227  
+        ) !important;  
+  
+      color:  
+        #080808 !important;  
+  
+      box-shadow:  
+        0 12px 35px rgba(201,162,39,.22);  
+    }  
+  
+    .whatsapp-float svg {  
+  
+      width: 30px !important;  
+  
+      height: 30px !important;  
+  
+      display: block !important;  
+    }  
+  
+    /* =====================================================  
+       PROCESS IMAGES  
+       ===================================================== */  
+  
+    .process-image img {  
+  
+      width: 100%;  
+  
+      height: 100%;  
+  
+      display: block;  
+  
+      object-fit: cover;  
+    }  
+  
+    /* =====================================================  
+       CLIENT MARQUEE SPEED  
+       ===================================================== */  
+  
+    .client-track {  
+  
+      animation-duration:  
+        55s !important;  
+  
+      animation-timing-function:  
+        linear !important;  
+    }  
+  
+    /* =====================================================  
+       FINAL CTA  
+       ===================================================== */  
+  
+    .final-cta {  
+  
+      position: relative;  
+  
+      overflow: hidden;  
+  
+      background:  
+        radial-gradient(  
+          circle at 50% 50%,  
+          rgba(201,162,39,.18),  
+          transparent 48%  
+        ),  
+        linear-gradient(  
+          135deg,  
+          #080808 0%,  
+          #161106 50%,  
+          #080808 100%  
+        ) !important;  
+  
+      border-top:  
+        1px solid rgba(201,162,39,.25);  
+  
+      border-bottom:  
+        1px solid rgba(201,162,39,.25);  
+    }  
+  
+    .final-cta h2 {  
+      color:  
+        #ffffff !important;  
+    }  
+  
+    .final-cta h2 span {  
+      color:  
+        var(--ew-gold-light) !important;  
+    }  
+  
+    .final-cta .eyebrow {  
+      color:  
+        var(--ew-gold-light) !important;  
+    }  
+  
+    /* =====================================================  
+       FOOTER  
+       ===================================================== */  
+  
+    .footer {  
+  
+      background:  
+        linear-gradient(  
+          180deg,  
+          #0d0d0d,  
+          #050505  
+        ) !important;  
+  
+      border-top:  
+        1px solid rgba(201,162,39,.25);  
+    }  
+  
+    .footer h4 {  
+      color:  
+        var(--ew-gold-light) !important;  
+    }  
+  
+    .footer a:hover {  
+      color:  
+        var(--ew-gold-light) !important;  
+    }  
+  
+    .footer-bottom {  
+      border-top:  
+        1px solid rgba(201,162,39,.15) !important;  
+    }  
+  
+    /* =====================================================  
+       MOBILE  
+       ===================================================== */  
+  
+    @media (max-width:700px) {  
+  
+      .client-reviews-section {  
+        padding:  
+          70px 5vw;  
+      }  
+  
+      .client-reviews-heading h2 {  
+  
+        font-size:  
+          clamp(38px,12vw,58px);  
+  
+        letter-spacing:  
+          -1.5px;  
+      }  
+  
+      .reviews-slider {  
+        border-radius:  
+          20px;  
+      }  
+  
+      .client-review-slide {  
+        padding: 4px;  
+      }  
+  
+      .client-review-card {  
+  
+        min-height:  
+          430px;  
+  
+        padding:  
+          30px 24px;  
+  
+        border-radius:  
+          22px;  
+      }  
+  
+      .review-top-row {  
+  
+        align-items:  
+          flex-start;  
+  
+        flex-direction:  
+          column;  
+  
+        gap: 18px;  
+      }  
+  
+      .review-avatar {  
+  
+        width: 48px;  
+        height: 48px;  
+  
+        min-width: 48px;  
+  
+        font-size: 18px;  
+      }  
+  
+      .review-client-name {  
+        font-size: 16px;  
+      }  
+  
+      .review-stars {  
+        font-size: 22px;  
+      }  
+  
+      .client-review-card blockquote {  
+  
+        font-size: 18px;  
+  
+        line-height: 1.6;  
+      }  
+  
+      .review-arrow {  
+  
+        width: 40px;  
+        height: 40px;  
+  
+        font-size: 18px;  
+      }  
+  
+      .review-arrow.prev {  
+        left: 12px;  
+      }  
+  
+      .review-arrow.next {  
+        right: 12px;  
+      }  
+  
+      .review-dots {  
+        gap: 5px;  
+      }  
+  
+      .review-dot {  
+  
+        width: 6px;  
+        height: 6px;  
+      }  
+  
+      .review-dot.active {  
+        width: 20px;  
+      }  
+  
+    }  
+  
+    /* =====================================================  
+       PREMIUM CLIENT SLIDER MOBILE  
+       ===================================================== */  
+  
+    @media (max-width:600px) {  
+  
+      .clients-showcase {  
+  
+        padding:  
+          65px 0 70px;  
+      }  
+  
+      .clients-showcase-head {  
+  
+        margin-bottom:  
+          30px;  
+  
+        padding:  
+          0 18px;  
+      }  
+  
+      .clients-showcase-head span {  
+  
+        font-size:  
+          10px;  
+  
+        letter-spacing:  
+          2.5px;  
+  
+        line-height:  
+          1.7;  
+      }  
+  
+      .clients-showcase-head h2 {  
+  
+        font-size:  
+          38px;  
+      }  
+  
+      .clients-showcase-head p {  
+  
+        font-size:  
+          13px;  
+      }  
+  
+      .client-logo-track {  
+  
+        gap:  
+          15px;  
+  
+        animation-duration:  
+          24s;  
+      }  
+  
+      .client-logo-card {  
+  
+        width:  
+          165px;  
+  
+        height:  
+          105px;  
+  
+        flex-basis:  
+          165px;  
+  
+        padding:  
+          20px;  
+  
+        border-radius:  
+          15px;  
+      }  
+  
+      .client-logo-slider::before,  
+      .client-logo-slider::after {  
+  
+        width:  
+          65px;  
+      }  
+  
+      .clients-section {  
+  
+        padding-left:  
+          5vw !important;  
+  
+        padding-right:  
+          5vw !important;  
+  
+        overflow:  
+          hidden !important;  
+      }  
+  
+      .clients-section .eyebrow {  
+  
+        max-width:  
+          330px;  
+  
+        margin:  
+          0 auto 12px;  
+  
+        line-height:  
+          1.7;  
+      }  
+  
+    }  
+  
+    @media (max-width:600px) {  
+  
+      .about-image.about-logo-box img.about-logo {  
+  
+        width: 260px !important;  
+        height: 260px !important;  
+  
+        min-width: 260px !important;  
+        min-height: 260px !important;  
+      }  
+  
+      .team-section {  
+        padding:  
+          65px 5vw;  
+      }  
+  
+      .team-image-box,  
+      .team-image-box img {  
+        border-radius: 16px;  
+      }  
+  
+    }  
+  
+    /* =====================================================  
+       FINAL SAFETY  
+       ===================================================== */  
+  
+    html,  
+    body,  
+    main {  
+  
+      max-width: 100%;  
+  
+      overflow-x: hidden;  
+    }  
+  
+  </style>  </head>  <body>    <!-- ================= LOADER ================= -->    <div class="page-loader" id="pageLoader">  <img  
+  src="https://shotxcinematicz.github.io/editwallah.github.io/logo.png"  
+  alt="Edit Wallah Logo"  
+  class="logo-circle"  
+  width="43"  
+  height="43"  
+>  
+
+<p>EDITWALLAH</p>
+
+  </div>    <!-- ================= HEADER ================= -->    <header class="site-header" id="siteHeader">  <a  
+  href="#top"  
+  class="brand"  
+  aria-label="Edit Wallah Home"  
+>  
+
+  <img  
+    src="https://shotxcinematicz.github.io/editwallah.github.io/logo.png"  
+    alt="Edit Wallah Logo"  
+    class="logo-circle"  
+    width="43"  
+    height="43"  
+  >  
+
+  <span class="brand-name">EDITWALLAH</span>  
+
+</a>  
+
+<nav class="desktop-nav" aria-label="Main Navigation">  
+
+  <a href="#work">Work</a>  
+  <a href="#process">Process</a>  
+  <a href="#services">Services</a>  
+  <a href="#about">About</a>  
+
+  <a  
+    class="header-cta"  
+    href="https://wa.me/919373376926"  
+    target="_blank"  
+    rel="noopener noreferrer"  
+  >  
+    Book A Call →  
+  </a>  
+
+</nav>  
+
+<button  
+  class="menu-btn"  
+  id="menuBtn"  
+  aria-label="Open Menu"  
+  type="button"  
+>  
+  <span></span>  
+  <span></span>  
+  <span></span>  
+</button>  
+
+<div class="mobile-menu" id="mobileMenu">  
+
+  <a href="#work">Work</a>  
+  <a href="#process">Process</a>  
+  <a href="#services">Services</a>  
+  <a href="#about">About</a>  
+
+  <a  
+    href="https://wa.me/919373376926"  
+    target="_blank"  
+    rel="noopener noreferrer"  
+  >  
+    Book A Call →  
+  </a>  
+
 </div>
 
-<!-- FEATURED WORK -->
+  </header>    <main id="top">  <!-- ================= HERO ================= -->  
 
-<section id="featured">
+<section  
+  class="hero"  
+  aria-labelledby="hero-title"  
+>  
 
-  <div class="container">
+  <div class="hero-copy reveal">  
 
-    <h2 class="section-title">
-      OUR <span class="gold">CREATIVE WORK</span>
-    </h2>
+    <div class="eyebrow">  
+      SOCIAL MEDIA MARKETING AGENCY — NAGPUR  
+    </div>  
 
-    <p class="section-desc">
-      Ideas transformed into visuals that capture attention
-      and make brands memorable.
-    </p>
+    <h1 id="hero-title">  
 
-    <div class="work-grid">
+      We Make Your Brand<br>  
 
-      <div class="work-card">
-        <video controls playsinline preload="metadata">
-          <source src="589e4a37.mp4" type="video/mp4">
-        </video>
-        <h3>Creative Video Production</h3>
-      </div>
+      <span>  
+        Impossible To Ignore  
+      </span>  
 
-      <div class="work-card">
-        <video controls playsinline preload="metadata">
-          <source src="905dac61.mp4" type="video/mp4">
-        </video>
-        <h3>Brand Visuals</h3>
-      </div>
+    </h1>  
 
-      <div class="work-card">
-        <video controls playsinline preload="metadata">
-          <source src="48cefe50.mp4" type="video/mp4">
-        </video>
-        <h3>Social Media Content</h3>
-      </div>
+    <p class="hero-text">  
 
-      <div class="work-card">
-        <video controls playsinline preload="metadata">
-          <source src="67b109fb.mp4" type="video/mp4">
-        </video>
-        <h3>Digital Creative</h3>
-      </div>
+      Edit Wallah is a social media marketing agency  
+      in Nagpur creating scroll-stopping content,  
+      cinematic video edits, professional ad creatives  
+      and powerful brand visuals that make people  
+      remember your brand.  
 
-    </div>
+    </p>  
 
-  </div>
+    <div class="hero-actions">  
+
+      <a  
+        class="btn btn-dark"  
+        href="https://wa.me/919373376926"  
+        target="_blank"  
+        rel="noopener noreferrer"  
+      >  
+        Get Your Ad Made →  
+      </a>  
+
+      <a  
+        class="text-link"  
+        href="#work"  
+      >  
+        Swipe to explore ↓  
+      </a>  
+
+    </div>  
+
+  </div>  
+
+  <div  
+    class="hero-device"  
+    aria-label="Edit Wallah video showcase"  
+  >  
+
+    <div class="device-camera"></div>  
+
+    <div class="device-screen">  
+
+      <video  
+        autoplay  
+        muted  
+        loop  
+        playsinline  
+        preload="metadata"  
+        data-sound-video  
+        aria-label="Edit Wallah creative video showcase"  
+      >  
+
+        <source  
+          src="https://stream.vidhosting.in/videos/c6292109.mp4"  
+          type="video/mp4"  
+        >  
+
+      </video>  
+
+    </div>  
+
+    <div class="device-button"></div>  
+
+  </div>  
+
+  <div class="hero-glow"></div>  
+
+</section>  
+
+<!-- ================= SERVICES MARQUEE ================= -->  
+
+<div  
+  class="marquee"  
+  aria-label="Edit Wallah Services"  
+>  
+
+  <div class="marquee-track">  
+
+    <span>Ad Content ✦</span>  
+    <span>Performance Marketing ✦</span>  
+    <span>Social Media Marketing ✦</span>  
+    <span>Personal Branding ✦</span>  
+    <span>Video Production ✦</span>  
+    <span>Video Editing ✦</span>  
+    <span>Graphic Designing ✦</span>  
+    <span>Influencer Marketing ✦</span>  
+
+    <span>Ad Content ✦</span>  
+    <span>Performance Marketing ✦</span>  
+    <span>Social Media Marketing ✦</span>  
+    <span>Personal Branding ✦</span>  
+    <span>Video Production ✦</span>  
+    <span>Video Editing ✦</span>  
+    <span>Graphic Designing ✦</span>  
+    <span>Influencer Marketing ✦</span>  
+
+  </div>  
+
+</div>  
+
+<!-- ================= CLIENT FEEDBACK ================= -->  
+
+<section  
+  class="client-reviews-section"  
+  id="reviews"  
+  aria-labelledby="client-reviews-title"  
+>  
+
+  <div class="client-reviews-heading reveal">  
+
+    <div class="eyebrow">  
+      CLIENT FEEDBACK  
+    </div>  
+
+    <h2 id="client-reviews-title">  
+
+      WHAT OUR CLIENTS<br>  
+
+      <span>  
+        SAY ABOUT US  
+      </span>  
+
+    </h2>  
+
+  </div>  
+
+  <div  
+    class="reviews-slider"  
+    id="reviewsSlider"  
+  >  
+
+    <button  
+      class="review-arrow prev"  
+      id="reviewPrev"  
+      type="button"  
+      aria-label="Previous client review"  
+    >  
+      ←  
+    </button>  
+
+    <div  
+      class="reviews-track"  
+      id="reviewsTrack"  
+    ></div>  
+
+    <button  
+      class="review-arrow next"  
+      id="reviewNext"  
+      type="button"  
+      aria-label="Next client review"  
+    >  
+      →  
+    </button>  
+
+  </div>  
+
+  <div  
+    class="review-dots"  
+    id="reviewDots"  
+    aria-label="Client review navigation"  
+  ></div>  
+
+  <div class="review-slider-note">  
+    Auto sliding • Swipe to explore  
+  </div>  
+
+</section>  
+
+<!-- ================= FEATURED WORK ================= -->  
+
+<section  
+  class="section work-section"  
+  id="work"  
+  aria-labelledby="work-title"  
+>  
+
+  <div class="section-top reveal">  
+
+    <div>  
+
+      <div class="eyebrow">  
+        FEATURED WORK  
+      </div>  
+
+      <h2 id="work-title">  
+
+        PREMIUM CREATIVE<br>  
+
+        <span>  
+          THAT DRIVES REAL RESULTS  
+        </span>  
+
+      </h2>  
+
+    </div>  
+
+    <div class="swipe-note">  
+      Swipe to explore ← →  
+    </div>  
+
+  </div>  
+
+  <div class="portfolio-wrap">  
+
+    <button  
+      class="slider-arrow prev"  
+      id="workPrev"  
+      aria-label="Previous Work"  
+      type="button"  
+    >  
+      ←  
+    </button>  
+
+    <div  
+      class="portfolio-slider"  
+      id="workSlider"  
+    >  
+
+      <article class="portfolio-card">  
+
+        <video  
+          autoplay  
+          muted  
+          loop  
+          playsinline  
+          preload="metadata"  
+          data-sound-video  
+          aria-label="Edit Wallah commercial advertisement"  
+        >  
+
+          <source  
+            src="https://stream.vidhosting.in/videos/589e4a37.mp4"  
+            type="video/mp4"  
+          >  
+
+        </video>  
+
+        <div class="card-meta">  
+          <strong>01</strong>  
+          <span class="sound-icon">🔇</span>  
+        </div>  
+
+        <div class="card-title">  
+          <small>AD</small>  
+          <b>Commercial</b>  
+        </div>  
+
+      </article>  
+
+      <article class="portfolio-card">  
+
+        <video  
+          autoplay  
+          muted  
+          loop  
+          playsinline  
+          preload="metadata"  
+          data-sound-video  
+          aria-label="Edit Wallah education brand story video"  
+        >  
+
+          <source  
+            src="https://stream.vidhosting.in/videos/905dac61.mp4"  
+            type="video/mp4"  
+          >  
+
+        </video>  
+
+        <div class="card-meta">  
+          <strong>02</strong>  
+          <span class="sound-icon">🔇</span>  
+        </div>  
+
+        <div class="card-title">  
+          <small>EDUCATION</small>  
+          <b>Brand Story</b>  
+        </div>  
+
+      </article>  
+
+      <article class="portfolio-card">  
+
+        <video  
+          autoplay  
+          muted  
+          loop  
+          playsinline  
+          preload="metadata"  
+          data-sound-video  
+          aria-label="Edit Wallah fashion commercial"  
+        >  
+
+          <source  
+            src="https://stream.vidhosting.in/videos/48cefe50.mp4"  
+            type="video/mp4"  
+          >  
+
+        </video>  
+
+        <div class="card-meta">  
+          <strong>03</strong>  
+          <span class="sound-icon">🔇</span>  
+        </div>  
+
+        <div class="card-title">  
+          <small>FASHION</small>  
+          <b>Commercial</b>  
+        </div>  
+
+      </article>  
+
+      <article class="portfolio-card">  
+
+        <video  
+          autoplay  
+          muted  
+          loop  
+          playsinline  
+          preload="metadata"  
+          data-sound-video  
+          aria-label="Edit Wallah product commercial"  
+        >  
+
+          <source  
+            src="https://stream.vidhosting.in/videos/67b109fb.mp4"  
+            type="video/mp4"  
+          >  
+
+        </video>  
+
+        <div class="card-meta">  
+          <strong>04</strong>  
+          <span class="sound-icon">🔇</span>  
+        </div>  
+
+        <div class="card-title">  
+          <small>PRODUCT</small>  
+          <b>Commercial</b>  
+        </div>  
+
+      </article>  
+
+    </div>  
+
+    <button  
+      class="slider-arrow next"  
+      id="workNext"  
+      aria-label="Next Work"  
+      type="button"  
+    >  
+      →  
+    </button>  
+
+  </div>  
+
+  <div class="center-cta">  
+
+    <a  
+      class="btn btn-dark"  
+      href="https://wa.me/919373376926"  
+      target="_blank"  
+      rel="noopener noreferrer"  
+    >  
+      Get Your Ad Made →  
+    </a>  
+
+  </div>  
+
+</section>  
+
+<!-- ================= PROCESS ================= -->  
+
+<section  
+  class="section process-section"  
+  id="process"  
+  aria-labelledby="process-title"  
+>  
+
+  <div class="section-top reveal">  
+
+    <div>  
+
+      <div class="eyebrow">  
+        OUR PROVEN SYSTEMATIZED  
+      </div>  
+
+      <h2 id="process-title">  
+
+        CONTENT GROWTH<br>  
+
+        <span>  
+          PLAN  
+        </span>  
+
+      </h2>  
+
+    </div>  
+
+    <p class="section-description">  
+
+      We Don't Guess. Our creative team follows  
+      a proven process to scale your brand.  
+
+    </p>  
+
+  </div>  
+
+  <div class="process-grid">  
+
+    <article class="process-card reveal">  
+
+      <div class="process-number">  
+        01  
+      </div>  
+
+      <div class="process-image">  
+
+        <img  
+          src="process-01.jpg"  
+          alt="Edit Wallah research and content planning"  
+          loading="lazy"  
+        >  
+
+      </div>  
+
+      <h3>  
+        Deep Research & Proper Content Planning  
+      </h3>  
+
+      <p>  
+        We analyze your competitors and create  
+        proven result-oriented concepts for your brand.  
+      </p>  
+
+    </article>  
+
+    <article class="process-card reveal">  
+
+      <div class="process-number">  
+        02  
+      </div>  
+
+      <div class="process-image">  
+
+        <img  
+          src="process-02.jpg"  
+          alt="Edit Wallah scripting process"  
+          loading="lazy"  
+        >  
+
+      </div>  
+
+      <h3>  
+        Scripting  
+      </h3>  
+
+      <p>  
+        We write scroll-stopping scripts to stop  
+        the scroll and make people choose your brand.  
+      </p>  
+
+    </article>  
+
+    <article class="process-card reveal">  
+
+      <div class="process-number">  
+        03  
+      </div>  
+
+      <div class="process-image">  
+
+        <img  
+          src="process-03.jpg"  
+          alt="Edit Wallah professional shooting"  
+          loading="lazy"  
+        >  
+
+      </div>  
+
+      <h3>  
+        Professional Shooting  
+      </h3>  
+
+      <p>  
+        We provide the right direction with the  
+        right creators for your brand.  
+      </p>  
+
+    </article>  
+
+    <article class="process-card reveal">  
+
+      <div class="process-number">  
+        04  
+      </div>  
+
+      <div class="process-image">  
+
+        <img  
+          src="process-04.jpg"  
+          alt="Edit Wallah premium video editing"  
+          loading="lazy"  
+        >  
+
+      </div>  
+
+      <h3>  
+        Premium Quality Editing  
+      </h3>  
+
+      <p>  
+        Our editing team creates videos designed  
+        to stop the scroll and maximize engagement.  
+      </p>  
+
+    </article>  
+
+  </div>  
+
+</section>  
+
+<!-- ================= SERVICES ================= -->  
+
+<section  
+  class="section services-section"  
+  id="services"  
+  aria-labelledby="services-title"  
+>  
+
+  <div class="section-heading reveal">  
+
+    <div class="eyebrow">  
+      EDIT WALLAH SERVICES  
+    </div>  
+
+    <h2 id="services-title">  
+      WHAT WE DO  
+    </h2>  
+
+    <p>  
+      Edit Wallah provides professional social media  
+      marketing, video editing and digital marketing  
+      services for brands and businesses in Nagpur.  
+    </p>  
+
+  </div>  
+
+  <div class="service-grid">  
+
+    <article class="service-card reveal">  
+
+      <div class="service-image">  
+
+        <img  
+          src="service-ads.jpg"  
+          alt="Edit Wallah professional advertising and ad shoot service in Nagpur"  
+          loading="lazy"  
+        >  
+
+      </div>  
+
+      <div class="service-body">  
+
+        <h3>  
+          Ads Shoot 🎬  
+        </h3>  
+
+        <p>  
+          High-converting ad shoots crafted to stop  
+          the scroll, grab attention, and turn viewers  
+          into loyal customers.  
+        </p>  
+
+        <div class="tags">  
+          Product Ads · Brand Films · UGC Videos ·  
+          Studio Shoot · Outdoor Shoot · Reels ·  
+          Commercial Ads  
+        </div>  
+
+        <a  
+          href="https://wa.me/919373376926"  
+          target="_blank"  
+          rel="noopener noreferrer"  
+        >  
+          Request Callback Now →  
+        </a>  
+
+      </div>  
+
+    </article>  
+
+    <article class="service-card reveal">  
+
+      <div class="service-image">  
+
+        <img  
+          src="service-marketing.jpg"  
+          alt="Edit Wallah performance marketing and digital advertising service in Nagpur"  
+          loading="lazy"  
+        >  
+
+      </div>  
+
+      <div class="service-body">  
+
+        <h3>  
+          Performance Marketing 🚀  
+        </h3>  
+
+        <p>  
+          ROI-focused campaigns that drive qualified  
+          leads, boost conversions, and maximize every  
+          rupee of your marketing budget.  
+        </p>  
+
+        <div class="tags">  
+          Meta Ads · Google Ads · Lead Generation ·  
+          Remarketing · Conversion Tracking · Sales Funnel  
+        </div>  
+
+        <a  
+          href="https://wa.me/919373376926"  
+          target="_blank"  
+          rel="noopener noreferrer"  
+        >  
+          Request Callback Now →  
+        </a>  
+
+      </div>  
+
+    </article>  
+
+    <article class="service-card reveal">  
+
+      <div class="service-image">  
+
+        <img  
+          src="service-social.jpg"  
+          alt="Edit Wallah social media marketing agency service in Nagpur"  
+          loading="lazy"  
+        >  
+
+      </div>  
+
+      <div class="service-body">  
+
+        <h3>  
+          Social Media Marketing 📣  
+        </h3>  
+
+        <p>  
+          Build a powerful online presence with  
+          scroll-stopping content, consistent branding,  
+          and strategies that turn followers into customers.  
+        </p>  
+
+        <div class="tags">  
+          Instagram · Facebook · Content Strategy ·  
+          Reels Marketing · Community Growth ·  
+          Monthly Management  
+        </div>  
+
+        <a  
+          href="https://wa.me/919373376926"  
+          target="_blank"  
+          rel="noopener noreferrer"  
+        >  
+          Request Callback Now →  
+        </a>  
+
+      </div>  
+
+    </article>  
+
+    <article class="service-card reveal">  
+
+      <div class="service-image">  
+
+        <img  
+          src="service-editing.jpg"  
+          alt="Edit Wallah professional video editing service in Nagpur"  
+          loading="lazy"  
+        >  
+
+      </div>  
+
+      <div class="service-body">  
+
+        <h3>  
+          Video Editing 🎞️  
+        </h3>  
+
+        <p>  
+          Premium edits built around storytelling,  
+          pacing, sound design, effects and  
+          professional color grading.  
+        </p>  
+
+        <div class="tags">  
+          Reels · Shorts · YouTube · Cinematic ·  
+          Color Grading · Motion Graphics · Sound Design  
+        </div>  
+
+        <a  
+          href="https://wa.me/919373376926"  
+          target="_blank"  
+          rel="noopener noreferrer"  
+        >  
+          Request Callback Now →  
+        </a>  
+
+      </div>  
+
+    </article>  
+
+  </div>  
+
+</section>  
+
+<!-- =====================================================  
+     OUR TRAINERS WORKED WITH GLOBAL BRANDS  
+     IMAGE SLIDER  
+     ===================================================== -->  
+
+<section class="clients-showcase">  
+
+  <div class="clients-showcase-head">  
+
+    <span>  
+      OUR TRAINERS WORKED WITH GLOBAL BRANDS  
+    </span>  
+
+    <h2>  
+      GLOBAL BRANDS  
+    </h2>  
+
+    <p>  
+      Brands we've worked with and helped grow.  
+    </p>  
+
+  </div>  
+
+  <div class="client-logo-slider">  
+
+    <div class="client-logo-track">  
+
+      <!-- ORIGINAL 6 -->  
+
+      <div class="client-logo-card">  
+        <img  
+          src="./client-1.png"  
+          alt="Edit Wallah Client 1"  
+          loading="lazy"  
+        >  
+      </div>  
+
+      <div class="client-logo-card">  
+        <img  
+          src="./client-2.png"  
+          alt="Edit Wallah Client 2"  
+          loading="lazy"  
+        >  
+      </div>  
+
+      <div class="client-logo-card">  
+        <img  
+          src="./client-3.png"  
+          alt="Edit Wallah Client 3"  
+          loading="lazy"  
+        >  
+      </div>  
+
+      <div class="client-logo-card">  
+        <img  
+          src="./client-4.png"  
+          alt="Edit Wallah Client 4"  
+          loading="lazy"  
+        >  
+      </div>  
+
+      <div class="client-logo-card">  
+        <img  
+          src="./client-5.png"  
+          alt="Edit Wallah Client 5"  
+          loading="lazy"  
+        >  
+      </div>  
+
+      <div class="client-logo-card">  
+        <img  
+          src="./client-6.png"  
+          alt="Edit Wallah Client 6"  
+          loading="lazy"  
+        >  
+      </div>  
+
+      <!-- DUPLICATE FOR SEAMLESS LOOP -->  
+
+      <div class="client-logo-card">  
+        <img  
+          src="./client-1.png"  
+          alt="Edit Wallah Client 1"  
+          loading="lazy"  
+        >  
+      </div>  
+
+      <div class="client-logo-card">  
+        <img  
+          src="./client-2.png"  
+          alt="Edit Wallah Client 2"  
+          loading="lazy"  
+        >  
+      </div>  
+
+      <div class="client-logo-card">  
+        <img  
+          src="./client-3.png"  
+          alt="Edit Wallah Client 3"  
+          loading="lazy"  
+        >  
+      </div>  
+
+      <div class="client-logo-card">  
+        <img  
+          src="./client-4.png"  
+          alt="Edit Wallah Client 4"  
+          loading="lazy"  
+        >  
+      </div>  
+
+      <div class="client-logo-card">  
+        <img  
+          src="./client-5.png"  
+          alt="Edit Wallah Client 5"  
+          loading="lazy"  
+        >  
+      </div>  
+
+      <div class="client-logo-card">  
+        <img  
+          src="./client-6.png"  
+          alt="Edit Wallah Client 6"  
+          loading="lazy"  
+        >  
+      </div>  
+
+    </div>  
+
+  </div>  
+
+</section>  
+
+<!-- =====================================================  
+     OUR CLIENTS  
+     CLIENT NAME MARQUEE  
+     ===================================================== -->  
+
+<section  
+  class="clients-section"  
+  aria-labelledby="clients-title"  
+>  
+
+  <div class="eyebrow">  
+    TRUSTED BY  
+  </div>  
+
+  <h2 id="clients-title">  
+    OUR CLIENTS  
+  </h2>  
+
+  <div class="client-marquee">  
+
+    <div class="client-track">  
+
+      <span>SHOBHA AYURVEDA</span>  
+      <span>MADHAV BAUG</span>  
+      <span>SHRI SANSAR</span>  
+      <span>SHRI SAT GURU COLLECTION</span>  
+      <span>SHRI SAT GURU CREATION</span>  
+      <span>KARAN NX</span>  
+      <span>BELLA VEDA SALON</span>  
+      <span>THE HOUSE OF STYLE SALON</span>  
+      <span>ART ZONE SALON</span>  
+      <span>REEVA THE LUXURY SALON</span>  
+      <span>DHRUV INTERIOR MALL</span>  
+      <span>LOYAL DECORE</span>  
+      <span>RUDRA LIFESTYLE</span>  
+      <span>FLOWRA</span>  
+      <span>PRAYAS ACADEMY</span>  
+      <span>FIRSTCRY</span>  
+      <span>AMRITSAR HAVELI</span>  
+
+      <span>SHOBHA AYURVEDA</span>  
+      <span>MADHAV BAUG</span>  
+      <span>SHRI SANSAR</span>  
+      <span>SHRI SAT GURU COLLECTION</span>  
+      <span>SHRI SAT GURU CREATION</span>  
+      <span>KARAN NX</span>  
+      <span>BELLA VEDA SALON</span>  
+      <span>THE HOUSE OF STYLE SALON</span>  
+      <span>ART ZONE SALON</span>  
+      <span>REEVA THE LUXURY SALON</span>  
+      <span>DHRUV INTERIOR MALL</span>  
+      <span>LOYAL DECORE</span>  
+      <span>RUDRA LIFESTYLE</span>  
+      <span>FLOWRA</span>  
+      <span>PRAYAS ACADEMY</span>  
+      <span>FIRSTCRY</span>  
+      <span>AMRITSAR HAVELI</span>  
+
+    </div>  
+
+  </div>  
+
+  <p>  
+    …and many more growing brands 🚀  
+  </p>  
+
+</section>  
+
+<!-- ================= PORTFOLIO ================= -->  
+
+<section  
+  class="section portfolio-section"  
+  aria-labelledby="portfolio-title"  
+>  
+
+  <div class="section-top reveal">  
+
+    <div>  
+
+      <div class="eyebrow">  
+        EDITWALLAH PORTFOLIO  
+      </div>  
+
+      <h2 id="portfolio-title">  
+
+        PREMIUM CREATIVE<br>  
+
+        <span>  
+          THAT DRIVES REAL RESULTS  
+        </span>  
+
+      </h2>  
+
+    </div>  
+
+    <div class="swipe-note">  
+      Swipe to explore ← →  
+    </div>  
+
+  </div>  
+
+  <div class="portfolio-wrap">  
+
+    <button  
+      class="slider-arrow prev"  
+      id="portfolioPrev"  
+      aria-label="Previous Portfolio"  
+      type="button"  
+    >  
+      ←  
+    </button>  
+
+    <div  
+      class="portfolio-slider"  
+      id="portfolioSlider"  
+    >  
+
+      <article class="portfolio-card">  
+
+        <video  
+          autoplay  
+          muted  
+          loop  
+          playsinline  
+          preload="metadata"  
+          data-sound-video  
+          aria-label="Edit Wallah education commercial"  
+        >  
+
+          <source  
+            src="https://stream.vidhosting.in/videos/003e8c93.mp4"  
+            type="video/mp4"  
+          >  
+
+        </video>  
+
+        <div class="card-meta">  
+          <strong>01</strong>  
+          <span class="sound-icon">🔇</span>  
+        </div>  
+
+        <div class="card-title">  
+
+          <small>  
+            EDUCATION  
+          </small>  
+
+          <b>  
+            Commercial  
+          </b>  
+
+        </div>  
+
+      </article>  
+
+      <article class="portfolio-card">  
+
+        <video  
+          autoplay  
+          muted  
+          loop  
+          playsinline  
+          preload="metadata"  
+          data-sound-video  
+          aria-label="Edit Wallah fashion commercial"  
+        >  
+
+          <source  
+            src="https://stream.vidhosting.in/videos/430e51a0.mp4"  
+            type="video/mp4"  
+          >  
+
+        </video>  
+
+        <div class="card-meta">  
+          <strong>02</strong>  
+          <span class="sound-icon">🔇</span>  
+        </div>  
+
+        <div class="card-title">  
+
+          <small>  
+            FASHION  
+          </small>  
+
+          <b>  
+            Commercial  
+          </b>  
+
+        </div>  
+
+      </article>  
+
+      <article class="portfolio-card">  
+
+        <video  
+          autoplay  
+          muted  
+          loop  
+          playsinline  
+          preload="metadata"  
+          data-sound-video  
+          aria-label="Edit Wallah cafe commercial"  
+        >  
+
+          <source  
+            src="https://stream.vidhosting.in/videos/589e4a37.mp4"  
+            type="video/mp4"  
+          >  
+
+        </video>  
+
+        <div class="card-meta">  
+          <strong>03</strong>  
+          <span class="sound-icon">🔇</span>  
+        </div>  
+
+        <div class="card-title">  
+
+          <small>  
+            CAFE  
+          </small>  
+
+          <b>  
+            Commercial  
+          </b>  
+
+        </div>  
+
+      </article>  
+
+      <article class="portfolio-card">  
+
+        <video  
+          autoplay  
+          muted  
+          loop  
+          playsinline  
+          preload="metadata"  
+          data-sound-video  
+          aria-label="Edit Wallah product commercial"  
+        >  
+
+          <source  
+            src="https://stream.vidhosting.in/videos/e4ce8cf2.mp4"  
+            type="video/mp4"  
+          >  
+
+        </video>  
+
+        <div class="card-meta">  
+          <strong>04</strong>  
+          <span class="sound-icon">🔇</span>  
+        </div>  
+
+        <div class="card-title">  
+
+          <small>  
+            PRODUCT  
+          </small>  
+
+          <b>  
+            Commercial  
+          </b>  
+
+        </div>  
+
+      </article>  
+
+    </div>  
+
+    <button  
+      class="slider-arrow next"  
+      id="portfolioNext"  
+      aria-label="Next Portfolio"  
+      type="button"  
+    >  
+      →  
+    </button>  
+
+  </div>  
+
+  <div class="center-cta">  
+
+    <a  
+      class="btn btn-dark"  
+      href="https://wa.me/919373376926"  
+      target="_blank"  
+      rel="noopener noreferrer"  
+    >  
+      Get Your Ad Made →  
+    </a>  
+
+  </div>  
+
+</section>  
+
+<!-- ================= TEAM ================= -->  
+
+<section  
+  class="team-section"  
+  id="team"  
+  aria-labelledby="team-title"  
+>  
+
+  <div class="team-heading reveal">  
+
+    <div class="eyebrow">  
+      OUR TEAM  
+    </div>  
+
+    <h2 id="team-title">  
+      TEAM  
+    </h2>  
+
+  </div>  
+
+  <div class="team-image-box reveal">  
+
+    <img  
+      src="./team.jpg"  
+      alt="Edit Wallah Team"  
+      loading="lazy"  
+    >  
+
+  </div>  
+
+</section>  
+
+<!-- ================= ABOUT ================= -->  
+
+<section  
+  class="section about-section"  
+  id="about"  
+  aria-labelledby="about-title"  
+>  
+
+  <div class="about-grid">  
+
+    <div  
+      class="about-image about-logo-box reveal"  
+    >  
+
+      <img  
+        src="https://shotxcinematicz.github.io/editwallah.github.io/logo.png"  
+        alt="Edit Wallah Social Media Marketing Agency Logo"  
+        class="about-logo"  
+        width="420"  
+        height="420"  
+        loading="lazy"  
+      >  
+
+    </div>  
+
+    <div class="about-copy reveal">  
+
+      <div class="eyebrow">  
+        KNOW US  
+      </div>  
+
+      <h2 id="about-title">  
+        About EDITWALLAH  
+      </h2>  
+
+      <h3>  
+
+        We Don't Just Create Content.  
+        We Build Brands That People Remember.  
+
+      </h3>  
+
+      <p>  
+
+        At EDITWALLAH, we believe every business  
+        has a story worth telling—but only the right  
+        strategy can turn that story into attention  
+        and growth.  
+
+      </p>  
+
+      <p>  
+
+        We're a creative studio and social media  
+        marketing agency in Nagpur helping businesses,  
+        creators and brands grow through high-quality  
+        content, powerful ad creatives, social media  
+        branding and result-driven visual storytelling.  
+
+      </p>  
+
+      <a  
+        class="btn btn-dark"  
+        href="https://wa.me/919373376926"  
+        target="_blank"  
+        rel="noopener noreferrer"  
+      >  
+        Chat on WhatsApp  
+      </a>  
+
+      <div class="contact-number">  
+        WhatsApp: +91 93733 76926  
+      </div>  
+
+    </div>  
+
+  </div>  
+
+</section>  
+
+<!-- ================= FINAL CTA ================= -->  
+
+<section  
+  class="final-cta"  
+  aria-labelledby="cta-title"  
+>  
+
+  <div class="eyebrow">  
+    READY TO BLOW UP?  
+  </div>  
+
+  <h2 id="cta-title">  
+
+    Let's Make Your Brand<br>  
+
+    <span>  
+      Impossible to Ignore!  
+    </span>  
+
+  </h2>  
+
+  <a  
+    class="btn btn-dark"  
+    href="https://wa.me/919373376926"  
+    target="_blank"  
+    rel="noopener noreferrer"  
+  >  
+    Book Free Call  
+  </a>  
 
 </section>
 
-<!-- PROCESS -->
+  </main>    <!-- ================= FOOTER ================= -->    <footer class="footer">  <div class="footer-top">  
 
-<section id="process">
+  <div class="footer-brand">  
 
-  <div class="container">
+    <img  
+      src="https://shotxcinematicz.github.io/editwallah.github.io/logo.png"  
+      alt="Edit Wallah Social Media Marketing Agency Logo"  
+      class="logo-circle"  
+      loading="lazy"  
+      width="43"  
+      height="43"  
+    >  
 
-    <h2 class="section-title">
-      OUR <span class="gold">PROCESS</span>
-    </h2>
+    <p>  
 
-    <p class="section-desc">
-      A strategic process built to turn ideas into effective
-      digital content and campaigns.
-    </p>
+      Premium creative and social media marketing  
+      solutions for brands, creators and businesses.  
 
-    <div class="process-grid">
+    </p>  
 
-      <div class="process-card">
-        <img src="process-01.jpg" alt="Strategy">
-        <h3>01. Strategy</h3>
-        <p>
-          Understanding your brand, audience, goals
-          and creative direction.
-        </p>
-      </div>
+  </div>  
 
-      <div class="process-card">
-        <img src="process-02.jpg" alt="Planning">
-        <h3>02. Planning</h3>
-        <p>
-          Planning content, concepts, campaigns
-          and production.
-        </p>
-      </div>
+  <div class="footer-column">  
 
-      <div class="process-card">
-        <img src="process-03.jpg" alt="Production">
-        <h3>03. Production</h3>
-        <p>
-          Creating engaging visuals, videos
-          and creative assets.
-        </p>
-      </div>
+    <h4>  
+      Services  
+    </h4>  
 
-      <div class="process-card">
-        <img src="process-04.jpg" alt="Growth">
-        <h3>04. Growth</h3>
-        <p>
-          Delivering content designed to improve
-          visibility and brand engagement.
-        </p>
-      </div>
+    <a href="#services">  
+      Ad Content  
+    </a>  
 
-    </div>
+    <a href="#services">  
+      Performance Marketing  
+    </a>  
 
-  </div>
+    <a href="#services">  
+      Social Media Marketing  
+    </a>  
 
-</section>
+    <a href="#services">  
+      Personal Branding  
+    </a>  
 
-<!-- SERVICES -->
+    <a href="#services">  
+      Video Production  
+    </a>  
 
-<section id="services">
+  </div>  
 
-  <div class="container">
+  <div class="footer-column">  
 
-    <h2 class="section-title">
-      OUR <span class="gold">SERVICES</span>
-    </h2>
+    <h4>  
+      Services  
+    </h4>  
 
-    <p class="section-desc">
-      Everything your brand needs to build a strong digital presence.
-    </p>
+    <a href="#services">  
+      Video Editing  
+    </a>  
 
-    <div class="services-grid">
+    <a href="#services">  
+      Graphic Designing  
+    </a>  
 
-      <div class="service-card">
-        <img src="service-ads.jpg" alt="Performance Marketing">
-        <h3>Performance Marketing</h3>
-        <p>
-          Campaign strategies focused on reaching the right audience
-          and supporting measurable business growth.
-        </p>
-      </div>
+    <a href="#services">  
+      Influencer Marketing  
+    </a>  
 
-      <div class="service-card">
-        <img src="service-marketing.jpg" alt="Digital Marketing">
-        <h3>Digital Marketing</h3>
-        <p>
-          Digital strategies that help businesses build visibility,
-          connect with audiences and strengthen their presence.
-        </p>
-      </div>
+  </div>  
 
-      <div class="service-card">
-        <img src="service-social.jpg" alt="Social Media Marketing">
-        <h3>Social Media Marketing</h3>
-        <p>
-          Creative content and social media strategies
-          designed to help brands grow.
-        </p>
-      </div>
+  <div class="footer-column">  
 
-      <div class="service-card">
-        <img src="service-editing.jpg" alt="Video Editing">
-        <h3>Video Editing & Production</h3>
-        <p>
-          Professional editing, reels, promotional videos,
-          creative storytelling and visual production.
-        </p>
-      </div>
+    <h4>  
+      Contact  
+    </h4>  
 
-    </div>
+    <a href="tel:+919373376926">  
 
-  </div>
+      Call Us<br>  
+      +91 93733 76926  
 
-</section>
+    </a>  
 
-<!-- CLIENT NAMES -->
+    <a  
+      href="https://www.instagram.com/editwallah.media/"  
+      target="_blank"  
+      rel="noopener noreferrer"  
+    >  
+      Instagram  
+    </a>  
 
-<div class="client-marquee">
-  <div class="client-track">
+    <p>  
 
-    <span>EDIT WALLAH</span>
-    <span>CREATIVE STRATEGY</span>
-    <span>VIDEO PRODUCTION</span>
-    <span>BRAND BUILDING</span>
-    <span>DIGITAL GROWTH</span>
-    <span>EDIT WALLAH</span>
-    <span>CREATIVE STRATEGY</span>
-    <span>VIDEO PRODUCTION</span>
-    <span>BRAND BUILDING</span>
-    <span>DIGITAL GROWTH</span>
+      Location<br>  
+      Nagpur, Maharashtra, India  
 
-  </div>
+    </p>  
+
+  </div>  
+
+</div>  
+
+<div class="footer-bottom">  
+
+  <span>  
+    © 2026 EDITWALLAH — All Rights Reserved.  
+  </span>  
+
+  <span>  
+    Nagpur, Maharashtra, India  
+  </span>  
+
 </div>
 
-<!-- PORTFOLIO -->
-
-<section id="portfolio">
-
-  <div class="container">
-
-    <h2 class="section-title">
-      OUR <span class="gold">PORTFOLIO</span>
-    </h2>
-
-    <p class="section-desc">
-      Explore some of our creative video work and visual projects.
-    </p>
-
-    <div class="portfolio-grid">
-
-      <div class="portfolio-card">
-        <video controls playsinline preload="metadata">
-          <source src="003e8c93.mp4" type="video/mp4">
-        </video>
-        <h3>Creative Production</h3>
-      </div>
-
-      <div class="portfolio-card">
-        <video controls playsinline preload="metadata">
-          <source src="430e51a0.mp4" type="video/mp4">
-        </video>
-        <h3>Brand Campaign</h3>
-      </div>
-
-      <div class="portfolio-card">
-        <video controls playsinline preload="metadata">
-          <source src="589e4a37.mp4" type="video/mp4">
-        </video>
-        <h3>Video Editing</h3>
-      </div>
-
-      <div class="portfolio-card">
-        <video controls playsinline preload="metadata">
-          <source src="e4ce8cf2.mp4" type="video/mp4">
-        </video>
-        <h3>Visual Storytelling</h3>
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- REVIEWS -->
-
-<section class="reviews-section" id="reviews">
-
-  <div class="container">
-
-    <h2 class="section-title">
-      CLIENT <span class="gold">REVIEWS</span>
-    </h2>
-
-    <p class="section-desc">
-      What people think about our creative work.
-    </p>
-
-    <div class="review-slider">
-
-      <div class="review-track" id="reviewTrack">
-
-        <div class="review-slide">
-          <h3>Creative Experience</h3>
-          <p>
-            We believe every project deserves creativity,
-            attention to detail and a professional approach.
-          </p>
-        </div>
-
-        <div class="review-slide">
-          <h3>Quality & Creativity</h3>
-          <p>
-            Our focus is creating engaging visuals
-            and delivering a quality creative experience.
-          </p>
-        </div>
-
-        <div class="review-slide">
-          <h3>Building Brands</h3>
-          <p>
-            We aim to help businesses build their identity
-            through creative content and digital strategies.
-          </p>
-        </div>
-
-      </div>
-
-    </div>
-
-    <div class="review-buttons">
-      <button id="prevReview" type="button">Previous</button>
-      <button id="nextReview" type="button">Next</button>
-    </div>
-
-  </div>
-
-</section>
-
-<!-- ABOUT -->
-
-<section id="about">
-
-  <div class="container about-grid">
-
-    <div>
-      <img src="team.jpg" alt="Edit Wallah Team">
-    </div>
-
-    <div class="about-content">
-
-      <h2>
-        ABOUT <span class="gold">EDIT WALLAH</span>
-      </h2>
-
-      <p>
-        Edit Wallah is a creative marketing and production agency
-        focused on helping businesses, creators and brands
-        establish a powerful digital presence.
-      </p>
-
-      <p>
-        From social media marketing and performance campaigns
-        to video production, editing and creative content,
-        we bring ideas to life through visual storytelling
-        and strategic creativity.
-      </p>
-
-      <p>
-        Our mission is to make brands stand out,
-        capture attention and create a memorable digital identity.
-      </p>
-
-      <a href="https://www.instagram.com/editwallah.media/"
-         class="btn">
-        Follow Our Journey
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- CTA -->
-
-<section class="cta" id="contact">
-
-  <div class="container">
-
-    <h2>
-      LET'S CREATE SOMETHING
-      <span class="gold">AMAZING.</span>
-    </h2>
-
-    <p>
-      Have a project, brand or idea in mind?
-      Let's make it happen.
-    </p>
-
-    <a href="https://wa.me/919373376926"
-       class="btn">
-      Contact Us
-    </a>
-
-  </div>
-
-</section>
-
-<!-- FOOTER -->
-
-<footer>
-
-  <div class="container">
-
-    <div class="footer-grid">
-
-      <div>
-
-        <div class="logo-area">
-          <img src="logo.png" alt="Edit Wallah">
-          <h2>EDIT<span class="gold">WALLAH</span></h2>
-        </div>
-
-        <p style="margin-top:20px;">
-          We Make Your Brand Impossible To Ignore.
-          Creative marketing, production and digital growth.
-        </p>
-
-      </div>
-
-      <div>
-
-        <h3>Quick Links</h3>
-
-        <div class="footer-links">
-          <a href="#home">Home</a>
-          <a href="#services">Services</a>
-          <a href="#portfolio">Portfolio</a>
-          <a href="#about">About</a>
-          <a href="#contact">Contact</a>
-        </div>
-
-      </div>
-
-      <div>
-
-        <h3>Connect With Us</h3>
-
-        <div class="footer-links">
-          <a href="https://www.instagram.com/editwallah.media/" target="_blank" rel="noopener">Instagram</a>
-          <a href="https://wa.me/919373376926" target="_blank" rel="noopener">WhatsApp</a>
-        </div>
-
-        <p style="margin-top:15px;">
-          Nagpur, Maharashtra, India
-        </p>
-
-      </div>
-
-    </div>
-
-    <div class="copyright">
-      © <span id="year"></span> Edit Wallah. All Rights Reserved.
-    </div>
-
-  </div>
-
-</footer>
-
-<!-- WHATSAPP BUTTON -->
-
-<a class="whatsapp"
-   href="https://wa.me/919373376926"
-   target="_blank"
-   rel="noopener">
-  WhatsApp
-</a>
-
-<!-- MENU SCRIPT -->
-
-<script>
-const menuBtn = document.getElementById("menuBtn");
-const navLinks = document.getElementById("navLinks");
-
-menuBtn.addEventListener("click", function() {
-  navLinks.classList.toggle("active");
-});
-
-document.querySelectorAll(".nav-links a").forEach(function(link) {
-  link.addEventListener("click", function() {
-    navLinks.classList.remove("active");
-  });
-});
-
-document.getElementById("year").textContent =
-  new Date().getFullYear();
-</script>
-
-<!-- REVIEW SLIDER -->
-
-<script>
-(function() {
-
-  const track = document.getElementById("reviewTrack");
-  const slides = track.querySelectorAll(".review-slide");
-
-  let current = 0;
-
-  function showSlide(index) {
-    current = (index + slides.length) % slides.length;
-    track.style.transform = "translateX(-" + (current * 100) + "%)";
-  }
-
-  document.getElementById("nextReview").addEventListener("click", function() {
-    showSlide(current + 1);
-  });
-
-  document.getElementById("prevReview").addEventListener("click", function() {
-    showSlide(current - 1);
-  });
-
-  setInterval(function() {
-    showSlide(current + 1);
-  }, 5000);
-
-})();
-</script>
-
-<!-- VIDEO RECOVERY SCRIPT -->
-
-<script>
-(function() {
-
-  const videos = document.querySelectorAll("video");
-
-  videos.forEach(function(video) {
-
-    video.muted = true;
-
-    video.setAttribute("muted", "");
-    video.setAttribute("playsinline", "");
-    video.setAttribute("webkit-playsinline", "");
-
-    video.addEventListener("error", function() {
-      console.log("Video loading error:", video.currentSrc);
-    });
-
-  });
-
-  function retryVisibleVideos() {
-
-    videos.forEach(function(video) {
-
-      const rect = video.getBoundingClientRect();
-
-      const visible =
-        rect.top < window.innerHeight &&
-        rect.bottom > 0;
-
-      if (visible && video.classList.contains("hero-video")) {
-
-        if (video.paused) {
-          video.play().catch(function() {});
-        }
-
-      }
-
-    });
-
-  }
-
-  window.addEventListener("pageshow", retryVisibleVideos);
-
-  document.addEventListener("visibilitychange", function() {
-    if (!document.hidden) {
-      retryVisibleVideos();
-    }
-  });
-
-  retryVisibleVideos();
-
-})();
-</script>
-
-</body>
-</html>
+  </footer>    <!-- ================= WHATSAPP ================= -->  <a
+class="whatsapp-float"
+href="https://wa.me/919373376926"
+target="_blank"
+rel="noopener noreferrer"
+aria-label="Chat with Edit Wallah on WhatsApp"
+
+> 
+
+<svg  
+  viewBox="0 0 24 24"  
+  aria-hidden="true"  
+  focusable="false"  
+>  
+
+  <path  
+    d="M20 11.5a8.5 8.5 0 0 1-12.7 7.4L4 20l1.2-3.1A8.5 8.5 0 1 1 20 11.5Z"  
+    fill="none"  
+    stroke="currentColor"  
+    stroke-width="2"  
+    stroke-linecap="round"  
+    stroke-linejoin="round"  
+  />  
+
+  <path  
+    d="M8.5 10.5h7M8.5 14h4.5"  
+    fill="none"  
+    stroke="currentColor"  
+    stroke-width="2"  
+    stroke-linecap="round"  
+  />  
+
+</svg>
+
+  </a>    <!-- ================= MAIN JS ================= -->    <script src="script.js"></script>    <!-- =====================================================  
+       CLIENT REVIEWS  
+       ===================================================== -->    <script>  
+  
+    (function () {  
+  
+      const reviews = [  
+  
+        [  
+          "S",  
+          "SHOBHA AYURVEDA",  
+          "Editwallah team ke sath kaam karke hamari Ayurvedic brand ko ek naya aur premium look mila hai. Unki Reels aur social media strategy se hamari client inquiries kafi badh gayi hain. Highly recommended for authentic brand building!"  
+        ],  
+  
+        [  
+          "M",  
+          "MADHAV BAUG",  
+          "Health & Wellness niche me engagement lana mushkil hota hai, lekin Editwallah ne hamare educational aur promotional content ko itna attractive banaya ki patient trust build ho saka. Brilliant execution!"  
+        ],  
+  
+        [  
+          "S",  
+          "SHRI SANSAR",  
+          "Ethnic wear business ke liye high-quality visuals aur video editing bohot zaruri hoti hai. Editwallah ki team ne hamare clothing collection ko perfectly showcase kiya. Hamari sales aur footfall dono me growth dekhi hai."  
+        ],  
+  
+        [  
+          "S",  
+          "SHRI SAT GURU COLLECTION",  
+          "Social media marketing aur content strategy me Editwallah expert hai. Unke ad campaigns aur trend-based Reels ki wajeh se hamari brand reach localized audience me bohot strong ho gayi hai."  
+        ],  
+  
+        [  
+          "S",  
+          "SHRI SAT GURU CREATION",  
+          "Creative agency bolna inko bilkul sahi hoga! Frame design se lekar final video edit tak, har cheez top-notch hoti hai. Team hamesha punctual aur supportive rahi hai."  
+        ],  
+  
+        [  
+          "K",  
+          "KARAN NX",  
+          "Retail fashion business me regular fresh content chahiye hota hai. Editwallah ne hamare studio shoots aur Reels dynamic tarike se handle kiye. Highly satisfied with their consistency and speed."  
+        ],  
+  
+        [  
+          "B",  
+          "BELLA VEDA SALON",  
+          "Salon transformation videos aur aesthetics edit karna Editwallah se accha koi nahi kar sakta. Unki social media management se hamare salon ki online bookings me kafi rise aaya hai!"  
+        ],  
+  
+        [  
+          "H",  
+          "THE HOUSE OF STYLE SALON",  
+          "Aesthetic feed, trendy reels, aur targeted Ads—Editwallah ne hamare salon ko ek luxury brand jaisa positioning diya hai. Nagpur & PAN India level par inki strategy super effective hai!"  
+        ],  
+  
+        [  
+          "A",  
+          "ART ZONE SALON",  
+          "Client retention aur naye walk-ins ke liye social media presence bohot zaruri tha. Editwallah team ne hamare work ki branding bohot hi professional way me ki. Amazing team to work with!"  
+        ],  
+  
+        [  
+          "R",  
+          "REEVA THE LUXURY SALON",  
+          "Luxury clients ko attract karne ke liye premium edits aur high-end strategy chahiye thi. Editwallah delivered exactly what we needed. Content quality and professionalism are top tier!"  
+        ],  
+  
+        [  
+          "D",  
+          "DHRUV INTERIOR MALL",  
+          "Interior mall ke large scale products aur showrooms ko short-form videos me capture karna tough job hai. Editwallah ki team ne cinematic shoots aur clean editing se hamari branding next level kar di."  
+        ],  
+  
+        [  
+          "L",  
+          "LOYAL DECORE",  
+          "Home decor and interior projects me visuals hi sab kuch hote hain. Editwallah team ne hamare projects ke tour videos aur branding campaign itne shandar tarike se design kiye ki inquiries continuously aa rahi hain."  
+        ],  
+  
+        [  
+          "R",  
+          "RUDRA LIFESTYLE",  
+          "Working with Editwallah has been a smooth ride. Content strategy se lekar Ads management tak, har step par transparent ROI aur growth dekhne ko mili. Great job, team!"  
+        ],  
+  
+        [  
+          "F",  
+          "FLOWRA",  
+          "Hamare brand aesthetics aur tone of voice ko Editwallah ne turant samajh liya. Creative posts aur reel strategy ne hamari organic reach kafi improve ki hai. Best agency experience!"  
+        ],  
+  
+        [  
+          "P",  
+          "PRAYAS ACADEMY",  
+          "Education sector me students aur parents tak sahi message pahunchana zaruri hota hai. Editwallah ne hamare results, ad campaigns aur informative reels ko bohot achhe se manage kiya."  
+        ],  
+  
+        [  
+          "F",  
+          "FIRSTCRY",  
+          "Local level promotion aur brand visibility badhane ke liye Editwallah ke campaigns bohot effective rahe. Unki execution speed aur creative ideas really stand out."  
+        ],  
+  
+        [  
+          "A",  
+          "AMRITSAR HAVELI",  
+          "Food & Hospitality business me mouth-watering visuals sabse zyada matter karte hain. Editwallah ne hamare food Reels aur restaurant ambiance ko itna tempting tarike se edit kiya ki footfall kafi badh gaya!"  
+        ]  
+  
+      ];  
+  
+      const track =  
+        document.getElementById("reviewsTrack");  
+  
+      const slider =  
+        document.getElementById("reviewsSlider");  
+  
+      const prevButton =  
+        document.getElementById("reviewPrev");  
+  
+      const nextButton =  
+        document.getElementById("reviewNext");  
+  
+      const dotsContainer =  
+        document.getElementById("reviewDots");  
+  
+      if (  
+        !track ||  
+        !slider ||  
+        !prevButton ||  
+        !nextButton ||  
+        !dotsContainer  
+      ) {  
+        return;  
+      }  
+  
+      /* ================= BUILD REVIEWS ================= */  
+  
+      reviews.forEach(function (review, index) {  
+  
+        const slide =  
+          document.createElement("article");  
+  
+        slide.className =  
+          "client-review-slide";  
+  
+        slide.innerHTML = `  
+  
+          <div class="client-review-card">  
+  
+            <div class="review-top-row">  
+  
+              <div class="review-client-info">  
+  
+                <div class="review-avatar">  
+                  ${review[0]}  
+                </div>  
+  
+                <div>  
+  
+                  <h3 class="review-client-name">  
+                    ${review[1]}  
+                  </h3>  
+  
+                  <p class="review-client-type">  
+                    Client Feedback  
+                  </p>  
+  
+                </div>  
+  
+              </div>  
+  
+              <div class="review-stars">  
+                ★★★★★  
+              </div>  
+  
+            </div>  
+  
+            <div class="review-label">  
+              Client Review  
+            </div>  
+  
+            <blockquote>  
+              "${review[2]}"  
+            </blockquote>  
+  
+            <div class="review-counter">  
+              ${String(index + 1).padStart(2,"0")} / ${reviews.length}  
+            </div>  
+  
+          </div>  
+  
+        `;  
+  
+        track.appendChild(slide);  
+  
+      });  
+  
+      const slides =  
+        Array.from(  
+          track.querySelectorAll(  
+            ".client-review-slide"  
+          )  
+        );  
+  
+      let currentIndex = 0;  
+  
+      let autoSlide = null;  
+  
+      const slideDelay = 6500;  
+  
+      /* ================= DOTS ================= */  
+  
+      slides.forEach(function (_, index) {  
+  
+        const dot =  
+          document.createElement("button");  
+  
+        dot.type = "button";  
+  
+        dot.className =  
+          "review-dot" +  
+          (index === 0 ? " active" : "");  
+  
+        dot.setAttribute(  
+          "aria-label",  
+          "Go to client review " + (index + 1)  
+        );  
+  
+        dot.addEventListener(  
+          "click",  
+          function () {  
+  
+            goToReview(index);  
+  
+            restartAutoSlide();  
+  
+          }  
+        );  
+  
+        dotsContainer.appendChild(dot);  
+  
+      });  
+  
+      const dots =  
+        Array.from(  
+          dotsContainer.querySelectorAll(  
+            ".review-dot"  
+          )  
+        );  
+  
+      /* ================= SLIDE ================= */  
+  
+      function goToReview(index) {  
+  
+        if (index < 0) {  
+          index =  
+            slides.length - 1;  
+        }  
+  
+        if (index >= slides.length) {  
+          index = 0;  
+        }  
+  
+        currentIndex =  
+          index;  
+  
+        track.style.transform =  
+          "translateX(-" +  
+          currentIndex * 100 +  
+          "%)";  
+  
+        dots.forEach(  
+          function (dot, dotIndex) {  
+  
+            dot.classList.toggle(  
+              "active",  
+              dotIndex === currentIndex  
+            );  
+  
+          }  
+        );  
+  
+      }  
+  
+      function nextReview() {  
+  
+        goToReview(  
+          currentIndex + 1  
+        );  
+  
+      }  
+  
+      function previousReview() {  
+  
+        goToReview(  
+          currentIndex - 1  
+        );  
+  
+      }  
+  
+      /* ================= BUTTONS ================= */  
+  
+      nextButton.addEventListener(  
+        "click",  
+        function () {  
+  
+          nextReview();  
+  
+          restartAutoSlide();  
+  
+        }  
+      );  
+  
+      prevButton.addEventListener(  
+        "click",  
+        function () {  
+  
+          previousReview();  
+  
+          restartAutoSlide();  
+  
+        }  
+      );  
+  
+      /* ================= AUTO ================= */  
+  
+      function startAutoSlide() {  
+  
+        stopAutoSlide();  
+  
+        autoSlide =  
+          setInterval(  
+            nextReview,  
+            slideDelay  
+          );  
+  
+      }  
+  
+      function stopAutoSlide() {  
+  
+        if (autoSlide) {  
+  
+          clearInterval(autoSlide);  
+  
+          autoSlide = null;  
+  
+        }  
+  
+      }  
+  
+      function restartAutoSlide() {  
+  
+        startAutoSlide();  
+  
+      }  
+  
+      /* ================= HOVER ================= */  
+  
+      slider.addEventListener(  
+        "mouseenter",  
+        stopAutoSlide  
+      );  
+  
+      slider.addEventListener(  
+        "mouseleave",  
+        startAutoSlide  
+      );  
+  
+      /* ================= SWIPE ================= */  
+  
+      let touchStartX = 0;  
+  
+      slider.addEventListener(  
+        "touchstart",  
+        function (event) {  
+  
+          touchStartX =  
+            event.changedTouches[0].screenX;  
+  
+          stopAutoSlide();  
+  
+        },  
+        {  
+          passive: true  
+        }  
+      );  
+  
+      slider.addEventListener(  
+        "touchend",  
+        function (event) {  
+  
+          const touchEndX =  
+            event.changedTouches[0].screenX;  
+  
+          const difference =  
+            touchStartX -  
+            touchEndX;  
+  
+          if (  
+            Math.abs(difference) > 45  
+          ) {  
+  
+            if (difference > 0) {  
+              nextReview();  
+            } else {  
+              previousReview();  
+            }  
+  
+          }  
+  
+          startAutoSlide();  
+  
+        },  
+        {  
+          passive: true  
+        }  
+      );  
+  
+      /* ================= KEYBOARD ================= */  
+  
+      document.addEventListener(  
+        "keydown",  
+        function (event) {  
+  
+          if (  
+            event.key === "ArrowRight"  
+          ) {  
+  
+            nextReview();  
+  
+            restartAutoSlide();  
+  
+          }  
+  
+          if (  
+            event.key === "ArrowLeft"  
+          ) {  
+  
+            previousReview();  
+  
+            restartAutoSlide();  
+  
+          }  
+  
+        }  
+      );  
+  
+      /* ================= START ================= */  
+  
+      goToReview(0);  
+  
+      startAutoSlide();  
+  
+    })();  
+  
+  </script>  </body>  </html>
